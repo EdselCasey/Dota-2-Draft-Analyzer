@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dota 2 Draft Analyzer
 
-## Getting Started
+A data-driven draft analysis tool that evaluates team compositions based on ability-level features, timing, and matchup interactions.
 
-First, run the development server:
+This project is designed to explain **why a game played out the way it did**, not just who won.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 📌 Overview
+
+Most players evaluate games based on outcome or individual performance.
+
+This tool focuses on **draft structure**:
+
+* What each team is capable of doing
+* What each team is missing
+* How those capabilities interact
+
+It helps answer questions like:
+
+* Why did this game feel unwinnable?
+* Was the draft structurally weak?
+* What conditions were required to win?
+
+---
+
+## 🧠 Core Idea
+
+Instead of relying on win rates or meta statistics, this project models gameplay by breaking abilities into functional components.
+
+Each ability is expressed using **tags** that represent what it actually does (burst, sustain, control, etc.).
+
+These tags are then evaluated across:
+
+* team composition
+* timing (early vs late)
+* matchup interactions
+
+---
+
+## ⚙️ How It Works
+
+### 1. Ability Tagging
+
+Each ability is mapped to a set of tags that describe its function:
+
+```json
+"abaddon_death_coil": ["burst", "heal"]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+These tags are **manually defined and standardized** to ensure consistency.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Tag System
 
-## Learn More
+Tags represent gameplay capabilities, such as:
 
-To learn more about Next.js, take a look at the following resources:
+* burst
+* dps
+* sustain
+* control
+* push
+* defensive utility
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Each tag has a clear meaning and is used consistently across all abilities.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### 3. Timing Model
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Each tag has a **timing factor** that determines when it is most impactful:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* early game
+* mid game
+* late game
+
+This allows the system to model tempo differences between drafts.
+
+---
+
+### 4. Matchup Interaction
+
+Tags are evaluated against each other using a **counter system**.
+
+Examples:
+
+* sustain vs burst
+* defense vs sustained damage
+* control vs mobility
+
+This determines how effective a team is against the opposing draft.
+
+---
+
+### 5. Team Evaluation
+
+Teams are evaluated based on:
+
+* overall structure
+* strengths and weaknesses
+* timing advantage
+* execution difficulty
+
+---
+
+## 🔍 Example Insights
+
+* High push vs low defense → fast game
+* High pickoff vs low survivability → high kill tempo
+* Even drafts → long, volatile games
+* Strong late game vs early pressure → requires defensive play
+
+---
+
+## 🎯 Purpose
+
+This tool is especially useful for:
+
+* post-game analysis
+* understanding draft weaknesses
+* improving decision-making
+* learning how team compositions actually function
+
+It is intended to make **high-level draft understanding accessible to all players**, not just professionals.
+
+---
+
+## 🛠 Tech Stack
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+
+---
+
+## ⚠️ Disclaimer
+
+This is a fan-made project and is not affiliated with Valve.
+
+No proprietary game files or raw data are included in this repository.
+All ability tags and systems are original and derived from independent analysis.
+
+---
+
+## 🚀 Future Improvements
+
+* Improve recommendation system
+* Expand tag interaction logic
+* Enhance UI and visualization
+* Add more detailed game flow explanations
