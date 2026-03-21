@@ -5,7 +5,7 @@ import { tagHero, extractMaxDamage } from './tagger'
 import { buildHeroProfile } from './scorer'
 import { extractAllProps, buildGlobalNorms, type GlobalPropNorms } from './tagProps'
 
-const HEROES_DIR   = path.join(process.cwd(), 'data', 'heroes_clean')
+const HEROES_DIR    = path.join(process.cwd(), 'data', 'heroes_clean')
 const HERO_TAGS_DIR = path.join(process.cwd(), 'data', 'hero_tags')
 
 // ── Manual tag file types ─────────────────────────────────────────────────────
@@ -29,6 +29,17 @@ function loadManualTags(heroName: string): ManualFile | null {
     return JSON.parse(fs.readFileSync(filePath, 'utf-8')) as ManualFile
   } catch {
     return null
+  }
+}
+
+/** Load raw abilities from heroes_clean if available, otherwise return empty map. */
+function loadCleanAbilities(heroName: string): Record<string, CleanedAbility> {
+  const filePath = path.join(HEROES_DIR, `${heroName}.json`)
+  try {
+    if (!fs.existsSync(filePath)) return {}
+    return JSON.parse(fs.readFileSync(filePath, 'utf-8')) as Record<string, CleanedAbility>
+  } catch {
+    return {}
   }
 }
 
@@ -69,26 +80,42 @@ let _cache: Map<string, HeroProfile> | null = null
 export function loadAllHeroes(): Map<string, HeroProfile> {
   if (process.env.NODE_ENV === 'production' && _cache) return _cache
 
+  // ── Enumerate heroes from hero_tags (always present in git) ──────────────
+  // Fall back to heroes_clean if hero_tags is somehow missing (local dev only).
+  let heroNames: string[] = []
+
+  if (fs.existsSync(HERO_TAGS_DIR)) {
+    heroNames = fs.readdirSync(HERO_TAGS_DIR)
+      .filter(f => f.endsWith('.json'))
+      .map(f => f.replace('.json', ''))
+  } else if (fs.existsSync(HEROES_DIR)) {
+    heroNames = fs.readdirSync(HEROES_DIR)
+      .filter(f => f.endsWith('.json'))
+      .map(f => f.replace('.json', ''))
+  }
+
   // ── Pass 1: collect tagged abilities for every hero ───────────────────────
   const heroAbilities = new Map<string, TaggedAbility[]>()
-  const files = fs.readdirSync(HEROES_DIR).filter(f => f.endsWith('.json'))
 
-  for (const file of files) {
-    const heroName = file.replace('.json', '')
-    const raw = fs.readFileSync(path.join(HEROES_DIR, file), 'utf-8')
-    const abilities = JSON.parse(raw) as Record<string, CleanedAbility>
-
+  for (const heroName of heroNames) {
     const manual = loadManualTags(heroName)
+
     let tagged: TaggedAbility[]
 
     if (manual) {
+      // Manual tags path — heroes_clean is used only for prop enrichment, optional
+      const abilities = loadCleanAbilities(heroName)
       tagged = buildTaggedFromManual(abilities, manual)
-    } else {
-      // Auto-tagger path: also extract props from heroes_clean
+    } else if (fs.existsSync(path.join(HEROES_DIR, `${heroName}.json`))) {
+      // Auto-tagger path — only available when heroes_clean is present (local dev)
+      const abilities = loadCleanAbilities(heroName)
       tagged = tagHero(abilities).map(ta => ({
         ...ta,
         props: extractAllProps(ta.tags, abilities[ta.name] ?? ({} as CleanedAbility)),
       }))
+    } else {
+      // No data available for this hero — skip
+      continue
     }
 
     heroAbilities.set(heroName, tagged)
