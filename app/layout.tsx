@@ -13,8 +13,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dota 2 Draft Analyzer",
-  description: "Analyze and optimize your Dota 2 team draft",
+ title: "Dota 2 Draft Analyzer",
+  description: "Analyze Dota 2 drafts using ability-based logic instead of win rates.",
+  openGraph: {
+    title: "Dota 2 Draft Analyzer",
+    description: "Understand why drafts win or lose based on structure, timing, and interactions.",
+    url: "https://dota2-draftanalyzer.vercel.app",
+    siteName: "Dota 2 Draft Analyzer",
+    images: [
+      {
+        url: "https://dota2-draftanalyzer.vercel.app/preview.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
