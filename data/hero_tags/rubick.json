@@ -8,10 +8,6 @@
     "burst",
     "damage_reduction"
   ],
-  "rubick_null_field": [
-    "aoe",
-    "damage_reduction"
-  ],
   "rubick_might_and_magus": [
     "attack_damage_boost",
     "damage_resistance",
