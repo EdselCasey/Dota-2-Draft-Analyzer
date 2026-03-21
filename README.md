@@ -135,6 +135,32 @@ It is intended to make **high-level draft understanding accessible to all player
 
 ---
 
+## 📷 Screenshots
+
+### Draft
+![Draft](public/screenshots/Game1_Draft.png)
+![Draft In Tool](public/screenshots/FullDraft.png)
+
+### Outcome
+![Outcome](public/screenshots/Game1_outcome.png)
+![Tool Analysis - Dimension Comparison & Timing](public/screenshots/TeamComparisonTop.png) 
+![Tool Analysis - Favored Draft, Gameplan, and Advantages/Vulnerabilities](public/screenshots/TeamComparisonBot.png) 
+
+### Hero Pool
+![Hero pool](public/screenshots/UngroupedHeroes.png)
+![Hero pool - Categorized](public/screenshots/GroupedHeroes.png)
+
+### Hero Profile
+![Hero Profile](public/screenshots/HeroProfile.png)
+
+### Hero Selection
+![Selection](public/screenshots/Hero_selector.png)
+![Banning](public/screenshots/BannedHeroes.png)
+![Recommendations](public/screenshots/Recommended.png)
+
+
+---
+
 ## ⚠️ Disclaimer
 
 This is a fan-made project and is not affiliated with Valve.
