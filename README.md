@@ -124,6 +124,9 @@ This tool is especially useful for:
 
 It is intended to make **high-level draft understanding accessible to all players**, not just professionals.
 
+You can try it here:
+https://dota2-draftanalyzer.vercel.app
+
 ---
 
 ## 🛠 Tech Stack
