@@ -137,30 +137,72 @@ It is intended to make **high-level draft understanding accessible to all player
 
 ## 📷 Screenshots
 
+---
+
 ### Draft
-![Draft](public/screenshots/Game1_Draft.png)
-![Draft In Tool](public/screenshots/FullDraft.png)
+
+![Draft](./public/screenshots/Game1_Draft.png)
+
+Original draft from the match.
+
+![Draft In Tool](./public/screenshots/FullDraft.png)
+
+Same draft recreated inside the analyzer.
+
+---
 
 ### Outcome
-![Outcome](public/screenshots/Game1_outcome.png)
-![Tool Analysis - Dimension Comparison & Timing](public/screenshots/TeamComparisonTop.png) 
-![Tool Analysis - Favored Draft, Gameplan, and Advantages/Vulnerabilities](public/screenshots/TeamComparisonBot.png) 
+
+![Outcome](./public/screenshots/Game1_outcome.png)
+
+Actual result of the match.
+
+![Tool Analysis - Dimension Comparison & Timing](./public/screenshots/TeamComparisonTop.png)
+
+Top section showing dimension comparison and timing evaluation.
+
+![Tool Analysis - Favored Draft, Gameplan, and Advantages/Vulnerabilities](./public/screenshots/TeamComparisonBot.png)
+
+Bottom section showing favored team, gameplan, and identified strengths/weaknesses.
+
+---
 
 ### Hero Pool
-![Hero pool](public/screenshots/UngroupedHeroes.png)
-Categorized by primary attribute
-![Hero pool - Categorized](public/screenshots/GroupedHeroes.png)
+
+![Hero Pool](./public/screenshots/UngroupedHeroes.png)
+
+Full hero pool.
+
+Categorized by primary attribute:
+
+![Hero Pool - Categorized](./public/screenshots/GroupedHeroes.png)
+
+---
 
 ### Hero Profile
-![Hero Profile](public/screenshots/HeroProfile.png)
+
+![Hero Profile](./public/screenshots/HeroProfile.png)
+
+Detailed ability breakdown with tags.
+
+---
 
 ### Hero Selection
-Hero Selector
-![Selection](public/screenshots/Hero_selector.png)
-Showing banning functionality
-![Banning](public/screenshots/BannedHeroes.png)
-Showing recommended picks a simple dot is a good pick and a star indicates highest impact pick out of remaining pool. *ignores banned heroes
-![Recommendations](public/screenshots/Recommended.png)
+
+Hero selector interface:
+
+![Selection](./public/screenshots/Hero_selector.png)
+
+Showing banning functionality:
+
+![Banning](./public/screenshots/BannedHeroes.png)
+
+Recommended picks:
+- ● = good pick  
+- ★ = highest impact pick  
+- Ignores banned heroes  
+
+![Recommendations](./public/screenshots/Recommended.png)
 
 
 ---
