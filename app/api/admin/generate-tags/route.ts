@@ -111,6 +111,13 @@ type AbilityEntry = {
 }
 
 export async function GET(): Promise<NextResponse> {
+  if (!fs.existsSync(HEROES_DIR)) {
+    return NextResponse.json(
+      { status: 'error', message: 'heroes_clean directory not found. This route is only available in local development with Valve source data present.' },
+      { status: 503 }
+    )
+  }
+
   try {
     fs.mkdirSync(HERO_TAGS_DIR, { recursive: true })
 
