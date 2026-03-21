@@ -148,14 +148,18 @@ It is intended to make **high-level draft understanding accessible to all player
 
 ### Hero Pool
 ![Hero pool](public/screenshots/UngroupedHeroes.png)
+Categorized by primary attribute
 ![Hero pool - Categorized](public/screenshots/GroupedHeroes.png)
 
 ### Hero Profile
 ![Hero Profile](public/screenshots/HeroProfile.png)
 
 ### Hero Selection
+Hero Selector
 ![Selection](public/screenshots/Hero_selector.png)
+Showing banning functionality
 ![Banning](public/screenshots/BannedHeroes.png)
+Showing recommended picks a simple dot is a good pick and a star indicates highest impact pick out of remaining pool. *ignores banned heroes
 ![Recommendations](public/screenshots/Recommended.png)
 
 
