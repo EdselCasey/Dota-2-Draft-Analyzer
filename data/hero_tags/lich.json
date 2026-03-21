@@ -1,0 +1,23 @@
+{
+  "lich_frost_nova": [
+    "aoe",
+    "slow",
+    "aoe_damage"
+  ],
+  "lich_sinister_gaze": [
+    "forced_movement"
+  ],
+  "lich_frost_shield": [
+    "aoe",
+    "slow",
+    "damage_reduction",
+    "dps"
+  ],
+  "lich_chain_frost": [
+    "aoe",
+    "slow",
+    "aoe_damage",
+    "vision",
+    "magic_amp"
+  ]
+}

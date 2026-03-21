@@ -1,0 +1,204 @@
+{
+  "chaos_knight_chaos_bolt": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      110
+    ],
+    "stun_duration": [
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "effects": {
+      "chaos_bolt_speed": 700,
+      "stun_min": [
+        1.25,
+        1.5,
+        1.75,
+        2
+      ],
+      "stun_max": [
+        1.75,
+        2.25,
+        2.75,
+        3.25
+      ],
+      "damage_min": [
+        90,
+        120,
+        150,
+        180
+      ],
+      "damage_max": [
+        155,
+        240,
+        325,
+        410
+      ],
+      "fake_bolt_distance": 675,
+      "AbilityCastRange": 600,
+      "AbilityCooldown": [
+        13,
+        12,
+        11,
+        10
+      ]
+    }
+  },
+  "chaos_knight_reality_rift": {
+    "behavior": [
+      "UNIT_TARGET",
+      "ROOT_DISABLES"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 0,
+    "cooldown": [
+      18,
+      14,
+      10,
+      6
+    ],
+    "manaCost": [
+      50
+    ],
+    "pull_to_ck": true,
+    "effects": {
+      "AbilityCastRange": [
+        600,
+        650,
+        700,
+        750
+      ],
+      "pull_distance": [
+        300,
+        350,
+        400,
+        450
+      ],
+      "armor_reduction": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "duration": 6,
+      "pierces_immunity": 0,
+      "additional_debuff_duration_percent": 0
+    }
+  },
+  "chaos_knight_chaos_strike": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "crit_chance": true,
+    "crit_multiplier": [
+      140,
+      180,
+      220,
+      260
+    ],
+    "effects": {
+      "chance": 33.33,
+      "crit_min": 120,
+      "crit_max": [
+        140,
+        180,
+        220,
+        260
+      ],
+      "lifesteal": [
+        24,
+        36,
+        48,
+        60
+      ],
+      "creep_multiplier": 1
+    }
+  },
+  "chaos_knight_phantasm": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": 0,
+    "cooldown": [
+      75
+    ],
+    "manaCost": [
+      100,
+      200,
+      300
+    ],
+    "creates_clone": true,
+    "global": true,
+    "effects": {
+      "images_count": [
+        1,
+        2,
+        3
+      ],
+      "illusion_duration": 30,
+      "outgoing_damage": 0,
+      "outgoing_damage_tooltip": 100,
+      "incoming_damage": 250,
+      "incoming_damage_tooltip": 350,
+      "invuln_duration": 0.5,
+      "vision_radius": 400,
+      "magic_resistance": 0,
+      "chance_for_extra_illusion": 0
+    }
+  },
+  "chaos_knight_phantasmagoria": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN",
+      "SKIP_FOR_KEYBINDS",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "aura_radius": 1200,
+      "damage_reduction_pct": 20
+    }
+  },
+  "chaos_knight_fundamental_forging": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "trinket_options_current": 2,
+      "trinket_options_next": 2
+    }
+  }
+}

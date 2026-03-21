@@ -1,0 +1,20 @@
+{
+  "ursa_earthshock": [
+    "aoe",
+    "slow",
+    "dash",
+    "burst"
+  ],
+  "ursa_overpower": [
+    "attack_damage_boost"
+  ],
+  "ursa_fury_swipes": [
+    "attack_speed_boost"
+  ],
+  "ursa_enrage": [
+    "damage_reduction"
+  ],
+  "ursa_maul": [
+    "attack_damage_boost"
+  ]
+}

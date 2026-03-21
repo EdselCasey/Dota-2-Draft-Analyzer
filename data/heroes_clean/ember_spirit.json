@@ -1,0 +1,204 @@
+{
+  "ember_spirit_searing_chains": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 400,
+    "cooldown": [
+      13,
+      12,
+      11,
+      10
+    ],
+    "manaCost": [
+      95,
+      105,
+      115,
+      125
+    ],
+    "effects": {
+      "duration": [
+        1.25,
+        1.75,
+        2.25,
+        2.75
+      ],
+      "radius": 400,
+      "damage_per_second": 100,
+      "tick_interval": 0.5,
+      "unit_count": 2,
+      "remnant_chains": 0
+    }
+  },
+  "ember_spirit_sleight_of_fist": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "ROOT_DISABLES"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 650,
+    "cooldown": [],
+    "manaCost": [
+      60,
+      65,
+      70,
+      75
+    ],
+    "effects": {
+      "radius": [
+        250,
+        350,
+        450,
+        550
+      ],
+      "bonus_hero_damage": [
+        25,
+        70,
+        115,
+        160
+      ],
+      "attack_interval": 0.25,
+      "creep_damage_penalty": 0,
+      "AbilityCharges": 0,
+      "AbilityCooldown": [
+        13,
+        11,
+        9,
+        7
+      ],
+      "AbilityChargeRestoreTime": [
+        13,
+        11,
+        9,
+        7
+      ],
+      "min_enemies_for_double_sleight": 0,
+      "second_attack_damage_penalty": 0
+    }
+  },
+  "ember_spirit_flame_guard": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 400,
+    "cooldown": [
+      32
+    ],
+    "manaCost": [
+      65,
+      80,
+      95,
+      110
+    ],
+    "effects": {
+      "duration": [
+        12,
+        14,
+        16,
+        18
+      ],
+      "passive_radius": 150,
+      "tick_interval": 0.2,
+      "damage_per_second": [
+        20,
+        30,
+        40,
+        50
+      ],
+      "linger_duration": 0.5,
+      "radius": 500,
+      "shield_pct_absorb": 70,
+      "absorb_amount": [
+        60,
+        140,
+        220,
+        300
+      ]
+    }
+  },
+  "ember_spirit_immolation": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "radius": 175,
+      "tick_interval": 0.2,
+      "damage": [
+        10,
+        18,
+        26,
+        34
+      ]
+    }
+  },
+  "ember_spirit_fire_remnant": {
+    "behavior": [
+      "POINT"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 1400,
+    "cooldown": [
+      0.5
+    ],
+    "manaCost": [
+      0
+    ],
+    "effects": {
+      "speed_multiplier": 250,
+      "AbilityChargeRestoreTime": 35,
+      "damage": [
+        100,
+        200,
+        300
+      ],
+      "radius": 450,
+      "duration": 45
+    }
+  },
+  "ember_spirit_activate_fire_remnant": {
+    "behavior": [
+      "POINT",
+      "NOT_LEARNABLE",
+      "ROOT_DISABLES",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 99999,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [
+      100,
+      125,
+      150
+    ],
+    "effects": {
+      "speed_multiplier": 250,
+      "max_charges": 3,
+      "charge_restore_time": 35,
+      "damage": [
+        100,
+        200,
+        300
+      ],
+      "radius": 450,
+      "speed": 1300,
+      "shard_remnant_speed_pct": 300
+    }
+  }
+}

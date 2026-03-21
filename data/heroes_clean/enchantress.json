@@ -1,0 +1,233 @@
+{
+  "enchantress_untouchable": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "slow_attack_speed": [
+        -110,
+        -160,
+        -210
+      ],
+      "slow_duration": 4
+    }
+  },
+  "enchantress_bunny_hop": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      10
+    ],
+    "manaCost": [
+      60
+    ],
+    "effects": {
+      "hop_distance": 500,
+      "hop_duration": 0.4,
+      "hop_height": 150,
+      "attack_targets": 2,
+      "bonus_attack_range": 100
+    }
+  },
+  "enchantress_little_friends": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AOE",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 750,
+    "cooldown": [
+      20
+    ],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "duration": 6,
+      "bonus_attack_speed": 70,
+      "bonus_move_speed": 100,
+      "radius": 1200,
+      "root_base_duration": 2,
+      "root_per_target": 0.5,
+      "max_root": 5
+    }
+  },
+  "enchantress_enchant": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 0,
+    "cooldown": [
+      30,
+      24,
+      18,
+      12
+    ],
+    "manaCost": [
+      70
+    ],
+    "effects": {
+      "AbilityCastRange": [
+        500,
+        550,
+        600,
+        650
+      ],
+      "slow_movement_speed": [
+        -30,
+        -40,
+        -50,
+        -60
+      ],
+      "slow_duration": [
+        3.5,
+        4,
+        4.5,
+        5
+      ],
+      "dominate_duration": [
+        30,
+        60,
+        90,
+        120
+      ],
+      "enchant_health": [
+        150,
+        250,
+        350,
+        450
+      ],
+      "enchant_damage": [
+        0,
+        20,
+        40,
+        60
+      ],
+      "xp_gain_pct": 40,
+      "level_req": [
+        4,
+        5,
+        6,
+        6
+      ],
+      "max_creeps": 1,
+      "bonus_armor": 0,
+      "bonus_health": 0,
+      "bonus_damage": 0,
+      "bonus_attackspeed": 0
+    }
+  },
+  "enchantress_natures_attendants": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      35
+    ],
+    "manaCost": [
+      140
+    ],
+    "effects": {
+      "heal_duration": [
+        7,
+        9,
+        11,
+        13
+      ],
+      "heal_interval": 0.5,
+      "heal": [
+        4,
+        8,
+        12,
+        16
+      ],
+      "radius": [
+        275,
+        275,
+        275,
+        275
+      ],
+      "wisp_count": 9,
+      "movespeed": 0,
+      "overprotective_damage_threshold": 0,
+      "overprotective_damage_reset_interval": 0,
+      "overprotective_wisp_duration": 0,
+      "overprotective_wisp_count": 0,
+      "overprotective_max_wisps": 0
+    }
+  },
+  "enchantress_impetus": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AUTOCAST",
+      "ATTACK"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PURE",
+    "castRange": 575,
+    "cooldown": [
+      6,
+      4,
+      2,
+      0
+    ],
+    "manaCost": [
+      40,
+      45,
+      50,
+      55
+    ],
+    "effects": {
+      "distance_damage_pct": [
+        5,
+        10,
+        15,
+        20
+      ],
+      "distance_cap": 1750,
+      "illusion_damage_multiplier": 2
+    }
+  },
+  "enchantress_rabblerouser": {
+    "behavior": [
+      "PASSIVE",
+      "AURA",
+      "HIDDEN",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "damage_amp": 4
+    }
+  }
+}

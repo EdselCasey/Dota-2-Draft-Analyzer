@@ -1,0 +1,30 @@
+{
+  "clinkz_strafe": [
+    "attack_speed_boost"
+  ],
+  "clinkz_burning_barrage": [
+    "channelled",
+    "burst",
+    "aoe"
+  ],
+  "clinkz_searing_arrows": [
+    "attack_modifier",
+    "attack_damage_boost",
+    "siege",
+    "armor_reduction"
+  ],
+  "clinkz_skeleton_walk": [
+    "movement_speed_boost",
+    "stealth",
+    "escape",
+    "summon_units"
+  ],
+  "clinkz_burning_army": [
+    "summon_units",
+    "vision"
+  ],
+  "clinkz_death_pact": [
+    "summon_units",
+    "heal"
+  ]
+}

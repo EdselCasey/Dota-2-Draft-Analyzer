@@ -1,0 +1,289 @@
+{
+  "dazzle_poison_touch": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": null,
+    "cooldown": [
+      24,
+      21,
+      18,
+      15
+    ],
+    "manaCost": [
+      125,
+      130,
+      135,
+      140
+    ],
+    "effects": {
+      "start_radius": [
+        200,
+        200,
+        200,
+        200
+      ],
+      "end_radius": [
+        300,
+        300,
+        300,
+        300
+      ],
+      "end_distance": [
+        600,
+        700,
+        800,
+        900
+      ],
+      "targets": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "damage": [
+        16,
+        28,
+        40,
+        52
+      ],
+      "slow": [
+        -13,
+        -16,
+        -19,
+        -22
+      ],
+      "projectile_speed": 1300,
+      "duration": [
+        3.5,
+        5,
+        6.5,
+        8
+      ],
+      "bonus_damage": 0,
+      "bonus_slow": [
+        -2,
+        -2.5,
+        -3,
+        -3.5
+      ],
+      "attack_range_bonus": 0,
+      "split_radius": 0,
+      "attacks_to_split": 0
+    }
+  },
+  "dazzle_shallow_grave": {
+    "behavior": [
+      "UNIT_TARGET",
+      "DONT_RESUME_ATTACK",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": 900,
+    "cooldown": [],
+    "manaCost": [
+      90,
+      100,
+      110,
+      120
+    ],
+    "invulnerability": true,
+    "effects": {
+      "duration": [
+        4,
+        4.5,
+        5,
+        5.5
+      ],
+      "fx_halo_height": [
+        190,
+        240,
+        300,
+        350
+      ],
+      "heal_amplify": [
+        3,
+        5,
+        7,
+        9
+      ],
+      "AbilityCooldown": [
+        30,
+        26,
+        22,
+        18
+      ]
+    }
+  },
+  "dazzle_shadow_wave": {
+    "behavior": [
+      "UNIT_TARGET",
+      "DONT_RESUME_ATTACK"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [
+      10,
+      9,
+      8,
+      7
+    ],
+    "manaCost": [
+      90
+    ],
+    "effects": {
+      "AbilityCastRange": 800,
+      "bounce_radius": 475,
+      "damage_radius": 185,
+      "max_targets": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "tooltip_max_targets_inc_dazzle": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "damage": [
+        85,
+        105,
+        125,
+        145
+      ],
+      "heal_amount": true,
+      "armor_bonus_allies": true,
+      "armor_reduction_enemies": true,
+      "scepter_heal_pct": 100,
+      "scepter_cd_increase": 2
+    }
+  },
+  "dazzle_bad_juju": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [
+      3
+    ],
+    "manaCost": [],
+    "effects": {
+      "cooldown_reduction": [
+        4,
+        5,
+        6
+      ],
+      "cooldown_reduction_items": 0,
+      "mana_cost_increase_pct": 40,
+      "mana_cost_increase_duration": 20,
+      "max_stacks": 15
+    }
+  },
+  "dazzle_good_juju": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": 250,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "cooldown_reduction": [
+        1,
+        1.5,
+        2
+      ],
+      "scepter_mana_cost": 250,
+      "scepter_cooldown": 180
+    }
+  },
+  "dazzle_nothl_projection": {
+    "behavior": [
+      "POINT"
+    ],
+    "targetType": [],
+    "castRange": 450,
+    "cooldown": [
+      70,
+      60,
+      50
+    ],
+    "manaCost": [
+      100,
+      150,
+      200
+    ],
+    "attack_range_increase": true,
+    "removes_from_body": true,
+    "effects": {
+      "min_duration": 5,
+      "max_duration": 12,
+      "initial_travel_speed": 1200,
+      "soul_return_time": 0.75,
+      "soul_return_min_speed": 500,
+      "leash_start": 1600,
+      "base_leash_pull": 50,
+      "leash_increase": 1.5,
+      "poison_touch_hex": [
+        1.4,
+        1.6,
+        1.8
+      ],
+      "shallow_grave_heal": [
+        225,
+        300,
+        375
+      ],
+      "shadow_wave_cdr": [
+        30,
+        40,
+        50
+      ]
+    }
+  },
+  "dazzle_nothl_projection_end": {
+    "behavior": [
+      "NO_TARGET",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "dazzle_nothl_boon": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "duration": 12
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "luna_lucent_beam": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 800,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "AbilityCooldown": [
+        9,
+        8,
+        7,
+        6
+      ],
+      "AbilityManaCost": [
+        90,
+        100,
+        110,
+        120
+      ],
+      "beam_damage": [
+        75,
+        150,
+        225,
+        300
+      ],
+      "glaives_fired": 0,
+      "glaives_attack_radius": 0,
+      "stun_duration": 0.6,
+      "damage_buff_duration": 0,
+      "damage_buff_per_beam": 0
+    }
+  },
+  "luna_lunar_orbit": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "DONT_CANCEL_MOVEMENT"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "rotating_glaives_duration": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "rotating_glaives": 4,
+      "rotating_glaives_movement_radius": 225,
+      "rotating_glaives_movement_radius_expand_speed_scale": 4,
+      "rotating_glaives_hit_radius": 200,
+      "rotating_glaives_collision_damage": [
+        28,
+        32,
+        36,
+        40
+      ],
+      "rotating_glaives_speed": 160,
+      "rotating_glaives_shard_speed_bonus_tooltip": 0,
+      "AbilityCooldown": [
+        40,
+        35,
+        30,
+        25
+      ],
+      "AbilityManaCost": [
+        65,
+        70,
+        75,
+        80
+      ],
+      "rotating_glaives_damage_reduction": 0
+    }
+  },
+  "luna_moon_glaive": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "range": 500,
+      "bounces": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "damage_reduction_percent": [
+        50,
+        45,
+        40,
+        35
+      ]
+    }
+  },
+  "luna_lunar_blessing": {
+    "behavior": [
+      "PASSIVE",
+      "AURA",
+      "SKIP_FOR_KEYBINDS",
+      "HIDDEN",
+      "FORCE_NO_INNATE_UI"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "radius": 1200,
+      "bonus_damage": 1,
+      "self_bonus_damage": 2,
+      "bonus_night_vision": 250
+    }
+  },
+  "luna_lunar_grace": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      30,
+      25,
+      20,
+      15
+    ],
+    "manaCost": [
+      40
+    ],
+    "effects": {
+      "attack_speed": [
+        30,
+        45,
+        60,
+        75
+      ],
+      "night_multiplier": 2,
+      "duration": 5
+    }
+  },
+  "luna_eclipse": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      150,
+      200,
+      250
+    ],
+    "effects": {
+      "beams": [
+        6,
+        9,
+        12
+      ],
+      "beam_interval": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "beam_interval_scepter": 0.3,
+      "radius": 675,
+      "hit_count": 5,
+      "AbilityCastRange": 0,
+      "AbilityDuration": [
+        2.4,
+        4.2,
+        6
+      ],
+      "night_duration": 10,
+      "AbilityCooldown": 105
+    }
+  }
+}

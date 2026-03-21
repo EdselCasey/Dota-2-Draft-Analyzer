@@ -1,0 +1,244 @@
+{
+  "rattletrap_jetpack": {
+    "behavior": [
+      "NO_TARGET",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      16
+    ],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "bonus_speed": 20,
+      "turn_rate": 75,
+      "height": 250,
+      "duration": 6
+    }
+  },
+  "rattletrap_jetpack_toggle": {
+    "behavior": [
+      "HIDDEN",
+      "NO_TARGET",
+      "TOGGLE",
+      "IGNORE_CHANNEL"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      1,
+      1,
+      1
+    ],
+    "manaCost": [],
+    "effects": {}
+  },
+  "rattletrap_overclocking": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      50
+    ],
+    "manaCost": [
+      90
+    ],
+    "effects": {
+      "buff_duration": 13,
+      "bonus_movement_speed": 0,
+      "bonus_attack_speed": 250,
+      "debuff_duration": 3
+    }
+  },
+  "rattletrap_battery_assault": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_BACKSWING",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      24,
+      22,
+      20,
+      18
+    ],
+    "manaCost": [
+      90
+    ],
+    "effects": {
+      "radius": [
+        275,
+        275,
+        275,
+        275
+      ],
+      "duration": [
+        10.5,
+        10.5,
+        10.5,
+        10.5
+      ],
+      "interval": [
+        0.7,
+        0.7,
+        0.7,
+        0.7
+      ],
+      "damage": [
+        20,
+        45,
+        70,
+        95
+      ],
+      "creep_damage_multiplier": 1
+    }
+  },
+  "rattletrap_power_cogs": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      70
+    ],
+    "effects": {
+      "duration": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "damage": [
+        50,
+        125,
+        200,
+        275
+      ],
+      "mana_burn": [
+        35,
+        70,
+        105,
+        140
+      ],
+      "mana_burn_as_damage_pct": 50,
+      "attacks_to_destroy": 2,
+      "repel_length": 300,
+      "repel_duration": 0.8,
+      "cogs_radius": 215,
+      "trigger_distance": 185,
+      "creates_structure": true
+    }
+  },
+  "rattletrap_rocket_flare": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      35,
+      40,
+      45,
+      50
+    ],
+    "effects": {
+      "radius": 600,
+      "duration": 6,
+      "speed": 2250,
+      "damage": [
+        80,
+        120,
+        160,
+        200
+      ],
+      "slow_pct": 100,
+      "slow_duration": 0.4,
+      "projectile_vision_radius": 250,
+      "projectile_vision_duration": 1,
+      "projectile_vision_tick_rate": 0.15
+    }
+  },
+  "rattletrap_hookshot": {
+    "behavior": [
+      "POINT",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "BOTH",
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": null,
+    "cooldown": [
+      60,
+      45,
+      30
+    ],
+    "manaCost": [
+      100,
+      125,
+      150
+    ],
+    "effects": {
+      "latch_area": [
+        125,
+        125,
+        125
+      ],
+      "stun_area": 175,
+      "ally_area": 175,
+      "stun_duration": [
+        1.2,
+        1.4,
+        1.6
+      ],
+      "duration": [
+        1.2,
+        1.4,
+        1.6
+      ],
+      "dash_distance": 2500,
+      "damage_absorb": 150,
+      "speed": [
+        4000,
+        5000,
+        6000
+      ],
+      "damage": [
+        75,
+        175,
+        275
+      ]
+    }
+  },
+  "rattletrap_armor_power": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "damage_per_armor": 0.25
+    }
+  }
+}

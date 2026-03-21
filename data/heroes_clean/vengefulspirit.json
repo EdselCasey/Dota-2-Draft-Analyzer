@@ -1,0 +1,164 @@
+{
+  "vengefulspirit_magic_missile": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      90,
+      95,
+      100,
+      105
+    ],
+    "effects": {
+      "magic_missile_speed": 1350,
+      "magic_missile_stun": [
+        1.2,
+        1.4,
+        1.6,
+        1.8
+      ],
+      "magic_missile_damage": [
+        85,
+        170,
+        255,
+        340
+      ],
+      "AbilityCastRange": 650,
+      "bounce_range_pct": 75,
+      "damage_per_lasthit": 0,
+      "AbilityCooldown": [
+        14,
+        13,
+        12,
+        11
+      ]
+    }
+  },
+  "vengefulspirit_command_aura": {
+    "behavior": [
+      "PASSIVE",
+      "AURA"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [],
+    "castRange": 1200,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bonus_base_damage": [
+        10,
+        15,
+        20,
+        25
+      ],
+      "aura_radius": 1200
+    }
+  },
+  "vengefulspirit_wave_of_terror": {
+    "behavior": [
+      "POINT"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 1400,
+    "cooldown": [
+      16,
+      14,
+      12,
+      10
+    ],
+    "manaCost": [
+      40
+    ],
+    "effects": {
+      "damage": [
+        60,
+        80,
+        100,
+        120
+      ],
+      "wave_speed": 2000,
+      "wave_width": 325,
+      "armor_reduction": [
+        -3,
+        -4,
+        -5,
+        -6
+      ],
+      "attack_reduction": [
+        10,
+        15,
+        20,
+        25
+      ],
+      "vision_aoe": 350,
+      "vision_duration": 4,
+      "steal_pct": 0
+    }
+  },
+  "vengefulspirit_nether_swap": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "CUSTOM",
+    "targetType": [
+      "CUSTOM"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": null,
+    "cooldown": [],
+    "manaCost": [
+      100,
+      150,
+      200
+    ],
+    "effects": {
+      "damage_reduction": 0,
+      "damage_reduction_duration": 10,
+      "damage": [
+        150,
+        300,
+        450
+      ],
+      "AbilityCooldown": [
+        46,
+        38,
+        30
+      ]
+    }
+  },
+  "vengefulspirit_soul_strike": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bat_tooltip": 1.5
+    }
+  },
+  "vengefulspirit_retribution": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bonus_damage": 20
+    }
+  }
+}

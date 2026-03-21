@@ -1,0 +1,23 @@
+{
+  "razor_plasma_field": [
+    "aoe",
+    "slow",
+    "burst"
+  ],
+  "razor_static_link": [
+    "damage_reduction"
+  ],
+  "razor_storm_surge": [
+    "aoe",
+    "slow",
+    "burst"
+  ],
+  "razor_eye_of_the_storm": [
+    "aoe",
+    "dps",
+    "armor_reduction"
+  ],
+  "razor_unstable_current": [
+    "movement_speed_boost"
+  ]
+}

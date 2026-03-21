@@ -1,0 +1,22 @@
+{
+  "faceless_void_backtrack": [
+    "damage_reduction"
+  ],
+  "faceless_void_time_lock": [
+    "attack_damage_boost",
+    "stun",
+    "burst",
+    "attack_modifier"
+  ],
+  "faceless_void_time_dilation": [
+    "aoe",
+    "slow",
+    "dps"
+  ],
+  "faceless_void_chronosphere": [
+    "aoe",
+    "stun",
+    "attack_speed_boost",
+    "movement_speed_boost"
+  ]
+}

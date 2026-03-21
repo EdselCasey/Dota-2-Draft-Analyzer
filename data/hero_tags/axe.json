@@ -1,0 +1,23 @@
+{
+  "axe_berserkers_call": [
+    "aoe",
+    "taunt",
+    "armor_gain"
+  ],
+  "axe_battle_hunger": [
+    "slow",
+    "dps"
+  ],
+  "axe_counter_helix": [
+    "aoe",
+    "burst"
+  ],
+  "axe_culling_blade": [
+    "burst",
+    "armor_gain",
+    "movement_speed_boost"
+  ],
+  "axe_coat_of_blood": [
+    "armor_gain"
+  ]
+}

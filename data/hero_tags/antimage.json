@@ -1,0 +1,22 @@
+{
+  "antimage_persecutor": [
+    "slow"
+  ],
+  "antimage_manaburn": [
+    "attack_modifier",
+    "attack_damage_boost"
+  ],
+  "antimage_spell_shield": [
+    "damage_reduction",
+    "shield"
+  ],
+  "antimage_mana_void": [
+    "aoe",
+    "stun",
+    "aoe_damage"
+  ],
+  "antimage_blink": [
+    "blink",
+    "escape"
+  ]
+}

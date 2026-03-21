@@ -1,0 +1,48 @@
+{
+  "kez_echo_slash": [
+    "aoe",
+    "slow",
+    "burst",
+    "dash",
+    "escape"
+  ],
+  "kez_grappling_claw": [
+    "slow",
+    "dash",
+    "escape"
+  ],
+  "kez_kazurai_katana": [
+    "attack_modifier",
+    "dps"
+  ],
+  "kez_raptor_dance": [
+    "aoe",
+    "burst",
+    "lifesteal",
+    "dispel",
+    "damage_reduction",
+    "invulnerability"
+  ],
+  "kez_falcon_rush": [
+    "movement_speed_boost",
+    "dash"
+  ],
+  "kez_talon_toss": [
+    "silence",
+    "burst"
+  ],
+  "kez_shodo_sai": [
+    "stun",
+    "attack_damage_boost"
+  ],
+  "kez_ravens_veil": [
+    "aoe",
+    "movement_speed_boost",
+    "stealth",
+    "escape"
+  ],
+  "kez_parry": [
+    "damage_reduction",
+    "stun"
+  ]
+}

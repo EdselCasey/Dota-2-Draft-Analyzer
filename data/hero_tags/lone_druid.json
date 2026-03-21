@@ -1,0 +1,36 @@
+{
+  "lone_druid_spirit_bear": [
+    "summon_units",
+    "regen"
+  ],
+  "lone_druid_spirit_link": [
+    "lifesteal",
+    "movement_speed_boost"
+  ],
+  "lone_druid_savage_roar": [
+    "aoe",
+    "forced_movement"
+  ],
+  "lone_druid_true_form": [
+    "hp_gain",
+    "damage_reduction",
+    "armor_gain"
+  ],
+  "lone_druid_spirit_bear_entangle": [
+    "root",
+    "attack_modifier",
+    "dps"
+  ],
+  "lone_druid_entangle": [
+    "aoe",
+    "root",
+    "dps"
+  ],
+  "lone_druid_spirit_bear_fetch": [
+    "stun",
+    "forced_movement"
+  ],
+  "lone_druid_spirit_bear_demolish": [
+    "siege"
+  ]
+}

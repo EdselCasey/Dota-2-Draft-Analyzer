@@ -1,0 +1,218 @@
+{
+  "sandking_burrowstrike": {
+    "behavior": [
+      "POINT",
+      "ROOT_DISABLES",
+      "ALT_CASTABLE"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      100,
+      110,
+      120,
+      130
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        14,
+        13,
+        12,
+        11
+      ],
+      "burrow_width": 150,
+      "burrow_duration": [
+        1.2,
+        1.4,
+        1.6,
+        1.8
+      ],
+      "burrow_speed": 2000,
+      "burrow_anim_time": 0.52,
+      "AbilityCastRange": [
+        525,
+        600,
+        675,
+        750
+      ]
+    }
+  },
+  "sandking_sand_storm": {
+    "behavior": [
+      "NO_TARGET",
+      "DONT_RESUME_ATTACK"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      40,
+      34,
+      28,
+      22
+    ],
+    "manaCost": [
+      85
+    ],
+    "effects": {
+      "damage_tick_rate": 0.2,
+      "AbilityDuration": [
+        16,
+        20,
+        24,
+        28
+      ],
+      "sand_storm_radius": [
+        475,
+        550,
+        625,
+        700
+      ],
+      "sand_storm_damage": [
+        30,
+        50,
+        70,
+        90
+      ],
+      "fade_delay": 0.7
+    }
+  },
+  "sandking_caustic_finale": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "caustic_finale_radius": 400,
+      "caustic_finale_damage_base": [
+        20,
+        40,
+        60,
+        80
+      ],
+      "caustic_finale_damage_pct": [
+        3,
+        7,
+        11,
+        15
+      ],
+      "caustic_finale_duration": [
+        4.5,
+        5,
+        5.5,
+        6
+      ]
+    }
+  },
+  "sandking_epicenter": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      150,
+      225,
+      300
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        120,
+        110,
+        100
+      ],
+      "epicenter_pulses": [
+        12,
+        16,
+        20
+      ],
+      "epicenter_damage": [
+        60,
+        70,
+        80
+      ],
+      "epicenter_radius_base": 500,
+      "epicenter_radius_increment": 13,
+      "epicenter_slow": [
+        -30,
+        -40,
+        -50
+      ],
+      "epicenter_slow_as": [
+        -50,
+        -55,
+        -60
+      ],
+      "linger_duration": 3
+    }
+  },
+  "sandking_scorpion_strike": {
+    "behavior": [
+      "POINT",
+      "IGNORE_BACKSWING",
+      "AOE"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 200,
+    "cooldown": [
+      15,
+      12,
+      9,
+      6
+    ],
+    "manaCost": [
+      35,
+      40,
+      45,
+      50
+    ],
+    "effects": {
+      "radius": [
+        230,
+        250,
+        270,
+        290
+      ],
+      "inner_radius": 125,
+      "inner_radius_bonus_damage_pct": 40,
+      "attack_damage": [
+        50,
+        75,
+        100,
+        125
+      ],
+      "debuff_duration": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "strike_slow": [
+        10,
+        12,
+        14,
+        16
+      ]
+    }
+  }
+}

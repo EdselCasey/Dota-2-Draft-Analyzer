@@ -1,0 +1,24 @@
+{
+  "wisp_tether": [
+    "aoe",
+    "slow",
+    "heal",
+    "dash",
+    "dps",
+    "mana_regen"
+  ],
+  "wisp_spirits": [
+    "aoe",
+    "burst"
+  ],
+  "wisp_overcharge": [
+    "armor_gain",
+    "regen",
+    "attack_speed_boost"
+  ],
+  "wisp_relocate": [
+    "teleport",
+    "global",
+    "save"
+  ]
+}

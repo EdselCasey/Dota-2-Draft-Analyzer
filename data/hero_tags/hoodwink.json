@@ -1,0 +1,25 @@
+{
+  "hoodwink_acorn_shot": [
+    "slow",
+    "burst",
+    "aoe"
+  ],
+  "hoodwink_bushwhack": [
+    "aoe",
+    "stun",
+    "forced_movement",
+    "dps"
+  ],
+  "hoodwink_scurry": [
+    "movement_speed_boost",
+    "aerial"
+  ],
+  "hoodwink_sharpshooter": [
+    "slow",
+    "vision",
+    "burst"
+  ],
+  "hoodwink_mistwoods_wayfarer": [
+    "damage_reduction"
+  ]
+}

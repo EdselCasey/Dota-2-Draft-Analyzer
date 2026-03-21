@@ -1,0 +1,29 @@
+{
+  "undying_decay": [
+    "aoe",
+    "burst",
+    "hp_growth",
+    "magic_amp"
+  ],
+  "undying_soul_rip": [
+    "aoe",
+    "heal",
+    "burst"
+  ],
+  "undying_tombstone": [
+    "aoe",
+    "summon_units",
+    "slow",
+    "dps",
+    "zone_control"
+  ],
+  "undying_flesh_golem": [
+    "slow",
+    "summon_units",
+    "hp_growth",
+    "magic_amp"
+  ],
+  "undying_ceaseless_dirge": [
+    "invulnerability"
+  ]
+}

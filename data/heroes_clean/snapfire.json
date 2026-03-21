@@ -1,0 +1,271 @@
+{
+  "snapfire_scatterblast": {
+    "behavior": [
+      "POINT"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      18,
+      15,
+      12,
+      9
+    ],
+    "manaCost": [
+      85,
+      90,
+      95,
+      100
+    ],
+    "effects": {
+      "AbilityCastRange": 800,
+      "damage": [
+        100,
+        160,
+        220,
+        280
+      ],
+      "blast_speed": 3000,
+      "blast_width_initial": 225,
+      "blast_width_end": 400,
+      "debuff_duration": 1,
+      "movement_slow_pct": 100,
+      "attack_slow_pct": 100,
+      "point_blank_range": 450,
+      "point_blank_dmg_bonus_pct": 50,
+      "bonus_applies_at_long_range": 0
+    }
+  },
+  "snapfire_mortimer_kisses": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "DONT_RESUME_MOVEMENT",
+      "DONT_RESUME_ATTACK"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 3000,
+    "cooldown": [
+      120,
+      110,
+      100
+    ],
+    "manaCost": [
+      125,
+      150,
+      175
+    ],
+    "effects": {
+      "projectile_count": 8,
+      "projectile_speed": 1300,
+      "projectile_width": 130,
+      "impact_radius": 275,
+      "damage_per_impact": [
+        180,
+        270,
+        360
+      ],
+      "duration_tooltip": 5.5,
+      "projectile_vision": 500,
+      "turn_rate": 75,
+      "burn_interval": 0.5,
+      "burn_damage": [
+        60,
+        80,
+        100
+      ],
+      "move_slow_pct": [
+        15,
+        20,
+        25
+      ],
+      "burn_ground_duration": 3.5,
+      "dist_change_speed": 75,
+      "min_range": 600,
+      "min_lob_travel_time": 0.8,
+      "max_lob_travel_time": 2,
+      "delay_after_last_projectile": 0.5,
+      "burn_linger_duration": 1
+    }
+  },
+  "snapfire_gobble_up": {
+    "behavior": [
+      "UNIT_TARGET",
+      "DONT_RESUME_ATTACK",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetTeam": "CUSTOM",
+    "targetType": [
+      "CUSTOM"
+    ],
+    "castRange": 150,
+    "cooldown": [
+      40
+    ],
+    "manaCost": [
+      120
+    ],
+    "effects": {}
+  },
+  "snapfire_spit_creep": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "DONT_RESUME_MOVEMENT",
+      "DONT_RESUME_ATTACK"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 3000,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [],
+    "effects": {
+      "projectile_speed": 1400,
+      "projectile_width": 130,
+      "impact_radius": 400,
+      "projectile_vision": 500,
+      "burn_interval": 0.5,
+      "burn_damage": 100,
+      "move_slow_pct": 25,
+      "burn_ground_duration": 3,
+      "min_lob_travel_time": 0.1,
+      "max_lob_travel_time": 2,
+      "burn_linger_duration": 1,
+      "stun_duration": 1.2,
+      "min_height_above_lowest": 150,
+      "min_height_above_highest": 100,
+      "min_acceleration": 1000,
+      "max_acceleration": 2000
+    }
+  },
+  "snapfire_firesnap_cookie": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO",
+      "CREEP"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 650,
+    "cooldown": [],
+    "manaCost": [
+      105
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        18,
+        17,
+        16,
+        15
+      ],
+      "AbilityCharges": 0,
+      "AbilityChargeRestoreTime": [
+        21,
+        19,
+        17,
+        15
+      ],
+      "projectile_speed": 1200,
+      "pre_hop_duration": 0,
+      "jump_duration": 0.484,
+      "jump_height": 257,
+      "jump_horizontal_distance": 425,
+      "pre_land_anim_time": 0.14,
+      "landing_gesture_duration": 0.6,
+      "impact_radius": 300,
+      "impact_damage": [
+        75,
+        150,
+        225,
+        300
+      ],
+      "impact_stun_duration": [
+        1,
+        1.4,
+        1.8,
+        2.2
+      ],
+      "self_cast_delay": 0.3,
+      "target_heal": 0,
+      "shard_damage_multiplier_tooltip": 40
+    }
+  },
+  "snapfire_buckshot": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "miss_chance": 25,
+      "damage_amp": 30,
+      "split_shot": 0,
+      "split_shot_damage_pct": 0,
+      "glancing_shot_damage_pct": 60
+    }
+  },
+  "snapfire_lil_shredder": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 800,
+    "cooldown": [
+      24,
+      20,
+      16,
+      12
+    ],
+    "manaCost": [
+      70,
+      80,
+      90,
+      100
+    ],
+    "effects": {
+      "damage": [
+        20,
+        35,
+        50,
+        65
+      ],
+      "buffed_attacks": 5,
+      "damage_pct": 35,
+      "attack_speed_bonus": 300,
+      "attack_range_bonus": [
+        160,
+        240,
+        320,
+        400
+      ],
+      "buff_duration_tooltip": 6,
+      "base_attack_time": 1,
+      "armor_reduction_per_attack": 0.5,
+      "armor_duration": 5
+    }
+  }
+}

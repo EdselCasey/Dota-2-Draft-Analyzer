@@ -1,0 +1,26 @@
+{
+  "slardar_seaborn_sentinel": [
+    "regen",
+    "armor_gain",
+    "attack_damage_boost",
+    "movement_speed_boost"
+  ],
+  "slardar_sprint": [
+    "movement_speed_boost",
+    "damage_reduction"
+  ],
+  "slardar_slithereen_crush": [
+    "aoe",
+    "stun",
+    "burst"
+  ],
+  "slardar_bash": [
+    "attack_modifier",
+    "stun",
+    "burst"
+  ],
+  "slardar_corrosive_haze": [
+    "armor_reduction",
+    "vision"
+  ]
+}

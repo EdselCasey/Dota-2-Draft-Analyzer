@@ -1,0 +1,24 @@
+{
+  "winter_wyvern_arctic_burn": [
+    "aerial",
+    "escape",
+    "slow",
+    "attack_modifier",
+    "dps"
+  ],
+  "winter_wyvern_splinter_blast": [
+    "aoe",
+    "slow",
+    "burst"
+  ],
+  "winter_wyvern_cold_embrace": [
+    "heal",
+    "save",
+    "damage_reduction"
+  ],
+  "winter_wyvern_winters_curse": [
+    "aoe",
+    "taunt",
+    "magic_amp"
+  ]
+}

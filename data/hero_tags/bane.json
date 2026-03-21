@@ -1,0 +1,20 @@
+{
+  "bane_enfeeble": [
+    "dps",
+    "damage_reduction"
+  ],
+  "bane_brain_sap": [
+    "burst",
+    "heal"
+  ],
+  "bane_fiends_grip": [
+    "channelled",
+    "dps",
+    "stun"
+  ],
+  "bane_nightmare": [
+    "forced_movement",
+    "stun",
+    "save"
+  ]
+}

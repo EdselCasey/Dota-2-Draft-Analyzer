@@ -1,0 +1,20 @@
+{
+  "lion_impale": [
+    "burst",
+    "stun",
+    "aoe"
+  ],
+  "lion_mana_drain": [
+    "channelled",
+    "movement_speed_boost",
+    "mana_regen",
+    "slow",
+    "dps"
+  ],
+  "lion_finger_of_death": [
+    "burst"
+  ],
+  "lion_hex": [
+    "hex"
+  ]
+}

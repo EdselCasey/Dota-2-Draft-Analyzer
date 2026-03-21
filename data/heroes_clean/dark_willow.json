@@ -1,0 +1,221 @@
+{
+  "dark_willow_bramble_maze": {
+    "behavior": [
+      "POINT",
+      "AOE"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": null,
+    "cooldown": [],
+    "manaCost": [
+      100,
+      120,
+      140,
+      160
+    ],
+    "effects": {
+      "placement_range": 500,
+      "placement_count": 8,
+      "placement_duration": 12,
+      "extra_brambles_placement_duration": 4,
+      "latch_duration": [
+        1,
+        1.5,
+        2,
+        2.5
+      ],
+      "latch_range": 90,
+      "damage_per_tick": [
+        50,
+        55,
+        60,
+        65
+      ],
+      "spell_amp": 0,
+      "latch_creation_interval": 0.075,
+      "latch_creation_delay": 0.1,
+      "initial_creation_delay": 0.3,
+      "AbilityCooldown": 22,
+      "root_duration": [
+        1,
+        1.5,
+        2,
+        2.5
+      ]
+    }
+  },
+  "dark_willow_bedlam": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 900,
+    "cooldown": [
+      30
+    ],
+    "manaCost": [
+      100,
+      150,
+      200
+    ],
+    "effects": {
+      "attack_damage": [
+        70,
+        120,
+        170
+      ],
+      "attack_interval": 0.25,
+      "attack_radius": 300,
+      "attack_targets": 1,
+      "roaming_radius": 200,
+      "roaming_seconds_per_rotation": 1.5,
+      "roaming_duration": 5.5,
+      "target_count": 1,
+      "travel_speed": 1800,
+      "unit_targetable": 0,
+      "damage_reduction_pct": 0,
+      "summons_unit": true,
+      "damage_per_second": [
+        280,
+        480,
+        680
+      ]
+    }
+  },
+  "dark_willow_terrorize": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "NORMAL_WHEN_STOLEN"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 1200,
+    "cooldown": [],
+    "manaCost": [
+      150
+    ],
+    "effects": {
+      "destination_travel_speed": 2000,
+      "destination_radius": [
+        400,
+        450,
+        500
+      ],
+      "destination_status_duration": [
+        2.8,
+        3,
+        3.2
+      ],
+      "return_travel_speed": 800,
+      "starting_height": 300,
+      "telegraph_to_enemies": 0,
+      "AbilityCooldown": [
+        100,
+        90,
+        80
+      ],
+      "fear": true,
+      "forced_movement": true
+    }
+  },
+  "dark_willow_shadow_realm": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "IGNORE_CHANNEL"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      80,
+      90,
+      100,
+      110
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        21,
+        19,
+        17,
+        15
+      ],
+      "duration": 5,
+      "fade_time": 0.3,
+      "damage": [
+        120,
+        200,
+        280,
+        360
+      ],
+      "attack_range_bonus": 600,
+      "max_damage_duration": 3,
+      "aura_radius": 0,
+      "aura_linger": 0,
+      "aura_damage_pct": 0
+    }
+  },
+  "dark_willow_cursed_crown": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": null,
+    "cooldown": [],
+    "manaCost": [
+      80,
+      90,
+      100,
+      110
+    ],
+    "effects": {
+      "delay": 4,
+      "stun_duration": [
+        1.5,
+        1.8,
+        2.1,
+        2.4
+      ],
+      "stun_radius": 360,
+      "AbilityCooldown": [
+        17,
+        15,
+        13,
+        11
+      ]
+    }
+  },
+  "dark_willow_pixie_dust": {
+    "behavior": [
+      "PASSIVE",
+      "SHOW_IN_GUIDES",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "damageType": "NONE",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "hp_regen": 150,
+      "mana_regen_amp": 150
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "jakiro_dual_breath": [
+    "aoe",
+    "slow",
+    "dps"
+  ],
+  "jakiro_ice_path": [
+    "stun",
+    "aoe",
+    "burst"
+  ],
+  "jakiro_liquid_fire_and ice": [
+    "aoe",
+    "slow",
+    "attack_modifier",
+    "dps",
+    "siege"
+  ],
+  "jakiro_macropyre": [
+    "slow",
+    "burst",
+    "aoe",
+    "aoe_damage",
+    "dps"
+  ]
+}

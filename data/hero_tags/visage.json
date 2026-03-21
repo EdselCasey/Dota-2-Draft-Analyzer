@@ -1,0 +1,26 @@
+{
+  "visage_grave_chill": [
+    "aoe",
+    "movement_speed_boost",
+    "slow",
+    "attack_speed_boost"
+  ],
+  "visage_soul_assumption": [
+    "burst",
+    "aoe"
+  ],
+  "visage_gravekeepers_cloak": [
+    "damage_reduction"
+  ],
+  "visage_summon_familiars": [
+    "summon_units",
+    "vision",
+    "siege",
+    "aerial",
+    "armor_reduction"
+  ],
+  "visage_summon_familiars_stone_form": [
+    "aoe",
+    "stun"
+  ]
+}

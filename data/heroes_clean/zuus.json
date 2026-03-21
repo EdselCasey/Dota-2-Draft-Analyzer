@@ -1,0 +1,237 @@
+{
+  "zuus_heavenly_jump": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "ROOT_DISABLES"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      50,
+      60,
+      70,
+      80
+    ],
+    "effects": {
+      "damage": [
+        25,
+        50,
+        75,
+        100
+      ],
+      "hop_distance": [
+        375,
+        450,
+        525,
+        600
+      ],
+      "hop_duration": 0.5,
+      "hop_height": 250,
+      "range": [
+        700,
+        800,
+        900,
+        1000
+      ],
+      "vision_radius": 900,
+      "vision_duration": 3,
+      "duration": 1.4,
+      "move_slow": 80,
+      "aspd_slow": 100,
+      "targets": 1,
+      "AbilityCooldown": [
+        26,
+        22,
+        18,
+        14
+      ],
+      "postjump_movespeed_duration": 0,
+      "postjump_movespeed": 0
+    }
+  },
+  "zuus_arc_lightning": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 800,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "AbilityCooldown": 1.6,
+      "arc_damage": [
+        90,
+        120,
+        150,
+        180
+      ],
+      "radius": 450,
+      "jump_count": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "jump_delay": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    }
+  },
+  "zuus_lightning_bolt": {
+    "behavior": [
+      "UNIT_TARGET",
+      "POINT"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": null,
+    "cooldown": [
+      6,
+      6,
+      6,
+      6
+    ],
+    "manaCost": [
+      120,
+      125,
+      130,
+      135
+    ],
+    "effects": {
+      "damage": [
+        140,
+        220,
+        300,
+        380
+      ],
+      "true_sight_radius": 500,
+      "sight_radius_day": 500,
+      "sight_radius_night": 500,
+      "sight_duration": 5,
+      "spread_aoe": 325,
+      "ministun_duration": 0.35,
+      "creep_damage_bonus_pct": 0
+    }
+  },
+  "zuus_cloud": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      45
+    ],
+    "manaCost": [
+      275
+    ],
+    "effects": {
+      "cloud_duration": 30,
+      "cloud_bolt_interval": 2.5,
+      "cloud_radius": 450,
+      "hits_to_kill_tooltip": 8,
+      "creep_hits_to_kill_tooltip": 16,
+      "cloud_bounty_tooltip": 125
+    }
+  },
+  "zuus_static_field": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN",
+      "SHOW_IN_GUIDES",
+      "FORCE_NO_INNATE_UI"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "damage_health_pct": [
+        2.5,
+        3.25,
+        4,
+        4.75
+      ],
+      "distance_threshold_min": 0,
+      "distance_threshold_max": 0
+    }
+  },
+  "zuus_thundergods_wrath": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      130
+    ],
+    "manaCost": [
+      250,
+      375,
+      500
+    ],
+    "effects": {
+      "sight_radius_day": 500,
+      "sight_radius_night": 500,
+      "sight_duration": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "damage": [
+        300,
+        475,
+        650
+      ],
+      "growing_delay": 0,
+      "grow_kill_amp": 0
+    }
+  },
+  "zuus_lightning_hands": {
+    "behavior": [
+      "TOGGLE",
+      "ATTACK",
+      "SHOW_IN_GUIDES "
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [
+      0
+    ],
+    "effects": {
+      "attack_speed_bonus": 30,
+      "arc_lightning_damage_pct": 50,
+      "arc_lightning_damage_illusion_pct": 20
+    }
+  }
+}

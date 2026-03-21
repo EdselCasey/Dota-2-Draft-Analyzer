@@ -1,0 +1,244 @@
+{
+  "arc_warden_scepter": {
+    "behavior": [
+      "NO_TARGET",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      60
+    ],
+    "manaCost": [
+      100
+    ],
+    "effects": {}
+  },
+  "arc_warden_flux": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      16
+    ],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "duration": 6,
+      "search_radius": 225,
+      "think_interval": 0.5,
+      "damage_per_second": [
+        15,
+        30,
+        45,
+        60
+      ],
+      "move_speed_slow_pct": [
+        14,
+        21,
+        28,
+        35
+      ],
+      "AbilityCastRange": [
+        500,
+        600,
+        700,
+        800
+      ],
+      "applies_silence": 0
+    }
+  },
+  "arc_warden_magnetic_field": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "IGNORE_BACKSWING",
+      "CAN_SELF_CAST"
+    ],
+    "targetTeam": "ALLY",
+    "targetType": [],
+    "castRange": 900,
+    "cooldown": [],
+    "manaCost": [
+      60,
+      70,
+      80,
+      90
+    ],
+    "effects": {
+      "radius": 300,
+      "knockback_enemies": 0,
+      "duration": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "attack_speed_bonus": [
+        30,
+        60,
+        90,
+        120
+      ],
+      "evasion_chance": 100,
+      "evasion": 0.1,
+      "attack_speed_boost": true,
+      "AbilityCooldown": [
+        20,
+        19,
+        18,
+        17
+      ],
+      "affects_buildings": 0,
+      "rune_pull_strength": 0,
+      "rune_pull_max_speed_as_multiplier_of_pull_strength": 0,
+      "rune_pull_falloff_multiplier": 0,
+      "rune_pull_radius": 0,
+      "rune_activate_radius_buffer": 0
+    }
+  },
+  "arc_warden_spark_wraith": {
+    "behavior": [
+      "POINT",
+      "AOE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 2000,
+    "cooldown": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "manaCost": [
+      80
+    ],
+    "effects": {
+      "radius": 375,
+      "radius_note": "detection only",
+      "single_target": true,
+      "duration": 16,
+      "damage": [
+        100,
+        170,
+        240,
+        310
+      ],
+      "move_speed_slow_pct": 100,
+      "base_activation_delay": 1.5,
+      "spark_damage_base": [
+        100,
+        170,
+        240,
+        310
+      ],
+      "wraith_speed_base": 550,
+      "ministun_duration": [
+        0.5,
+        0.6,
+        0.7,
+        0.8
+      ],
+      "think_interval": 0.2,
+      "wraith_vision_radius": 300,
+      "wraith_vision_duration": 3.34,
+      "maximum_targets": 1,
+      "second_wraith_damage_pct": 0,
+      "second_wraith_speed_pct": 0,
+      "creep_damage_bonus_pct": 0
+    }
+  },
+  "arc_warden_tempest_double": {
+    "behavior": [
+      "POINT"
+    ],
+    "targetType": [],
+    "castRange": 700,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "AbilityCooldown": [
+        60,
+        55,
+        50
+      ],
+      "creates_clone": true,
+      "summon_duration": [
+        15,
+        20,
+        25
+      ],
+      "bounty": [
+        180,
+        240,
+        300
+      ],
+      "duration": [
+        18,
+        21,
+        24
+      ],
+      "rune_duration": 0,
+      "invis_rune": [
+        0,
+        0,
+        0
+      ],
+      "arcane_rune": [
+        0,
+        0,
+        0
+      ],
+      "haste_rune": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "arc_warden_tempest_recall": {
+    "behavior": [
+      "NO_TARGET",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      50
+    ],
+    "manaCost": [
+      125
+    ],
+    "effects": {
+      "restore_pct": 50
+    }
+  },
+  "arc_warden_runic_infusion": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "regeneration_effect": 1,
+      "duration": 4,
+      "water_bounty_rune_duration_pct": 67,
+      "bonus_stacks_per_rune_pickup": 0,
+      "all_attribute_bonus_per_stack": 0
+    }
+  }
+}

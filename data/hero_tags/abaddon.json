@@ -1,0 +1,23 @@
+{
+  "abaddon_death_coil": [
+    "burst",
+    "heal"
+  ],
+  "abaddon_aphotic_shield": [
+    "shield",
+    "regen",
+    "aoe_damage"
+  ],
+  "abaddon_withering_mist": [
+    "antiheal"
+  ],
+  "abaddon_curse_of_avernus": [
+    "slow",
+    "attack_speed_boost",
+    "dps",
+    "building_damage"
+  ],
+  "abaddon_borrowed_time": [
+    "invulnerability"
+  ]
+}

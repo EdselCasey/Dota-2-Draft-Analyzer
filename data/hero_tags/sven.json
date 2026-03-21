@@ -1,0 +1,22 @@
+{
+  "sven_storm_hammer": [
+    "aoe",
+    "stun",
+    "burst"
+  ],
+  "sven_warcry": [
+    "aoe",
+    "movement_speed_boost",
+    "armor_gain"
+  ],
+  "sven_great_cleave": [
+    "aoe",
+    "attack_modifier"
+  ],
+  "sven_gods_strength": [
+    "attack_damage_boost"
+  ],
+  "sven_vanquisher": [
+    "attack_damage_boost"
+  ]
+}

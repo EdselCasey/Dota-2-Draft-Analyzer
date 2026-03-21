@@ -1,0 +1,31 @@
+{
+  "pangolier_swashbuckle": [
+    "aoe",
+    "slow",
+    "burst",
+    "dash",
+    "escape"
+  ],
+  "pangolier_shield_crash": [
+    "aoe",
+    "shield",
+    "burst",
+    "dash",
+    "escape"
+  ],
+  "pangolier_lucky_shot": [
+    "armor_reduction",
+    "slow"
+  ],
+  "pangolier_gyroshell": [
+    "aoe",
+    "stun",
+    "knockback",
+    "damage_reduction",
+    "movement_speed_boost",
+    "burst"
+  ],
+  "pangolier_fortune_favors_the_bold": [
+    "damage_reduction"
+  ]
+}

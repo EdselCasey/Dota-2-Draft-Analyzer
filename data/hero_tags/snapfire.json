@@ -1,0 +1,27 @@
+{
+  "snapfire_scatterblast": [
+    "slow",
+    "burst",
+    "aoe"
+  ],
+  "snapfire_mortimer_kisses": [
+    "aoe",
+    "slow",
+    "burst",
+    "vision",
+    "dps"
+  ],
+  "snapfire_firesnap_cookie": [
+    "aoe",
+    "stun",
+    "save",
+    "burst",
+    "dash",
+    "escape"
+  ],
+  "snapfire_lil_shredder": [
+    "attack_speed_boost",
+    "armor_reduction",
+    "burst"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "alchemist_berserk_potion": [
+    "attack_speed_boost",
+    "regen",
+    "dispel",
+    "movement_speed_boost"
+  ],
+  "alchemist_acid_spray": [
+    "aoe",
+    "slow",
+    "armor_reduction",
+    "dps"
+  ],
+  "alchemist_unstable_concoction": [
+    "aoe",
+    "stun",
+    "aoe_damage"
+  ],
+  "alchemist_chemical_rage": [
+    "regen",
+    "mana_regen",
+    "attack_speed_boost",
+    "movement_speed_boost"
+  ],
+  "alchemist_corrosive_weaponry": [
+    "slow",
+    "attack_modifier"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "spirit_breaker_charge_of_darkness": [
+    "aoe",
+    "stun",
+    "movement_speed_boost",
+    "vision",
+    "dash",
+    "burst"
+  ],
+  "spirit_breaker_bulldoze": [
+    "movement_speed_boost"
+  ],
+  "spirit_breaker_greater_bash": [
+    "knockback",
+    "attack_modifier",
+    "stun"
+  ],
+  "spirit_breaker_nether_strike": [
+    "burst",
+    "knockback",
+    "stun",
+    "blink"
+  ]
+}

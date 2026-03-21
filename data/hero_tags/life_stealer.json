@@ -1,0 +1,24 @@
+{
+  "life_stealer_rage": [
+    "damage_reduction",
+    "debuff_immunity"
+  ],
+  "life_stealer_open_wounds": [
+    "slow",
+    "lifesteal"
+  ],
+  "life_stealer_ghoul_frenzy": [
+    "attack_speed_boost",
+    "movement_speed_boost"
+  ],
+  "life_stealer_infest": [
+    "aoe",
+    "regen",
+    "movement_speed_boost",
+    "aoe_damage"
+  ],
+  "life_stealer_feast": [
+    "lifesteal",
+    "attack_damage_boost"
+  ]
+}

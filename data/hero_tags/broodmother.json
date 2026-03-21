@@ -1,0 +1,26 @@
+{
+  "broodmother_spawn_spiderlings": [
+    "slow",
+    "summon_units",
+    "burst"
+  ],
+  "broodmother_spin_web": [
+    "aoe",
+    "movement_speed_boost",
+    "aerial",
+    "antiheal"
+  ],
+  "broodmother_spiders_milk": [
+    "heal"
+  ],
+  "broodmother_incapacitating_bite": [
+    "disarm",
+    "slow",
+    "attack_modifier"
+  ],
+  "broodmother_insatiable_hunger": [
+    "lifesteal",
+    "attack_damage_boost",
+    "attack_speed_boost"
+  ]
+}

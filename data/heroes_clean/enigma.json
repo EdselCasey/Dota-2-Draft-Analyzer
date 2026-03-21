@@ -1,0 +1,279 @@
+{
+  "enigma_malefice": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": null,
+    "cooldown": [
+      20,
+      18,
+      16,
+      14
+    ],
+    "manaCost": [
+      100,
+      110,
+      120,
+      130
+    ],
+    "effects": {
+      "tick_rate": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "stun_duration": [
+        0.3,
+        0.5,
+        0.7,
+        0.9
+      ],
+      "shard_bonus_stun_duration_tooltip": 0.3,
+      "damage": [
+        55,
+        70,
+        85,
+        100
+      ],
+      "stun_instances": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "eidolon_spawns_per_tick": 0
+    }
+  },
+  "enigma_demonic_conversion": {
+    "behavior": [
+      "POINT",
+      "DONT_RESUME_ATTACK"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 400,
+    "cooldown": [
+      40,
+      38,
+      36,
+      34
+    ],
+    "manaCost": [
+      70,
+      80,
+      90,
+      100
+    ],
+    "effects": {
+      "spawn_count": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "split_attack_count": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "eidelon_max_health": [
+        180,
+        200,
+        220,
+        240
+      ],
+      "life_extension": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "eidelon_base_damage": [
+        16,
+        27,
+        38,
+        49
+      ],
+      "eidolon_damage_spread": 4,
+      "eidolon_bonus_damage": 0,
+      "eidolon_bonus_attack_speed": 0,
+      "eidelon_base_movespeed": [
+        280,
+        310,
+        340,
+        370
+      ],
+      "creep_max_level": 4,
+      "eidolon_magic_resist": [
+        30,
+        40,
+        50,
+        60
+      ],
+      "eidolon_attack_range": [
+        425,
+        450,
+        475,
+        500
+      ],
+      "allied_damage_pct": 45,
+      "self_modelscale": -40,
+      "spawn_offset": 100,
+      "current_health_pct": 3,
+      "eidolon_xp_bounty": 10,
+      "eidolon_gold_bounty_min": 17,
+      "eidolon_gold_bounty_max": 20,
+      "non_splitting_bounty_reduction": 50
+    }
+  },
+  "enigma_midnight_pulse": {
+    "behavior": [
+      "AOE",
+      "POINT",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 700,
+    "cooldown": [
+      40,
+      35,
+      30,
+      25
+    ],
+    "manaCost": [
+      65,
+      90,
+      115,
+      140
+    ],
+    "effects": {
+      "radius": 600,
+      "base_damage": [
+        5,
+        10,
+        15,
+        20
+      ],
+      "damage_percent": [
+        4,
+        6,
+        8,
+        10
+      ],
+      "duration": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "tick_rate": 0.5
+    }
+  },
+  "enigma_black_hole": {
+    "behavior": [
+      "AOE",
+      "POINT",
+      "CHANNELLED"
+    ],
+    "targetType": [],
+    "damageType": "PURE",
+    "castRange": 275,
+    "cooldown": [
+      180,
+      170,
+      160
+    ],
+    "manaCost": [
+      300,
+      400,
+      500
+    ],
+    "effects": {
+      "damage": [
+        100,
+        150,
+        200
+      ],
+      "radius": 420,
+      "pull_speed": 30,
+      "tick_rate": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "duration": 4,
+      "vision_radius": 800,
+      "pull_rotate_speed": 0.25,
+      "animation_rate": 0.2
+    }
+  },
+  "enigma_gravity_well": {
+    "behavior": [
+      "PASSIVE",
+      "SHOW_IN_GUIDES",
+      "SKIP_FOR_KEYBINDS",
+      "INNATE_UI",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "damageType": "NONE",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "max_dist": 500,
+      "min_dist": 200,
+      "damage_reduction": [
+        9,
+        11,
+        13,
+        15
+      ]
+    }
+  },
+  "enigma_splitting_image": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "damage_threshold": 375,
+      "damage_reset_interval": 7,
+      "eidolon_spawns": 1,
+      "non_splitting_bounty_reduction_tooltip": 50
+    }
+  },
+  "enigma_event_horizon": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "radius": 600,
+      "speed_bonus": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "vision_cone": 0.08715
+    }
+  }
+}

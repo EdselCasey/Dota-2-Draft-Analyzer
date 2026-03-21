@@ -1,0 +1,213 @@
+{
+  "alchemist_berserk_potion": {
+    "behavior": [
+      "UNIT_TARGET",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 800,
+    "cooldown": [
+      35
+    ],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "duration": 15,
+      "attack_speed": 50,
+      "hp_regen": 40,
+      "projectile_speed": 900,
+      "move_speed": 30,
+      "chemical_rage_cooldown_reduction_pct": 0
+    }
+  },
+  "alchemist_acid_spray": {
+    "behavior": [
+      "POINT",
+      "AOE"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 900,
+    "cooldown": [
+      22,
+      21,
+      20,
+      19
+    ],
+    "manaCost": [
+      120
+    ],
+    "effects": {
+      "radius": [
+        350,
+        400,
+        450,
+        500
+      ],
+      "duration": 15,
+      "damage": [
+        25,
+        30,
+        35,
+        40
+      ],
+      "damage_per_second": [
+        15,
+        25,
+        35,
+        45
+      ],
+      "armor_reduction": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "armor_allies": 0,
+      "tick_rate": 1
+    }
+  },
+  "alchemist_unstable_concoction": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AOE",
+      "HIDDEN"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": 775,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "brew_time": 5,
+      "min_stun": 0.25,
+      "max_stun": [
+        1.75,
+        2.25,
+        2.75,
+        3.25
+      ],
+      "min_damage": 0,
+      "max_damage": [
+        150,
+        220,
+        290,
+        360
+      ],
+      "projectile_speed": 900,
+      "midair_explosion_radius": 250,
+      "brew_explosion": 7,
+      "stun_duration": [
+        1.5,
+        2.0,
+        2.5,
+        3.0
+      ],
+      "damage": [
+        150,
+        220,
+        290,
+        360
+      ]
+    }
+  },
+  "alchemist_goblins_greed": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO",
+      "SELF"
+    ],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "duration": 40,
+      "bonus_gold": 2,
+      "bonus_bonus_gold": 2,
+      "bounty_multiplier": 2,
+      "bonus_gold_cap": 18,
+      "scepter_bonus_damage": 25
+    }
+  },
+  "alchemist_chemical_rage": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      60
+    ],
+    "manaCost": [
+      50,
+      75,
+      100
+    ],
+    "effects": {
+      "duration": 30,
+      "transformation_time": 0.35,
+      "base_attack_time": [
+        1.2,
+        1.1,
+        1
+      ],
+      "bonus_health": 0,
+      "bonus_health_regen": [
+        60,
+        90,
+        120
+      ],
+      "bonus_mana_regen": 0,
+      "bonus_movespeed": [
+        20,
+        30,
+        40
+      ]
+    }
+  },
+  "alchemist_corrosive_weaponry": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "max_stacks": [
+        7,
+        10,
+        13,
+        16
+      ],
+      "debuff_duration": 4,
+      "slow_per_stack": [
+        2,
+        2.5,
+        3,
+        3.5
+      ],
+      "attack_dmg_per_stack": [
+        2,
+        2.5,
+        3,
+        3.5
+      ],
+      "stacks_per_attack": 2,
+      "one_tooltip": 1
+    }
+  }
+}

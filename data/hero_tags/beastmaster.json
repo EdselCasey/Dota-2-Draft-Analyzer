@@ -1,0 +1,28 @@
+{
+  "beastmaster_wild_axes": [
+    "aoe",
+    "burst",
+    "magic_amp"
+  ],
+  "beastmaster_call_of_the_wild_boar": [
+    "slow",
+    "summon_units"
+  ],
+  "beastmaster_call_of_the_wild_hawk": [
+    "stun",
+    "summon_units"
+  ],
+  "beastmaster_inner_beast": [
+    "aoe",
+    "attack_speed_boost",
+    "magic_amp"
+  ],
+  "beastmaster_primal_roar": [
+    "stun",
+    "slow",
+    "burst"
+  ],
+  "beastmaster_rugged": [
+    "damage_reduction"
+  ]
+}

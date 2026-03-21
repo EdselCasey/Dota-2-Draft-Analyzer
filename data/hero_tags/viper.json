@@ -1,0 +1,26 @@
+{
+  "viper_poison_attack": [
+    "attack_modifier",
+    "attack_damage_boost",
+    "slow",
+    "dps",
+    "magic_amp"
+  ],
+  "viper_nethertoxin": [
+    "aoe",
+    "slow",
+    "dps"
+  ],
+  "viper_corrosive_skin": [
+    "dps",
+    "damage_reduction",
+    "slow"
+  ],
+  "viper_viper_strike": [
+    "slow",
+    "dps"
+  ],
+  "viper_predator": [
+    "attack_damage_boost"
+  ]
+}

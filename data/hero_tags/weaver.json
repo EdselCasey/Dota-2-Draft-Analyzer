@@ -1,0 +1,28 @@
+{
+  "weaver_the_swarm": [
+    "aoe",
+    "summon_units",
+    "armor_reduction",
+    "dps"
+  ],
+  "weaver_shukuchi": [
+    "aoe",
+    "slow",
+    "movement_speed_boost",
+    "burst",
+    "stealth",
+    "escape"
+  ],
+  "weaver_geminate_attack": [
+    "attack_modifier",
+    "attack_damage_boost"
+  ],
+  "weaver_rewoven": [
+    "attack_modifier"
+  ],
+  "weaver_time_lapse": [
+    "heal",
+    "mana_regen",
+    "teleport"
+  ]
+}

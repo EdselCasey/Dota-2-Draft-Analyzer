@@ -1,0 +1,187 @@
+{
+  "earthshaker_fissure": {
+    "behavior": [
+      "POINT",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      115,
+      120,
+      125,
+      130
+    ],
+    "effects": {
+      "AbilityCastRange": 1600,
+      "fissure_duration": [
+        6.5,
+        7,
+        7.5,
+        8
+      ],
+      "fissure_radius": 225,
+      "stun_duration": [
+        0.8,
+        1,
+        1.2,
+        1.4
+      ],
+      "fissure_damage": [
+        100,
+        160,
+        220,
+        280
+      ],
+      "AbilityCooldown": [
+        18,
+        17,
+        16,
+        15
+      ],
+      "free_pathing_application_radius": 150,
+      "fissure_max_distance_moved": 300,
+      "echoes_radius": 0,
+      "echoes_damage_multiplier": 0
+    }
+  },
+  "earthshaker_enchant_totem": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      45,
+      55,
+      65,
+      75
+    ],
+    "effects": {
+      "totem_damage_percentage": [
+        100,
+        200,
+        300,
+        400
+      ],
+      "AbilityCooldown": 5,
+      "scepter_height": 950,
+      "scepter_height_arcbuffer": 100,
+      "scepter_acceleration_z": 4000,
+      "scepter_acceleration_horizontal": 3000,
+      "scepter_leap_duration": 0.8,
+      "bonus_attack_range": 100
+    }
+  },
+  "earthshaker_aftershock": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "aftershock_range": 300,
+      "aftershock_damage": [
+        65,
+        90,
+        115,
+        140
+      ],
+      "aftershock_range_increase_per_level_interval": 0,
+      "aftershock_range_tooltip": 300
+    }
+  },
+  "earthshaker_echo_slam": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      150,
+      200,
+      250
+    ],
+    "effects": {
+      "echo_slam_damage_range": 700,
+      "echo_slam_echo_search_range": 700,
+      "echo_slam_echo_range": 700,
+      "echo_slam_echo_damage": [
+        70,
+        90,
+        110
+      ],
+      "echo_slam_initial_damage": [
+        100,
+        140,
+        180
+      ],
+      "AbilityCooldown": [
+        130,
+        120,
+        110
+      ]
+    }
+  },
+  "earthshaker_spirit_cairn": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "fissure_radius": 75
+    }
+  },
+  "earthshaker_slugger": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "projectile_body_on_kill": 1,
+      "projectile_body_initial_impact_radius": 225,
+      "projectile_body_speed": 1600,
+      "projectile_body_distance": 1200,
+      "projectile_body_width_creep": 175,
+      "projectile_body_width_hero": 175,
+      "projectile_body_vision": 175,
+      "projectile_body_damage_creep": [
+        30,
+        45,
+        60,
+        75
+      ],
+      "projectile_body_damage_hero": [
+        150,
+        250,
+        350,
+        450
+      ],
+      "projectile_body_damage_additional_percent_health": 7
+    }
+  }
+}

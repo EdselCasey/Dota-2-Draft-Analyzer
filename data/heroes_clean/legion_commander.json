@@ -1,0 +1,163 @@
+{
+  "legion_commander_overwhelming_odds": {
+    "behavior": [
+      "AOE",
+      "NO_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      90,
+      105,
+      120,
+      135
+    ],
+    "effects": {
+      "damage": [
+        40,
+        70,
+        100,
+        130
+      ],
+      "damage_per_unit": [
+        14,
+        16,
+        18,
+        20
+      ],
+      "damage_per_hero": [
+        40,
+        70,
+        100,
+        130
+      ],
+      "bonus_attack_speed_creeps": 0,
+      "bonus_attack_speed": [
+        50,
+        75,
+        100,
+        125
+      ],
+      "duration": 6,
+      "radius": 600,
+      "AbilityCooldown": 18
+    }
+  },
+  "legion_commander_press_the_attack": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 700,
+    "cooldown": [
+      16,
+      15,
+      14,
+      13
+    ],
+    "manaCost": [
+      90
+    ],
+    "effects": {
+      "duration": 5,
+      "move_speed": [
+        13,
+        16,
+        19,
+        22
+      ],
+      "hp_regen": [
+        24,
+        36,
+        48,
+        60
+      ],
+      "radius": 0
+    }
+  },
+  "legion_commander_moment_of_courage": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      1.7,
+      1.4,
+      1.1,
+      0.8
+    ],
+    "manaCost": [],
+    "effects": {
+      "trigger_chance": 25,
+      "buff_duration": 1,
+      "hp_leech_percent": [
+        55,
+        65,
+        75,
+        85
+      ]
+    }
+  },
+  "legion_commander_duel": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      75,
+      75,
+      75
+    ],
+    "effects": {
+      "duration": [
+        4,
+        4.5,
+        5
+      ],
+      "AbilityCastRange": 200,
+      "reward_damage": [
+        10,
+        20,
+        30
+      ],
+      "damage_reduction_pct": 0,
+      "AbilityCooldown": [
+        60,
+        55,
+        50
+      ]
+    }
+  },
+  "legion_commander_outfight_them": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "heal_bonus_pct": [
+        30,
+        40,
+        50,
+        60
+      ],
+      "duration": 4
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "legion_commander_overwhelming_odds": [
+    "aoe",
+    "aoe_damage",
+    "shield",
+    "attack_speed_boost"
+  ],
+  "legion_commander_press_the_attack": [
+    "regen",
+    "dispel",
+    "save",
+    "movement_speed_boost"
+  ],
+  "legion_commander_duel": [
+    "taunt",
+    "attack_damage_boost"
+  ],
+  "legion_commander_outfight_them": [
+    "heal"
+  ],
+  "legion_commander_moment_of_courage": [
+    "lifesteal",
+    "attack_modifier",
+    "attack_speed_boost"
+  ]
+}

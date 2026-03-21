@@ -1,0 +1,365 @@
+{
+  "warlock_fatal_bonds": {
+    "behavior": [
+      "UNIT_TARGET",
+      "IGNORE_BACKSWING",
+      "DONT_PROC_OTHER_ABILITIES"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 1000,
+    "cooldown": [
+      42,
+      34,
+      26,
+      18
+    ],
+    "manaCost": [
+      120,
+      130,
+      140,
+      150
+    ],
+    "effects": {
+      "count": 6,
+      "damage_share_percentage": [
+        15,
+        18,
+        21,
+        24
+      ],
+      "duration": 18,
+      "search_aoe": 700
+    }
+  },
+  "warlock_shadow_word": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "BOTH",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": null,
+    "cooldown": [],
+    "manaCost": [
+      110,
+      120,
+      130,
+      140
+    ],
+    "effects": {
+      "damage": [
+        15,
+        25,
+        35,
+        45
+      ],
+      "duration": 10,
+      "tick_interval": 0.5,
+      "spell_aoe": 225,
+      "AbilityCooldown": [
+        15,
+        14,
+        13,
+        12
+      ]
+    }
+  },
+  "warlock_upheaval": {
+    "behavior": [
+      "POINT",
+      "CHANNELLED",
+      "AOE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 800,
+    "cooldown": [],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "aoe": [
+        575,
+        600,
+        625,
+        650
+      ],
+      "slow_per_second": [
+        11,
+        14,
+        17,
+        20
+      ],
+      "duration": 1,
+      "max_slow": [
+        55,
+        70,
+        85,
+        100
+      ],
+      "damage_per_second": 10,
+      "max_damage": [
+        35,
+        60,
+        85,
+        110
+      ],
+      "damage_tick_interval": 1,
+      "AbilityCooldown": [
+        60,
+        50,
+        40,
+        30
+      ],
+      "imps_interval": 2,
+      "minor_imp_duration": 15
+    }
+  },
+  "warlock_rain_of_chaos": {
+    "behavior": [
+      "POINT",
+      "AOE"
+    ],
+    "targetType": [],
+    "castRange": 900,
+    "cooldown": [
+      165
+    ],
+    "manaCost": [
+      200,
+      400,
+      600
+    ],
+    "effects": {
+      "golem_duration": 60,
+      "stun_duration": 0.8,
+      "aoe": 600,
+      "golem_hp": [
+        1500,
+        2250,
+        3000
+      ],
+      "golem_dmg": [
+        100,
+        150,
+        200
+      ],
+      "golem_armor": [
+        8,
+        12,
+        14
+      ],
+      "golem_movement_speed": [
+        320,
+        340,
+        360
+      ],
+      "golem_health_regen": [
+        25,
+        50,
+        75
+      ],
+      "golem_gold_bounty": [
+        100,
+        150,
+        200
+      ],
+      "stun_delay": 0.5,
+      "tooltip_golem_armor": [
+        8,
+        12,
+        14
+      ],
+      "bonus_slow_resistance": 60
+    }
+  },
+  "warlock_golem_flaming_fists": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "damageType": "PURE",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "damage": [
+        40,
+        50,
+        60
+      ],
+      "radius": [
+        300,
+        300,
+        300
+      ]
+    }
+  },
+  "warlock_golem_permanent_immolation": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "aura_radius": 300,
+      "aura_damage": [
+        30,
+        45,
+        60
+      ],
+      "health_bonus_pct": 0,
+      "share_damage": 0,
+      "tick_interval": 0.5,
+      "manahealthboost": 0,
+      "manaboost_scale_mult": 0.25
+    }
+  },
+  "warlock_imp_explode": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "explosion_delay": 0.3,
+      "explosion_radius": 400,
+      "explosion_dmg": [
+        20,
+        65,
+        110,
+        155,
+        200
+      ],
+      "explosion_nonhero_reduce": 50,
+      "bonus_hp": [
+        0,
+        80,
+        160,
+        240,
+        320
+      ],
+      "bonus_dmg": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "bonus_movespeed": [
+        0,
+        15,
+        30,
+        45,
+        60
+      ]
+    }
+  },
+  "warlock_imp_explode_major": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "explosion_delay": 0.2,
+      "explosion_radius": 600,
+      "explosion_dmg": [
+        100,
+        200,
+        300,
+        400,
+        500
+      ],
+      "explosion_nonhero_reduce": 50,
+      "bonus_hp": [
+        0,
+        100,
+        200,
+        300,
+        400
+      ],
+      "bonus_dmg": [
+        0,
+        8,
+        16,
+        24,
+        32
+      ],
+      "bonus_movespeed": [
+        0,
+        15,
+        30,
+        45,
+        60
+      ]
+    }
+  },
+  "warlock_eldritch_summoning": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "minor_imp_duration": 15,
+      "imp_level": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "golem_can_summon": 0,
+      "tooltip_imp_health": [
+        50,
+        130,
+        210,
+        290,
+        370
+      ],
+      "tooltip_imp_explode": [
+        20,
+        65,
+        110,
+        155,
+        200
+      ],
+      "tooltip_imp_explode_radius": 400
+    }
+  },
+  "warlock_black_grimoire": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "tooltip_xp": 200,
+      "tooltip_seconds": 420
+    }
+  }
+}

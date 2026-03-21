@@ -1,0 +1,29 @@
+{
+  "dawnbreaker_starbreaker": [
+    "aoe",
+    "stun",
+    "aoe_damage",
+    "burst"
+  ],
+  "dawnbreaker_celestial_hammer": [
+    "aoe",
+    "burst",
+    "slow",
+    "dps",
+    "dash",
+    "escape"
+  ],
+  "dawnbreaker_luminosity": [
+    "attack_modifier",
+    "attack_damage_boost",
+    "heal"
+  ],
+  "dawnbreaker_solar_guardian": [
+    "aoe",
+    "channelled",
+    "stun",
+    "heal",
+    "global",
+    "teleport"
+  ]
+}

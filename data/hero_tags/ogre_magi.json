@@ -1,0 +1,18 @@
+{
+  "ogre_magi_fireblast": [
+    "stun",
+    "burst"
+  ],
+  "ogre_magi_ignite": [
+    "aoe",
+    "slow",
+    "dps"
+  ],
+  "ogre_magi_bloodlust": [
+    "attack_speed_boost",
+    "movement_speed_boost"
+  ],
+  "ogre_magi_multicast": [
+    "magic_amp"
+  ]
+}

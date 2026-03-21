@@ -1,0 +1,20 @@
+{
+  "doom_bringer_lvl_pain": [
+    "attack_damage_boost"
+  ],
+  "doom_bringer_scorched_earth": [
+    "aoe",
+    "movement_speed_boost",
+    "dps"
+  ],
+  "doom_bringer_infernal_blade": [
+    "stun",
+    "attack_modifier",
+    "burst"
+  ],
+  "doom_bringer_doom": [
+    "dps",
+    "antiheal",
+    "silence"
+  ]
+}

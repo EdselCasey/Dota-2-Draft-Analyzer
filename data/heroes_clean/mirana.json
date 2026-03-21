@@ -1,0 +1,195 @@
+{
+  "mirana_arrow": {
+    "behavior": [
+      "DIRECTIONAL",
+      "POINT",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 3000,
+    "cooldown": [],
+    "manaCost": [
+      90
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        19,
+        18,
+        17,
+        16
+      ],
+      "arrow_speed": 900,
+      "arrow_width": 115,
+      "arrow_range": 3000,
+      "arrow_max_stunrange": 1500,
+      "arrow_min_stun": 0.01,
+      "arrow_max_stun": [
+        2.6,
+        3.4,
+        4.2,
+        5
+      ],
+      "arrow_bonus_damage": 180,
+      "arrow_vision": 400
+    }
+  },
+  "mirana_invis": {
+    "behavior": [
+      "NO_TARGET",
+      "DONT_RESUME_ATTACK",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      125
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        120,
+        110,
+        100
+      ],
+      "fade_delay": [
+        2.5,
+        2,
+        1.5
+      ],
+      "duration": 18,
+      "bonus_movement_speed": [
+        9,
+        12,
+        15
+      ],
+      "evasion": 0,
+      "bonus_outgoing_damage_pct": [
+        9,
+        12,
+        15
+      ]
+    }
+  },
+  "mirana_solar_flare": {
+    "behavior": [
+      "NO_TARGET",
+      "DONT_RESUME_ATTACK",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      125
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        120,
+        110,
+        100
+      ],
+      "smoothness": 0.015,
+      "increase_rate": [
+        10,
+        15,
+        20
+      ],
+      "max_total_increase": [
+        70,
+        110,
+        150
+      ],
+      "day_vision_multiplier": 0,
+      "ally_pct": 50,
+      "duration": 16,
+      "max_damage_time": 6,
+      "evasion": 0
+    }
+  },
+  "mirana_leap": {
+    "behavior": [
+      "IGNORE_BACKSWING",
+      "ROOT_DISABLES",
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [
+      50
+    ],
+    "effects": {
+      "leap_distance": 650,
+      "leap_speed": 1300,
+      "leap_acceleration": 6000,
+      "leap_speedbonus": [
+        6,
+        12,
+        18,
+        24
+      ],
+      "leap_speedbonus_as": [
+        25,
+        50,
+        75,
+        100
+      ],
+      "leap_bonus_duration": 5,
+      "additional_charges": 0,
+      "crit_damage_pct": 0,
+      "root_radius": 0,
+      "root_duration": 0
+    }
+  },
+  "mirana_starfall": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      80,
+      90,
+      100,
+      110
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "damage": [
+        75,
+        150,
+        225,
+        300
+      ],
+      "secondary_starfall_damage_percent": 70,
+      "starfall_radius": 675,
+      "starfall_secondary_radius": 675,
+      "starstruck_blind_pct": 0,
+      "starstruck_duration": 0
+    }
+  },
+  "mirana_selemenes_faithful": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bonus_lotus": 50
+    }
+  }
+}

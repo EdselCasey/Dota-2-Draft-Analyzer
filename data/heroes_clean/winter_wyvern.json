@@ -1,0 +1,229 @@
+{
+  "winter_wyvern_arctic_burn": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      26,
+      24,
+      22,
+      20
+    ],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "duration": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "attack_range_bonus": [
+        250,
+        275,
+        300,
+        325
+      ],
+      "percent_damage": [
+        4,
+        6,
+        8,
+        10
+      ],
+      "tick_rate": 0.5,
+      "damage_duration": 5,
+      "move_slow": [
+        16,
+        24,
+        32,
+        40
+      ],
+      "projectile_speed_bonus": 500,
+      "tree_destruction_radius": 175,
+      "attack_point": 0.1,
+      "max_attacks": 5
+    }
+  },
+  "winter_wyvern_splinter_blast": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AOE"
+    ],
+    "targetTeam": "BOTH",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 1150,
+    "cooldown": [
+      6
+    ],
+    "manaCost": [
+      105,
+      115,
+      125,
+      135
+    ],
+    "effects": {
+      "projectile_speed": 1200,
+      "projectile_max_time": 1,
+      "split_radius": 500,
+      "bonus_movespeed": [
+        -28,
+        -32,
+        -36,
+        -40
+      ],
+      "movespeed_slow_tooltip": [
+        28,
+        32,
+        36,
+        40
+      ],
+      "slow_duration": 4,
+      "secondary_projectile_speed": 1000,
+      "damage": [
+        80,
+        160,
+        240,
+        320
+      ],
+      "stun_duration": 0
+    }
+  },
+  "winter_wyvern_cold_embrace": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO",
+      "CREEP"
+    ],
+    "castRange": null,
+    "cooldown": [
+      24,
+      21,
+      18,
+      15
+    ],
+    "manaCost": [
+      50,
+      60,
+      70,
+      80
+    ],
+    "effects": {
+      "duration": 4,
+      "heal_additive": [
+        40,
+        45,
+        50,
+        55
+      ],
+      "heal_percentage": [
+        2.25,
+        3,
+        3.75,
+        4.5
+      ],
+      "tick_interval": 0.25
+    }
+  },
+  "winter_wyvern_winters_curse": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AOE",
+      "DONT_PROC_OTHER_ABILITIES"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "CREEP"
+    ],
+    "castRange": 800,
+    "cooldown": [
+      100,
+      90,
+      80
+    ],
+    "manaCost": [
+      150,
+      200,
+      250
+    ],
+    "effects": {
+      "radius": 525,
+      "damage_reduction": 100,
+      "bonus_attack_speed": 65,
+      "duration": 2,
+      "max_duration": [
+        4,
+        5.5,
+        7
+      ],
+      "bonus_duration_per_hero": 2,
+      "bonus_duration_per_creep": 0.5,
+      "transfer_on_death": 0,
+      "transfer_duration_pct": 0
+    }
+  },
+  "winter_wyvern_eldwurm_scholar": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "share_percentage": 20,
+      "three_tooltip": 3
+    }
+  },
+  "winter_wyvern_essence_of_the_blueheart": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "restore_pct": 24
+    }
+  },
+  "winter_wyvern_dragon_sight": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "attack_range_per_damage": [
+        40,
+        30,
+        20,
+        10
+      ],
+      "damage_per_ten_attack_range_tooltip": [
+        0.25,
+        0.33,
+        0.5,
+        1
+      ],
+      "attack_range_min": 400
+    }
+  }
+}

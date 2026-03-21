@@ -1,0 +1,255 @@
+{
+  "venomancer_area_poison": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 900,
+    "cooldown": [
+      60
+    ],
+    "manaCost": [
+      150
+    ],
+    "effects": {
+      "duration": 15,
+      "radius": 650
+    }
+  },
+  "venomancer_venomous_gale": {
+    "behavior": [
+      "AOE",
+      "POINT"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 800,
+    "cooldown": [],
+    "manaCost": [
+      95,
+      105,
+      115,
+      125
+    ],
+    "effects": {
+      "duration": 15,
+      "strike_damage": [
+        25,
+        50,
+        75,
+        100
+      ],
+      "tick_damage": [
+        10,
+        40,
+        70,
+        100
+      ],
+      "tick_interval": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "movement_slow": [
+        -35,
+        -40,
+        -45,
+        -50
+      ],
+      "radius": 125,
+      "speed": [
+        1200,
+        1200,
+        1200,
+        1200
+      ],
+      "create_wards": 0,
+      "num_created_wards_tooltip": 0,
+      "ward_hp_dmg_pct": 0,
+      "AbilityCooldown": [
+        21,
+        20,
+        19,
+        18
+      ]
+    }
+  },
+  "venomancer_poison_sting": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "duration": [
+        6,
+        9,
+        12,
+        15
+      ],
+      "damage": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "movement_speed": [
+        -8,
+        -10,
+        -12,
+        -14
+      ],
+      "hp_regen_reduction": 0
+    }
+  },
+  "venomancer_plague_ward": {
+    "behavior": [
+      "POINT"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 850,
+    "cooldown": [],
+    "manaCost": [
+      24,
+      26,
+      28,
+      30
+    ],
+    "effects": {
+      "AbilityCooldown": 5,
+      "can_target": 0,
+      "gold_bounty_pct": 100,
+      "max_charges": 0,
+      "duration": 40,
+      "ward_multiplier": 1,
+      "ward_model_scale": 1,
+      "ward_hp_tooltip": [
+        150,
+        250,
+        350,
+        450
+      ],
+      "ward_damage_tooltip": [
+        16,
+        24,
+        32,
+        40
+      ]
+    }
+  },
+  "venomancer_noxious_plague": {
+    "behavior": [
+      "UNIT_TARGET",
+      "DONT_RESUME_ATTACK"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 900,
+    "cooldown": [
+      100,
+      90,
+      80
+    ],
+    "manaCost": [
+      200,
+      300,
+      400
+    ],
+    "effects": {
+      "debuff_duration": 5,
+      "impact_damage": [
+        200,
+        300,
+        400
+      ],
+      "health_damage": [
+        3,
+        4,
+        5
+      ],
+      "debuff_radius": 800,
+      "movement_slow_max": 50,
+      "movement_slow_min": 15,
+      "attack_slow": 0,
+      "spread_count": 1,
+      "projectile_speed": 1200
+    }
+  },
+  "venomancer_poison_nova": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "radius": 900,
+      "start_radius": 255,
+      "duration": 10,
+      "damage": 3,
+      "magic_resist": -20,
+      "speed": 550,
+      "trigger_cd": 10
+    }
+  },
+  "venomancer_latent_poison": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 800,
+    "cooldown": [
+      20
+    ],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "duration_damage": 20,
+      "movement_slow": -10,
+      "projectile_speed": 1800,
+      "damage_interval": 1,
+      "duration": 7,
+      "explosion_damage": 300,
+      "explosion_stun_duration": 1.6
+    }
+  },
+  "venomancer_sepsis": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bonus_dmg_per_debuff_pct": 8,
+      "apply_from_ward_attacks": 0
+    }
+  }
+}

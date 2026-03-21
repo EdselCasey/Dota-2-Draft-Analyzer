@@ -1,0 +1,222 @@
+{
+  "slark_fish_bait": {
+    "behavior": [
+      "UNIT_TARGET",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 1100,
+    "cooldown": [
+      9
+    ],
+    "manaCost": [
+      50
+    ],
+    "effects": {
+      "slow_duration": 6,
+      "movement_speed": 30,
+      "attack_speed": 75
+    }
+  },
+  "slark_depth_shroud": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 400,
+    "cooldown": [
+      75
+    ],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "duration": 2,
+      "radius": 225
+    }
+  },
+  "slark_dark_pact": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      65
+    ],
+    "effects": {
+      "delay": 1.5,
+      "pulse_duration": 1,
+      "radius": 325,
+      "total_damage": [
+        75,
+        150,
+        225,
+        300
+      ],
+      "total_pulses": 10,
+      "pulse_interval": 0.1,
+      "self_damage_pct": 30,
+      "AbilityCooldown": [
+        9,
+        8,
+        7,
+        6
+      ]
+    }
+  },
+  "slark_pounce": {
+    "behavior": [
+      "NO_TARGET",
+      "ROOT_DISABLES"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "pounce_damage": 0,
+      "pounce_distance": 700,
+      "pounce_speed": 933.33,
+      "pounce_acceleration": 7000,
+      "pounce_radius": 120,
+      "leash_duration": [
+        2.5,
+        2.75,
+        3,
+        3.25
+      ],
+      "leash_radius": 400,
+      "essence_stacks": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "AbilityCooldown": [
+        24,
+        20,
+        16,
+        12
+      ]
+    }
+  },
+  "slark_essence_shift": {
+    "behavior": [
+      "PASSIVE",
+      "AURA",
+      "NOT_LEARNABLE",
+      "HIDDEN",
+      "FORCE_NO_INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "agi_gain": 3,
+      "stat_loss": 1,
+      "duration": 15,
+      "steal_radius": 300,
+      "max_stacks_per_hero": 0
+    }
+  },
+  "slark_shadow_dance": {
+    "behavior": [
+      "IMMEDIATE",
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      50,
+      40,
+      30
+    ],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "bonus_movement_speed": [
+        24,
+        36,
+        48
+      ],
+      "bonus_regen": [
+        60,
+        90,
+        120
+      ],
+      "activation_delay": 0.5,
+      "neutral_disable": 2,
+      "duration": [
+        4,
+        4.25,
+        4.5
+      ],
+      "fade_time": 0
+    }
+  },
+  "slark_saltwater_shiv": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AUTOCAST",
+      "ATTACK",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 150,
+    "cooldown": [
+      10,
+      8,
+      6,
+      4
+    ],
+    "manaCost": [
+      20
+    ],
+    "effects": {
+      "duration": 12,
+      "agi_bonus_damage_factor": 0,
+      "base_health_rest_steal": 0,
+      "health_rest_steal": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "regen_steal": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "ms_steal": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "melee_range_buffer": 0
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "puck_illusory_orb": [
+    "aoe",
+    "vision",
+    "burst",
+    "teleport",
+    "escape"
+  ],
+  "puck_waning_rift": [
+    "aoe",
+    "silence",
+    "blink",
+    "escape",
+    "burst"
+  ],
+  "puck_phase_shift": [
+    "escape",
+    "invulnerability"
+  ],
+  "puck_dream_coil": [
+    "aoe",
+    "stun",
+    "leash",
+    "burst"
+  ]
+}

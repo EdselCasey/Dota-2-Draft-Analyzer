@@ -1,0 +1,25 @@
+{
+  "largo_amphibian_rhapsody": [
+    "aoe",
+    "movement_speed_boost",
+    "attack_damage_boost",
+    "heal",
+    "magic_amp",
+    "armor_gain"
+  ],
+  "largo_frogstomp": [
+    "aoe",
+    "stun",
+    "slow"
+  ],
+  "largo_croak_of_genius": [
+    "magic_amp",
+    "dps"
+  ],
+  "largo_catchy_lick": [
+    "regen",
+    "dispel",
+    "burst",
+    "forced_movement"
+  ]
+}

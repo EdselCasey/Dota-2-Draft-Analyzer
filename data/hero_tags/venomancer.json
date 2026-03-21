@@ -1,0 +1,28 @@
+{
+  "venomancer_venomous_gale": [
+    "aoe",
+    "slow",
+    "burst",
+    "summon_units"
+  ],
+  "venomancer_poison_sting": [
+    "slow",
+    "antiheal",
+    "dps",
+    "attack_modifier"
+  ],
+  "venomancer_noxious_plague": [
+    "aoe",
+    "slow",
+    "dps"
+  ],
+  "venomancer_plague_ward": [
+    "summon_units",
+    "push",
+    "vision",
+    "zone_control"
+  ],
+  "venomancer_septic_shock": [
+    "attack_damage_boost"
+  ]
+}

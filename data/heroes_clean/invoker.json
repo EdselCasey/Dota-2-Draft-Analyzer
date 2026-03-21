@@ -1,0 +1,1275 @@
+{
+  "invoker_quas": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "IGNORE_CHANNEL",
+      "IGNORE_INVISIBLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [
+      0
+    ],
+    "effects": {
+      "max_level": 7,
+      "hp_regen_per_instance": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "upgrade_at_level": 0,
+      "strength_bonus": 1,
+      "scepter_bonus_levels": 1,
+      "facet_bonus_levels": 0
+    }
+  },
+  "invoker_wex": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "IGNORE_CHANNEL",
+      "IGNORE_INVISIBLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [
+      0
+    ],
+    "effects": {
+      "max_level": 7,
+      "move_speed_per_instance": [
+        0.6,
+        1.2,
+        1.8,
+        2.4,
+        3,
+        3.6,
+        4.2,
+        4.8,
+        5.4,
+        6
+      ],
+      "attack_speed_per_instance": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "upgrade_at_level": 0,
+      "agility_bonus": 1,
+      "scepter_bonus_levels": 1,
+      "facet_bonus_levels": 0
+    }
+  },
+  "invoker_exort": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "IGNORE_CHANNEL",
+      "IGNORE_INVISIBLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [
+      0
+    ],
+    "effects": {
+      "max_level": 7,
+      "bonus_damage_per_instance": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "upgrade_at_level": 0,
+      "intelligence_bonus": 1,
+      "scepter_bonus_levels": 1,
+      "facet_bonus_levels": 0
+    }
+  },
+  "invoker_empty1": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "invoker_empty2": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "invoker_invoke": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "SHOW_IN_GUIDES",
+      "NOT_LEARNABLE",
+      "IGNORE_CHANNEL",
+      "IGNORE_INVISIBLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      7
+    ],
+    "manaCost": [
+      0
+    ],
+    "effects": {
+      "max_invoked_spells": 2,
+      "cooldown_reduction_per_orb": 0.3
+    }
+  },
+  "invoker_attribute_bonus": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "attribute_bonus_per_level": 6
+    }
+  },
+  "invoker_cold_snap": {
+    "behavior": [
+      "UNIT_TARGET",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "IGNORE_BACKSWING",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 1000,
+    "cooldown": [],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "AbilityCooldown": 18,
+      "duration": [
+        3,
+        3.4,
+        3.8,
+        4.2,
+        4.6,
+        5,
+        5.4,
+        5.8,
+        6.2,
+        6.6
+      ],
+      "freeze_duration": 0.4,
+      "freeze_cooldown": [
+        0.8,
+        0.77,
+        0.74,
+        0.71,
+        0.68,
+        0.65,
+        0.62,
+        0.59,
+        0.56,
+        0.53
+      ],
+      "freeze_damage": [
+        28,
+        36,
+        44,
+        52,
+        60,
+        68,
+        76,
+        84,
+        92,
+        100
+      ],
+      "freeze_heal": 0,
+      "damage_trigger": 10
+    }
+  },
+  "invoker_ghost_walk": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "IGNORE_CHANNEL",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      175
+    ],
+    "effects": {
+      "AbilityCooldown": 32,
+      "duration": 60,
+      "area_of_effect": 450,
+      "enemy_slow": [
+        -20,
+        -25,
+        -30,
+        -35,
+        -40,
+        -45,
+        -50,
+        -55,
+        -60,
+        -65
+      ],
+      "self_slow": [
+        -20,
+        -15,
+        -10,
+        -5,
+        0,
+        5,
+        10,
+        15,
+        20,
+        25
+      ],
+      "aura_fade_time": 2,
+      "health_regen": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "mana_regen": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "apply_ice_wall_debuff": 0
+    }
+  },
+  "invoker_tornado": {
+    "behavior": [
+      "POINT",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "IGNORE_BACKSWING",
+      "SHOW_IN_GUIDES",
+      "OVERSHOOT"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 2000,
+    "cooldown": [],
+    "manaCost": [
+      140
+    ],
+    "effects": {
+      "AbilityCooldown": 27,
+      "travel_distance": [
+        1500,
+        1800,
+        2100,
+        2400,
+        2700,
+        3000,
+        3300,
+        3600,
+        3900,
+        4200
+      ],
+      "travel_speed": 1000,
+      "area_of_effect": 200,
+      "vision_distance": 200,
+      "end_vision_duration": 1.75,
+      "lift_duration": [
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2,
+        2.2,
+        2.4,
+        2.6,
+        2.8,
+        3
+      ],
+      "base_damage": 50,
+      "quas_damage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "wex_damage": [
+        45,
+        90,
+        135,
+        180,
+        225,
+        270,
+        315,
+        360,
+        405,
+        450
+      ],
+      "twister_distance_interval": 0,
+      "twister_radius": 150,
+      "twister_damage": 0,
+      "twister_duration": 0,
+      "twister_tick_rate": 0.25
+    }
+  },
+  "invoker_emp": {
+    "behavior": [
+      "POINT",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "AOE",
+      "IGNORE_BACKSWING",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 950,
+    "cooldown": [
+      27
+    ],
+    "manaCost": [
+      125
+    ],
+    "effects": {
+      "delay": 2.9,
+      "area_of_effect": 675,
+      "mana_burned": [
+        100,
+        175,
+        250,
+        325,
+        400,
+        475,
+        550,
+        625,
+        700,
+        775
+      ],
+      "damage_per_mana_pct": 60,
+      "drag_speed": 0,
+      "self_mana_restore_pct": 25,
+      "damage_barriers": 0
+    }
+  },
+  "invoker_alacrity": {
+    "behavior": [
+      "UNIT_TARGET",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "DONT_RESUME_ATTACK",
+      "IGNORE_BACKSWING",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO",
+      "CREEP"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 700,
+    "cooldown": [
+      15
+    ],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "bonus_attack_speed": [
+        10,
+        22,
+        34,
+        46,
+        58,
+        70,
+        82,
+        94,
+        106,
+        118
+      ],
+      "bonus_damage": [
+        10,
+        22,
+        34,
+        46,
+        58,
+        70,
+        82,
+        94,
+        106,
+        118
+      ],
+      "bonus_attack_range": 0,
+      "duration": 9
+    }
+  },
+  "invoker_chaos_meteor": {
+    "behavior": [
+      "POINT",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "IGNORE_BACKSWING",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 700,
+    "cooldown": [],
+    "manaCost": [
+      200
+    ],
+    "effects": {
+      "AbilityCooldown": 50,
+      "land_time": 1.3,
+      "area_of_effect": 275,
+      "travel_distance": [
+        465,
+        615,
+        780,
+        930,
+        1095,
+        1245,
+        1410,
+        1575,
+        1725,
+        1890
+      ],
+      "travel_speed": 300,
+      "damage_interval": 0.5,
+      "vision_distance": 500,
+      "end_vision_duration": 3,
+      "main_damage": [
+        55,
+        80,
+        105,
+        130,
+        155,
+        180,
+        205,
+        220,
+        235,
+        250
+      ],
+      "burn_duration": 3,
+      "burn_dps": [
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45,
+        50,
+        55
+      ],
+      "meteor_count": 1,
+      "stun_duration": 0
+    }
+  },
+  "invoker_sun_strike": {
+    "behavior": [
+      "POINT",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "AOE",
+      "IGNORE_BACKSWING",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "damageType": "PURE",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      175
+    ],
+    "effects": {
+      "delay": 1.7,
+      "area_of_effect": 175,
+      "AbilityCooldown": 23,
+      "damage": [
+        175,
+        225,
+        275,
+        325,
+        375,
+        425,
+        475,
+        525,
+        575,
+        625
+      ],
+      "vision_distance": 400,
+      "vision_duration": 4,
+      "cataclysm_count": 0,
+      "cataclysm_cooldown": 90,
+      "cataclysm_min_range": 90,
+      "cataclysm_max_range": 180,
+      "cataclysm_damage_pct": 75,
+      "create_forged_spirit_on_hero_damage": 0
+    }
+  },
+  "invoker_forge_spirit": {
+    "behavior": [
+      "NO_TARGET",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "IGNORE_BACKSWING",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      27
+    ],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "spirit_damage": [
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100,
+        110
+      ],
+      "spirit_mana": [
+        100,
+        150,
+        200,
+        250,
+        300,
+        350,
+        400,
+        450,
+        500,
+        550
+      ],
+      "spirit_armor": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "spirit_attack_range": [
+        305,
+        360,
+        415,
+        470,
+        525,
+        580,
+        635,
+        690,
+        745,
+        800
+      ],
+      "spirit_hp": [
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900,
+        1000,
+        1100,
+        1200
+      ],
+      "spirit_duration": [
+        24,
+        30,
+        36,
+        42,
+        48,
+        54,
+        60,
+        66,
+        72,
+        78
+      ],
+      "armor_per_attack": [
+        0.8,
+        0.9,
+        1,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7
+      ],
+      "extra_spirit_count_quas": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "extra_spirit_count_exort": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  "invoker_forge_spirit_ad": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "spirit_damage": [
+        30,
+        50,
+        70,
+        90
+      ],
+      "spirit_mana": [
+        150,
+        250,
+        350,
+        450
+      ],
+      "spirit_armor": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "spirit_attack_range": [
+        360,
+        470,
+        580,
+        690
+      ],
+      "spirit_hp": [
+        400,
+        600,
+        800,
+        1000
+      ],
+      "spirit_duration": [
+        30,
+        42,
+        54,
+        66
+      ],
+      "armor_per_attack": [
+        0.9,
+        1.1,
+        1.3,
+        1.5
+      ],
+      "extra_spirit_count_quas": 0,
+      "extra_spirit_count_exort": 0,
+      "spirit_count_ad": [
+        1,
+        2,
+        2,
+        3
+      ]
+    }
+  },
+  "forged_spirit_melting_strike": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "armor_removed": [
+        0.8,
+        0.9,
+        1,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7
+      ],
+      "max_armor_removed": 20,
+      "duration": 5
+    }
+  },
+  "invoker_ice_wall": {
+    "behavior": [
+      "NO_TARGET",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "IGNORE_BACKSWING",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      23
+    ],
+    "manaCost": [
+      125
+    ],
+    "effects": {
+      "duration": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "slow": [
+        -20,
+        -40,
+        -60,
+        -80,
+        -100,
+        -120,
+        -140,
+        -160,
+        -180,
+        -200
+      ],
+      "slow_duration": 2,
+      "damage_per_second": [
+        30,
+        36,
+        42,
+        48,
+        54,
+        60,
+        66,
+        72,
+        78,
+        84
+      ],
+      "tick_interval": 0.5,
+      "wall_place_distance": 200,
+      "wall_total_length": 1200,
+      "wall_width": 105,
+      "vector_cast_range": 0,
+      "glacier_formation_delay": 1.3,
+      "glacier_formation_speed": 600,
+      "root_delay": 0,
+      "root_duration": 0,
+      "root_damage": 0
+    }
+  },
+  "invoker_deafening_blast": {
+    "behavior": [
+      "POINT",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "IGNORE_BACKSWING",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 1000,
+    "cooldown": [
+      36
+    ],
+    "manaCost": [
+      250
+    ],
+    "effects": {
+      "travel_distance": 1000,
+      "travel_speed": 1100,
+      "radius_start": 175,
+      "radius_end": 225,
+      "end_vision_duration": 1.75,
+      "damage": [
+        70,
+        110,
+        150,
+        190,
+        230,
+        270,
+        310,
+        350,
+        390,
+        430
+      ],
+      "knockback_duration": [
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2
+      ],
+      "disarm_duration": [
+        1.5,
+        2,
+        2.5,
+        3,
+        3.5,
+        4,
+        4.5,
+        5,
+        5.5,
+        6
+      ],
+      "radial_count": 1
+    }
+  },
+  "invoker_mastermind": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "xp_on_deny_percent": 25
+    }
+  },
+  "invoker_cold_snap_ad": {
+    "behavior": [
+      "UNIT_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 1000,
+    "cooldown": [],
+    "manaCost": [
+      90
+    ],
+    "effects": {
+      "AbilityCooldown": 20,
+      "duration": [
+        3.5,
+        4.3,
+        5.1,
+        6
+      ],
+      "freeze_duration": 0.4,
+      "freeze_cooldown": [
+        0.8,
+        0.75,
+        0.7,
+        0.65
+      ],
+      "freeze_damage": [
+        16,
+        30,
+        43,
+        56
+      ],
+      "damage_trigger": 10
+    }
+  },
+  "invoker_ghost_walk_ad": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "IGNORE_CHANNEL"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      200
+    ],
+    "effects": {
+      "AbilityCooldown": 45,
+      "duration": 100,
+      "area_of_effect": 400,
+      "enemy_slow": [
+        -20,
+        -30,
+        -40,
+        -50
+      ],
+      "self_slow": [
+        -15,
+        -5,
+        5,
+        15
+      ],
+      "aura_fade_time": 2
+    }
+  },
+  "invoker_tornado_ad": {
+    "behavior": [
+      "POINT",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 2000,
+    "cooldown": [],
+    "manaCost": [
+      140
+    ],
+    "effects": {
+      "AbilityCooldown": 30,
+      "travel_distance": [
+        1200,
+        1865,
+        2530,
+        3200
+      ],
+      "travel_speed": 1000,
+      "area_of_effect": 200,
+      "vision_distance": 200,
+      "end_vision_duration": 1.75,
+      "lift_duration": [
+        1.1,
+        1.6,
+        2.1,
+        2.6
+      ],
+      "base_damage": 70,
+      "quas_damage": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "wex_damage": [
+        90,
+        165,
+        240,
+        315
+      ]
+    }
+  },
+  "invoker_emp_ad": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 950,
+    "cooldown": [
+      30
+    ],
+    "manaCost": [
+      125
+    ],
+    "effects": {
+      "delay": 2.9,
+      "area_of_effect": 675,
+      "mana_burned": [
+        100,
+        250,
+        400,
+        550
+      ],
+      "damage_per_mana_pct": 60,
+      "self_mana_restore_pct": 25
+    }
+  },
+  "invoker_alacrity_ad": {
+    "behavior": [
+      "UNIT_TARGET",
+      "DONT_RESUME_ATTACK",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO",
+      "CREEP"
+    ],
+    "castRange": 650,
+    "cooldown": [
+      17
+    ],
+    "manaCost": [
+      90
+    ],
+    "effects": {
+      "bonus_attack_speed": [
+        22,
+        42,
+        62,
+        82
+      ],
+      "bonus_damage": [
+        22,
+        42,
+        62,
+        82
+      ],
+      "duration": 9
+    }
+  },
+  "invoker_sun_strike_ad": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "PURE",
+    "castRange": 0,
+    "cooldown": [
+      25
+    ],
+    "manaCost": [
+      175
+    ],
+    "effects": {
+      "delay": 1.7,
+      "area_of_effect": 175,
+      "damage": [
+        162,
+        266,
+        370,
+        475
+      ],
+      "vision_distance": 400,
+      "vision_duration": 4,
+      "cataclysm_cooldown": 90,
+      "cataclysm_min_range": 90,
+      "cataclysm_max_range": 180,
+      "cataclysm_damage_pct": 75
+    }
+  },
+  "invoker_chaos_meteor_ad": {
+    "behavior": [
+      "POINT",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 700,
+    "cooldown": [],
+    "manaCost": [
+      200
+    ],
+    "effects": {
+      "AbilityCooldown": 55,
+      "land_time": 1.3,
+      "area_of_effect": 275,
+      "travel_distance": [
+        615,
+        880,
+        1145,
+        1410
+      ],
+      "travel_speed": 300,
+      "damage_interval": 0.5,
+      "vision_distance": 500,
+      "end_vision_duration": 3,
+      "main_damage": [
+        71,
+        103,
+        134,
+        166
+      ],
+      "burn_duration": 3,
+      "burn_dps": [
+        14,
+        20,
+        26.5,
+        32.5
+      ],
+      "meteor_count": 1
+    }
+  },
+  "invoker_ice_wall_ad": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      25
+    ],
+    "manaCost": [
+      125
+    ],
+    "effects": {
+      "duration": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "slow": [
+        -20,
+        -80,
+        -140,
+        -200
+      ],
+      "slow_duration": 2,
+      "damage_per_second": [
+        30,
+        45,
+        60,
+        75
+      ],
+      "tick_interval": 0.5,
+      "wall_place_distance": 200,
+      "wall_total_length": 1200,
+      "wall_width": 105,
+      "vector_cast_range": 0,
+      "glacier_formation_delay": 1.3,
+      "glacier_formation_speed": 600
+    }
+  },
+  "invoker_deafening_blast_ad": {
+    "behavior": [
+      "POINT",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 1000,
+    "cooldown": [
+      40
+    ],
+    "manaCost": [
+      250
+    ],
+    "effects": {
+      "travel_distance": 1000,
+      "travel_speed": 1100,
+      "radius_start": 175,
+      "radius_end": 225,
+      "end_vision_duration": 1.75,
+      "damage": [
+        60,
+        127,
+        293,
+        260
+      ],
+      "knockback_duration": [
+        0.4,
+        0.74,
+        1.06,
+        1.4
+      ],
+      "disarm_duration": [
+        2,
+        3.25,
+        4.5,
+        5.75
+      ],
+      "radial_count": 1
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "phoenix_icarus_dive": [
+    "aoe",
+    "slow",
+    "dash",
+    "escape",
+    "dps"
+  ],
+  "phoenix_supernova": [
+    "aoe",
+    "stun",
+    "dps",
+    "zone_control",
+    "escape",
+    "save"
+  ],
+  "phoenix_launch_fire_spirit": [
+    "aoe",
+    "slow",
+    "dps"
+  ],
+  "phoenix_blinding_sun": [
+    "disarm"
+  ],
+  "phoenix_dying_light": [
+    "aoe",
+    "dps"
+  ],
+  "phoenix_sun_ray": [
+    "aoe",
+    "dps",
+    "heal"
+  ]
+}

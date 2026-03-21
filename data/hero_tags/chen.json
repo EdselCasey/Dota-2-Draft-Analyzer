@@ -1,0 +1,20 @@
+{
+  "chen_penitence": [
+    "slow",
+    "attack_speed_boost"
+  ],
+  "chen_divine_favor": [
+    "armor_gain",
+    "regen"
+  ],
+  "chen_holy_persuasion": [
+    "summon_units"
+  ],
+  "chen_hand_of_god": [
+    "global",
+    "heal"
+  ],
+  "chen_summon_convert": [
+    "summon_units"
+  ]
+}

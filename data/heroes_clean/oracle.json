@@ -1,0 +1,200 @@
+{
+  "oracle_fortunes_end": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AOE",
+      "CHANNELLED",
+      "DONT_CANCEL_CHANNEL"
+    ],
+    "targetTeam": "BOTH",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 850,
+    "cooldown": [
+      18,
+      14,
+      10,
+      6
+    ],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "channel_time": 2.5,
+      "damage": [
+        100,
+        160,
+        220,
+        280
+      ],
+      "bolt_speed": 1200,
+      "minimum_purge_duration": 0.75,
+      "maximum_purge_duration": 2.75,
+      "radius": 350,
+      "damage_per_buff": 0,
+      "heal_per_debuff": 0
+    }
+  },
+  "oracle_fates_edict": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 700,
+    "cooldown": [
+      17,
+      14,
+      11,
+      8
+    ],
+    "manaCost": [
+      70
+    ],
+    "effects": {
+      "duration": [
+        3.5,
+        4,
+        4.5,
+        5
+      ],
+      "magic_damage_resistance_pct_tooltip": 100
+    }
+  },
+  "oracle_purifying_flames": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "FRIENDLY | DOTA_UNIT_TARGET_TEAM_ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 850,
+    "cooldown": [],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "damage": [
+        90,
+        180,
+        270,
+        360
+      ],
+      "heal_per_second": [
+        15,
+        25,
+        35,
+        45
+      ],
+      "total_heal_tooltip": [
+        150,
+        250,
+        350,
+        450
+      ],
+      "duration": 10,
+      "tick_rate": 0.1,
+      "damage_modifier": 1,
+      "AbilityCooldown": 2.5
+    }
+  },
+  "oracle_false_promise": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": null,
+    "cooldown": [],
+    "manaCost": [
+      100,
+      150,
+      200
+    ],
+    "effects": {
+      "duration": [
+        7,
+        8.5,
+        10
+      ],
+      "radius": 400,
+      "AbilityCooldown": [
+        110,
+        85,
+        60
+      ],
+      "heal_amp_pct": 100
+    }
+  },
+  "oracle_rain_of_destiny": {
+    "behavior": [
+      "POINT",
+      "AOE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 650,
+    "cooldown": [
+      40
+    ],
+    "manaCost": [
+      150
+    ],
+    "effects": {
+      "radius": 650,
+      "duration": 10,
+      "damage": 30,
+      "tick_rate": 1,
+      "heal_amp": 15
+    }
+  },
+  "oracle_clairvoyant_curse": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "spell_amplification": 1
+    }
+  },
+  "oracle_clairvoyant_cure": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "heal_amplification": 0.75
+    }
+  },
+  "oracle_prognosticate": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  }
+}

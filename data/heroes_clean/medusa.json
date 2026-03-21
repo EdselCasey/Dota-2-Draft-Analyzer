@@ -1,0 +1,254 @@
+{
+  "medusa_cold_blooded": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      12
+    ],
+    "manaCost": [],
+    "effects": {
+      "damage": 0,
+      "stone_form_scepter_base_tooltip": 1
+    }
+  },
+  "medusa_split_shot": {
+    "behavior": [
+      "NO_TARGET",
+      "TOGGLE",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "damage_modifier": [
+        -50,
+        -40,
+        -30,
+        -20
+      ],
+      "damage_modifier_tooltip": [
+        50,
+        60,
+        70,
+        80
+      ],
+      "arrow_count": 4,
+      "process_procs": 0,
+      "split_shot_bonus_range": 150
+    }
+  },
+  "medusa_mystic_snake": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "AbilityCastRange": 750,
+      "AbilityCastPoint": 0.2,
+      "AbilityCooldown": [
+        15,
+        14,
+        13,
+        12
+      ],
+      "AbilityManaCost": [
+        80,
+        100,
+        120,
+        140
+      ],
+      "radius": 450,
+      "snake_jumps": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "jump_delay": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "snake_damage": [
+        90,
+        140,
+        190,
+        240
+      ],
+      "snake_damage_pct": 0,
+      "snake_mana_steal": 15,
+      "snake_scale": 25,
+      "initial_speed": 800,
+      "return_speed": 800,
+      "movement_slow": 30,
+      "slow_duration": 0
+    }
+  },
+  "medusa_mana_shield": {
+    "behavior": [
+      "NO_TARGET",
+      "PASSIVE",
+      "INNATE_UI",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "damage_per_mana": 2,
+      "damage_per_mana_per_level": 0.1,
+      "illusion_percentage": 60,
+      "absorption_pct": 98,
+      "aspd_increase_smoothness": 0.015,
+      "aspd_increase_rate_pct": 0,
+      "aspd_increase_max_tooltip": 0,
+      "aspd_increase_buff_duration": 0,
+      "aspd_increase_mana_cost_pct": 0,
+      "aspd_increase_max_aspd_time": 0,
+      "attack_buff_cooldown": 0,
+      "min_duration": 0
+    }
+  },
+  "medusa_stone_gaze": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "AbilityCastRange": 1200,
+      "AbilityCooldown": 90,
+      "AbilityManaCost": 250,
+      "radius": 1200,
+      "duration": [
+        5,
+        5.5,
+        6
+      ],
+      "slow": 35,
+      "stone_duration": [
+        2,
+        2.2,
+        2.4
+      ],
+      "face_duration": 2,
+      "vision_cone": 0.08715,
+      "bonus_physical_damage": [
+        35,
+        45,
+        55
+      ],
+      "speed_boost": 50
+    }
+  },
+  "medusa_gorgon_grasp": {
+    "behavior": [
+      "AOE",
+      "POINT"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 625,
+    "cooldown": [
+      30,
+      27,
+      24,
+      21
+    ],
+    "manaCost": [
+      65,
+      85,
+      105,
+      125
+    ],
+    "effects": {
+      "radius": 150,
+      "radius_grow": 50,
+      "delay": 1,
+      "volley_interval": 0.25,
+      "volley_spread_pct": 170,
+      "volley_count": 3,
+      "duration": [
+        0.8,
+        1.2,
+        1.6,
+        2
+      ],
+      "damage": [
+        30,
+        70,
+        110,
+        150
+      ],
+      "damage_pers": 100,
+      "damage_interval": 0.2
+    }
+  },
+  "medusa_venomed_volley": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "duration": 1.5,
+      "move_slow": [
+        15,
+        20,
+        25,
+        30,
+        35
+      ],
+      "attack_slow": [
+        20,
+        35,
+        50,
+        65,
+        80
+      ],
+      "cast_slow": 0,
+      "attack_count": 6
+    }
+  },
+  "medusa_undulation": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "fixed_movespeed": 310,
+      "stone_gaze_ms_tooltip_only": 465
+    }
+  }
+}

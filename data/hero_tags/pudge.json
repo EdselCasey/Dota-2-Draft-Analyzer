@@ -1,0 +1,26 @@
+{
+  "pudge_meat_hook": [
+    "aoe",
+    "stun",
+    "forced_movement",
+    "burst",
+    "save"
+  ],
+  "pudge_rot": [
+    "aoe",
+    "slow",
+    "dps"
+  ],
+  "pudge_dismember": [
+    "channelled",
+    "dps",
+    "stun",
+    "forced_movement"
+  ],
+  "pudge_flesh_heap": [
+    "hp_growth"
+  ],
+  "pudge_meat_shield": [
+    "damage_reduction"
+  ]
+}

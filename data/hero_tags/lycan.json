@@ -1,0 +1,24 @@
+{
+  "lycan_summon_wolves": [
+    "summon_units"
+  ],
+  "lycan_apex_predator": [
+    "attack_damage_boost"
+  ],
+  "lycan_howl": [
+    "aoe",
+    "armor_reduction",
+    "damage_reduction",
+    "global"
+  ],
+  "lycan_feral_impulse": [
+    "attack_damage_boost",
+    "regen"
+  ],
+  "lycan_shapeshift": [
+    "vision",
+    "hp_growth",
+    "movement_speed_boost",
+    "attack_damage_boost"
+  ]
+}

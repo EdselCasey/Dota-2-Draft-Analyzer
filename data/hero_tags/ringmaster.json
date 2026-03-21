@@ -1,0 +1,60 @@
+{
+  "ringmaster_spotlight": [
+    "aoe",
+    "damage_reduction",
+    "aoe_damage"
+  ],
+  "ringmaster_tame_the_beasts": [
+    "aoe",
+    "channelled",
+    "forced_movement",
+    "burst"
+  ],
+  "ringmaster_the_box": [
+    "save",
+    "escape",
+    "debuff_immunity",
+    "damage_reduction",
+    "movement_speed_boost"
+  ],
+  "ringmaster_wheel_of_wonder": [
+    "aoe",
+    "slow",
+    "knockback",
+    "zone_control",
+    "vision",
+    "aoe_damage",
+    "taunt",
+    "forced_movement"
+  ],
+  "ringmaster_impalement": [
+    "slow",
+    "vision",
+    "dps"
+  ],
+  "ringmaster_funhouse_mirror": [
+    "illusion"
+  ],
+  "ringmaster_whoopee_cushion": [
+    "aoe",
+    "slow",
+    "dash"
+  ],
+  "ringmaster_summon_unicycle": [
+    "knockback",
+    "movement_speed_boost"
+  ],
+  "ringmaster_weighted_pie": [
+    "slow",
+    "knockback"
+  ],
+  "ringmaster_crystal_ball": [
+    "global",
+    "vision"
+  ],
+  "ringmaster_strongman_tonic": [
+    "hp_growth",
+    "save",
+    "heal"
+  ]
+}

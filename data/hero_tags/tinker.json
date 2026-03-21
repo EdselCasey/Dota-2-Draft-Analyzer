@@ -1,0 +1,23 @@
+{
+  "tinker_defense_matrix": [
+    "damage_reduction",
+    "shield",
+    "dispel",
+    "save",
+    "blink"
+  ],
+  "tinker_keen_conveyance": [
+    "global",
+    "channelled",
+    "teleport"
+  ],
+  "tinker_laser": [
+    "burst",
+    "damage_reduction"
+  ],
+  "tinker_march_of_the_machines": [
+    "aoe",
+    "dps",
+    "zone_control"
+  ]
+}

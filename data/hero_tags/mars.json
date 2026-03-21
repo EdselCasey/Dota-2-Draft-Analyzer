@@ -1,0 +1,26 @@
+{
+  "mars_spear": [
+    "stun",
+    "forced_movement",
+    "burst",
+    "vision"
+  ],
+  "mars_gods_rebuke": [
+    "aoe",
+    "slow",
+    "knockback",
+    "aoe_damage",
+    "attack_damage_boost"
+  ],
+  "mars_dauntless": [
+    "regen"
+  ],
+  "mars_bulwark": [
+    "damage_reduction"
+  ],
+  "mars_arena_of_blood": [
+    "aoe",
+    "zone_control",
+    "vision"
+  ]
+}

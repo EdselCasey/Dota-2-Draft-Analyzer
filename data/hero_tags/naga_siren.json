@@ -1,0 +1,23 @@
+{
+  "naga_siren_mirror_image": [
+    "illusion"
+  ],
+  "naga_siren_rip_tide": [
+    "aoe",
+    "burst",
+    "armor_reduction"
+  ],
+  "naga_siren_eelskin": [
+    "damage_reduction"
+  ],
+  "naga_siren_song_of_the_siren": [
+    "aoe",
+    "regen",
+    "stun",
+    "save"
+  ],
+  "naga_siren_ensnare": [
+    "root",
+    "forced_movement"
+  ]
+}

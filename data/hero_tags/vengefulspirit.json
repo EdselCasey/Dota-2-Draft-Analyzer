@@ -1,0 +1,25 @@
+{
+  "vengefulspirit_magic_missile": [
+    "burst",
+    "stun"
+  ],
+  "vengefulspirit_vengeance_aura": [
+    "aoe",
+    "attack_damage_boost"
+  ],
+  "vengefulspirit_wave_of_terror": [
+    "vision",
+    "aoe",
+    "armor_reduction",
+    "damage_reduction"
+  ],
+  "vengefulspirit_nether_swap": [
+    "shield",
+    "save",
+    "forced_movement",
+    "burst"
+  ],
+  "vengefulspirit_retribution": [
+    "attack_damage_boost"
+  ]
+}

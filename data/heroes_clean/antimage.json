@@ -1,0 +1,208 @@
+{
+  "antimage_mana_break": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "percent_damage_per_burn": 50,
+      "mana_per_hit": [
+        25,
+        30,
+        35,
+        40
+      ],
+      "mana_per_hit_pct": [
+        1.6,
+        2.4,
+        3.2,
+        4
+      ],
+      "damage_per_hit": [
+        28,
+        40,
+        52,
+        64
+      ],
+      "empowered_max_burn_pct": 0,
+      "empowered_mana_break_debuff_duration": 0
+    }
+  },
+  "antimage_persectur": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "move_slow_min": [
+        12.5,
+        15,
+        17.5,
+        20
+      ],
+      "move_slow_max": [
+        25,
+        30,
+        35,
+        40
+      ],
+      "mana_threshold": 50,
+      "slow_duration": 0.75,
+      "zero_tooltip": 0
+    }
+  },
+  "antimage_blink": {
+    "behavior": [
+      "POINT",
+      "ROOT_DISABLES",
+      "OVERSHOOT"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      50
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        12,
+        10,
+        8,
+        6
+      ],
+      "AbilityCastRange": [
+        750,
+        900,
+        1050,
+        1200
+      ],
+      "min_blink_range": 200,
+      "empowered_mana_break_duration": 0,
+      "empowered_max_burn_pct_tooltip": 0,
+      "empowered_mana_break_debuff_duration_tooltip": 0
+    }
+  },
+  "antimage_spell_shield": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "spell_shield_resistance": [
+        20,
+        30,
+        40,
+        50
+      ],
+      "scepter_cooldown": 12
+    }
+  },
+  "antimage_counterspell": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      50
+    ],
+    "effects": {
+      "magic_resistance": [
+        16,
+        24,
+        32,
+        40
+      ],
+      "duration": 1.2,
+      "outgoing_damage": 0,
+      "incoming_damage": 100,
+      "does_reflect": 1,
+      "reflected_spell_amp": 0,
+      "AbilityCooldown": [
+        15,
+        11,
+        7,
+        3
+      ],
+      "heal_pct": 0
+    }
+  },
+  "antimage_mana_void": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AOE"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 600,
+    "cooldown": [],
+    "manaCost": [
+      100,
+      150,
+      200
+    ],
+    "effects": {
+      "AbilityCooldown": 70,
+      "mana_void_damage_per_mana": [
+        0.8,
+        0.95,
+        1.1
+      ],
+      "mana_void_ministun": 0.3,
+      "mana_void_aoe_radius": 500,
+      "stun_duration": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "thirst_enabled": 0,
+      "thirst_range": 0,
+      "threshold_pct": 0,
+      "min_bonus_pct": 0,
+      "max_bonus_pct": 0
+    }
+  },
+  "antimage_mana_overload": {
+    "behavior": [
+      "POINT",
+      "UNIT_TARGET",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 0,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [
+      50
+    ],
+    "effects": {
+      "duration": 7,
+      "outgoing_damage": -25,
+      "incoming_damage": 100
+    }
+  }
+}

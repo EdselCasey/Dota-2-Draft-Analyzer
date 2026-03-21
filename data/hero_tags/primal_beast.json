@@ -1,0 +1,29 @@
+{
+  "primal_beast_onslaught": [
+    "aoe",
+    "stun",
+    "knockback",
+    "burst",
+    "dash",
+    "escape"
+  ],
+  "primal_beast_trample": [
+    "aoe",
+    "dps"
+  ],
+  "primal_beast_uproar": [
+    "aoe",
+    "slow",
+    "armor_gain",
+    "attack_damage_boost"
+  ],
+  "primal_beast_pulverize": [
+    "aoe",
+    "aoe_damage",
+    "stun",
+    "magic_amp"
+  ],
+  "primal_beast_colossal": [
+    "siege"
+  ]
+}

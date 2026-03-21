@@ -1,0 +1,27 @@
+{
+  "marci_dispose": [
+    "aoe",
+    "slow",
+    "burst",
+    "forced_movement"
+  ],
+  "marci_unleash": [
+    "aoe",
+    "slow",
+    "attack_speed_boost",
+    "movement_speed_boost",
+    "burst"
+  ],
+  "marci_rebound": [
+    "aoe",
+    "dash",
+    "escape",
+    "save",
+    "stun",
+    "burst"
+  ],
+  "marci_bodyguard": [
+    "attack_damage_boost",
+    "lifesteal"
+  ]
+}

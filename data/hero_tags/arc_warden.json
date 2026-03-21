@@ -1,0 +1,25 @@
+{
+  "arc_warden_flux": [
+    "slow",
+    "dps"
+  ],
+  "arc_warden_magnetic_field": [
+    "aoe",
+    "attack_speed_boost",
+    "damage_reduction",
+    "attack_modifier"
+  ],
+  "arc_warden_spark_wraith": [
+    "slow",
+    "vision",
+    "burst",
+    "zone_control"
+  ],
+  "arc_warden_tempest_double": [
+    "summon_units",
+    "push_structures"
+  ],
+  "arc_warden_runic_infusion": [
+    "regen"
+  ]
+}

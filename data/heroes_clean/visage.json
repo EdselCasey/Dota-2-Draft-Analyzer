@@ -1,0 +1,292 @@
+{
+  "visage_grave_chill": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AOE"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 625,
+    "cooldown": [],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        17,
+        15,
+        13,
+        11
+      ],
+      "chill_duration": 5,
+      "movespeed_bonus": [
+        12,
+        18,
+        24,
+        30
+      ],
+      "attackspeed_bonus": [
+        25,
+        40,
+        55,
+        70
+      ],
+      "radius": 900
+    }
+  },
+  "visage_soul_assumption": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 1000,
+    "cooldown": [
+      4
+    ],
+    "manaCost": [
+      110
+    ],
+    "effects": {
+      "bolt_speed": 1000,
+      "soul_base_damage": 20,
+      "soul_charge_damage": 70,
+      "soul_charge_gold": 0,
+      "gold_creep_pct": 0,
+      "gold_grace_period_hero": 0,
+      "gold_max_tooltip": 0,
+      "stack_limit": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "stack_duration": 6,
+      "damage_limit": 100,
+      "radius": 1800,
+      "damage_min": 2,
+      "damage_max": 3000,
+      "target_count": 1
+    }
+  },
+  "visage_gravekeepers_cloak": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "max_layers": 4,
+      "damage_reduction": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "recovery_time": [
+        7,
+        6,
+        5,
+        4
+      ],
+      "minimum_damage": 40,
+      "radius": 900,
+      "max_damage_reduction": 80
+    }
+  },
+  "visage_summon_familiars": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [
+      130,
+      120,
+      110
+    ],
+    "manaCost": [
+      150,
+      150,
+      150
+    ],
+    "effects": {
+      "familiar_hp": [
+        500,
+        600,
+        700
+      ],
+      "familiar_armor": [
+        2,
+        3,
+        4
+      ],
+      "familiar_attack_range": 180,
+      "familiar_base_movespeed": 430,
+      "familiar_bounty": 100,
+      "bonus_movement_speed": 0,
+      "familiar_attack_damage": [
+        25,
+        50,
+        75
+      ],
+      "bonus_damage": 0,
+      "familiar_count": 2,
+      "armor_reduction_per_hit": 0,
+      "armor_reduction_duration": 0,
+      "in_formation": 0,
+      "back_distance": 75,
+      "side_distance": 75,
+      "return_distance": 1200,
+      "recall_duration": 4,
+      "max_distance": 3500,
+      "attack_range_buffer": 200,
+      "additional_target_search_radius": 300
+    }
+  },
+  "visage_silent_as_the_grave": {
+    "behavior": [
+      "HIDDEN",
+      "NO_TARGET",
+      "IMMEDIATE",
+      "IGNORE_CHANNEL"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      45
+    ],
+    "manaCost": [
+      115
+    ],
+    "effects": {
+      "bonus_duration": 4,
+      "bonus_damage": 20,
+      "invis_duration": 30,
+      "movespeed_bonus": 20
+    }
+  },
+  "visage_stone_form_self_cast": {
+    "behavior": [
+      "NOT_LEARNABLE",
+      "NO_TARGET",
+      "IMMEDIATE",
+      "IGNORE_CHANNEL",
+      "IGNORE_PSEUDO_QUEUE",
+      "ALT_CASTABLE",
+      "IGNORE_SILENCE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [
+      0
+    ],
+    "effects": {
+      "stun_radius": 375,
+      "stun_delay": 0.55,
+      "stun_damage": [
+        60,
+        100,
+        140
+      ],
+      "stun_duration": [
+        0.8,
+        1,
+        1.2
+      ],
+      "stone_duration": 6,
+      "hp_regen": [
+        150,
+        175,
+        200
+      ],
+      "AbilityCastRange": 0
+    }
+  },
+  "visage_summon_familiars_stone_form": {
+    "behavior": [
+      "NOT_LEARNABLE",
+      "NO_TARGET",
+      "IMMEDIATE",
+      "IGNORE_CHANNEL",
+      "IGNORE_PSEUDO_QUEUE",
+      "ALT_CASTABLE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 50,
+    "cooldown": [
+      11
+    ],
+    "manaCost": [],
+    "effects": {
+      "stun_radius": 375,
+      "stun_delay": 0.55,
+      "stun_damage": [
+        60,
+        100,
+        140
+      ],
+      "stun_duration": [
+        0.8,
+        1,
+        1.2
+      ],
+      "stone_duration": 6,
+      "hp_regen": [
+        150,
+        175,
+        200
+      ]
+    }
+  },
+  "visage_lurker": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "max_stacks": 8,
+      "stack_gain_time": 2,
+      "cooldown_speed_per_stack": 2,
+      "linger_duration": 2
+    }
+  },
+  "visage_summon_familiars_recall": {
+    "behavior": [
+      "NOT_LEARNABLE",
+      "NO_TARGET",
+      "IMMEDIATE",
+      "IGNORE_CHANNEL",
+      "IGNORE_PSEUDO_QUEUE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      10
+    ],
+    "manaCost": [],
+    "effects": {
+      "recall_duration": 4
+    }
+  }
+}

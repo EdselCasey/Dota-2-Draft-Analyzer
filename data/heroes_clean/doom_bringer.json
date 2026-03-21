@@ -1,0 +1,223 @@
+{
+  "doom_bringer_devour": {
+    "behavior": [
+      "UNIT_TARGET",
+      "DONT_RESUME_ATTACK",
+      "ALT_CASTABLE"
+    ],
+    "targetTeam": "CUSTOM",
+    "targetType": [
+      "CUSTOM"
+    ],
+    "castRange": null,
+    "cooldown": [],
+    "manaCost": [
+      40,
+      50,
+      60,
+      70
+    ],
+    "effects": {
+      "bonus_gold": [
+        35,
+        70,
+        105,
+        140
+      ],
+      "creep_level": [
+        4,
+        5,
+        6,
+        6
+      ],
+      "hero_ability_steal_time": 99999,
+      "magic_resist": 0,
+      "AbilityCharges": 0,
+      "AbilityChargeRestoreTime": 0,
+      "AbilityCooldown": 70
+    }
+  },
+  "doom_bringer_lvl_pain": {
+    "behavior": [
+      "PASSIVE",
+      "SHOW_IN_GUIDES",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "damageType": "NONE",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bonus_damage": 25
+    }
+  },
+  "doom_bringer_scorched_earth": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": null,
+    "cooldown": [],
+    "manaCost": [
+      60,
+      70,
+      80,
+      90
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        41,
+        39,
+        37,
+        35
+      ],
+      "damage_per_second": [
+        20,
+        35,
+        50,
+        65
+      ],
+      "radius": [
+        600,
+        600,
+        600,
+        600
+      ],
+      "bonus_movement_speed_pct": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "heal_pct": 0,
+      "duration": [
+        10,
+        12,
+        14,
+        16
+      ]
+    }
+  },
+  "doom_bringer_infernal_blade": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AUTOCAST",
+      "ATTACK"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 200,
+    "cooldown": [
+      13,
+      10,
+      7,
+      4
+    ],
+    "manaCost": [
+      35
+    ],
+    "effects": {
+      "burn_damage": [
+        15,
+        30,
+        45,
+        60
+      ],
+      "burn_damage_pct": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "burn_duration": 4,
+      "ministun_duration": 0.6
+    }
+  },
+  "doom_bringer_doom": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "BOTH",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PURE",
+    "castRange": 400,
+    "cooldown": [],
+    "manaCost": [
+      150,
+      200,
+      250
+    ],
+    "effects": {
+      "duration": [
+        12,
+        14,
+        16
+      ],
+      "damage": [
+        25,
+        45,
+        65
+      ],
+      "deniable_pct": [
+        25,
+        25,
+        25
+      ],
+      "AbilityCooldown": [
+        140,
+        130,
+        120
+      ],
+      "does_break": 0,
+      "does_mute": 0,
+      "scepter_aura_radius": 0,
+      "upgrade_interval": 0,
+      "upgrade_amount": 0
+    }
+  },
+  "doom_bringer_empty1": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "doom_bringer_empty2": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "doom_bringer_devils_bargain": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "buyback_penalty": 20,
+      "item_sellback_percent": 85
+    }
+  }
+}

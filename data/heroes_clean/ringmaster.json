@@ -1,0 +1,453 @@
+{
+  "ringmaster_spotlight": {
+    "behavior": [
+      "POINT",
+      "AOE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 1500,
+    "cooldown": [
+      30
+    ],
+    "manaCost": [
+      50
+    ],
+    "effects": {
+      "radius": 275,
+      "illusion_percent_damage": 30,
+      "pulse_interval": 0.1,
+      "duration": 8,
+      "miss_chance": 30,
+      "initial_speed": 3000,
+      "sweep_speed": 0.785,
+      "sweep_radius": 450,
+      "linger_duration": 0.3,
+      "spotlight_count": 3,
+      "start_offset": 0
+    }
+  },
+  "ringmaster_tame_the_beasts": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "CHANNELLED"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 700,
+    "cooldown": [
+      16,
+      14,
+      12,
+      10
+    ],
+    "manaCost": [
+      90,
+      105,
+      120,
+      135
+    ],
+    "effects": {
+      "start_width": 450,
+      "end_width": 200,
+      "damage_min": [
+        50,
+        75,
+        100,
+        125
+      ],
+      "damage_max": [
+        180,
+        280,
+        380,
+        480
+      ],
+      "crack_duration": 0.2,
+      "max_multiplier": 4,
+      "whip_channel_reduction": 0,
+      "whip_cooldown_reduction": 0,
+      "magic_resist": 0,
+      "has_debuff_immunity": 0,
+      "fear_duration_min": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "fear_duration_max": [
+        0.6,
+        0.8,
+        1,
+        1.2
+      ]
+    }
+  },
+  "ringmaster_tame_the_beasts_crack": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "NOT_LEARNABLE",
+      "HIDDEN",
+      "IGNORE_CHANNEL"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      0.5
+    ],
+    "manaCost": [
+      0
+    ],
+    "effects": {}
+  },
+  "ringmaster_the_box": {
+    "behavior": [
+      "UNIT_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      120
+    ],
+    "effects": {
+      "AbilityCastRange": 600,
+      "invis_duration": [
+        2,
+        2.4,
+        2.8,
+        3.2
+      ],
+      "move_speed": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "magic_resist": [
+        50,
+        60,
+        70,
+        80
+      ],
+      "slow_resist": 100,
+      "transform_time": 0.5,
+      "model_scale_time": 0.2,
+      "leash_radius": 500,
+      "heal_ally": 0,
+      "leap_distance": 250,
+      "leap_speed": 1300,
+      "leap_acceleration": 20000,
+      "grant_debuff_immunity": 0,
+      "AbilityCooldown": [
+        38,
+        32,
+        26,
+        20
+      ],
+      "AbilityChargeRestoreTime": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "ringmaster_wheel": {
+    "behavior": [
+      "POINT",
+      "AOE"
+    ],
+    "targetType": [
+      "HERO"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      90,
+      80,
+      70
+    ],
+    "manaCost": [
+      150,
+      225,
+      300
+    ],
+    "effects": {
+      "min_range": 700,
+      "mesmerize_radius": 500,
+      "projectile_speed": 1200,
+      "AbilityCastRange": 1400,
+      "trap_duration": 4,
+      "wheel_stun": [
+        2.5,
+        2.75,
+        3
+      ],
+      "face_duration": 0.5,
+      "aura_tick_interval": 0.5,
+      "aura_damage": [
+        50,
+        75,
+        100
+      ],
+      "aura_slow": -50,
+      "explosion_damage": [
+        300,
+        450,
+        600
+      ],
+      "vision_radius": 400,
+      "damage_per_second": 0,
+      "tick_rate": 0.25,
+      "vision_cone": 0.08715,
+      "knockback_radius": 100,
+      "knockback_duration": 0.35,
+      "knockback_distance": 100,
+      "knockback_height": 100
+    }
+  },
+  "ringmaster_impalement": {
+    "behavior": [
+      "POINT"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 2400,
+    "cooldown": [
+      1
+    ],
+    "manaCost": [
+      80
+    ],
+    "effects": {
+      "damage_impact": 50,
+      "bleed_health_pct": [
+        3.5,
+        4,
+        4.5,
+        5
+      ],
+      "bleed_creep_dps": 100,
+      "bleed_duration": 4,
+      "slow_percent": 100,
+      "slow_duration": 0.8,
+      "dagger_speed": 1350,
+      "dagger_width": 130,
+      "dagger_vision": 200,
+      "tick_interval": 1,
+      "dagger_pass_through": 0
+    }
+  },
+  "ringmaster_empty_souvenir": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE",
+      "IS_FAKE_ITEM"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "ringmaster_dark_carnival_souvenirs": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "souvenir_collection_range": 925,
+      "use_souvenir_set_1": 0,
+      "use_souvenir_set_2": 0
+    }
+  },
+  "ringmaster_funhouse_mirror": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_SILENCE",
+      "AFFECTED_BY_MUTE",
+      "IS_FAKE_ITEM",
+      "DONT_RESUME_ATTACK",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      3
+    ],
+    "manaCost": [],
+    "effects": {
+      "images_count": 1,
+      "illusion_duration": 18,
+      "images_do_damage_percent_melee": -67,
+      "tooltip_damage_outgoing_melee": 33,
+      "images_take_damage_percent": 200,
+      "tooltip_damage_incoming_total_pct": 300,
+      "images_do_damage_percent_ranged": -72,
+      "tooltip_damage_outgoing_ranged": 28,
+      "invuln_duration": 0.2,
+      "vision_radius": 1000,
+      "num_scale_sets": 3,
+      "model_scale_animate_time": 0.05,
+      "illusion_model_scale_1": 0,
+      "illusion_model_scale_2": 0,
+      "illusion_model_scale_3": 50,
+      "health_bar_offset_1": 180,
+      "health_bar_offset_2": 220,
+      "health_bar_offset_3": 280
+    }
+  },
+  "ringmaster_whoopee_cushion": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_SILENCE",
+      "AFFECTED_BY_MUTE",
+      "IS_FAKE_ITEM",
+      "ROOT_DISABLES",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      3
+    ],
+    "manaCost": [],
+    "effects": {
+      "leap_distance": 400,
+      "leap_speed": 1300,
+      "leap_acceleration": 10000,
+      "fart_cloud_duration": 3,
+      "fart_cloud_slow": -30,
+      "fart_cloud_aura_linger_duration": 1,
+      "fart_cloud_radius": 250
+    }
+  },
+  "ringmaster_strongman_tonic": {
+    "behavior": [
+      "UNIT_TARGET",
+      "IGNORE_SILENCE",
+      "AFFECTED_BY_MUTE",
+      "IS_FAKE_ITEM",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": 750,
+    "cooldown": [
+      3
+    ],
+    "manaCost": [],
+    "effects": {
+      "projectile_speed": 1400,
+      "strength_bonus_base": 5,
+      "strength_bonus_per_level": 1,
+      "model_scale": 30,
+      "model_scale_animate_time": 0.1,
+      "duration": 8,
+      "effect_strength_max_duration": 4
+    }
+  },
+  "ringmaster_summon_unicycle": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_SILENCE",
+      "AFFECTED_BY_MUTE",
+      "IS_FAKE_ITEM",
+      "ROOT_DISABLES",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      3
+    ],
+    "manaCost": [],
+    "effects": {
+      "mount_cast_point": 0.5,
+      "mount_duration": 10,
+      "tree_impact_speed_divisor": 4,
+      "max_speed": 750,
+      "acceleration": 350,
+      "turn_rate_min": 90,
+      "turn_rate_max": 130,
+      "impact_radius": 75,
+      "knockback_distance": 50,
+      "damage_grace_period": 1.5,
+      "damage_threshold": 20
+    }
+  },
+  "ringmaster_weighted_pie": {
+    "behavior": [
+      "UNIT_TARGET",
+      "IGNORE_SILENCE",
+      "AFFECTED_BY_MUTE",
+      "IS_FAKE_ITEM",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 750,
+    "cooldown": [
+      3
+    ],
+    "manaCost": [],
+    "effects": {
+      "projectile_speed": 1400,
+      "duration": 1,
+      "push_length": 400,
+      "push_duration": 0.3,
+      "blind_duration": 3,
+      "vision_radius": 50,
+      "max_slow_pct": 45
+    }
+  },
+  "ringmaster_crystal_ball": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "IGNORE_SILENCE",
+      "AFFECTED_BY_MUTE",
+      "IS_FAKE_ITEM",
+      "HIDDEN",
+      "NOT_LEARNABLE",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      3
+    ],
+    "manaCost": [],
+    "effects": {
+      "radius": 450,
+      "duration": 5,
+      "truesight_linger_duration": 1
+    }
+  }
+}

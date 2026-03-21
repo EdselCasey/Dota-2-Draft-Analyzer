@@ -1,0 +1,29 @@
+{
+  "keeper_of_the_light_illuminate": [
+    "aoe",
+    "vision",
+    "burst",
+    "heal"
+  ],
+  "keeper_of_the_light_chakra_magic": [
+    "mana_regen"
+  ],
+  "keeper_of_the_light_solar_bind": [
+    "magic_amp",
+    "slow"
+  ],
+  "keeper_of_the_light_recall": [
+    "movement_speed_boost",
+    "teleport",
+    "save",
+    "global"
+  ],
+  "keeper_of_the_light_blinding_light": [
+    "aoe",
+    "knockback",
+    "burst"
+  ],
+  "keeper_of_the_light_spirit_form": [
+    "movement_speed_boost"
+  ]
+}

@@ -1,0 +1,93 @@
+# Dota 2 Draft Analyzer -- Ability Tag Reference
+# Generated automatically. Edit hero_tags/{hero}.json to override per-hero tags.
+# Format: each hero_tags/{heroName}.json maps  ability_name -> ["tag1", "tag2", ...]
+#
+# To regenerate all hero_tags files from the auto-tagger:
+#   GET http://localhost:3000/api/admin/generate-tags
+#
+# NOTE: Once a hero_tags file exists the app uses IT instead of auto-tagging.
+#       Regenerating will OVERWRITE your manual edits for that hero.
+
+# ===========================================================================
+# CONTROL
+# ===========================================================================
+stun                # Hard stun -- completely stops the target
+root                # Roots in place (abilities still usable)
+silence             # Prevents ability use
+hex                 # Transforms target, disabling most actions
+slow                # Reduces movement and/or attack speed
+disarm              # Prevents attacking (miss-chance debuffs also count)
+knockback           # Launches target away / displacement
+taunt               # Forces target to attack the caster
+forced_movement     # Uncontrollable movement: drag, pull, fear
+antiheal            # Reduces or blocks enemy healing / regen
+
+# ===========================================================================
+# BURST DAMAGE
+# ===========================================================================
+burst               # Single-hit nuke (high instant damage)
+aoe_damage          # Area-of-effect nuke
+magic_amp           # Amplifies magic damage taken by the target
+
+# ===========================================================================
+# SUSTAINED DAMAGE
+# ===========================================================================
+dps                 # Damage over time / repeating tick damage
+attack_modifier     # On-hit proc (AUTOCAST behavior or ATTACK behavior)
+attack_speed_boost  # Increases own attack speed (passive or self-buff)
+attack_damage_boost # Increases own attack damage or crit
+armor_reduction     # Reduces enemy armor (amplifies physical output)
+
+# ===========================================================================
+# SUSTAIN
+# ===========================================================================
+heal                # Heals a unit (self or ally)
+lifesteal           # Recovers HP based on damage dealt
+shield              # Temporary HP buffer / damage absorb block
+
+# ===========================================================================
+# MOBILITY
+# ===========================================================================
+blink               # Instant positional teleport (blink-dagger style)
+dash                # Rapid directional movement / gap close
+escape              # Mobility used specifically for disengaging
+teleport            # Long-distance or global map teleport
+
+# ===========================================================================
+# DEFENSE
+# ===========================================================================
+damage_reduction    # Reduces incoming damage (flat or %)
+armor_gain          # Increases own armor
+save                # Rescues an ally from harm (disruption, shallow grave etc.)
+invulnerability     # Briefly makes target immune to all damage
+dispel              # Removes debuffs from allies
+debuff_immunity     # Prevents debuffs / grants magic immunity
+
+# ===========================================================================
+# PUSH / OBJECTIVES
+# ===========================================================================
+push_structures     # Explicit push / building-damage mechanic
+zone_control        # Spawns a persistent structure or area-denial zone
+summon_units        # Creates units (creeps, spiders, boar, clone, dominate)
+illusion            # Creates illusion copies of the hero
+siege               # Amplified or dedicated building damage
+building_damage     # Bonus damage to buildings
+
+# ===========================================================================
+# VISION / MAP PRESENCE
+# ===========================================================================
+stealth             # Turns the hero invisible
+aerial              # Grants flying / elevated movement (vision bonus)
+vision              # Provides sight (wards, scouting projectiles, track)
+
+# ===========================================================================
+# UTILITY / SUPPORT
+# ===========================================================================
+mana_regen          # Restores mana to self or allies
+global              # Ability has global / map-wide range
+
+# ===========================================================================
+# INTERNAL (used for scoring bonuses, not displayed as hero tags)
+# ===========================================================================
+aoe                 # Ability has area of effect -- enables AOE combo bonus
+channelled          # Ability requires channelling

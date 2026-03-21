@@ -1,0 +1,19 @@
+{
+  "chaos_knight_chaos_bolt": [
+    "burst",
+    "stun"
+  ],
+  "chaos_knight_reality_rift": [
+    "armor_reduction",
+    "forced_movement"
+  ],
+  "chaos_knight_chaos_strike": [
+    "lifesteal",
+    "attack_damage_boost",
+    "attack_modifier"
+  ],
+  "chaos_knight_phantasm": [
+    "illusion",
+    "vision"
+  ]
+}

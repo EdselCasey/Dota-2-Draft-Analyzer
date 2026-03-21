@@ -1,0 +1,25 @@
+{
+  "zuus_heavenly_jump": [
+    "slow",
+    "dash",
+    "burst"
+  ],
+  "zuus_arc_lightning": [
+    "aoe",
+    "aoe_damage",
+    "burst"
+  ],
+  "zuus_lightning_bolt": [
+    "aoe",
+    "stun",
+    "burst",
+    "vision"
+  ],
+  "zuus_static_field": [
+    "magic_amp"
+  ],
+  "zuus_thundergods_wrath": [
+    "global",
+    "aoe_damage"
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "primal_beast_onslaught": {
+    "behavior": [
+      "POINT",
+      "IGNORE_BACKSWING",
+      "ROOT_DISABLES"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "BASIC",
+      "HERO"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [
+      25,
+      22,
+      19,
+      16
+    ],
+    "manaCost": [
+      120
+    ],
+    "effects": {
+      "charge_speed": 1200,
+      "chargeup_time": 2.2,
+      "knockback_radius": 190,
+      "max_distance": 2000,
+      "knockback_distance": 200,
+      "knockback_damage": [
+        75,
+        170,
+        265,
+        360
+      ],
+      "knockback_duration": 0.2,
+      "max_charge_time": 1.7,
+      "turn_rate": 70,
+      "base_power": 0.05,
+      "movement_turn_rate": 50,
+      "stun_duration": [
+        0.7,
+        1,
+        1.3,
+        1.6
+      ]
+    }
+  },
+  "primal_beast_onslaught_release": {
+    "behavior": [
+      "IMMEDIATE",
+      "NO_TARGET",
+      "IGNORE_BACKSWING",
+      "NOT_LEARNABLE",
+      "HIDDEN",
+      "DONT_RESUME_ATTACK",
+      "IGNORE_CHANNEL"
+    ],
+    "targetType": [],
+    "castRange": 999999,
+    "cooldown": [
+      0.3
+    ],
+    "manaCost": [],
+    "effects": {}
+  },
+  "primal_beast_trample": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "IGNORE_CHANNEL"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "effect_radius": 230,
+      "step_distance": 140,
+      "base_damage": [
+        15,
+        30,
+        45,
+        60
+      ],
+      "duration": 5.5,
+      "attack_damage": 35,
+      "bonus_magic_resistance": 0,
+      "AbilityCooldown": [
+        30,
+        27,
+        24,
+        21
+      ],
+      "unslowable": 0,
+      "proc_attack_modifiers": 0
+    }
+  },
+  "primal_beast_uproar": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_CHANNEL",
+      "IMMEDIATE",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [],
+    "effects": {
+      "bonus_damage_per_stack": [
+        10,
+        20,
+        30,
+        40
+      ],
+      "stack_limit": 6,
+      "stack_count_increase_on_disable": 0,
+      "damage_limit": 50,
+      "stack_duration": 20,
+      "move_slow_per_stack": [
+        4,
+        6,
+        8,
+        10
+      ],
+      "slow_duration": 3,
+      "damage_min": 20,
+      "damage_max": 2000,
+      "radius": 900,
+      "roared_bonus_attack_speed": 0,
+      "roared_bonus_armor": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "roar_duration": 7
+    }
+  },
+  "primal_beast_pulverize": {
+    "behavior": [
+      "CHANNELLED ",
+      "UNIT_TARGET",
+      "AOE"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 200,
+    "cooldown": [
+      40,
+      35,
+      30
+    ],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "splash_radius": 600,
+      "interval": 0.75,
+      "ministun": 0.2,
+      "cast_range": 200,
+      "animation_rate": 1.5,
+      "damage": [
+        100,
+        175,
+        250
+      ],
+      "bonus_aoe_duration": 0,
+      "bonus_aoe_pct_per_hit": 0,
+      "max_stacks": 0,
+      "channel_time": 2.3,
+      "pierce_immunity": 0,
+      "bonus_damage_per_hit": [
+        20,
+        40,
+        60
+      ]
+    }
+  },
+  "primal_beast_rock_throw": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "HIDDEN ",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetTeam": "BOTH",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 1800,
+    "cooldown": [
+      20
+    ],
+    "manaCost": [
+      85
+    ],
+    "effects": {
+      "base_damage": 325,
+      "impact_radius": 225,
+      "min_range": 550,
+      "min_travel_time": 0.65,
+      "max_travel_time": 1.75,
+      "bounce_travel_time": 0.5,
+      "stun_duration": 1.4,
+      "fragment_impact_distance": 525,
+      "fragment_impact_radius": 185
+    }
+  },
+  "primal_beast_colossal": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bonus_building_damage": 40
+    }
+  },
+  "primal_beast_innate_slow_resistance_per_time": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "slow_resistance_per_upgrade": 1,
+      "upgrade_rate": 120
+    }
+  },
+  "primal_beast_innate_status_resistance_per_time": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "status_resistance_per_upgrade": 1,
+      "upgrade_rate": 360
+    }
+  }
+}

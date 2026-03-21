@@ -1,0 +1,22 @@
+{
+  "night_stalker_void": [
+    "slow",
+    "burst"
+  ],
+  "night_stalker_crippling_fear": [
+    "aoe",
+    "silence",
+    "dps"
+  ],
+  "night_stalker_hunter_in_the_night": [
+    "attack_speed_boost",
+    "movement_speed_boost"
+  ],
+  "night_stalker_dar_ascension": [
+    "aerial",
+    "attack_damage_boost"
+  ],
+  "night_stalker_heart_of_darkness": [
+    "regen"
+  ]
+}

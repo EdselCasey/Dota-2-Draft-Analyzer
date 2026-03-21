@@ -1,0 +1,23 @@
+{
+  "abyssal_underlord_firestorm": [
+    "aoe",
+    "dps",
+    "aoe_damage",
+    "zone_control"
+  ],
+  "abyssal_underlord_pit_of_malice": [
+    "aoe",
+    "movement_speed_boost",
+    "root",
+    "zone_control"
+  ],
+  "abyssal_underlord_atrophy_aura": [
+    "aoe",
+    "damage_reduction"
+  ],
+  "abyssal_underlord_dark_rift": [
+    "aoe",
+    "teleport",
+    "global"
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "obsidian_destroyer_arcane_orb": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AUTOCAST",
+      "ATTACK"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PURE",
+    "castRange": 450,
+    "cooldown": [
+      4.5,
+      3,
+      1.5,
+      0
+    ],
+    "manaCost": [
+      0
+    ],
+    "effects": {
+      "mana_pool_damage_pct": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "mana_cost_percentage": 20,
+      "bounce_radius": 0
+    }
+  },
+  "obsidian_destroyer_ominous_discernment": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bonus_max_mana_per_int": 2.5
+    }
+  },
+  "obsidian_destroyer_astral_imprisonment": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AOE",
+      "DONT_RESUME_ATTACK"
+    ],
+    "targetTeam": "ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      150
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        18,
+        16,
+        14,
+        12
+      ],
+      "prison_duration": [
+        1.75,
+        2.5,
+        3.25,
+        4
+      ],
+      "damage": [
+        90,
+        180,
+        270,
+        360
+      ],
+      "has_mana_steal": 1,
+      "mana_capacity_steal": [
+        16,
+        19,
+        22,
+        25
+      ],
+      "mana_capacity_duration": [
+        30,
+        40,
+        50,
+        60
+      ],
+      "allied_movement_speed_pct": 0,
+      "AbilityCastRange": 650
+    }
+  },
+  "obsidian_destroyer_essence_aura": {
+    "behavior": [
+      "PASSIVE",
+      "AURA"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "obsidian_destroyer_equilibrium": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "proc_chance": 30,
+      "mana_restore": [
+        25,
+        35,
+        45,
+        55
+      ],
+      "mana_increase": 0,
+      "mana_increase_duration": 0,
+      "scepter_barrier_threshold": 20,
+      "scepter_barrier_duration": 12,
+      "scepter_barrier_cooldown": 80,
+      "scepter_max_mana_barrier_pct": 65
+    }
+  },
+  "obsidian_destroyer_sanity_eclipse": {
+    "behavior": [
+      "POINT",
+      "AOE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 700,
+    "cooldown": [],
+    "manaCost": [
+      200,
+      300,
+      400
+    ],
+    "effects": {
+      "base_damage": [
+        200,
+        300,
+        400
+      ],
+      "radius": [
+        450,
+        525,
+        600
+      ],
+      "cast_range": 700,
+      "damage_multiplier": 0.4,
+      "illusion_bonus_damage": 0,
+      "debuff_duration": 0,
+      "percentage_damage": 0,
+      "percentage_heal": 0,
+      "AbilityCooldown": [
+        150,
+        135,
+        120
+      ]
+    }
+  }
+}

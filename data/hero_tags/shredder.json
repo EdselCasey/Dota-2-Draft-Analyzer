@@ -1,0 +1,30 @@
+{
+  "shredder_whirling_death": [
+    "aoe",
+    "burst"
+  ],
+  "shredder_timber_chain": [
+    "aoe",
+    "dash",
+    "escape",
+    "burst"
+  ],
+  "shredder_reactive_armor": [
+    "armor_gain",
+    "regen"
+  ],
+  "shredder_chakram": [
+    "aoe",
+    "slow",
+    "burst",
+    "dps"
+  ],
+  "shredder_twisted_chakram": [
+    "aoe",
+    "slow",
+    "burst"
+  ],
+  "shredder_exposure_therapy": [
+    "mana_regen"
+  ]
+}

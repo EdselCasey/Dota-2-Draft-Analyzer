@@ -1,0 +1,249 @@
+{
+  "beastmaster_mark_of_the_beast": {
+    "behavior": [
+      "UNIT_TARGET",
+      "HIDDEN",
+      "SHOW_IN_GUIDES",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 800,
+    "cooldown": [
+      16
+    ],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "duration": 6,
+      "target_crit_multiplier": 160
+    }
+  },
+  "beastmaster_wild_axes": {
+    "behavior": [
+      "POINT"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 1500,
+    "cooldown": [],
+    "manaCost": [
+      50,
+      55,
+      60,
+      65
+    ],
+    "effects": {
+      "radius": 175,
+      "spread": 450,
+      "range": 1500,
+      "damage": [
+        30,
+        65,
+        100,
+        135
+      ],
+      "axe_damage": [
+        30,
+        65,
+        100,
+        135
+      ],
+      "duration": 12,
+      "damage_amp": [
+        7,
+        9,
+        11,
+        13
+      ],
+      "AbilityCooldown": 8,
+      "min_throw_duration": 0.4,
+      "max_throw_duration": 1
+    }
+  },
+  "beastmaster_call_of_the_wild": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "beastmaster_call_of_the_wild_boar": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      60
+    ],
+    "summons_unit": true,
+    "slow_on_attack": true,
+    "effects": {
+      "duration": 60,
+      "boar_base_max_health": [
+        300,
+        450,
+        600,
+        750
+      ],
+      "boar_base_damage": [
+        25,
+        40,
+        55,
+        70
+      ],
+      "boar_total_damage_tooltip": [
+        25,
+        40,
+        55,
+        70
+      ],
+      "boar_bonus_damage": 0,
+      "boar_base_xp_bounty": [
+        60,
+        70,
+        80,
+        90
+      ],
+      "boar_base_movespeed": [
+        320,
+        330,
+        340,
+        350
+      ],
+      "boar_moveslow_tooltip": [
+        10,
+        18,
+        26,
+        34
+      ],
+      "AbilityCooldown": 30
+    }
+  },
+  "beastmaster_inner_beast": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "radius": 1200,
+      "bonus_attack_speed": [
+        10,
+        30,
+        50,
+        70
+      ],
+      "attack_speed_per_unit": 0,
+      "berserk_duration": 0,
+      "berserk_bonus_attack_speed": 0,
+      "AbilityCooldown": 0,
+      "AbilityManaCost": 0
+    }
+  },
+  "beastmaster_primal_roar": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 600,
+    "cooldown": [],
+    "manaCost": [
+      100,
+      125,
+      150
+    ],
+    "effects": {
+      "stun_duration": [
+        3,
+        3.5,
+        4
+      ],
+      "duration": [
+        3,
+        3.5,
+        4
+      ],
+      "damage": [
+        150,
+        225,
+        300
+      ],
+      "slow_movement_speed_pct": -60,
+      "slow_attack_speed_pct": -60,
+      "push_distance": 450,
+      "push_duration": 1,
+      "slow_duration": [
+        3,
+        3.5,
+        4
+      ],
+      "movement_speed": 40,
+      "movement_speed_duration": 2,
+      "AbilityCooldown": [
+        90,
+        75,
+        60
+      ]
+    }
+  },
+  "beastmaster_drums_of_slom": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "radius": 600,
+      "max_stacks": 20,
+      "stack_decay_time": 1,
+      "min_drum_hit_interval": 0.5,
+      "max_drum_hit_interval": 3,
+      "base_damage": 80,
+      "heal_pct": 20,
+      "creep_damage_pct": 100,
+      "creep_heal_pct": 5,
+      "aura_radius": 1200
+    }
+  },
+  "beastmaster_rugged": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "damage_block_pct_fifty_tooltip": 50,
+      "damage_block_pct_vs_creeps": 100
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "ursa_earthshock": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      95
+    ],
+    "effects": {
+      "shock_radius": 385,
+      "movement_slow": [
+        -22,
+        -28,
+        -34,
+        -40
+      ],
+      "hop_distance": 250,
+      "hop_duration": 0.25,
+      "hop_height": 83,
+      "AbilityCooldown": [
+        15,
+        13,
+        11,
+        9
+      ],
+      "AbilityCharges": 0,
+      "AbilityChargeRestoreTime": [
+        15,
+        13,
+        11,
+        9
+      ]
+    }
+  },
+  "ursa_overpower": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      12,
+      11,
+      10,
+      9
+    ],
+    "manaCost": [
+      45,
+      50,
+      55,
+      60
+    ],
+    "effects": {
+      "max_attacks": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "attack_speed_bonus_pct": 400,
+      "slow_resist": 25
+    }
+  },
+  "ursa_fury_swipes": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bonus_reset_time": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "bonus_reset_time_roshan": 8,
+      "damage_per_stack": [
+        12,
+        20,
+        28,
+        36
+      ],
+      "stun_stack_count": 0,
+      "stun_duration": 0
+    }
+  },
+  "ursa_enrage": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      0,
+      0,
+      0
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        60,
+        45,
+        30
+      ],
+      "damage_reduction": 80,
+      "status_resistance": 50,
+      "duration": [
+        4,
+        4.5,
+        5
+      ],
+      "aoe_radius": 0,
+      "damage_increase": 0,
+      "damage_increase_duration": 0
+    }
+  },
+  "ursa_maul": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "health_as_damage_pct": 1.25
+    }
+  },
+  "ursa_bear_down": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "debuff_amp": 15
+    }
+  }
+}

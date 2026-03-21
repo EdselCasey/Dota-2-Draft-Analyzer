@@ -1,0 +1,173 @@
+{
+  "sven_storm_bolt": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AOE",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      21,
+      18,
+      15,
+      12
+    ],
+    "manaCost": [
+      110,
+      115,
+      120,
+      125
+    ],
+    "effects": {
+      "AbilityCastRange": 600,
+      "bolt_speed": 1000,
+      "bolt_stun_duration": [
+        1,
+        1.2,
+        1.4,
+        1.6
+      ],
+      "bolt_aoe": [
+        250,
+        270,
+        290,
+        310
+      ],
+      "vision_radius": 225,
+      "scepter_bonus_damage": 180
+    }
+  },
+  "sven_great_cleave": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "cleave_starting_width": 150,
+      "cleave_ending_width": [
+        270,
+        300,
+        330,
+        360
+      ],
+      "cleave_distance": [
+        400,
+        500,
+        600,
+        700
+      ],
+      "great_cleave_damage": [
+        60,
+        70,
+        80,
+        90
+      ],
+      "strength_bonus": 0
+    }
+  },
+  "sven_warcry": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      36,
+      32,
+      28,
+      24
+    ],
+    "manaCost": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "effects": {
+      "movespeed": [
+        6,
+        9,
+        12,
+        15
+      ],
+      "bonus_armor": [
+        5,
+        8,
+        11,
+        14
+      ],
+      "radius": 700,
+      "duration": 8
+    }
+  },
+  "sven_gods_strength": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      100,
+      125,
+      150
+    ],
+    "effects": {
+      "gods_strength_damage": [
+        110,
+        150,
+        190
+      ],
+      "bonus_slow_resistance": 30,
+      "AbilityCooldown": [
+        110,
+        105,
+        100
+      ]
+    }
+  },
+  "sven_vanquisher": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bonus_damage_pct": 20
+    }
+  },
+  "sven_wrath_of_god": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bonus_damage_per_str": [
+        0,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "base_damage_reduction": 0
+    }
+  }
+}

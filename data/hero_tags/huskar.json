@@ -1,0 +1,24 @@
+{
+  "huskar_inner_fire": [
+    "aoe",
+    "silence",
+    "knockback",
+    "burst"
+  ],
+  "huskar_burning_spear": [
+    "attack_modifier",
+    "dps"
+  ],
+  "huskar_berserkers_blood": [
+    "attack_speed_boost",
+    "damage_reduction",
+    "regen"
+  ],
+  "huskar_life_break": [
+    "slow",
+    "dash",
+    "taunt",
+    "burst",
+    "debuff_immune"
+  ]
+}

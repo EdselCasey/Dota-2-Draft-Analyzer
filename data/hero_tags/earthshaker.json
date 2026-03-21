@@ -1,0 +1,20 @@
+{
+  "earthshaker_fissure": [
+    "aoe",
+    "stun",
+    "burst",
+    "zone_control"
+  ],
+  "earthshaker_enchant_totem": [
+    "attack_damage_boost"
+  ],
+  "earthshaker_echo_slam": [
+    "aoe",
+    "aoe_damage"
+  ],
+  "earthshaker_aftershock": [
+    "stun",
+    "aoe",
+    "burst"
+  ]
+}

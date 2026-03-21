@@ -1,0 +1,26 @@
+{
+  "shadow_demon_disruption": [
+    "summon_units",
+    "banish",
+    "save"
+  ],
+  "shadow_demon_shadow_poison": [
+    "aoe",
+    "vision",
+    "burst"
+  ],
+  "shadow_demon_demonic_purge": [
+    "slow",
+    "burst",
+    "dispel"
+  ],
+  "shadow_demon_menace": [
+    "magic_amp",
+    "attack_modifier"
+  ],
+  "shadow_demon_disseminate": [
+    "aoe",
+    "dps",
+    "heal"
+  ]
+}

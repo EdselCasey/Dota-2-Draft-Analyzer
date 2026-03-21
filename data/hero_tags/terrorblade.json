@@ -1,0 +1,22 @@
+{
+  "terrorblade_reflection": [
+    "slow",
+    "illusion",
+    "vision"
+  ],
+  "terrorblade_conjure_image": [
+    "illusion"
+  ],
+  "terrorblade_sunder": [
+    "burst",
+    "heal"
+  ],
+  "terrorblade_metamorphosis": [
+    "attack_modifier",
+    "attack_damage_boost"
+  ],
+  "terrorblade_dark_unity": [
+    "aoe",
+    "attack_damage_boost"
+  ]
+}

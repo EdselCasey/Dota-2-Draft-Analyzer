@@ -1,0 +1,27 @@
+{
+  "necrolyte_death_pulse": [
+    "aoe",
+    "heal",
+    "burst"
+  ],
+  "necrolyte_heartstopper_aura": [
+    "aoe",
+    "dps"
+  ],
+  "necrolyte_sadist": [
+    "heal",
+    "regen",
+    "mana_regen"
+  ],
+  "necrolyte_ghost_shroud": [
+    "slow",
+    "damage_reduction",
+    "heal"
+  ],
+  "necrolyte_reapers_scythe": [
+    "stun",
+    "burst",
+    "regen",
+    "mana_regen"
+  ]
+}

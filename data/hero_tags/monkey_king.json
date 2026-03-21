@@ -1,0 +1,33 @@
+{
+  "monkey_king_boundless_strike": [
+    "stun",
+    "burst",
+    "aoe",
+    "attack_damage_boost"
+  ],
+  "monkey_king_mischief": [
+    "escape",
+    "stealth"
+  ],
+  "monkey_king_tree_dance": [
+    "aerial",
+    "escape",
+    "dash",
+    "vision"
+  ],
+  "monkey_king_primal_spring": [
+    "aoe",
+    "slow",
+    "burst"
+  ],
+  "monkey_king_wukongs_command": [
+    "aoe",
+    "armor_gain",
+    "zone_control",
+    "summon_units"
+  ],
+  "monkey_king_jingu_mastery": [
+    "attack_damage_boost",
+    "lifesteal"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "ancient_apparition_cold_feet": [
+    "stun"
+  ],
+  "ancient_apparition_ice_vortex": [
+    "aoe",
+    "vision",
+    "magic_amp",
+    "slow",
+    "dps"
+  ],
+  "ancient_apparition_chilling_touch": [
+    "slow",
+    "attack_modifier",
+    "burst"
+  ],
+  "ancient_apparition_ice_blast": [
+    "aoe",
+    "stun",
+    "antiheal",
+    "aoe_damage"
+  ],
+  "ancient_apparition_death_rime": [
+    "slow",
+    "dps"
+  ]
+}

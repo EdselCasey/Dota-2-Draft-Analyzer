@@ -1,0 +1,221 @@
+{
+  "tidehunter_gush": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 700,
+    "cooldown": [
+      12
+    ],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "gush_damage": [
+        100,
+        160,
+        220,
+        280
+      ],
+      "projectile_speed": 2500,
+      "movement_speed": [
+        -40,
+        -40,
+        -40,
+        -40
+      ],
+      "negative_armor": [
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  "tidehunter_kraken_shell": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      45
+    ],
+    "effects": {
+      "AbilityCooldown": 30,
+      "damage_reduction": [
+        15,
+        35,
+        55,
+        75
+      ],
+      "bonus_reduction_per_kill": 0,
+      "creep_reduction_penalty_pct": 50,
+      "active_pct_effectiveness": 200,
+      "active_move_speed_penalty_pct": 40,
+      "active_duration": 4
+    }
+  },
+  "tidehunter_anchor_smash": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [
+      7,
+      6,
+      5,
+      4
+    ],
+    "manaCost": [
+      40,
+      45,
+      50,
+      55
+    ],
+    "effects": {
+      "attack_damage": [
+        50,
+        100,
+        150,
+        200
+      ],
+      "damage_reduction": [
+        -25,
+        -30,
+        -35,
+        -40
+      ],
+      "reduction_duration": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "radius": 375,
+      "targets_buildings": 0
+    }
+  },
+  "tidehunter_ravage": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      125,
+      225,
+      325
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        150,
+        145,
+        140
+      ],
+      "radius": 1250,
+      "speed": 725,
+      "duration": [
+        2,
+        2.2,
+        2.4
+      ]
+    }
+  },
+  "tidehunter_arm_of_the_deep": {
+    "behavior": [
+      "POINT",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      20
+    ],
+    "manaCost": [
+      80
+    ],
+    "effects": {
+      "projectile_width": 150,
+      "damage_pct": 50,
+      "duration_pct": 50,
+      "range_pct": 75
+    }
+  },
+  "tidehunter_dead_in_the_water": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 350,
+    "cooldown": [
+      35
+    ],
+    "manaCost": [
+      110
+    ],
+    "effects": {
+      "attacks_to_destroy": 4,
+      "max_movement_speed": 100,
+      "chain_length": 350,
+      "duration": 10,
+      "projectile_speed": 1000
+    }
+  },
+  "tidehunter_krill_eater": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "model_scale_base": -25,
+      "model_scale_per_level": 3,
+      "attack_range_base": -60,
+      "attack_range_per_level": 5,
+      "anchor_smash_radius_base": -60,
+      "anchor_smash_radius_per_level": 5,
+      "health_bar_offset_base": 160,
+      "health_bar_offset_per_level": 5,
+      "strength_gain_tooltip": 3.9
+    }
+  },
+  "tidehunter_blubber": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "damage_cleanse": 450,
+      "damage_reset_interval": 7
+    }
+  }
+}

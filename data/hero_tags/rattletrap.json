@@ -1,0 +1,24 @@
+{
+  "rattletrap_battery_assault": [
+    "aoe",
+    "stun",
+    "dps"
+  ],
+  "rattletrap_power_cogs": [
+    "aoe",
+    "burst",
+    "zone_control",
+    "knockback"
+  ],
+  "rattletrap_rocket_flare": [
+    "aoe",
+    "slow",
+    "vision",
+    "burst"
+  ],
+  "rattletrap_hookshot": [
+    "stun",
+    "shield",
+    "dash"
+  ]
+}

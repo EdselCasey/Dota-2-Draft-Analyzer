@@ -1,0 +1,30 @@
+{
+  "skeleton_king_wraithfire_blast": [
+    "stun",
+    "burst",
+    "dps",
+    "slow"
+  ],
+  "skeleton_king_bone_guard": [
+    "push",
+    "summon_units"
+  ],
+  "skeleton_king_spectral_blade": [
+    "attack_damage_boost",
+    "burst"
+  ],
+  "skeleton_king_mortal_strike": [
+    "attack_modifier",
+    "attack_damage_boost"
+  ],
+  "skeleton_king_reincarnation": [
+    "aoe",
+    "invulnerability"
+  ],
+  "skeleton_king_vampiric_spirit": [
+    "lifesteal",
+    "invulnerability",
+    "attack_speed_boost",
+    "movement_speed_boost"
+  ]
+}

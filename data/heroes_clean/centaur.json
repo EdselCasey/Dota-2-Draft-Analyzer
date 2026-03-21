@@ -1,0 +1,260 @@
+{
+  "centaur_hoof_stomp": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      18,
+      16,
+      14,
+      12
+    ],
+    "manaCost": [
+      100,
+      110,
+      120,
+      130
+    ],
+    "damage": [
+      100,
+      160,
+      220,
+      280
+    ],
+    "stun_duration": [
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "effects": {
+      "radius": 325,
+      "stomp_damage": [
+        70,
+        140,
+        210,
+        280
+      ],
+      "stun_duration": [
+        1.5,
+        2.0,
+        2.5,
+        3.0
+      ],
+      "windup_time": 0.5
+    }
+  },
+  "centaur_double_edge": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AOE"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": null,
+    "cooldown": [
+      3.5
+    ],
+    "manaCost": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "damage": [
+      120,
+      180,
+      240,
+      300
+    ],
+    "effects": {
+      "edge_damage": [
+        120,
+        180,
+        240,
+        300
+      ],
+      "strength_damage": [
+        60,
+        90,
+        120,
+        150
+      ],
+      "stack_duration": 0,
+      "pct_of_incoming_damage_as_bonus": 0,
+      "max_damage_increase_pct": 0,
+      "radius": 220
+    }
+  },
+  "centaur_return": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "aoe_return_damage": true,
+    "effects": {
+      "return_damage": [
+        15,
+        25,
+        35,
+        45
+      ],
+      "return_damage_str": [
+        16,
+        24,
+        32,
+        40
+      ],
+      "aura_radius": 1200
+    }
+  },
+  "centaur_stampede": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      150,
+      200,
+      250
+    ],
+    "movement_speed_bonus": true,
+    "phased_movement": true,
+    "effects": {
+      "duration": [
+        3.5,
+        4,
+        4.5
+      ],
+      "base_damage": 0,
+      "strength_damage": [
+        2,
+        2.5,
+        3
+      ],
+      "slow_duration": 3,
+      "radius": 105,
+      "slow_movement_speed": 100,
+      "AbilityCooldown": [
+        100,
+        95,
+        90
+      ]
+    }
+  },
+  "centaur_work_horse": {
+    "behavior": [
+      "NO_TARGET",
+      " IGNORE_BACKSWING"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": 0,
+    "cooldown": [
+      35
+    ],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "duration": 6,
+      "melee_attack_range": 200,
+      "air_duration": 0.5,
+      "air_height": 450,
+      "break_distance": 600
+    }
+  },
+  "centaur_horsepower": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI "
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "strength_to_movement_pct": 30,
+      "move_speed_limit": 575,
+      "base_move_speed_penalty": 0
+    }
+  },
+  "centaur_mount": {
+    "behavior": [
+      "UNIT_TARGET",
+      " IGNORE_BACKSWING",
+      "HIDDEN"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": 250,
+    "cooldown": [
+      30
+    ],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "duration": 8,
+      "melee_attack_range": 200,
+      "air_duration": 0.5,
+      "air_height": 450,
+      "break_distance": 600
+    }
+  },
+  "centaur_overrun": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      16
+    ],
+    "manaCost": [
+      50
+    ],
+    "effects": {
+      "duration": 2
+    }
+  },
+  "centaur_rawhide": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "health_per_upgrade": 25,
+      "upgrade_rate": 120
+    }
+  }
+}

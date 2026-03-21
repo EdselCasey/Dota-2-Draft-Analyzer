@@ -1,0 +1,34 @@
+{
+  "spectre_spectral_dagger": [
+    "aoe",
+    "burst",
+    "vision",
+    "aerial",
+    "slow"
+  ],
+  "spectre_dispersion": [
+    "aoe",
+    "dps",
+    "damage_reduction"
+  ],
+  "spectre_haunt": [
+    "slow",
+    "forced_movement",
+    "illusion",
+    "teleport",
+    "global",
+    "escape"
+  ],
+  "spectre_shadow_step": [
+    "teleport",
+    "illusion",
+    "escape"
+  ],
+  "spectre_spectral": [
+    "movement_speed_boost"
+  ],
+  "spectre_desolate": [
+    "attack_damage_boost",
+    "attack_modifier"
+  ]
+}

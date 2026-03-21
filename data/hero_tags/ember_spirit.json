@@ -1,0 +1,33 @@
+{
+  "ember_spirit_searing_chains": [
+    "aoe",
+    "root",
+    "burst"
+  ],
+  "ember_spirit_sleight_of_fist": [
+    "aoe",
+    "burst"
+  ],
+  "ember_spirit_flame_guard": [
+    "aoe",
+    "shield",
+    "dps"
+  ],
+  "ember_spirit_immolation": [
+    "aoe",
+    "dps"
+  ],
+  "ember_spirit_fire_remnant": [
+    "zone_conrol",
+    "aoe",
+    "dps"
+  ],
+  "ember_spirit_activate_fire_remnant": [
+    "aoe",
+    "global",
+    "dash",
+    "escape",
+    "burst",
+    "invulnerability"
+  ]
+}

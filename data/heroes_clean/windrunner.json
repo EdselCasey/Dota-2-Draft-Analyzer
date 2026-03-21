@@ -1,0 +1,213 @@
+{
+  "windrunner_gale_force": {
+    "behavior": [
+      "POINT",
+      " VECTOR_TARGETING",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 1200,
+    "cooldown": [
+      30
+    ],
+    "manaCost": [
+      125
+    ],
+    "effects": {
+      "duration": 3,
+      "wind_strength": 240,
+      "radius": 900
+    }
+  },
+  "windrunner_shackleshot": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 800,
+    "cooldown": [],
+    "manaCost": [
+      70,
+      80,
+      90,
+      100
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        16,
+        14,
+        12,
+        10
+      ],
+      "fail_stun_duration": 0.6,
+      "stun_duration": [
+        1.75,
+        2.25,
+        2.75,
+        3.25
+      ],
+      "shackle_distance": 575,
+      "arrow_speed": 1650,
+      "shackle_count": 1,
+      "shackle_angle": 23
+    }
+  },
+  "windrunner_powershot": {
+    "behavior": [
+      "POINT",
+      "CHANNELLED"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 3000,
+    "cooldown": [
+      12,
+      11,
+      10,
+      9
+    ],
+    "manaCost": [
+      90,
+      100,
+      110,
+      120
+    ],
+    "effects": {
+      "powershot_damage": [
+        170,
+        270,
+        370,
+        470
+      ],
+      "slow": [
+        20,
+        25,
+        30,
+        35
+      ],
+      "slow_duration": 3,
+      "damage_reduction": 15,
+      "arrow_width": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "arrow_range": 3000,
+      "arrow_speed": 3000,
+      "tree_width": 50,
+      "vision_radius": 400,
+      "vision_duration": [
+        3.34,
+        3.34,
+        3.34,
+        3.34
+      ]
+    }
+  },
+  "windrunner_windrun": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      50
+    ],
+    "effects": {
+      "movespeed_bonus_pct": 60,
+      "evasion_pct_tooltip": 100,
+      "enemy_movespeed_bonus_pct": 0,
+      "duration": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "AbilityCooldown": [
+        15,
+        14,
+        13,
+        12
+      ]
+    }
+  },
+  "windrunner_focusfire": {
+    "behavior": [
+      "UNIT_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC",
+      "BUILDING"
+    ],
+    "castRange": 600,
+    "cooldown": [],
+    "manaCost": [
+      75,
+      100,
+      125
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        70,
+        50,
+        30
+      ],
+      "AbilityDuration": [
+        20,
+        20,
+        20
+      ],
+      "bonus_attack_speed": [
+        350,
+        425,
+        500
+      ],
+      "focusfire_damage_reduction": -25,
+      "focusfire_fire_on_the_move": 1,
+      "process_procs": 1,
+      "is_unfocused": 0,
+      "bonus_range": 0,
+      "unfocused_cancel_initial_cooldown": 0.5
+    }
+  },
+  "windrunner_focusfire_cancel": {
+    "behavior": [
+      "HIDDEN",
+      "NO_TARGET",
+      "TOGGLE",
+      "DONT_RESUME_ATTACK"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "windrunner_easy_breezy": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "min_movespeed": 240,
+      "max_movespeed": 600
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "furion_sprout": [
+    "aoe",
+    "burst",
+    "heal",
+    "vision",
+    "save",
+    "root"
+  ],
+  "furion_teleportation": [
+    "aoe",
+    "teleport",
+    "escape",
+    "global"
+  ],
+  "furion_wrath_of_nature": [
+    "burst",
+    "global",
+    "aoe"
+  ],
+  "furion_curse_of_the_oldgrowth": [
+    "aoe",
+    "slow",
+    "dps",
+    "vision"
+  ],
+  "furion_nature's_call": [
+    "summon_units",
+    "aoe_damage"
+  ],
+  "furion_spirit_of_the_forest": [
+    "attack_damage_boost"
+  ]
+}

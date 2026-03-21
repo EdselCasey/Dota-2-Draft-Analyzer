@@ -1,0 +1,300 @@
+{
+  "lycan_summon_wolves": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      30,
+      30,
+      30,
+      30
+    ],
+    "manaCost": [],
+    "effects": {
+      "AbilityManaCost": [
+        115,
+        120,
+        125,
+        130,
+        130,
+        130
+      ],
+      "wolf_index": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "wolf_duration": 50,
+      "wolf_bat": [
+        1.2,
+        1.1,
+        1,
+        0.9,
+        0.9,
+        0.9
+      ],
+      "wolf_damage": [
+        22,
+        28,
+        34,
+        40,
+        46,
+        52
+      ],
+      "wolf_hp": [
+        325,
+        375,
+        425,
+        475,
+        525,
+        575
+      ],
+      "bonus_health": 0,
+      "bonus_damage": 0,
+      "bonus_armor": [
+        0,
+        0,
+        0,
+        0,
+        5,
+        10
+      ],
+      "bash_chance": 15,
+      "bash_duration": 1,
+      "wolf_count": 2,
+      "max_level": 4
+    }
+  },
+  "lycan_wolf_bite": {
+    "behavior": [
+      "UNIT_TARGET",
+      "HIDDEN",
+      "SHOW_IN_GUIDES",
+      "NOT_LEARNABLE"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO",
+      "CREEP_HERO"
+    ],
+    "castRange": 300,
+    "cooldown": [],
+    "manaCost": [
+      150
+    ],
+    "effects": {
+      "lifesteal_percent": 40,
+      "lifesteal_range": 1200,
+      "attack_range": 150,
+      "AbilityCooldown": [
+        110,
+        100,
+        90
+      ]
+    }
+  },
+  "lycan_howl": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      22,
+      20,
+      18,
+      16
+    ],
+    "manaCost": [
+      40
+    ],
+    "effects": {
+      "howl_duration": 8,
+      "attack_damage_reduction": [
+        25,
+        30,
+        35,
+        40
+      ],
+      "total_attack_damage_reduction": 0,
+      "armor": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "radius": 2000,
+      "fear_duration": 0,
+      "max_level": 4
+    }
+  },
+  "lycan_feral_impulse": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bonus_damage": [
+        10,
+        20,
+        30,
+        40
+      ],
+      "bonus_hp_regen": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "max_level": 4
+    }
+  },
+  "lycan_shapeshift": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "duration": 25,
+      "speed": 550,
+      "bonus_night_vision": 1000,
+      "transformation_time": 1.1,
+      "crit_chance": 40,
+      "crit_multiplier": [
+        160,
+        200,
+        240
+      ],
+      "health_bonus": [
+        225,
+        325,
+        425
+      ],
+      "is_wolfpack": 0,
+      "kill_duration_extension": 0,
+      "AbilityCooldown": [
+        110,
+        100,
+        90
+      ]
+    }
+  },
+  "lycan_summon_wolves_critical_strike": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "maim_chance": 20,
+      "maim_duration": 4,
+      "maim_movement_speed": 15,
+      "maim_attack_speed": 60,
+      "maim_damage": 8
+    }
+  },
+  "lycan_summon_wolves_invisibility": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "fade_time": [
+        0,
+        0,
+        0
+      ],
+      "fade_delay": 2
+    }
+  },
+  "lycan_summon_wolves_bash": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bash_chance": 20,
+      "bash_damage": 50,
+      "bash_duration": 0.5
+    }
+  },
+  "lycan_summon_wolves_hamstring": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AUTOCAST",
+      "ATTACK"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 150,
+    "cooldown": [
+      8
+    ],
+    "manaCost": [],
+    "effects": {
+      "root_duration": 0.5,
+      "damage_boost": 50,
+      "damage_boost_stacks": 4,
+      "damage_boost_duration": 12
+    }
+  },
+  "lycan_summon_wolves_hightail": {
+    "behavior": [
+      "NO_TARGET",
+      "IGNORE_BACKSWING",
+      "DONT_CANCEL_MOVEMENT"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      50
+    ],
+    "manaCost": [],
+    "effects": {
+      "duration": 6,
+      "evasion": 100,
+      "min_movespeed": 550,
+      "bonus_attack_speed": 20
+    }
+  },
+  "lycan_apex_predator": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "damage_amp_per_level": 2
+    }
+  }
+}

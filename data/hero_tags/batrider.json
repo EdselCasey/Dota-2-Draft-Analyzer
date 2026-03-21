@@ -1,0 +1,29 @@
+{
+  "batrider_sticky_napalm": [
+    "aoe",
+    "aoe_damage",
+    "slow",
+    "magic_amp"
+  ],
+  "batrider_flamebreak": [
+    "aoe",
+    "slow",
+    "knockback"
+  ],
+  "batrider_firefly": [
+    "aoe",
+    "dps",
+    "aoe_damage",
+    "aerial",
+    "movement_speed_boost"
+  ],
+  "batrider_flaming_lasso": [
+    "stun",
+    "forced_movement",
+    "dps"
+  ],
+  "batrider_smoldering_resin": [
+    "dps",
+    "attack_modifier"
+  ]
+}

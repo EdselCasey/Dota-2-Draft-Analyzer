@@ -1,0 +1,23 @@
+{
+  "phantom_lancer_spirit_lance": [
+    "burst",
+    "illusion",
+    "slow"
+  ],
+  "phantom_lancer_doppelganger": [
+    "illusion",
+    "blink"
+  ],
+  "phantom_lancer_juxtapose": [
+    "illusion",
+    "attack_modifier"
+  ],
+  "phantom_lancer_phantom_rush": [
+    "dash",
+    "movement_speed_boost",
+    "damage_reduction"
+  ],
+  "phantom_lancer_illusory_armaments": [
+    "attack_damage_boost"
+  ]
+}

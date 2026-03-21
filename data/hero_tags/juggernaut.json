@@ -1,0 +1,30 @@
+{
+  "juggernaut_blade_dance": [
+    "attack_damage_boost",
+    "lifesteal"
+  ],
+  "juggernaut_blade_fury": [
+    "aoe",
+    "dps"
+  ],
+  "juggernaut_blade_form": [
+    "armor_gain",
+    "attack_speed_boost",
+    "movement_speed_boost",
+    "attack_damage_boost"
+  ],
+  "juggernaut_healing_ward": [
+    "aoe",
+    "heal"
+  ],
+  "juggernaut_omni_slash": [
+    "aoe",
+    "dps",
+    "dispel",
+    "invulnerability",
+    "attack_speed_boost"
+  ],
+  "juggernaut_duelist": [
+    "magic_amp"
+  ]
+}

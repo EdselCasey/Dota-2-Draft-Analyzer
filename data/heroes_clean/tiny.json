@@ -1,0 +1,271 @@
+{
+  "tiny_avalanche": {
+    "behavior": [
+      "AOE",
+      "POINT"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      95,
+      110,
+      125,
+      140
+    ],
+    "effects": {
+      "AbilityCastRange": 600,
+      "radius": [
+        325,
+        340,
+        355,
+        370
+      ],
+      "tick_interval": 0.3,
+      "total_duration": 1.5,
+      "tick_count": 5,
+      "stun_duration": 0.3,
+      "projectile_speed": 1200,
+      "avalanche_damage": [
+        100,
+        190,
+        280,
+        370
+      ],
+      "toss_damage_bonus_pct": 0,
+      "AbilityCooldown": [
+        23,
+        20,
+        17,
+        14
+      ]
+    }
+  },
+  "tiny_toss": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AOE",
+      "RUNE_TARGET"
+    ],
+    "targetTeam": "CUSTOM",
+    "targetType": [
+      "CUSTOM"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": null,
+    "cooldown": [
+      20,
+      17,
+      14,
+      11
+    ],
+    "manaCost": [
+      110,
+      125,
+      140,
+      155
+    ],
+    "effects": {
+      "duration": 1.25,
+      "grab_radius": 300,
+      "radius": 275,
+      "bonus_damage_pct": 0,
+      "toss_damage": [
+        90,
+        180,
+        270,
+        360
+      ],
+      "land_movement_slow": 0,
+      "land_attack_slow": 0,
+      "bonus_land_damage_pct": 0,
+      "land_debuff_duration": 0
+    }
+  },
+  "tiny_craggy_exterior": {
+    "behavior": [
+      "PASSIVE",
+      "SHOW_IN_GUIDES",
+      "NOT_LEARNABLE "
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "debuff_duration": 5,
+      "damage": 0,
+      "max_stacks": 10,
+      "damage_reduction_per_stack": [
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "tiny_tree_grab": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "CUSTOM",
+    "targetType": [
+      "TREE",
+      "CUSTOM"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 165,
+    "cooldown": [
+      16,
+      15,
+      14,
+      13
+    ],
+    "manaCost": [
+      40
+    ],
+    "effects": {
+      "attack_count": 5,
+      "bonus_damage": [
+        10,
+        20,
+        30,
+        40
+      ],
+      "bonus_damage_buildings": [
+        30,
+        40,
+        50,
+        60
+      ],
+      "attack_range": 300,
+      "splash_width": 200,
+      "splash_range": 400,
+      "splash_pct": [
+        70,
+        80,
+        90,
+        100
+      ],
+      "bat_increase": 0,
+      "speed_reduction": 0
+    }
+  },
+  "tiny_toss_tree": {
+    "behavior": [
+      "UNIT_TARGET",
+      "POINT",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 1200,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "speed": 900,
+      "range": 1200,
+      "bonus_damage": [
+        10,
+        20,
+        30,
+        40
+      ],
+      "splash_radius": 275,
+      "movement_slow": 25,
+      "slow_duration": 2.5
+    }
+  },
+  "tiny_tree_channel": {
+    "behavior": [
+      "CHANNELLED ",
+      "POINT",
+      "AOE",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 1200,
+    "cooldown": [
+      17
+    ],
+    "manaCost": [
+      200
+    ],
+    "effects": {
+      "speed": 1000,
+      "range": 1200,
+      "splash_radius": 400,
+      "tree_grab_radius": 700,
+      "interval": 0.5
+    }
+  },
+  "tiny_grow": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "bonus_armor": [
+        5,
+        10,
+        15
+      ],
+      "bonus_damage": [
+        55,
+        110,
+        165
+      ],
+      "attack_speed_reduction": -35,
+      "toss_bonus_damage": [
+        50,
+        175,
+        300
+      ],
+      "move_speed": [
+        10,
+        15,
+        20
+      ]
+    }
+  },
+  "tiny_rocksteady": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "max_attack_speed": 100,
+      "attack_speed_to_damage": 60
+    }
+  },
+  "tiny_insurmountable": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "str_to_slow_resist_pct": 20,
+      "str_to_status_resist_pct": 10
+    }
+  }
+}

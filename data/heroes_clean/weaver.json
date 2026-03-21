@@ -1,0 +1,198 @@
+{
+  "weaver_the_swarm": {
+    "behavior": [
+      "POINT",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 3000,
+    "cooldown": [
+      44,
+      36,
+      28,
+      20
+    ],
+    "manaCost": [
+      110
+    ],
+    "effects": {
+      "damage": [
+        18,
+        23,
+        28,
+        33
+      ],
+      "attack_rate": [
+        1.2,
+        1.05,
+        0.9,
+        0.75
+      ],
+      "count": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "armor_reduction": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "duration": 16,
+      "destroy_attacks": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "radius": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "speed": [
+        750,
+        750,
+        750,
+        750
+      ],
+      "spawn_radius": [
+        300,
+        300,
+        300,
+        300
+      ]
+    }
+  },
+  "weaver_shukuchi": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "IGNORE_CHANNEL"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      65
+    ],
+    "effects": {
+      "damage": [
+        100,
+        130,
+        160,
+        190
+      ],
+      "speed": [
+        200,
+        230,
+        260,
+        290
+      ],
+      "radius": [
+        175,
+        175,
+        175,
+        175
+      ],
+      "fade_time": 0.25,
+      "duration": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "AbilityCooldown": [
+        15,
+        12,
+        9,
+        6
+      ],
+      "geminate_attack_mark_duration": 0,
+      "min_movespeed_override": 550,
+      "shukuchi_attack_mark_radius": 0,
+      "shukuchi_attack_delay": 0,
+      "slow_duration": 0,
+      "slow_percent": 0
+    }
+  },
+  "weaver_geminate_attack": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AUTOCAST",
+      "ATTACK"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC",
+      "BUILDING"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 425,
+    "cooldown": [
+      9,
+      7,
+      5,
+      3
+    ],
+    "manaCost": [],
+    "effects": {
+      "delay": 0.25,
+      "extra_attack": 1,
+      "bonus_damage": [
+        20,
+        35,
+        50,
+        65
+      ]
+    }
+  },
+  "weaver_time_lapse": {
+    "behavior": [
+      "NO_TARGET",
+      "DONT_RESUME_MOVEMENT",
+      "DONT_RESUME_ATTACK",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": 500,
+    "cooldown": [],
+    "manaCost": [
+      150,
+      75,
+      0
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        70,
+        55,
+        40
+      ],
+      "targets_allies": 0
+    }
+  },
+  "weaver_rewoven": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "attack_range_increase_per_stack": 50,
+      "duration": 7
+    }
+  }
+}

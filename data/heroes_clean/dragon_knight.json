@@ -1,0 +1,207 @@
+{
+  "dragon_knight_fireball": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "HIDDEN ",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      20
+    ],
+    "manaCost": [
+      80
+    ],
+    "effects": {
+      "radius": 275,
+      "damage": 75,
+      "duration": 8,
+      "burn_interval": 0.5,
+      "linger_duration": 2,
+      "dragon_form_cast_range": 1400,
+      "melee_cast_range": 600,
+      "physical_damage_type": 0
+    }
+  },
+  "dragon_knight_breathe_fire": {
+    "behavior": [
+      "DIRECTIONAL",
+      "POINT",
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      90,
+      95,
+      100,
+      105
+    ],
+    "effects": {
+      "start_radius": [
+        150,
+        150,
+        150,
+        150
+      ],
+      "end_radius": [
+        250,
+        250,
+        250,
+        250
+      ],
+      "range": 750,
+      "AbilityCastRange": 600,
+      "AbilityCooldown": [
+        14,
+        13,
+        12,
+        11
+      ],
+      "speed": 1050,
+      "damage": [
+        80,
+        160,
+        240,
+        320
+      ],
+      "reduction": -30,
+      "dragon_form_bonus_pct": 0,
+      "duration": 11,
+      "physical_damage_type": 0
+    }
+  },
+  "dragon_knight_dragon_tail": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 150,
+    "cooldown": [
+      16,
+      14,
+      12,
+      10
+    ],
+    "manaCost": [
+      70,
+      80,
+      90,
+      100
+    ],
+    "effects": {
+      "stun_duration": [
+        1.8,
+        2,
+        2.2,
+        2.4
+      ],
+      "damage": [
+        60,
+        90,
+        120,
+        150
+      ],
+      "damage_pct": 0,
+      "dragon_cast_range": 450,
+      "projectile_speed": 1600,
+      "physical_damage_type": 0
+    }
+  },
+  "dragon_knight_dragon_blood": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "dragon_knight_inherited_vigor": {
+    "behavior": [
+      "PASSIVE",
+      " SHOW_IN_GUIDES",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "base_health_regen": 2,
+      "base_armor": 2,
+      "level_mult": 0.5,
+      "regen_and_armor_multiplier_during_dragon_form": 1.5
+    }
+  },
+  "dragon_knight_elder_dragon_form": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [
+      100
+    ],
+    "manaCost": [
+      50,
+      50,
+      50
+    ],
+    "effects": {
+      "duration": 60,
+      "bonus_movement_speed": 20,
+      "bonus_attack_range": [
+        350,
+        350,
+        350,
+        350
+      ],
+      "bonus_attack_damage": [
+        20,
+        50,
+        80,
+        110
+      ],
+      "magic_resistance": 0,
+      "model_scale": [
+        10,
+        15,
+        20
+      ],
+      "is_green_dragon": 0,
+      "is_red_dragon": 0,
+      "is_blue_dragon": 0,
+      "ranged_splash_radius": 275,
+      "ranged_splash_damage_pct": [
+        30,
+        40,
+        50,
+        60
+      ],
+      "wyrms_wrath_bonus_tooltip": [
+        20,
+        30,
+        40,
+        50
+      ],
+      "health_bar_offset": 300
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "tidehunter_gush": [
+    "burst",
+    "slow",
+    "armor_reduction"
+  ],
+  "tidehunter_kraken_shell": [
+    "damage_reduction",
+    "dispel"
+  ],
+  "tidehunter_anchor_smash": [
+    "aoe",
+    "damage_reduction",
+    "burst"
+  ],
+  "tidehunter_ravage": [
+    "aoe",
+    "stun",
+    "burst"
+  ],
+  "tidehunter_dead_in_the_water": [
+    "slow"
+  ],
+  "tidehunter_krill_eater": [
+    "hp_growth"
+  ]
+}

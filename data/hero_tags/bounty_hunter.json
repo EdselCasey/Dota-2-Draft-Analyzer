@@ -1,0 +1,20 @@
+{
+  "bounty_hunter_shuriken_toss": [
+    "slow",
+    "burst"
+  ],
+  "bounty_hunter_jinada": [
+    "attack_modifier",
+    "burst",
+    "attack_damage_boost"
+  ],
+  "bounty_hunter_wind_walk": [
+    "stun",
+    "damage_reduction",
+    "stealth"
+  ],
+  "bounty_hunter_track": [
+    "magic_amp",
+    "vision"
+  ]
+}

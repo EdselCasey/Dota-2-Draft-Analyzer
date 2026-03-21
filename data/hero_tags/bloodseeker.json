@@ -1,0 +1,25 @@
+{
+  "bloodseeker_bloodrage": [
+    "attack_speed_boost",
+    "attack_modifier",
+    "attack_damage_boost"
+  ],
+  "bloodseeker_blood_rite": [
+    "aoe",
+    "silence",
+    "aoe_damage"
+  ],
+  "bloodseeker_thirst": [
+    "movement_speed_boost",
+    "global"
+  ],
+  "bloodseeker_rupture": [
+    "knockback",
+    "burst",
+    "dps"
+  ],
+  "bloodseeker_sanguivore": [
+    "heal",
+    "lifesteal"
+  ]
+}

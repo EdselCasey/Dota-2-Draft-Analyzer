@@ -1,0 +1,23 @@
+{
+  "centaur_hoof_stomp": [
+    "aoe",
+    "stun",
+    "burst"
+  ],
+  "centaur_double_edge": [
+    "aoe",
+    "burst"
+  ],
+  "centaur_retaliate": [
+    "aoe",
+    "burst"
+  ],
+  "centaur_stampede": [
+    "slow",
+    "global",
+    "movement_speed_boost"
+  ],
+  "rawhide": [
+    "hp_growth"
+  ]
+}

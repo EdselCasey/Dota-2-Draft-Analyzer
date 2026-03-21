@@ -1,0 +1,20 @@
+{
+  "phantom_assassin_stifling_dagger": [
+    "slow",
+    "burst",
+    "attack_damage_boost"
+  ],
+  "phantom_assassin_phantom_strike": [
+    "attack_speed_boost"
+  ],
+  "phantom_assassin_blur": [
+    "move_speed_boost"
+
+  ],
+  "phantom_assassin_coup_de_grace": [
+    "attack_damage_boost"
+  ],
+  "phantom_assassin_immaterial": [
+    "damage_reduction"
+  ]
+}

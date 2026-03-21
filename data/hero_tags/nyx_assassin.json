@@ -1,0 +1,28 @@
+{
+  "nyx_assassin_impale": [
+    "burst",
+    "aoe",
+    "stun"
+  ],
+  "nyx_assassin_mind_flare": [
+    "burst"
+  ],
+  "nyx_assassin_spiked_carapace": [
+    "stun",
+    "invulnerability",
+    "aoe",
+    "aoe_damage"
+  ],
+  "nyx_assassin_vendetta": [
+    "magic_amp",
+    "burst",
+    "movement_speed_boost",
+    "stealth",
+    "unobstructed",
+    "escape"
+  ],
+  "nyx_assassin_nyxth_sense": [
+    "aoe",
+    "vision"
+  ]
+}

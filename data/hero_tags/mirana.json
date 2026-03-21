@@ -1,0 +1,24 @@
+{
+  "mirana_arrow": [
+    "vision",
+    "stun",
+    "burst"
+  ],
+  "mirana_moonlight_shadow": [
+    "movement_speed_boost",
+    "stealth",
+    "global",
+    "save",
+    "escape"
+  ],
+  "mirana_leap": [
+    "root",
+    "dash",
+    "attack_speed_boost",
+    "movement_speed_boost"
+  ],
+  "mirana_starfall": [
+    "aoe",
+    "burst"
+  ]
+}

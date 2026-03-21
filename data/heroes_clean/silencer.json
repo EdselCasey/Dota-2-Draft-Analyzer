@@ -1,0 +1,225 @@
+{
+  "silencer_curse_of_the_silent": {
+    "behavior": [
+      "POINT",
+      "AOE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 850,
+    "cooldown": [],
+    "manaCost": [
+      120,
+      130,
+      140,
+      150
+    ],
+    "effects": {
+      "damage": [
+        16,
+        24,
+        32,
+        40
+      ],
+      "application_damage": [
+        20,
+        40,
+        60,
+        80
+      ],
+      "AbilityCooldown": [
+        22,
+        20,
+        18,
+        16
+      ],
+      "AbilityCharges": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "radius": 350,
+      "duration": 6,
+      "movespeed": [
+        -16,
+        -19,
+        -22,
+        -25
+      ],
+      "undispellable": 0,
+      "penalty_duration": 2,
+      "penalty_multiplier": 1.25
+    }
+  },
+  "silencer_glaives_of_wisdom": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AUTOCAST",
+      "ATTACK"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 600,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [
+      14,
+      16,
+      18,
+      20,
+      20
+    ],
+    "effects": {
+      "max_level": 4,
+      "intellect_damage_pct": [
+        35,
+        50,
+        65,
+        80,
+        80
+      ],
+      "int_steal": [
+        2,
+        3,
+        4,
+        5,
+        5
+      ],
+      "int_steal_duration": [
+        10,
+        20,
+        30,
+        40,
+        40
+      ],
+      "bounce_range": 0,
+      "bounce_count": 0,
+      "stacks_for_silence": 0,
+      "silence_duration": 2.5,
+      "debuff_linger_duration": [
+        3,
+        4,
+        5,
+        6,
+        6
+      ]
+    }
+  },
+  "silencer_last_word": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 900,
+    "cooldown": [
+      22,
+      18,
+      14,
+      10
+    ],
+    "manaCost": [
+      100,
+      105,
+      110,
+      115
+    ],
+    "effects": {
+      "damage": [
+        120,
+        160,
+        200,
+        240
+      ],
+      "int_multiplier": [
+        1,
+        1.5,
+        2,
+        2.5
+      ],
+      "debuff_duration": 4,
+      "duration": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "radius": 0
+    }
+  },
+  "silencer_global_silence": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      300,
+      450,
+      600
+    ],
+    "effects": {
+      "AbilityDuration": [
+        4.5,
+        5.25,
+        6
+      ],
+      "AbilityCooldown": 120
+    }
+  },
+  "silencer_brain_drain": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "permanent_int_steal_range": 925,
+      "permanent_int_steal_amount": 1
+    }
+  },
+  "silencer_oppressive_silence": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "damage_pct": [
+        8,
+        12,
+        16,
+        20
+      ]
+    }
+  },
+  "silencer_irrepressible": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  }
+}

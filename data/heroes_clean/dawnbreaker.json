@@ -1,0 +1,259 @@
+{
+  "dawnbreaker_fire_wreath": {
+    "behavior": [
+      "POINT",
+      "CAN_SELF_CAST",
+      "DONT_RESUME_MOVEMENT"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        17,
+        15,
+        13,
+        11
+      ],
+      "duration": 1.1,
+      "swipe_radius": 300,
+      "swipe_damage": [
+        25,
+        40,
+        55,
+        70
+      ],
+      "smash_radius": 300,
+      "smash_damage": [
+        25,
+        40,
+        55,
+        70
+      ],
+      "movement_speed": 215,
+      "total_attacks": 3,
+      "swipe_slow": -100,
+      "smash_distance_from_hero": 120,
+      "animation_rate": 0,
+      "turn_rate": 90,
+      "shard_cast_point": 0.1,
+      "shard_movement_penalty": 0,
+      "movespeed_bonus_radius": 0,
+      "movespeed_bonus_self_max": 0,
+      "movespeed_bonus_ally_max": 0,
+      "movespeed_bonus_duration": 0
+    }
+  },
+  "dawnbreaker_celestial_hammer": {
+    "behavior": [
+      "POINT"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      18,
+      16,
+      14,
+      12
+    ],
+    "manaCost": [
+      100,
+      110,
+      120,
+      130
+    ],
+    "effects": {
+      "hammer_damage": [
+        50,
+        80,
+        110,
+        140
+      ],
+      "projectile_radius": 200,
+      "projectile_speed": 1600,
+      "flare_debuff_duration": [
+        2.5,
+        3,
+        3.5,
+        4
+      ],
+      "flare_radius": 200,
+      "move_slow": [
+        24,
+        28,
+        32,
+        36
+      ],
+      "burn_damage": [
+        20,
+        30,
+        40,
+        50
+      ],
+      "burn_interval": 0.5,
+      "pause_duration": 2,
+      "hammer_aoe_radius": 200,
+      "travel_speed_pct": 100,
+      "return_anim_distance_threshold": 300,
+      "range": [
+        700,
+        900,
+        1100,
+        1300
+      ],
+      "hammer_solar_guardian_radius": 0,
+      "hammer_solar_guardian_effectiveness_pct": 0,
+      "fire_trail_health_regen": 0,
+      "stun_duration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "dawnbreaker_converge": {
+    "behavior": [
+      "NO_TARGET",
+      "NOT_LEARNABLE",
+      "HIDDEN",
+      "IMMEDIATE",
+      "DONT_RESUME_MOVEMENT",
+      "ROOT_DISABLES"
+    ],
+    "targetType": [],
+    "castRange": 375,
+    "cooldown": [
+      0.25
+    ],
+    "manaCost": [
+      0
+    ],
+    "effects": {}
+  },
+  "dawnbreaker_luminosity": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "attack_count": 3,
+      "heal_radius": 650,
+      "heal_pct": [
+        35,
+        40,
+        45,
+        50
+      ],
+      "heal_from_creeps": 40,
+      "bonus_damage": [
+        125,
+        150,
+        175,
+        200
+      ],
+      "proc_cooldown": 0,
+      "allied_healing_pct": 50,
+      "cooldown_reduction": 0,
+      "triggered_by_celestial_hammer": 0
+    }
+  },
+  "dawnbreaker_solar_guardian": {
+    "behavior": [
+      "POINT",
+      "CHANNELLED"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      150,
+      200,
+      250
+    ],
+    "global": true,
+    "teleport": true,
+    "effects": {
+      "AbilityCooldown": [
+        120,
+        105,
+        90
+      ],
+      "base_heal": [
+        45,
+        70,
+        95
+      ],
+      "heal_amount": [
+        45,
+        70,
+        95
+      ],
+      "radius": 500,
+      "base_damage": [
+        30,
+        50,
+        70
+      ],
+      "pulse_interval": 0.5,
+      "land_damage": [
+        130,
+        160,
+        190
+      ],
+      "land_stun_duration": [
+        1.4,
+        1.6,
+        1.8
+      ],
+      "max_offset_distance": 350,
+      "airtime_scepter_movement_speed": 200,
+      "airtime_duration": 0.8
+    }
+  },
+  "dawnbreaker_land": {
+    "behavior": [
+      "NO_TARGET",
+      "HIDDEN",
+      "IMMEDIATE",
+      "UNRESTRICTED",
+      "IGNORE_PSEUDO_QUEUE",
+      "IGNORE_SILENCE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      2
+    ],
+    "manaCost": [],
+    "effects": {}
+  },
+  "dawnbreaker_unbreakable": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  }
+}

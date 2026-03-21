@@ -1,0 +1,33 @@
+{
+  "oracle_fortunes_end": [
+    "aoe",
+    "channelled",
+    "burst",
+    "root",
+    "dispel"
+  ],
+  "oracle_fates_edict": [
+    "damage_reduction",
+    "disarm",
+    "save"
+  ],
+  "oracle_false_promise": [
+    "invulnerability",
+    "dispel",
+    "heal",
+    "armor_gain",
+    "save"
+  ],
+  "oracle_rain_of_destiny": [
+    "aoe",
+    "heal",
+    "regen",
+    "antiheal",
+    "dps"
+  ],
+  "oracle_purifying_flames": [
+    "heal",
+    "regen",
+    "burst"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "dragon_knight_fireball": [
+    "aoe",
+    "aoe_damage",
+    "dps"
+  ],
+  "dragon_knight_breathe_fire": [
+    "aoe",
+    "damage_reduction",
+    "aoe_damage"
+  ],
+  "dragon_knight_dragon_tail": [
+    "stun",
+    "burst"
+  ],
+  "dragon_knight_dragon_blood": [
+    "armor_gain",
+    "regen"
+  ],
+  "dragon_knight_elder_dragon_form": [
+    "attack_damage_boost",
+    "movement_speed_boost",
+    "attack_modifier",
+    "regen",
+    "armor_gain"
+  ],
+  "dragon_knight_forms": [
+    "armor_reduction",
+    "dps",
+    "aoe",
+    "siege",
+    "slow",
+    "antiheal"
+  ]
+}

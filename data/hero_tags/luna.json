@@ -1,0 +1,25 @@
+{
+  "luna_lucent_beam": [
+    "stun",
+    "burst"
+  ],
+  "luna_lunar_orbit": [
+    "aoe",
+    "damage_reduction",
+    "movement_speed_boost",
+    "dps"
+  ],
+  "luna_moon_glaive": [
+    "aoe",
+    "attack_modifier"
+  ],
+  "luna_eclipse": [
+    "aoe",
+    "aoe_damage"
+  ],
+  "luna_lunar_blessing": [
+    "global",
+    "attack_damage_boost",
+    "aoe"
+  ]
+}

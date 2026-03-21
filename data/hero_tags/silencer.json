@@ -1,0 +1,26 @@
+{
+  "silencer_arcane_curse": [
+    "aoe",
+    "slow",
+    "dps"
+  ],
+  "silencer_glaives_of_wisdom": [
+    "attack_modifier",
+    "attack_damage_boost"
+  ],
+  "silencer_last_word": [
+    "burst",
+    "silence"
+  ],
+  "silencer_brain_drain": [
+    "mana_regen",
+    "attack_damage_boost"
+  ],
+  "silencer_suffer_in_silence": [
+    "magic_amp"
+  ],
+  "silencer_global_silence": [
+    "global",
+    "silence"
+  ]
+}

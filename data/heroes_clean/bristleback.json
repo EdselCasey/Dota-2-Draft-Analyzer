@@ -1,0 +1,192 @@
+{
+  "bristleback_viscous_nasal_goo": {
+    "behavior": [
+      "UNIT_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 0,
+    "cooldown": [
+      1.75
+    ],
+    "manaCost": [
+      12,
+      16,
+      20,
+      24
+    ],
+    "armor_reduction": true,
+    "effects": {
+      "goo_speed": 1000,
+      "goo_duration": 5,
+      "base_armor": [
+        1.5,
+        2,
+        2.5,
+        3
+      ],
+      "armor_per_stack": [
+        2,
+        2.5,
+        3,
+        3.5
+      ],
+      "base_move_slow": 12,
+      "move_slow_per_stack": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "stack_limit": 4,
+      "goo_duration_creep": 10,
+      "AbilityCastRange": 650
+    }
+  },
+  "bristleback_quill_spray": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE",
+      "AUTOCAST",
+      "AOE"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "manaCost": [
+      35,
+      35,
+      35,
+      35
+    ],
+    "damage": [
+      25,
+      45,
+      65,
+      85
+    ],
+    "effects": {
+      "radius": 700,
+      "quill_base_damage": [
+        25,
+        45,
+        65,
+        85
+      ],
+      "quill_stack_damage": 30,
+      "quill_stack_duration": 14,
+      "max_damage": 500,
+      "projectile_speed": 2400
+    }
+  },
+  "bristleback_bristleback": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "side_damage_reduction": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "back_damage_reduction": [
+        16,
+        24,
+        32,
+        40
+      ],
+      "side_angle": 110,
+      "back_angle": 70,
+      "quill_release_threshold": [
+        275,
+        250,
+        225,
+        200
+      ],
+      "quill_release_interval": 0.1,
+      "goo_radius": 0,
+      "activation_cooldown": 24,
+      "activation_manacost": 125,
+      "activation_delay": 0.5,
+      "activation_num_quill_sprays": 5,
+      "activation_spray_interval": 0.4,
+      "activation_angle": 45,
+      "cast_range_bonus": 0,
+      "activation_movement_speed_pct": -40,
+      "activation_turn_rate_pct": -100,
+      "activation_disable_turning": 1,
+      "activation_ignore_cast_angle": 1,
+      "activation_turn_rate": 500
+    }
+  },
+  "bristleback_prickly": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "amp_pct": 10,
+      "angle": 110
+    }
+  },
+  "bristleback_warpath": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      45
+    ],
+    "manaCost": [],
+    "effects": {
+      "AbilityManaCost": 0,
+      "damage_per_stack": [
+        15,
+        20,
+        25
+      ],
+      "aspd_per_stack": 0,
+      "move_speed_per_stack": [
+        2,
+        2.5,
+        3
+      ],
+      "stack_duration": [
+        16,
+        18,
+        20
+      ],
+      "max_stacks": [
+        8,
+        10,
+        12
+      ],
+      "active_bonus_attack_percent": 0,
+      "active_bonus_movement_percent": 0,
+      "active_duration": 0,
+      "active_view_angle_restriction": 0
+    }
+  }
+}

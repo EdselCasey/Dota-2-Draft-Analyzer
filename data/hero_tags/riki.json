@@ -1,0 +1,28 @@
+{
+  "riki_smoke_screen": [
+    "aoe",
+    "silence",
+    "damage_reduction"
+  ],
+  "riki_blink_strike": [
+    "slow",
+    "blink",
+    "escape",
+    "burst",
+    "attack_damage_boost"
+  ],
+  "riki_backstab": [
+    "attack_modifier"
+  ],
+  "riki_cloak_and_dagger": [
+    "stealth"
+  ],
+  "riki_tricks_of_the_trade": [
+    "aoe",
+    "channelled",
+    "attack_damage_boost",
+    "dps",
+    "invulnerability",
+    "escape"
+  ]
+}

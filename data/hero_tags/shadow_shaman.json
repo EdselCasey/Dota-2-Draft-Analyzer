@@ -1,0 +1,25 @@
+{
+  "shadow_shaman_ether_shock": [
+    "burst"
+  ],
+  "shadow_shaman_voodoo": [
+    "hex"
+  ],
+  "shadow_shaman_shackles": [
+    "channelled",
+    "dps",
+    "stun"
+  ],
+  "shadow_shaman_mass_serpent_ward": [
+    "summon_units",
+    "siege",
+    "zone_control"
+  ],
+  "shadow_shaman_fowl_play": [
+    "damage_reduction",
+    "movement_speed_boost"
+  ],
+  "shadow_shaman_chicken_fingers": [
+    "hex"
+  ]
+}

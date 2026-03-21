@@ -1,0 +1,22 @@
+{
+  "morphling_adaptive_strike_agi": [
+    "burst"
+  ],
+  "morphling_adaptive_strike_str": [
+    "knockback",
+    "stun"
+  ],
+  "morphling_hybrid": [
+    "hp_growth",
+    "attack_damage_boost",
+    "attack_speed_boost",
+    "armor_gain"
+  ],
+  "morphling_waveform": [
+    "dash",
+    "aoe",
+    "attack_modifier",
+    "escape",
+    "invulnerability"
+  ]
+}

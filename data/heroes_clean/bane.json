@@ -1,0 +1,177 @@
+{
+  "bane_enfeeble": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PURE",
+    "castRange": null,
+    "cooldown": [
+      22,
+      17,
+      12,
+      7
+    ],
+    "manaCost": [
+      100,
+      110,
+      120,
+      130
+    ],
+    "effects": {
+      "damage_reduction": [
+        55,
+        60,
+        65,
+        70
+      ],
+      "cast_reduction": 30,
+      "duration": 9,
+      "damage_per_second": [
+        12,
+        18,
+        24,
+        30
+      ],
+      "damage_tick_rate": 1
+    }
+  },
+  "bane_brain_sap": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PURE",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      120,
+      130,
+      140,
+      150
+    ],
+    "effects": {
+      "damage": [
+        90,
+        160,
+        230,
+        300
+      ],
+      "heal_amount": [
+        90,
+        160,
+        230,
+        300
+      ],
+      "AbilityCastRange": 625
+    }
+  },
+  "bane_fiends_grip": {
+    "behavior": [
+      "UNIT_TARGET",
+      "CHANNELLED"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PURE",
+    "castRange": 625,
+    "cooldown": [],
+    "manaCost": [
+      200,
+      300,
+      400
+    ],
+    "effects": {
+      "stun": [
+        4.75,
+        5.25,
+        5.75
+      ],
+      "fiend_grip_tick_interval": 0.5,
+      "fiend_grip_mana_drain": 5,
+      "AbilityChannelTime": [
+        4.75,
+        5.25,
+        5.75
+      ],
+      "fiend_grip_damage": [
+        70,
+        110,
+        150
+      ]
+    }
+  },
+  "bane_nightmare": {
+    "behavior": [
+      "UNIT_TARGET",
+      "DONT_RESUME_ATTACK"
+    ],
+    "targetTeam": "BOTH",
+    "targetType": [
+      "HERO",
+      "CREEP"
+    ],
+    "castRange": null,
+    "cooldown": [],
+    "manaCost": [
+      120,
+      130,
+      140,
+      150
+    ],
+    "effects": {
+      "nightmare_invuln_time": 1,
+      "animation_rate": [
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "walk_speed": 0,
+      "turn_rate": 200,
+      "forced_movement": true,
+      "sleep_duration": [
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  "bane_nightmare_end": {
+    "behavior": [
+      "HIDDEN",
+      "NO_TARGET",
+      "TOGGLE",
+      "IGNORE_PSEUDO_QUEUE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "bane_ichor_of_nyctasha": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  }
+}

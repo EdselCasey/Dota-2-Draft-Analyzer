@@ -1,0 +1,27 @@
+{
+  "grimstroke_ink_trail": [
+    "vision"
+  ],
+  "grimstroke_phantom's_embrace": [
+    "silence",
+    "burst",
+    "summon_units",
+    "vision"
+  ],
+  "grimstroke_stroke_of_fate": [
+    "burst",
+    "aoe",
+    "slow"
+  ],
+  "grimstroke_spirit_walk": [
+    "aoe",
+    "movement_speed_boost",
+    "stun",
+    "burst"
+  ],
+  "grimstroke_soul_chain": [
+    "aoe",
+    "forced_movement",
+    "magic_amp"
+  ]
+}

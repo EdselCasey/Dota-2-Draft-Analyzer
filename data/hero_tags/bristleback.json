@@ -1,0 +1,20 @@
+{
+  "bristleback_viscous_nasal_goo": [
+    "slow",
+    "armor_reduction"
+  ],
+  "bristleback_quill_spray": [
+    "aoe",
+    "burst",
+    "magic_amp"
+  ],
+  "bristleback_bristleback": [
+    "damage_reduction",
+    "aoe",
+    "burst"
+  ],
+  "bristleback_warpath": [
+    "attack_damage_boost",
+    "movement_speed_boost"
+  ]
+}

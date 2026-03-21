@@ -1,0 +1,22 @@
+{
+  "queenofpain_shadow_strike": [
+    "slow",
+    "dps"
+  ],
+  "queenofpain_sonic_wave": [
+    "knockback",
+    "aoe",
+    "aoe_damage"
+  ],
+  "queeofpain_blink": [
+    "blink",
+    "escape"
+  ],
+  "queenofpain_succubus": [
+    "lifesteal"
+  ],
+  "queenofpain_scream_of_pain": [
+    "aoe",
+    "burst"
+  ]
+}

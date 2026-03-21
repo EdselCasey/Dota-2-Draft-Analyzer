@@ -1,0 +1,21 @@
+{
+  "meepo_earthbind": [
+    "aoe",
+    "root"
+  ],
+  "meepo_poof": [
+    "aoe",
+    "burst",
+    "teleport",
+    "escape",
+    "global"
+  ],
+  "meepo_ransack": [
+    "heal",
+    "attack_modifier",
+    "attack_damage_boost"
+  ],
+  "meepo_divided_we_stand": [
+    "summon_units"
+  ]
+}

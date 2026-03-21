@@ -1,0 +1,27 @@
+{
+  "treant_natures_guise": [
+    "unobstructed",
+    "stealth"
+  ],
+  "treant_natures_grasp": [
+    "slow",
+    "zone_control",
+    "aoe",
+    "dps"
+  ],
+  "treant_leech_seed": [
+    "aoe",
+    "heal",
+    "dps"
+  ],
+  "treant_living_armor": [
+    "regen",
+    "armor_gain"
+  ],
+  "treant_overgrowth": [
+    "aoe",
+    "disarm",
+    "root",
+    "dps"
+  ]
+}

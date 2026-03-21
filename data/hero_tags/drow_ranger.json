@@ -1,0 +1,23 @@
+{
+  "drow_ranger_frost_arrows": [
+    "attack_modifier",
+    "attack_damage_boost",
+    "slow"
+  ],
+  "drow_ranger_multishot": [
+    "channelled",
+    "burst",
+    "aoe",
+    "slow"
+  ],
+  "drow_ranger_silence": [
+    "aoe",
+    "silence",
+    "knockback",
+    "vision"
+  ],
+  "drow_ranger_marksmanship": [
+    "attack_damage_boost",
+    "attack_modifier"
+  ]
+}

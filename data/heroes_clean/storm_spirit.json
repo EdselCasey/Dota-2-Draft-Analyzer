@@ -1,0 +1,164 @@
+{
+  "storm_spirit_electric_rave": {
+    "behavior": [
+      "NO_TARGET",
+      "HIDDEN",
+      "IGNORE_BACKSWING",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      30
+    ],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "radius": 750,
+      "charges": 3,
+      "duration": 12
+    }
+  },
+  "storm_spirit_static_remnant": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      70,
+      80,
+      90,
+      100
+    ],
+    "effects": {
+      "static_remnant_radius": 235,
+      "static_remnant_damage_radius": 300,
+      "static_remnant_delay": 0.75,
+      "AbilityCooldown": 3.5,
+      "static_remnant_damage": [
+        100,
+        160,
+        220,
+        280
+      ],
+      "is_point_targeted": 0,
+      "AbilityCastRange": 0,
+      "static_remnant_travel_speed": 0,
+      "static_remnant_vision_radius_day": 100,
+      "static_remnant_vision_radius_night": 100
+    }
+  },
+  "storm_spirit_electric_vortex": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 300,
+    "cooldown": [
+      20,
+      18,
+      16,
+      14
+    ],
+    "manaCost": [
+      60,
+      70,
+      80,
+      90
+    ],
+    "effects": {
+      "electric_vortex_pull_distance": [
+        180,
+        220,
+        260,
+        300
+      ],
+      "electric_vortex_pull_tether_range": 1200,
+      "electric_vortex_self_slow": -50,
+      "electric_vortex_self_slow_duration": 3,
+      "AbilityDuration": [
+        1.1,
+        1.4,
+        1.7,
+        2
+      ]
+    }
+  },
+  "storm_spirit_overload": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "overload_aoe": 300,
+      "overload_move_slow": -80,
+      "overload_attack_slow": -90,
+      "overload_damage": [
+        25,
+        50,
+        75,
+        100
+      ],
+      "overload_cast_range": 0
+    }
+  },
+  "storm_spirit_ball_lightning": {
+    "behavior": [
+      "POINT",
+      "ROOT_DISABLES",
+      "CAN_SELF_CAST",
+      "OPTIONAL_UNIT_TARGET"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      30
+    ],
+    "effects": {
+      "ball_lightning_initial_mana_percentage": 7.5,
+      "ball_lightning_initial_mana_base": 25,
+      "ball_lightning_move_speed": [
+        1400,
+        1850,
+        2300
+      ],
+      "ball_lightning_aoe": 200,
+      "ball_lightning_travel_cost_base": 10,
+      "ball_lightning_travel_cost_percent": 0.65,
+      "ball_lightning_vision_radius": 400,
+      "blocker_duration": 5,
+      "scepter_remnant_interval": 300
+    }
+  },
+  "storm_spirit_galvanized": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "perma_mp_per_kill": 0.1,
+      "mp_per_kill": 0.2,
+      "charges_per_ult": 3,
+      "aoe": 1200,
+      "charges_per_death": 2
+    }
+  }
+}

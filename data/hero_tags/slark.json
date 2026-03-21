@@ -1,0 +1,30 @@
+{
+  "slark_dark_pact": [
+    "aoe",
+    "dps",
+    "dispel"
+  ],
+  "slark_pounce": [
+    "dash",
+    "escape",
+    "leash"
+  ],
+  "slark_shadow_dance": [
+    "regen",
+    "movement_speed_boost",
+    "escape",
+    "damage_reduction",
+    "stealth"
+  ],
+  "slark_saltwater_shiv": [
+    "attack_modifier",
+    "regen",
+    "slow",
+    "movement_speed_boost"
+  ],
+  "slark_essence_shift": [
+    "attack_modifier",
+    "attack_damage_boost",
+    "attack_speed_boost"
+  ]
+}

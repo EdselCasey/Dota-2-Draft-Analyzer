@@ -1,0 +1,312 @@
+{
+  "tusk_ice_shards": {
+    "behavior": [
+      "DIRECTIONAL",
+      "POINT",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 1400,
+    "cooldown": [],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "shard_width": 200,
+      "shard_damage": [
+        75,
+        150,
+        225,
+        300
+      ],
+      "shard_count": 7,
+      "shard_speed": 1200,
+      "shard_duration": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "shard_angle_step": 40,
+      "shard_distance": 200,
+      "turn_rate_slow": 0,
+      "AbilityCooldown": [
+        23,
+        20,
+        17,
+        14
+      ]
+    }
+  },
+  "tusk_ice_shards_stop": {
+    "behavior": [
+      "HIDDEN",
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "tusk_snowball": {
+    "behavior": [
+      "UNIT_TARGET",
+      "ROOT_DISABLES"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 1150,
+    "cooldown": [],
+    "manaCost": [
+      75,
+      75,
+      75,
+      75
+    ],
+    "effects": {
+      "snowball_damage": [
+        80,
+        140,
+        200,
+        260
+      ],
+      "snowball_speed": [
+        575,
+        600,
+        625,
+        650
+      ],
+      "snowball_damage_bonus": [
+        40,
+        65,
+        90,
+        115
+      ],
+      "stun_duration": [
+        0.6,
+        0.8,
+        1,
+        1.2
+      ],
+      "stun_duration_bonus": 0.2,
+      "snowball_windup_radius": 100,
+      "snowball_duration": 3,
+      "snowball_radius": 200,
+      "snowball_grow_rate": 40,
+      "snowball_windup": 3,
+      "snowball_grab_radius": 325,
+      "snowball_speed_bonus": 50,
+      "AbilityCooldown": [
+        21,
+        19,
+        17,
+        15
+      ]
+    }
+  },
+  "tusk_launch_snowball": {
+    "behavior": [
+      "HIDDEN",
+      "NO_TARGET",
+      "NOT_LEARNABLE",
+      "IMMEDIATE",
+      "IGNORE_PSEUDO_QUEUE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "tusk_frozen_sigil": {
+    "behavior": [
+      "NO_TARGET",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      30
+    ],
+    "manaCost": [
+      70
+    ],
+    "effects": {
+      "sigil_radius": 650,
+      "sigil_duration": 25,
+      "move_slow": 40,
+      "attack_slow": 0
+    }
+  },
+  "tusk_tag_team": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [
+      24,
+      21,
+      18,
+      15
+    ],
+    "manaCost": [
+      70
+    ],
+    "effects": {
+      "bonus_damage": [
+        25,
+        50,
+        75,
+        100
+      ],
+      "movement_slow": 75,
+      "slow_duration": 0.5,
+      "debuff_duration": 6,
+      "radius": 350
+    }
+  },
+  "tusk_drinking_buddies": {
+    "behavior": [
+      "UNIT_TARGET| DOTA_ABILITY_BEHAVIOR_ALT_CASTABLE"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [
+      23,
+      20,
+      17,
+      14
+    ],
+    "manaCost": [
+      80
+    ],
+    "effects": {
+      "AbilityCastRange": 900,
+      "alt_cast_castrange_pct": 50,
+      "buff_duration": 6,
+      "pull_duration": 0.2,
+      "min_distance": 250,
+      "max_distance": 1200,
+      "movespeed_bonus": [
+        11,
+        14,
+        17,
+        20
+      ],
+      "attackdamage_bonus": [
+        20,
+        50,
+        80,
+        110
+      ]
+    }
+  },
+  "tusk_bitter_chill": {
+    "behavior": [
+      "PASSIVE",
+      "NOT_LEARNABLE",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "radius": 350,
+      "attack_speed_slow": [
+        20,
+        40,
+        60,
+        80
+      ]
+    }
+  },
+  "tusk_walrus_punch": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AUTOCAST",
+      "ATTACK"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "castRange": 150,
+    "cooldown": [
+      16,
+      13,
+      10
+    ],
+    "manaCost": [
+      75
+    ],
+    "effects": {
+      "bonus_damage": [
+        60,
+        90,
+        120
+      ],
+      "crit_multiplier": [
+        200,
+        250,
+        300
+      ],
+      "air_time": 1,
+      "push_length": 1000
+    }
+  },
+  "tusk_walrus_kick": {
+    "behavior": [
+      "UNIT_TARGET",
+      "VECTOR_TARGETING",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 250,
+    "cooldown": [
+      12
+    ],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "air_time": 1,
+      "push_length": 1200,
+      "move_slow": 40,
+      "slow_duration": 2,
+      "damage": 550,
+      "search_radius": 250,
+      "creep_cooldown_reduction_pct": 50
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "troll_warlord_berserkers_rage": [
+    "root",
+    "attack_modifier",
+    "attack_speed_boost",
+    "slow",
+    "burst",
+    "attack_damage_boost"
+  ],
+  "troll_warlord_whirling_axes_ranged": [
+    "slow",
+    "burst"
+  ],
+  "troll_warlord_whirling_axes_melee": [
+    "dispel",
+    "aoe",
+    "aoe_damage"
+  ],
+  "troll_warlord_fervor": [
+    "attack_speed_boost",
+    "armor_gain"
+  ],
+  "troll_warlord_battle_trance": [
+    "attack_speed_boost",
+    "lifesteal",
+    "invulnerability"
+  ]
+}

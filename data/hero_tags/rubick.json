@@ -1,0 +1,23 @@
+{
+  "rubick_telekinesis": [
+    "stun",
+    "forced_movement"
+  ],
+  "rubick_fade_bolt": [
+    "aoe",
+    "burst",
+    "damage_reduction"
+  ],
+  "rubick_null_field": [
+    "aoe",
+    "damage_reduction"
+  ],
+  "rubick_might_and_magus": [
+    "attack_damage_boost",
+    "damage_resistance",
+    "magic_amp"
+  ],
+  "rubick_arcane_supremacy": [
+    "magic_amp"
+  ]
+}

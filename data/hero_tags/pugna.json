@@ -1,0 +1,25 @@
+{
+  "pugna_nether_blast": [
+    "aoe",
+    "siege",
+    "burst"
+  ],
+  "pugna_decrepify": [
+    "save",
+    "magic_amp",
+    "slow",
+    "damage_reduction",
+    "heal"
+  ],
+  "pugna_nether_ward": [
+    "aoe",
+    "aoe_damage",
+    "zone_control"
+  ],
+  "pugna_life_drain": [
+    "channelled",
+    "heal",
+    "dps",
+    "save"
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "undying_decay": {
+    "behavior": [
+      "AOE",
+      "POINT",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [
+      "HERO",
+      "CREEP"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 650,
+    "cooldown": [],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "decay_damage": [
+        20,
+        60,
+        100,
+        140
+      ],
+      "str_steal": 4,
+      "decay_duration": 35,
+      "radius": 325,
+      "str_scale_up": 2,
+      "creep_damage_multiplier": 2,
+      "shard_buff_duration": 40,
+      "AbilityCooldown": [
+        13,
+        10,
+        7,
+        4
+      ]
+    }
+  },
+  "undying_soul_rip": {
+    "behavior": [
+      "UNIT_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "CUSTOM",
+    "targetType": [
+      "CUSTOM"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 750,
+    "cooldown": [
+      15,
+      12,
+      9,
+      6
+    ],
+    "manaCost": [
+      80,
+      90,
+      100,
+      110
+    ],
+    "effects": {
+      "damage_per_unit": [
+        14,
+        26,
+        38,
+        50
+      ],
+      "max_units": 10,
+      "radius": 1300,
+      "tombstone_heal": [
+        4,
+        8,
+        12,
+        16
+      ],
+      "strength_share_percent": 0,
+      "strength_share_duration": 0,
+      "strength_share_model_scale": 0
+    }
+  },
+  "undying_tombstone": {
+    "behavior": [
+      "POINT",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "damageType": "PHYSICAL",
+    "castRange": 500,
+    "cooldown": [],
+    "manaCost": [
+      125,
+      150,
+      175,
+      200
+    ],
+    "effects": {
+      "AbilityCooldown": 80,
+      "tombstone_health": [
+        20,
+        24,
+        28,
+        32
+      ],
+      "hits_to_destroy_tooltip": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "duration": 30,
+      "radius": 1200,
+      "health_threshold_pct_tooltip": 40,
+      "zombie_interval": [
+        4,
+        3.6,
+        3.2,
+        2.8
+      ],
+      "zombie_damage_tooltip": 34,
+      "zombie_health": 2,
+      "bunker_units": 1,
+      "bunker_heal_pct": 0,
+      "tombstone_grab_radius": 350,
+      "tombstone_bunker_cd": 2,
+      "tombstone_stun_penalty": 2,
+      "zombie_damage_interval": 0
+    }
+  },
+  "undying_tombstone_zombie_aura": {
+    "behavior": [
+      "PASSIVE",
+      "AURA",
+      "HIDDEN"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "radius": [
+        600,
+        800,
+        1000,
+        1200
+      ],
+      "health_threshold": [
+        100,
+        200,
+        300,
+        400
+      ],
+      "zombie_interval": 3
+    }
+  },
+  "undying_tombstone_zombie_deathstrike": {
+    "behavior": [
+      "PASSIVE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "slow": -5,
+      "health_threshold_pct": 40,
+      "duration": 2.5,
+      "bonus_move_speed": [
+        35,
+        40,
+        45,
+        50
+      ],
+      "bonus_attack_speed": [
+        50,
+        60,
+        70,
+        80
+      ],
+      "radius": 1200
+    }
+  },
+  "undying_flesh_golem": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      100,
+      125,
+      150
+    ],
+    "effects": {
+      "AbilityCooldown": 140,
+      "slow": [
+        30,
+        35,
+        40
+      ],
+      "damage_amp": [
+        25,
+        30,
+        35
+      ],
+      "slow_duration": 3,
+      "str_percentage": [
+        40,
+        50,
+        60
+      ],
+      "duration": 40,
+      "movement_bonus": 20,
+      "spawn_zombie_on_attack": 0,
+      "zombie_duration": 0,
+      "zombie_spawn_padding": 36
+    }
+  },
+  "undying_tombstone_grab": {
+    "behavior": [
+      "UNIT_TARGET",
+      "UNRESTRICTED",
+      "IGNORE_PSEUDO_QUEUE",
+      "IGNORE_SILENCE",
+      "NOT_LEARNABLE",
+      "DONT_RESUME_ATTACK",
+      "HIDDEN",
+      "IGNORE_BACKSWING",
+      "IGNORE_CHANNEL"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": 3000,
+    "cooldown": [
+      10
+    ],
+    "manaCost": [],
+    "effects": {
+      "grab_radius": 400
+    }
+  },
+  "undying_tombstone_unit_grab": {
+    "behavior": [
+      "UNIT_TARGET",
+      "UNRESTRICTED",
+      "IGNORE_PSEUDO_QUEUE",
+      "IGNORE_SILENCE",
+      "NOT_LEARNABLE",
+      "DONT_RESUME_ATTACK",
+      "IGNORE_BACKSWING",
+      "IGNORE_CHANNEL",
+      "IMMEDIATE"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "castRange": 1200,
+    "cooldown": [
+      10
+    ],
+    "manaCost": [],
+    "effects": {}
+  },
+  "undying_ceaseless_dirge": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      480
+    ],
+    "manaCost": [],
+    "effects": {
+      "respawn_delay": 2
+    }
+  }
+}

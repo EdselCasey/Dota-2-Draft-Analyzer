@@ -1,0 +1,304 @@
+{
+  "phoenix_icarus_dive": {
+    "behavior": [
+      "POINT",
+      "IGNORE_BACKSWING",
+      "ROOT_DISABLES"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [
+      40,
+      35,
+      30,
+      25
+    ],
+    "manaCost": [
+      0
+    ],
+    "effects": {
+      "hp_cost_perc": 15,
+      "dash_length": [
+        1100,
+        1200,
+        1300,
+        1400
+      ],
+      "dash_width": 500,
+      "hit_radius": 200,
+      "burn_duration": 4,
+      "damage_per_second": [
+        20,
+        40,
+        60,
+        80
+      ],
+      "burn_tick_interval": 0.2,
+      "slow_movement_speed_pct": [
+        10,
+        15,
+        20,
+        25
+      ],
+      "dive_duration": 2
+    }
+  },
+  "phoenix_icarus_dive_stop": {
+    "behavior": [
+      "IMMEDIATE",
+      "NO_TARGET",
+      "NOT_LEARNABLE",
+      "HIDDEN",
+      "DONT_RESUME_ATTACK"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "phoenix_fire_spirits": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 1400,
+    "cooldown": [
+      50,
+      40,
+      30,
+      20
+    ],
+    "manaCost": [
+      100
+    ],
+    "effects": {
+      "hp_cost_perc": 20,
+      "spirit_duration": 20,
+      "spirit_speed": 1000,
+      "radius": 200,
+      "duration": 4,
+      "attackspeed_slow": [
+        -50,
+        -80,
+        -110,
+        -140
+      ],
+      "damage_per_second": [
+        20,
+        40,
+        60,
+        80
+      ],
+      "spirit_count": 5,
+      "tick_interval": 0.2
+    }
+  },
+  "phoenix_sun_ray": {
+    "behavior": [
+      "POINT"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 1200,
+    "cooldown": [
+      30
+    ],
+    "manaCost": [
+      100,
+      110,
+      120,
+      130
+    ],
+    "effects": {
+      "hp_cost_perc_per_second": 5,
+      "base_damage": [
+        15,
+        20,
+        25,
+        30
+      ],
+      "hp_perc_damage": [
+        1.5,
+        3,
+        4.5,
+        6
+      ],
+      "base_heal": [
+        7,
+        10,
+        13,
+        16
+      ],
+      "hp_perc_heal": [
+        0.5,
+        1,
+        1.5,
+        2
+      ],
+      "radius": 130,
+      "tick_interval": 0.2,
+      "forward_move_speed": 250,
+      "turn_rate_initial": 250,
+      "turn_rate": 25,
+      "focal_point_max_multiplier": 0,
+      "focal_point_start_length_pct": 0,
+      "focal_point_full_length_tooltip_only": 0,
+      "focal_point_blind_stack_multiplier": 0
+    }
+  },
+  "phoenix_sun_ray_stop": {
+    "behavior": [
+      "NO_TARGET",
+      "NOT_LEARNABLE",
+      "HIDDEN",
+      "DONT_RESUME_ATTACK",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "phoenix_sun_ray_toggle_move": {
+    "behavior": [
+      "NO_TARGET",
+      "NOT_LEARNABLE",
+      "DONT_RESUME_ATTACK",
+      "IMMEDIATE",
+      "ROOT_DISABLES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "phoenix_supernova": {
+    "behavior": [
+      "NO_TARGET",
+      "DONT_RESUME_ATTACK"
+    ],
+    "targetTeam": "FRIENDLY",
+    "targetType": [
+      "HERO"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 450,
+    "cooldown": [
+      120
+    ],
+    "manaCost": [
+      150,
+      200,
+      250
+    ],
+    "effects": {
+      "aura_radius": 1200,
+      "damage_per_sec": [
+        60,
+        90,
+        120
+      ],
+      "tick_interval": 0.2,
+      "stun_duration": [
+        1.6,
+        2,
+        2.4
+      ],
+      "max_hero_attacks": [
+        6,
+        8,
+        10
+      ]
+    }
+  },
+  "phoenix_launch_fire_spirit": {
+    "behavior": [
+      "POINT",
+      "AOE",
+      "IGNORE_BACKSWING",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 1400,
+    "cooldown": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "manaCost": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "effects": {
+      "hp_cost_perc": 20,
+      "spirit_duration": [
+        20,
+        20,
+        20,
+        20
+      ],
+      "spirit_speed": [
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "radius": 200,
+      "duration": 4,
+      "attackspeed_slow": [
+        -50,
+        -80,
+        -110,
+        -140
+      ],
+      "damage_per_second": [
+        20,
+        40,
+        60,
+        80
+      ],
+      "spirit_count": 5,
+      "tick_interval": 0.2
+    }
+  },
+  "phoenix_dying_light": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "radius": 400,
+      "damage_pct": 4.5
+    }
+  },
+  "phoenix_blinding_sun": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "damageType": "NONE",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "blind_per_second": 2,
+      "blind_duration": 4
+    }
+  }
+}

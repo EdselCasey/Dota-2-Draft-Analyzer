@@ -1,0 +1,204 @@
+{
+  "death_prophet_carrion_swarm": {
+    "behavior": [
+      "UNIT_TARGET",
+      "POINT"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 900,
+    "cooldown": [],
+    "manaCost": [
+      80,
+      90,
+      100,
+      110
+    ],
+    "effects": {
+      "damage": [
+        100,
+        175,
+        250,
+        325
+      ],
+      "AbilityCooldown": [
+        9,
+        8,
+        7,
+        6
+      ],
+      "start_radius": 110,
+      "end_radius": 300,
+      "range": 900,
+      "speed": [
+        1100,
+        1100,
+        1100,
+        1100
+      ],
+      "slow_percent": 0,
+      "slow_duration": 0
+    }
+  },
+  "death_prophet_silence": {
+    "behavior": [
+      "AOE",
+      "POINT"
+    ],
+    "targetType": [],
+    "castRange": 900,
+    "cooldown": [
+      15,
+      14,
+      13,
+      12
+    ],
+    "manaCost": [
+      80,
+      90,
+      100,
+      110
+    ],
+    "effects": {
+      "radius": 450,
+      "projectile_speed": 1400,
+      "movement_slow": 0,
+      "damage_per_second": 0,
+      "tick_interval": 0
+    }
+  },
+  "death_prophet_witchcraft": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "movement_speed_pct_per_level": 0.75,
+      "cooldown_reduction_pct_per_level": 0.75
+    }
+  },
+  "death_prophet_spirit_siphon": {
+    "behavior": [
+      "UNIT_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 500,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [
+      80
+    ],
+    "effects": {
+      "damage": [
+        25,
+        50,
+        75,
+        100
+      ],
+      "damage_pct": 0,
+      "haunt_duration": 6,
+      "siphon_buffer": 250,
+      "AbilityChargeRestoreTime": 40
+    }
+  },
+  "death_prophet_exorcism": {
+    "behavior": [
+      "NO_TARGET"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [
+      150
+    ],
+    "manaCost": [
+      200,
+      300,
+      400
+    ],
+    "effects": {
+      "radius": [
+        700,
+        700,
+        700
+      ],
+      "spirits": [
+        10,
+        18,
+        26
+      ],
+      "spirit_speed": 525,
+      "max_distance": 2000,
+      "give_up_distance": 1200,
+      "min_damage": 62,
+      "max_damage": 67,
+      "hero_spirit_min_damage": 0,
+      "hero_spirit_max_damage": 0,
+      "heal_percent": 25,
+      "average_damage": 64,
+      "ghost_spawn_rate": 0.35,
+      "movement_bonus": 0
+    }
+  },
+  "death_prophet_spirit_collector": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "damageType": "PHYSICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "death_prophet_innate_healing_mastery": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "heal_amplify": 20
+    }
+  },
+  "death_prophet_mourning_ritual": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN",
+      "NOT_LEARNABLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "delay_pct": [
+        15,
+        25,
+        35,
+        45
+      ],
+      "delay_time": 5,
+      "damage_interval": 1
+    }
+  }
+}

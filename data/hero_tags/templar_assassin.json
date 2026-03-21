@@ -1,0 +1,23 @@
+{
+  "templar_assassin_refraction": [
+    "shield",
+    "invulnerability",
+    "attack_damage_boost"
+  ],
+  "templar_assassin_meld": [
+    "stealth",
+    "armor_reduction",
+    "attack_damage_boost",
+    "burst"
+  ],
+  "templar_assassin_psi_blades": [
+    "slow",
+    "attack_modifier"
+  ],
+  "templar_assassin_psionic_trap": [
+    "aoe",
+    "zone_control",
+    "slow",
+    "vision"
+  ]
+}

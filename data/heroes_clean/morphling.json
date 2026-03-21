@@ -1,0 +1,261 @@
+{
+  "morphling_waveform": {
+    "behavior": [
+      "POINT",
+      "IGNORE_BACKSWING",
+      "ROOT_DISABLES"
+    ],
+    "targetType": [],
+    "damageType": "MAGICAL",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [
+      115
+    ],
+    "effects": {
+      "speed": 1250,
+      "width": 200,
+      "AbilityCharges": 0,
+      "AbilityCastRange": [
+        700,
+        800,
+        900,
+        1000
+      ],
+      "AbilityCooldown": [
+        21,
+        18,
+        15,
+        12
+      ],
+      "pct_damage": 0,
+      "process_procs": 0
+    }
+  },
+  "morphling_adaptive_strike_agi": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": null,
+    "cooldown": [],
+    "manaCost": [
+      40,
+      50,
+      60,
+      70
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        17,
+        14,
+        11,
+        8
+      ],
+      "damage_base": [
+        25,
+        50,
+        75,
+        100
+      ],
+      "damage_min": 0.5,
+      "damage_max": [
+        1,
+        1.5,
+        2,
+        2.5
+      ],
+      "stun_min": 0.5,
+      "stun_max": 2.4,
+      "knockback_min": 50,
+      "knockback_max": 350,
+      "knockback_duration": 0.5,
+      "projectile_speed": 1150,
+      "extra_targets": 0
+    }
+  },
+  "morphling_morph_agi": {
+    "behavior": [
+      "NO_TARGET",
+      "TOGGLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [],
+    "effects": {
+      "points_per_tick": 1,
+      "morph_cooldown": [
+        0.25,
+        0.12,
+        0.08,
+        0.06
+      ],
+      "morph_rate_tooltip": [
+        4,
+        8,
+        12,
+        16
+      ],
+      "mana_cost": 10,
+      "castable_while_stunned": 0
+    }
+  },
+  "morphling_morph_str": {
+    "behavior": [
+      "NO_TARGET",
+      "TOGGLE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [],
+    "effects": {
+      "points_per_tick": 1,
+      "morph_cooldown": [
+        0.25,
+        0.12,
+        0.08,
+        0.06
+      ],
+      "morph_rate_tooltip": [
+        4,
+        8,
+        12,
+        16
+      ],
+      "mana_cost": 10,
+      "castable_while_stunned": 0
+    }
+  },
+  "morphling_ebb": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {}
+  },
+  "morphling_flow": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "agi_per_one_spell_amp": 4,
+      "one_percent_tooltip": 1
+    }
+  },
+  "morphling_replicate": {
+    "behavior": [
+      "UNIT_TARGET"
+    ],
+    "targetTeam": "CUSTOM",
+    "targetType": [
+      "CUSTOM"
+    ],
+    "castRange": null,
+    "cooldown": [
+      140,
+      100,
+      60
+    ],
+    "manaCost": [
+      50
+    ],
+    "effects": {
+      "duration": 24
+    }
+  },
+  "morphling_morph_replicate": {
+    "behavior": [
+      "NO_TARGET",
+      "HIDDEN",
+      "DONT_RESUME_MOVEMENT",
+      "DONT_RESUME_ATTACK",
+      "IMMEDIATE",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      2
+    ],
+    "manaCost": [
+      0
+    ],
+    "effects": {}
+  },
+  "morphling_hybrid": {
+    "behavior": [
+      "UNIT_TARGET",
+      "HIDDEN"
+    ],
+    "targetTeam": "CUSTOM",
+    "targetType": [
+      "CUSTOM"
+    ],
+    "castRange": 600,
+    "cooldown": [
+      60
+    ],
+    "manaCost": [
+      200
+    ],
+    "effects": {
+      "illusion_damage_out_pct": [
+        -50,
+        -50,
+        -50
+      ],
+      "tooltip_illusion_damage_out_pct": [
+        50,
+        50,
+        50
+      ],
+      "illusion_incoming_dmg_pct_tooltip": [
+        100,
+        100,
+        100
+      ],
+      "illusion_damage_in_pct": [
+        0,
+        0,
+        0
+      ],
+      "illusion_damage_out_pct_scepter": -20,
+      "duration": 20
+    }
+  },
+  "morphling_accumulation": {
+    "behavior": [
+      "PASSIVE",
+      "SKIP_FOR_KEYBINDS"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "percent_to_increment": 50,
+      "bonus_primary_stat_per_level_of_attributes": 3,
+      "bonus_int_per_level_of_attributes": 0
+    }
+  }
+}

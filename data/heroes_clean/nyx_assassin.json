@@ -1,0 +1,243 @@
+{
+  "nyx_assassin_impale": {
+    "behavior": [
+      "POINT",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 750,
+    "cooldown": [
+      17,
+      15,
+      13,
+      11
+    ],
+    "manaCost": [
+      90,
+      100,
+      110,
+      120
+    ],
+    "effects": {
+      "width": 140,
+      "duration": [
+        1.1,
+        1.4,
+        1.7,
+        2
+      ],
+      "length": 750,
+      "speed": 1600,
+      "impale_damage": [
+        100,
+        160,
+        220,
+        280
+      ]
+    }
+  },
+  "nyx_assassin_mana_burn": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AOE",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 600,
+    "cooldown": [
+      20,
+      15,
+      10,
+      5
+    ],
+    "manaCost": [
+      70,
+      80,
+      90,
+      100
+    ],
+    "effects": {}
+  },
+  "nyx_assassin_jolt": {
+    "behavior": [
+      "UNIT_TARGET",
+      "AOE",
+      "IGNORE_BACKSWING"
+    ],
+    "targetTeam": "ENEMY",
+    "targetType": [
+      "HERO",
+      "BASIC"
+    ],
+    "damageType": "MAGICAL",
+    "castRange": 800,
+    "cooldown": [],
+    "manaCost": [
+      100,
+      105,
+      110,
+      115
+    ],
+    "effects": {
+      "AbilityCooldown": [
+        11,
+        9.5,
+        8,
+        6.5
+      ],
+      "max_mana_as_damage_pct": [
+        25,
+        30,
+        35,
+        40
+      ],
+      "aoe": 0,
+      "damage_echo_duration": 15,
+      "damage_echo_pct": 15
+    }
+  },
+  "nyx_assassin_spiked_carapace": {
+    "behavior": [
+      "NO_TARGET",
+      "IMMEDIATE"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      20,
+      16,
+      12,
+      8
+    ],
+    "manaCost": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "effects": {
+      "reflect_duration": 2,
+      "stun_duration": [
+        0.7,
+        1,
+        1.3,
+        1.6
+      ],
+      "damage_reflect_pct": 140
+    }
+  },
+  "nyx_assassin_vendetta": {
+    "behavior": [
+      "IMMEDIATE",
+      "NO_TARGET",
+      "IGNORE_CHANNEL"
+    ],
+    "targetType": [],
+    "damageType": "PURE",
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "AbilityCooldown": [
+        80,
+        70,
+        60
+      ],
+      "AbilityManaCost": [
+        180,
+        240,
+        300
+      ],
+      "duration": 60,
+      "fade_time": 0,
+      "movement_speed": [
+        16,
+        18,
+        20
+      ],
+      "bonus_damage": [
+        300,
+        400,
+        500
+      ],
+      "health_regen_rate_scepter": 3,
+      "mana_regen_rate_scepter": 3,
+      "break_duration": 0,
+      "free_pathing_duration": 0,
+      "free_pathing_movement_speed_bonus": 0,
+      "attack_animation_bonus": 70,
+      "attack_range_bonus": 75
+    }
+  },
+  "nyx_assassin_burrow": {
+    "behavior": [
+      "NO_TARGET",
+      "HIDDEN",
+      "SHOW_IN_GUIDES"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "health_regen_rate": 1,
+      "mana_regen_rate": 1,
+      "damage_reduction": 40,
+      "cast_range": 500,
+      "cooldown_reduction": 25,
+      "carapace_radius": 400
+    }
+  },
+  "nyx_assassin_unburrow": {
+    "behavior": [
+      "HIDDEN",
+      "NO_TARGET",
+      "IGNORE_BACKSWING"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [
+      0
+    ],
+    "manaCost": [
+      0
+    ],
+    "effects": {}
+  },
+  "nyx_assassin_nyxth_sense": {
+    "behavior": [
+      "PASSIVE",
+      "INNATE_UI"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "radius": 400
+    }
+  },
+  "nyx_assassin_innate_mana_burn": {
+    "behavior": [
+      "PASSIVE",
+      "HIDDEN"
+    ],
+    "targetType": [],
+    "castRange": 0,
+    "cooldown": [],
+    "manaCost": [],
+    "effects": {
+      "mana_pct": 15
+    }
+  }
+}
