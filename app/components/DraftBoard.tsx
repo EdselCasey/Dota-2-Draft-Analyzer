@@ -171,13 +171,21 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
         <h1 className="text-base lg:text-xl font-bold tracking-wide text-white/90 truncate">
           Dota 2 Draft Analyzer
         </h1>
-        {radiantTeam && direTeam && (
+        {radiantTeam && direTeam ? (
           <button
             onClick={() => setShowCompare(true)}
+            title="Compare both teams — see dimension scores side by side and which team has the advantage"
             className="ml-auto px-3 py-1.5 text-xs font-semibold rounded border border-white/20 bg-white/5 text-white/70 hover:bg-white/10 hover:text-white transition-colors shrink-0"
           >
             ⚖ Compare
           </button>
+        ) : (
+          <span
+            title="Add at least one hero to each team to unlock the Compare panel"
+            className="ml-auto px-3 py-1.5 text-xs font-semibold rounded border border-white/10 bg-white/[0.02] text-white/25 cursor-not-allowed shrink-0 select-none"
+          >
+            ⚖ Compare
+          </span>
         )}
       </header>
 
@@ -225,7 +233,7 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
             <span className="text-white/30 text-xs">({pool.length})</span>
 
             {/* Card size selector */}
-            <div className="flex items-center gap-0.5 ml-1">
+            <div className="flex items-center gap-0.5 ml-1" title="Resize hero cards">
               {SIZE_LABELS.map(s => (
                 <button
                   key={s}
@@ -247,10 +255,55 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
                   ? 'border-purple-400/60 bg-purple-500/20 text-purple-300'
                   : 'border-white/15 bg-white/5 text-white/40 hover:text-white/70'
               }`}
-              title="Toggle attribute grouping"
+              title={groupByAttr ? 'Switch to alphabetical list' : 'Group heroes by primary attribute (Strength / Agility / Intelligence / Universal)'}
             >
               {groupByAttr ? '✦ Grouped' : '✦ Group'}
             </button>
+
+            {/* Legend tooltip */}
+            <div className="relative group/legend">
+              <button
+                className="text-[11px] text-white/30 hover:text-white/70 transition-colors leading-none px-1"
+                tabIndex={0}
+                aria-label="Hero card legend"
+              >
+                ⓘ
+              </button>
+              <div className="absolute left-0 top-full mt-1 z-50 w-64 rounded-lg border border-white/15 bg-[#1a1d24] shadow-xl p-3 text-[11px] leading-relaxed text-white/80
+                              opacity-0 pointer-events-none group-hover/legend:opacity-100 group-hover/legend:pointer-events-auto transition-opacity duration-150">
+                <p className="font-bold text-white/60 uppercase tracking-wide text-[10px] mb-2">Hero Card Legend</p>
+                <div className="flex flex-col gap-1.5">
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full border-2 border-green-400 shrink-0" />
+                    <span>Green outline — recommended pick for <span className="text-green-400">Radiant</span></span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full border-2 border-red-400 shrink-0" />
+                    <span>Red outline — recommended pick for <span className="text-red-400">Dire</span></span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full border border-green-400 border-r-red-400 shrink-0" style={{ boxShadow: '0 0 0 1.5px #4ade80, 0 0 0 3px #f87171' }} />
+                    <span>Double outline — recommended for <span className="text-green-400">both</span> teams</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-green-400 font-bold text-[13px] leading-none">★</span>
+                    <span>Star + glow — <strong className="text-white">top pick</strong> (strongest single recommendation)</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="flex gap-0.5">
+                      <span className="w-2 h-2 rounded-full bg-green-400 inline-block" />
+                      <span className="w-2 h-2 rounded-full bg-red-400 inline-block" />
+                    </span>
+                    <span>Dot(s) — standard recommendation pick</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-red-500 font-black text-base leading-none">✕</span>
+                    <span>Greyed out with ✕ — hero is <span className="text-orange-400">banned</span> (excluded from recommendations)</span>
+                  </div>
+                </div>
+                <p className="mt-2 text-white/35 text-[10px]">Hover a card to add to Radiant / Dire, view profile, or ban.</p>
+              </div>
+            </div>
 
             <input
               type="text"
