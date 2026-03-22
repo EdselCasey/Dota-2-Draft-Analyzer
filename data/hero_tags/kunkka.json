@@ -3,7 +3,7 @@
     "aoe",
     "forced_movement",
     "slow",
-    "aoe_damage"
+    "burst"
   ],
   "kunkka_tidebringer": [
     "slow",
@@ -21,7 +21,7 @@
     "damage_reduction",
     "movement_speed_boost",
     "aoe",
-    "aoe_damage"
+    "burst"
   ],
   "kunkka_admirals_rum": [
     "damage_reduction",
