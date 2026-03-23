@@ -15,12 +15,10 @@
     "dispel"
   ],
   "shadow_demon_menace": [
-    "magic_amp",
-    "attack_modifier"
+    "magic_amp"
   ],
   "shadow_demon_disseminate": [
     "aoe",
-    "dps",
-    "heal"
+    "dps"
   ]
 }

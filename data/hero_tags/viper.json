@@ -1,7 +1,6 @@
 {
   "viper_poison_attack": [
     "attack_modifier",
-    "attack_damage_boost",
     "slow",
     "dps",
     "magic_amp"
