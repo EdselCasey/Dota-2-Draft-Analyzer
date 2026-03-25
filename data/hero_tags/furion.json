@@ -18,12 +18,6 @@
     "global",
     "aoe"
   ],
-  "furion_curse_of_the_oldgrowth": [
-    "aoe",
-    "slow",
-    "dps",
-    "vision"
-  ],
   "furion_nature's_call": [
     "summon_units",
     "aoe_damage"

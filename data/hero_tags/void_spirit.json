@@ -22,5 +22,9 @@
     "aoe",
     "shield",
     "burst"
+  ],
+  "void_spirit_intrinsic_edge": [
+    "attack_speed_boost",
+    "attack_damage_boost"
   ]
 }

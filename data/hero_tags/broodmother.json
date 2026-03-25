@@ -7,7 +7,7 @@
   "broodmother_spin_web": [
     "aoe",
     "movement_speed_boost",
-    "aerial",
+    "unobstructed",
     "antiheal"
   ],
   "broodmother_spiders_milk": [

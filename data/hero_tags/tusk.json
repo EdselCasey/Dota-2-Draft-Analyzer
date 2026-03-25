@@ -16,12 +16,6 @@
     "slow",
     "attack_damage_boost"
   ],
-  "tusk_drinking_buddies": [
-    "attack_damage_boost",
-    "movement_speed_boost",
-    "save",
-    "escape"
-  ],
   "tusk_bitter_chill": [
     "aoe",
     "slow"

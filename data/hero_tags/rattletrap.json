@@ -20,5 +20,8 @@
     "stun",
     "shield",
     "dash"
+  ],
+  "rattletrap_armor_power": [
+    "armor_gain"
   ]
 }

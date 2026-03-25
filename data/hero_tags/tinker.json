@@ -1,10 +1,9 @@
 {
-  "tinker_defense_matrix": [
-    "damage_reduction",
-    "shield",
-    "dispel",
-    "save",
-    "blink"
+  "tinker_deploy_turrets": [
+    "aoe",
+    "burst",
+    "summon_units",
+    "dps"
   ],
   "tinker_keen_conveyance": [
     "global",

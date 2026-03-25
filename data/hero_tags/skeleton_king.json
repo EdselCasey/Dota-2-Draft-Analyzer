@@ -9,10 +9,6 @@
     "push",
     "summon_units"
   ],
-  "skeleton_king_spectral_blade": [
-    "attack_damage_boost",
-    "burst"
-  ],
   "skeleton_king_mortal_strike": [
     "attack_modifier",
     "attack_damage_boost"

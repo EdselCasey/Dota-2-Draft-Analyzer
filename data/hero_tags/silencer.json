@@ -12,12 +12,9 @@
     "burst",
     "silence"
   ],
-  "silencer_brain_drain": [
-    "mana_regen",
-    "attack_damage_boost"
-  ],
   "silencer_suffer_in_silence": [
-    "magic_amp"
+    "magic_amp",
+    "damage_reduction"
   ],
   "silencer_global_silence": [
     "global",

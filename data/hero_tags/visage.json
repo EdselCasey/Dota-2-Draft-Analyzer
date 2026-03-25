@@ -22,5 +22,10 @@
   "visage_summon_familiars_stone_form": [
     "aoe",
     "stun"
+  ],
+  "visage_silent_as_the_grave": [
+    "aerial",
+    "movement_speed_boost",
+    "attack_damage_boost"
   ]
 }

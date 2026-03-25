@@ -17,9 +17,6 @@
     "stun",
     "aoe_damage"
   ],
-  "enigma_gravity_well": [
-    "damage_reduction"
-  ],
   "enigma_event_horizon": [
     "slow",
     "aoe"

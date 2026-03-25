@@ -3,11 +3,6 @@
     "slow",
     "damage_reduction"
   ],
-  "enchantress_bunny_hop": [
-    "dash",
-    "escape",
-    "burst"
-  ],
   "enchantress_enchant": [
     "slow",
     "summon_units"

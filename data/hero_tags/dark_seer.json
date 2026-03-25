@@ -1,13 +1,8 @@
 {
-  "dark_seer_normal_punch": [
-    "knockback",
-    "burst",
-    "illusion"
-  ],
   "dark_seer_vacuum": [
     "aoe",
     "forced_movement",
-    "aoe_damage"
+    "burst"
   ],
   "dark_seer_ion_shell": [
     "aoe",
@@ -21,5 +16,8 @@
     "slow",
     "summon_units",
     "zone_control"
+  ],
+  "dark_seer_quick_wit": [
+    "attack_speed_boost"
   ]
 }

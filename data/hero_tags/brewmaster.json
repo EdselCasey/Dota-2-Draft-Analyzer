@@ -2,12 +2,11 @@
   "brewmaster_thunder_clap": [
     "aoe",
     "slow",
-    "aoe_damage"
+    "burst"
   ],
   "brewmaster_cinder_brew": [
     "aoe",
     "slow",
-    "aoe_damage",
     "burst"
   ],
   "brewmaster_drunken_brawler": [
@@ -32,12 +31,11 @@
   ],
   "brewmaster_storm_dispel_magic": [
     "aoe",
-    "aoe_damage",
+    "burst",
     "dispel"
   ],
   "brewmaster_fire_permanent_immolation": [
     "aoe",
-    "aoe_damage",
     "dps"
   ],
   "brewmaster_cyclone": [

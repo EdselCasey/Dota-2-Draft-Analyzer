@@ -18,5 +18,8 @@
     "attack_modifier",
     "escape",
     "invulnerability"
+  ],
+  "morphling_ebb_and_flow": [
+    "movement_speed_boost"
   ]
 }

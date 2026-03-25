@@ -20,5 +20,9 @@
   "mirana_starfall": [
     "aoe",
     "burst"
+  ],
+  "mirana_celestial_quiver": [
+    "attack_modifier",
+    "burst"
   ]
 }

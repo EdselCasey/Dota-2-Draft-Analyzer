@@ -19,7 +19,7 @@
     "aoe",
     "aoe_damage"
   ],
-  "elder_titan_tip_the_scales": [
-    "attack_damage_boost"
+  "elder_titan_momentum": [
+    "armor_gain"
   ]
 }

@@ -17,8 +17,8 @@
     "attack_modifier",
     "attack_damage_boost"
   ],
-  "weaver_rewoven": [
-    "attack_modifier"
+  "weaver_threads_of_fate": [
+    "slow"
   ],
   "weaver_time_lapse": [
     "heal",

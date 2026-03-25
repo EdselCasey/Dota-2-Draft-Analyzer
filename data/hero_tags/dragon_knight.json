@@ -1,13 +1,8 @@
 {
-  "dragon_knight_fireball": [
-    "aoe",
-    "aoe_damage",
-    "dps"
-  ],
   "dragon_knight_breathe_fire": [
     "aoe",
     "damage_reduction",
-    "aoe_damage"
+    "burst"
   ],
   "dragon_knight_dragon_tail": [
     "stun",

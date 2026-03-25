@@ -16,7 +16,7 @@
     "attack_damage_boost"
   ],
   "legion_commander_outfight_them": [
-    "heal"
+    "armor_gain"
   ],
   "legion_commander_moment_of_courage": [
     "lifesteal",

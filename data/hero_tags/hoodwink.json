@@ -12,7 +12,7 @@
   ],
   "hoodwink_scurry": [
     "movement_speed_boost",
-    "aerial"
+    "unobstructed"
   ],
   "hoodwink_sharpshooter": [
     "slow",

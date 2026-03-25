@@ -16,7 +16,9 @@
     "aerial",
     "attack_damage_boost"
   ],
-  "night_stalker_heart_of_darkness": [
-    "regen"
+  "night_stalker_midnight_feast": [
+    "lifesteal",
+    "regen",
+    "mana_regen"
   ]
 }

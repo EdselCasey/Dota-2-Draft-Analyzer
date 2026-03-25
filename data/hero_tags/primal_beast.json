@@ -22,8 +22,5 @@
     "aoe_damage",
     "stun",
     "magic_amp"
-  ],
-  "primal_beast_colossal": [
-    "siege"
   ]
 }

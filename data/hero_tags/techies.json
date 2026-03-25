@@ -20,5 +20,9 @@
     "aoe",
     "disarm",
     "movement_speed_boost"
+  ],
+  "techies_m.a.d.": [
+    "aoe",
+    "burst"
   ]
 }

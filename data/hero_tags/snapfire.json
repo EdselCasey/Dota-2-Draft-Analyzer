@@ -23,5 +23,8 @@
     "attack_speed_boost",
     "armor_reduction",
     "burst"
+  ],
+  "boomstick": [
+    "magic_amp"
   ]
 }

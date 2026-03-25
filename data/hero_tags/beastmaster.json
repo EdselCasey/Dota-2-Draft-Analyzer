@@ -4,25 +4,21 @@
     "burst",
     "magic_amp"
   ],
-  "beastmaster_call_of_the_wild_boar": [
+  "beastmaster_summon_razorback": [
     "slow",
     "summon_units"
   ],
-  "beastmaster_call_of_the_wild_hawk": [
-    "stun",
+  "beastmaster_summon_raptors": [
+    "root",
     "summon_units"
   ],
   "beastmaster_inner_beast": [
     "aoe",
-    "attack_speed_boost",
-    "magic_amp"
+    "attack_speed_boost"
   ],
   "beastmaster_primal_roar": [
     "stun",
     "slow",
     "burst"
-  ],
-  "beastmaster_rugged": [
-    "damage_reduction"
   ]
 }

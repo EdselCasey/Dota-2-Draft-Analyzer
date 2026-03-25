@@ -20,5 +20,8 @@
     "knockback",
     "stun",
     "blink"
+  ],
+  "spirit_breaker_empowering_haste": [
+    "movement_speed_boost"
   ]
 }

@@ -17,11 +17,5 @@
     "aoe",
     "stun",
     "burst"
-  ],
-  "tidehunter_dead_in_the_water": [
-    "slow"
-  ],
-  "tidehunter_krill_eater": [
-    "hp_growth"
   ]
 }

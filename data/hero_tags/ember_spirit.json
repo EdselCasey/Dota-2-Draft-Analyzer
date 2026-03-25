@@ -18,16 +18,12 @@
     "dps"
   ],
   "ember_spirit_fire_remnant": [
-    "zone_conrol",
-    "aoe",
-    "dps"
-  ],
-  "ember_spirit_activate_fire_remnant": [
     "aoe",
     "global",
     "dash",
     "escape",
     "burst",
-    "invulnerability"
+    "invulnerability",
+    "dps"
   ]
 }

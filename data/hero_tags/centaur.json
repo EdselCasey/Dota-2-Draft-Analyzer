@@ -17,7 +17,7 @@
     "global",
     "movement_speed_boost"
   ],
-  "rawhide": [
-    "hp_growth"
+  "centaur_horsepower": [
+    "movement_speed_boost"
   ]
 }

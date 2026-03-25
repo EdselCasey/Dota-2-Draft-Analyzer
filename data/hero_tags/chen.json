@@ -14,7 +14,9 @@
     "global",
     "heal"
   ],
-  "chen_summon_convert": [
-    "summon_units"
+  "chen_zealot": [
+    "summon_units",
+    "heal",
+    "dps"
   ]
 }

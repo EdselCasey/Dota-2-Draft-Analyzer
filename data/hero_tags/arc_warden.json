@@ -18,8 +18,5 @@
   "arc_warden_tempest_double": [
     "summon_units",
     "push_structures"
-  ],
-  "arc_warden_runic_infusion": [
-    "regen"
   ]
 }

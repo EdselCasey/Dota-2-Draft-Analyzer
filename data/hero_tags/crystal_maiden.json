@@ -2,8 +2,7 @@
   "crystal_maiden_crystal_nova": [
     "aoe",
     "slow",
-    "shield",
-    "aoe_damage"
+    "burst"
   ],
   "crystal_maiden_frostbite": [
     "root",
@@ -19,5 +18,8 @@
     "channelled",
     "slow",
     "aoe_damage"
+  ],
+    "crystal_maiden_glacial_guard": [
+    "shield"
   ]
 }

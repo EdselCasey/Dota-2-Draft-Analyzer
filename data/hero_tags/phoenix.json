@@ -14,13 +14,10 @@
     "escape",
     "save"
   ],
-  "phoenix_launch_fire_spirit": [
+  "phoenix_fire_spirit": [
     "aoe",
     "slow",
     "dps"
-  ],
-  "phoenix_blinding_sun": [
-    "disarm"
   ],
   "phoenix_dying_light": [
     "aoe",

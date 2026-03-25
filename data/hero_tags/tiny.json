@@ -10,9 +10,6 @@
     "forced_movement",
     "save"
   ],
-  "tiny_craggy_exterior": [
-    "damage_reduction"
-  ],
   "tiny_tree_grab": [
     "aoe",
     "attack_damage_boost"

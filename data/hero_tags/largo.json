@@ -5,7 +5,8 @@
     "attack_damage_boost",
     "heal",
     "magic_amp",
-    "armor_gain"
+    "armor_gain",
+    "burst"
   ],
   "largo_frogstomp": [
     "aoe",

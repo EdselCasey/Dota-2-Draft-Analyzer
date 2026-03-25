@@ -2,7 +2,6 @@
   "dawnbreaker_starbreaker": [
     "aoe",
     "stun",
-    "aoe_damage",
     "burst"
   ],
   "dawnbreaker_celestial_hammer": [
@@ -25,5 +24,8 @@
     "heal",
     "global",
     "teleport"
+  ],
+  "dawnbreaker_break_of_dawn": [
+    "attack_damage_boost"
   ]
 }

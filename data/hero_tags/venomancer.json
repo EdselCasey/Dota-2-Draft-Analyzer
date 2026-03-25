@@ -2,8 +2,7 @@
   "venomancer_venomous_gale": [
     "aoe",
     "slow",
-    "burst",
-    "summon_units"
+    "burst"
   ],
   "venomancer_poison_sting": [
     "slow",
@@ -22,7 +21,8 @@
     "vision",
     "zone_control"
   ],
-  "venomancer_septic_shock": [
-    "attack_damage_boost"
+  "venomancer_snakebite": [
+    "burst",
+    "dps"
   ]
 }

@@ -17,7 +17,7 @@
     "armor_gain",
     "movement_speed_boost"
   ],
-  "axe_coat_of_blood": [
-    "armor_gain"
+  "axe_one_man_army": [
+    "hp_growth"
   ]
 }
