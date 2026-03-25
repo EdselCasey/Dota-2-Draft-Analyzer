@@ -3,7 +3,8 @@
     "aoe",
     "burst",
     "summon_units",
-    "dps"
+    "dps",
+    "knockback"
   ],
   "tinker_keen_conveyance": [
     "global",
