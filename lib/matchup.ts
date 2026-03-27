@@ -341,7 +341,7 @@ function winConditionText(
   if (favored && timing === 'late')
     return 'Farm safely and execute your power spike — time is on your side.'
   if (favored && timing === 'early')
-    return 'Your window is open — press early and snowball before they scale.'
+    return 'You have the tempo — apply pressure and convert your early advantage into objectives.'
   if (favored)
     return 'Flexible win condition — maintain pressure and respond to opponent moves.'
   if (!favored && timing === 'early')
