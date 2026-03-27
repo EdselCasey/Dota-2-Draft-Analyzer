@@ -20,7 +20,7 @@ function verdictSubtitle(
 ): string {
   if (favored === 'even') return 'Closely Contested — no clear structural edge'
   const t = favored === 'radiant' ? radiantTiming?.label : direTiming?.label
-  if (t === 'Early Game' || t === 'Early-Mid') return 'Close out before they scale'
+  if (t === 'Early Game' || t === 'Early-Mid') return 'Early–mid dominance — can control and close the map'
   if (t === 'Late Game'  || t === 'Mid-Late' ) return 'Farm to your power spike and scale to win'
   return 'Maintain pressure and respond to threats'
 }
