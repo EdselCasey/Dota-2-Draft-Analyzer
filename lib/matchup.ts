@@ -294,7 +294,7 @@ export interface MatchupAnalysis {
 //   Unfavored + late   → ~0.56  "Force fights"         — must steal momentum early
 
 export type UrgencyLabel =
-  | 'Farm and Scale'
+  | 'Low Pressure'
   | 'Press Your Advantage'
   | 'Force Fights'
   | 'Must Snowball'
@@ -314,7 +314,7 @@ export interface TeamUrgency {
 }
 
 const URGENCY_LABEL_THRESHOLDS: [number, UrgencyLabel][] = [
-  [0.25, 'Farm and Scale'],
+  [0.25, 'Low Pressure'],
   [0.45, 'Press Your Advantage'],
   [0.62, 'Force Fights'],
   [0.78, 'Must Snowball'],
@@ -322,7 +322,7 @@ const URGENCY_LABEL_THRESHOLDS: [number, UrgencyLabel][] = [
 ]
 
 export const URGENCY_COLORS: Record<UrgencyLabel, string> = {
-  'Farm and Scale':       '#a78bfa',  // purple — patient
+  'Low Pressure':       '#a78bfa',  // purple — patient
   'Press Your Advantage': '#34d399',  // green  — confident
   'Force Fights':         '#facc15',  // yellow — caution
   'Must Snowball':        '#fb923c',  // orange — urgent
