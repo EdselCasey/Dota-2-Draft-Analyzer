@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
- title: "Dota 2 Draft Analyzer",
+ title: "Dota 2 Draft Analyzer – Predict Winners, Timing & Win Conditions Instantly",
   description: "Analyze Dota 2 drafts using ability-based logic instead of win rates.",
   openGraph: {
     title: "Dota 2 Draft Analyzer",
