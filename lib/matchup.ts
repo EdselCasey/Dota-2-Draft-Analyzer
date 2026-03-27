@@ -98,6 +98,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   // ── Map presence ──────────────────────────────────────────────────────────
   map_presence: [
     { counters: 'pickoff',          strength: 0.30 },
+    { counters: 'teamfight',          strength: 0.30 },
   ],
 
   // ── Defensive utility ─────────────────────────────────────────────────────
