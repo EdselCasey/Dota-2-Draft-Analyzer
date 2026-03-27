@@ -82,7 +82,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
 
   // ── Teamfight ─────────────────────────────────────────────────────────────
   teamfight: [
-    { counters: 'map_presence',     strength: 0.70 },
+    { counters: 'map_presence',     strength: 0.25 },
     { counters: 'burst_damage',     strength: 0.25 },
     { counters: 'sustained_damage', strength: 0.40, requiresExcess: true },  // teamfight must dominate to force carries off
     { counters: 'push',             strength: 1.0 },
@@ -98,7 +98,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   // ── Map presence ──────────────────────────────────────────────────────────
   map_presence: [
     { counters: 'pickoff',          strength: 0.30 },
-    { counters: 'teamfight',          strength: 0.50 },
+    { counters: 'teamfight',          strength: 0.70 },
   ],
 
   // ── Defensive utility ─────────────────────────────────────────────────────
