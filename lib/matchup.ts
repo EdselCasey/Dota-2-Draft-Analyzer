@@ -54,7 +54,6 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   burst_damage: [
     { counters: 'sustain',          strength: 0.30 },
     { counters: 'defense',          strength: 0.25 },
-    { counters: 'resource_support', strength: 0.40 },
   ],
 
   // ── Sustained damage ──────────────────────────────────────────────────────
