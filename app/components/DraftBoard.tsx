@@ -6,15 +6,16 @@ import { buildTeamProfile } from '../../lib/scorer'
 import { toDisplayName } from '../../lib/displayNames'
 import { analyzeMatchup } from '../../lib/matchup'
 import { computeRecommendations } from '../../lib/recommend'
+import { teamTimingScore } from '../../lib/timing'
 import HeroCard, { type CardSize } from './HeroCard'
 import {
   HERO_ATTR, ATTR_LABEL, ATTR_ICON, ATTR_COLOR,
   type PrimaryAttr,
 } from '../../lib/heroAttributes'
 import TeamSlot from './TeamSlot'
-import TeamDimensionBars from './TeamDimensionBars'
 import HeroProfileModal from './HeroProfileModal'
 import TeamCompareOverlay from './TeamCompareOverlay'
+import DraftVerdictPanel from './DraftVerdictPanel'
 
 type Team = 'radiant' | 'dire'
 
@@ -98,11 +99,28 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
     return profiles.length > 0 ? buildTeamProfile(profiles) : null
   }, [dire, heroProfileMap])
 
-  const recommendedMap = useMemo<Map<string, 'radiant' | 'dire' | 'both'>>(() => {
-    if (!radiantTeam && !direTeam) return new Map()
+  // ── Single matchup computation shared by verdict, recommendations, top picks ──
+
+  const matchup = useMemo(() => {
+    if (!radiantTeam && !direTeam) return null
     const r = radiantTeam ?? buildTeamProfile([])
     const d = direTeam    ?? buildTeamProfile([])
-    const matchup = analyzeMatchup(r, d)
+    return analyzeMatchup(r, d)
+  }, [radiantTeam, direTeam])
+
+  const radiantTiming = useMemo(
+    () => radiantTeam ? teamTimingScore(radiantTeam.heroes.map(h => h.timing)) : null,
+    [radiantTeam]
+  )
+  const direTiming = useMemo(
+    () => direTeam ? teamTimingScore(direTeam.heroes.map(h => h.timing)) : null,
+    [direTeam]
+  )
+
+  const recommendedMap = useMemo<Map<string, 'radiant' | 'dire' | 'both'>>(() => {
+    if (!matchup) return new Map()
+    const r = radiantTeam ?? buildTeamProfile([])
+    const d = direTeam    ?? buildTeamProfile([])
     const { radiant: rRecs, dire: dRecs } = computeRecommendations(r, d, recPool, matchup)
     const map = new Map<string, 'radiant' | 'dire' | 'both'>()
     if (radiantCount < 5) for (const rec of rRecs) map.set(rec.hero.name, 'radiant')
@@ -111,19 +129,18 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
       map.set(rec.hero.name, ex === 'radiant' ? 'both' : 'dire')
     }
     return map
-  }, [radiantTeam, direTeam, recPool, radiantCount, direCount])
+  }, [matchup, radiantTeam, direTeam, recPool, radiantCount, direCount])
 
   const topPickSet = useMemo<Set<string>>(() => {
-    if (!radiantTeam && !direTeam) return new Set()
+    if (!matchup) return new Set()
     const r = radiantTeam ?? buildTeamProfile([])
     const d = direTeam    ?? buildTeamProfile([])
-    const matchup = analyzeMatchup(r, d)
     const { radiant: rRecs, dire: dRecs } = computeRecommendations(r, d, recPool, matchup, 1)
     const set = new Set<string>()
     if (rRecs[0] && radiantCount < 5) set.add(rRecs[0].hero.name)
     if (dRecs[0] && direCount    < 5) set.add(dRecs[0].hero.name)
     return set
-  }, [radiantTeam, direTeam, recPool, radiantCount, direCount])
+  }, [matchup, radiantTeam, direTeam, recPool, radiantCount, direCount])
 
   const selectedProfile = selectedHero ? heroProfileMap.get(selectedHero) ?? null : null
 
@@ -132,8 +149,6 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
   function renderTeamPanel(team: Team) {
     const heroes    = team === 'radiant' ? radiant : dire
     const count     = team === 'radiant' ? radiantCount : direCount
-    const teamObj   = team === 'radiant' ? radiantTeam  : direTeam
-    const accent    = team === 'radiant' ? '#4ade80' : '#f87171'
     const label     = team === 'radiant' ? 'Radiant'  : 'Dire'
     const dotClass  = team === 'radiant' ? 'bg-green-500'   : 'bg-red-500'
     const textClass = team === 'radiant' ? 'text-green-400' : 'text-red-400'
@@ -156,7 +171,6 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
             />
           ))}
         </div>
-        <TeamDimensionBars team={teamObj} accentColor={accent} />
       </>
     )
   }
@@ -228,7 +242,18 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
 
         {/* Hero Pool */}
         <main className="flex-1 flex flex-col overflow-hidden">
-          <div className="px-4 py-2 border-b border-white/10 flex items-center gap-2 shrink-0 flex-wrap">
+
+          {/* Draft Verdict Panel — always visible, updates in real time */}
+          <DraftVerdictPanel
+            matchup={matchup}
+            radiantTiming={radiantTiming}
+            direTiming={direTiming}
+            radiantCount={radiantCount}
+            direCount={direCount}
+          />
+
+          {/* Hero pool toolbar */}
+          <div className="px-4 py-2 mt-2 border-b border-white/10 flex items-center gap-2 shrink-0 flex-wrap">
             <span className="text-white/50 text-sm">Hero Pool</span>
             <span className="text-white/30 text-xs">({pool.length})</span>
 
