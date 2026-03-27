@@ -167,7 +167,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'defensive_utility', weight: 1.5 },
   ],
   regen: [
-    { dimension: 'sustain',           weight: 2.0 },  // increased from 1.5
+    { dimension: 'sustain',           weight: 1.5 },  // increased from 1.5
     { dimension: 'resource_support',  weight: 2.0 },
   ],
   lifesteal: [
