@@ -13,6 +13,7 @@ import {
   type PrimaryAttr,
 } from '../../lib/heroAttributes'
 import TeamSlot from './TeamSlot'
+import TeamDimensionBars from './TeamDimensionBars'
 import HeroProfileModal from './HeroProfileModal'
 import TeamCompareOverlay from './TeamCompareOverlay'
 import DraftVerdictPanel from './DraftVerdictPanel'
@@ -149,6 +150,8 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
   function renderTeamPanel(team: Team) {
     const heroes    = team === 'radiant' ? radiant : dire
     const count     = team === 'radiant' ? radiantCount : direCount
+    const teamObj   = team === 'radiant' ? radiantTeam  : direTeam
+    const accent    = team === 'radiant' ? '#4ade80' : '#f87171'
     const label     = team === 'radiant' ? 'Radiant'  : 'Dire'
     const dotClass  = team === 'radiant' ? 'bg-green-500'   : 'bg-red-500'
     const textClass = team === 'radiant' ? 'text-green-400' : 'text-red-400'
@@ -171,6 +174,7 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
             />
           ))}
         </div>
+        <TeamDimensionBars team={teamObj} accentColor={accent} />
       </>
     )
   }
