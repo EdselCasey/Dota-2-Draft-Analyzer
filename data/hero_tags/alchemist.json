@@ -1,10 +1,4 @@
 {
-  "alchemist_berserk_potion": [
-    "attack_speed_boost",
-    "regen",
-    "dispel",
-    "movement_speed_boost"
-  ],
   "alchemist_acid_spray": [
     "aoe",
     "slow",

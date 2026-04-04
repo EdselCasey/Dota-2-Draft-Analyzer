@@ -4,8 +4,7 @@
     "stun",
     "movement_speed_boost",
     "vision",
-    "dash",
-    "burst"
+    "dash"
   ],
   "spirit_breaker_bulldoze": [
     "movement_speed_boost"
@@ -13,7 +12,8 @@
   "spirit_breaker_greater_bash": [
     "knockback",
     "attack_modifier",
-    "stun"
+    "stun",
+    "burst"
   ],
   "spirit_breaker_nether_strike": [
     "burst",
