@@ -5,7 +5,8 @@
   "doom_bringer_scorched_earth": [
     "aoe",
     "movement_speed_boost",
-    "dps"
+    "dps",
+    "regen"
   ],
   "doom_bringer_infernal_blade": [
     "stun",
