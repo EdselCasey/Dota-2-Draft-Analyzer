@@ -192,7 +192,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   escape: [
     { dimension: 'mobility',         weight: 1.0 },
-    { dimension: 'defense',          weight: 1.0 },
+    { dimension: 'defense',          weight: 0.35 },
   ],
   teleport: [
     { dimension: 'mobility',         weight: 2.0 },
