@@ -9,11 +9,11 @@
   ],
   "sand_king_caustic_finale": [
     "aoe",
-    "aoe_damage"
+    "burst"
   ],
   "sand_king_stinger": [
     "aoe",
-    "aoe_damage",
+    "burst",
     "slow"
   ],
   "sand_king_epicenter": [
@@ -25,7 +25,7 @@
   "sand_king_burrow_strike": [
     "aoe",
     "slow",
-    "aoe_damage",
+    "burst",
     "escape",
     "dash",
     "stun"
