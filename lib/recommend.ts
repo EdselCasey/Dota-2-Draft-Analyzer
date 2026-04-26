@@ -16,6 +16,7 @@ export interface HeroRecommendation {
   timingFit:      number   // timing alignment with urgency bias
   tiltFactor:     number   // opens new edges (balanced teams only)
   reasons:        string[]
+  isLeastBad?:    boolean  // true when no positive delta exists (fallback)
 }
 
 export interface DraftRecommendations {
@@ -213,19 +214,30 @@ export function computeRecommendations(
   topN        = 10,
   minScore    = 0.15
 ): DraftRecommendations {
-  const rank = (isRadiant: boolean) =>
-    candidates
-      .map(h => scoreForTeam(
-        h,
-        isRadiant ? radiant : dire,
-        isRadiant ? dire    : radiant,
-        isRadiant ? matchup.radiantUrgency : matchup.direUrgency,
-        matchup,
-        isRadiant
-      ))
-      .filter(r => r.score >= minScore)
-      .sort((a, b) => b.score - a.score)
+  const rank = (isRadiant: boolean) => {
+    const scored = candidates.map(h => scoreForTeam(
+      h,
+      isRadiant ? radiant : dire,
+      isRadiant ? dire    : radiant,
+      isRadiant ? matchup.radiantUrgency : matchup.direUrgency,
+      matchup,
+      isRadiant
+    ))
+
+    // Primary: heroes with positive favor shift (net delta improves matchup)
+    const positive = scored
+      .filter(r => r.favorShift > 0)
+      .sort((a, b) => b.favorShift - a.favorShift)
       .slice(0, topN)
+
+    if (positive.length > 0) return positive
+
+    // Fallback: no pick improves the matchup, show least bad options
+    return scored
+      .sort((a, b) => b.favorShift - a.favorShift)
+      .slice(0, topN)
+      .map(r => ({ ...r, isLeastBad: true as const }))
+  }
 
   return { radiant: rank(true), dire: rank(false) }
 }
