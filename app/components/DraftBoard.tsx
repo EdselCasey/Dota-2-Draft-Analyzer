@@ -298,11 +298,12 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
               >
                 ⓘ
               </button>
-              <div className="absolute left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 top-full mt-1 z-50 w-64 rounded-lg border border-white/15 bg-[#1a1d24] shadow-xl p-3 text-[11px] leading-relaxed text-white/80
+              <div className="fixed inset-0 z-50 flex items-center justify-center sm:absolute sm:inset-auto sm:left-0 sm:top-full sm:mt-1 sm:block w-64 sm:w-64
                 opacity-0 pointer-events-none 
                 group-hover/legend:opacity-100 group-hover/legend:pointer-events-auto 
                 group-focus-within/legend:opacity-100 group-focus-within/legend:pointer-events-auto 
                 transition-opacity duration-150">
+                <div className="rounded-lg border border-white/15 bg-[#1a1d24] shadow-xl p-3 text-[11px] leading-relaxed text-white/80 w-64">
                 <p className="font-bold text-white/60 uppercase tracking-wide text-[10px] mb-2">Hero Card Legend</p>
                 <div className="flex flex-col gap-1.5">
                   <div className="flex items-center gap-2">
@@ -334,6 +335,7 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
                   </div>
                 </div>
                 <p className="mt-2 text-white/35 text-[10px]">Hover a card to add to Radiant / Dire, view profile, or ban.</p>
+                </div>
               </div>
             </div>
 
