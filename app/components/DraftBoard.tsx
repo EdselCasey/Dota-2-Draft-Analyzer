@@ -35,7 +35,7 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
   const [bannedHeroes, setBannedHeroes]   = useState<string[]>([])
   const [mobileTeamTab, setMobileTeamTab] = useState<Team | null>(null)
   const [cardSize, setCardSize]           = useState<CardSize>('sm')
-  const [groupByAttr, setGroupByAttr]     = useState(false)
+  const [groupByAttr, setGroupByAttr]     = useState(true)
 
   // ── Stable helpers ─────────────────────────────────────────────────────────
 
@@ -349,14 +349,14 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
           <div className="flex-1 overflow-y-auto p-3 lg:p-4">
             {groupByAttr ? (
               /* ── 2×2 attribute grid ── */
-              <div className="grid grid-cols-2 gap-x-4 gap-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-5">
                 {(
                   [
                     ['strength',     'intelligence'],
                     ['agility',      'universal'   ],
                   ] as PrimaryAttr[][]
-                ).map((row, ri) =>
-                  row.map((attr, ci) => {
+                ).map((row) =>
+                  row.map((attr) => {
                     const heroes = pool.filter(p => (HERO_ATTR[p.name] ?? 'universal') === attr)
                     const color  = ATTR_COLOR[attr]
                     const gap    = cardSize === 'sm' ? 6 : 8
