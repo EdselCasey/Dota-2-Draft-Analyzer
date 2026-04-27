@@ -363,7 +363,7 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
                     return (
                       <div key={attr}>
                         {/* Section header */}
-                        <div className="flex items-center gap-1.5 mb-2">
+                        <div className="flex items-center gap-1.5 mb-2 justify-center sm:justify-start">
                           <img
                             src={ATTR_ICON[attr]}
                             alt={ATTR_LABEL[attr]}
@@ -378,7 +378,7 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
                           <span className="text-[10px] text-white/25 ml-0.5">({heroes.length})</span>
                         </div>
                         {/* Heroes */}
-                        <div className="flex flex-wrap" style={{ gap }}>
+                        <div className="flex flex-wrap justify-center sm:justify-start" style={{ gap }}>
                           {heroes.map(p => (
                             <HeroCard
                               key={p.name}
@@ -406,7 +406,7 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
               </div>
             ) : (
               /* ── Flat alphabetical list ── */
-              <div className="flex flex-wrap" style={{ gap: cardSize === 'sm' ? 6 : 8 }}>
+              <div className="flex flex-wrap justify-center sm:justify-start" style={{ gap: cardSize === 'sm' ? 6 : 8 }}>
                 {pool.map(p => (
                   <HeroCard
                     key={p.name}
