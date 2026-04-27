@@ -298,7 +298,7 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
               >
                 ⓘ
               </button>
-              <div className="absolute left-0 top-full mt-1 z-50 w-64 rounded-lg border border-white/15 bg-[#1a1d24] shadow-xl p-3 text-[11px] leading-relaxed text-white/80
+              <div className="absolute left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 top-full mt-1 z-50 w-64 rounded-lg border border-white/15 bg-[#1a1d24] shadow-xl p-3 text-[11px] leading-relaxed text-white/80
                 opacity-0 pointer-events-none 
                 group-hover/legend:opacity-100 group-hover/legend:pointer-events-auto 
                 group-focus-within/legend:opacity-100 group-focus-within/legend:pointer-events-auto 
