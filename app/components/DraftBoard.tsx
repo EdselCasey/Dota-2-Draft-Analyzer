@@ -257,7 +257,7 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
           />
 
           {/* Hero pool toolbar */}
-          <div className="px-4 py-2 mt-2 border-b border-white/10 flex items-center gap-2 shrink-0 flex-wrap">
+          <div className="px-4 py-2 mt-2 border-b border-white/10 flex items-center justify-center sm:justify-start gap-2 shrink-0 flex-wrap">
             <span className="text-white/50 text-sm">Hero Pool</span>
             <span className="text-white/30 text-xs">({pool.length})</span>
 
