@@ -36,6 +36,10 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
   const [mobileTeamTab, setMobileTeamTab] = useState<Team | null>(null)
   const [cardSize, setCardSize]           = useState<CardSize>('sm')
   const [groupByAttr, setGroupByAttr]     = useState(true)
+  const [matchInput, setMatchInput]       = useState('')
+  const [matchLoading, setMatchLoading]   = useState(false)
+  const [matchError, setMatchError]       = useState<string | null>(null)
+  const [matchOutcome, setMatchOutcome]   = useState<boolean | null>(null) // true = radiant won
 
   // ── Stable helpers ─────────────────────────────────────────────────────────
 
@@ -59,6 +63,34 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
 
   function unbanHero(hero: string) {
     setBannedHeroes(prev => prev.filter(h => h !== hero))
+  }
+
+  async function loadMatch() {
+    const id = matchInput.trim()
+    if (!id || !/^\d+$/.test(id)) { setMatchError('Enter a valid match ID'); return }
+    setMatchLoading(true)
+    setMatchError(null)
+    setMatchOutcome(null)
+    try {
+      const res = await fetch(`/api/match/${id}`)
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}))
+        setMatchError(body.error ?? 'Failed to load match')
+        return
+      }
+      const data = await res.json()
+      // Populate teams — pad to 5 slots
+      const rSlots = [...(data.radiant as string[]), ...Array(5).fill(null)].slice(0, 5)
+      const dSlots = [...(data.dire as string[]), ...Array(5).fill(null)].slice(0, 5)
+      setRadiant(rSlots)
+      setDire(dSlots)
+      setMatchOutcome(data.radiantWin ?? null)
+      setBannedHeroes([])
+    } catch {
+      setMatchError('Network error')
+    } finally {
+      setMatchLoading(false)
+    }
   }
 
   // ── Derived ────────────────────────────────────────────────────────────────
@@ -185,10 +217,38 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
     <div className="min-h-screen bg-[#0e1015] text-white flex flex-col">
 
       {/* Header */}
-      <header className="border-b border-white/10 px-4 py-3 shrink-0 flex items-center gap-3">
+      <header className="border-b border-white/10 px-4 py-3 shrink-0 flex items-center gap-3 flex-wrap">
         <h1 className="text-base lg:text-xl font-bold tracking-wide text-white/90 truncate">
           Dota 2 Draft Analyzer
         </h1>
+
+        {/* Match ID input */}
+        <div className="flex items-center gap-1.5">
+          <input
+            type="text"
+            placeholder="Match ID"
+            value={matchInput}
+            onChange={e => { setMatchInput(e.target.value); setMatchError(null) }}
+            onKeyDown={e => e.key === 'Enter' && loadMatch()}
+            className="w-28 sm:w-36 bg-white/5 border border-white/10 rounded px-2 py-1 text-xs text-white placeholder-white/30 focus:outline-none focus:border-white/30 tabular-nums"
+          />
+          <button
+            onClick={loadMatch}
+            disabled={matchLoading}
+            className="px-2 py-1 text-xs font-semibold rounded border border-white/20 bg-white/5 text-white/70 hover:bg-white/10 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            {matchLoading ? '…' : 'Load'}
+          </button>
+          {matchError && <span className="text-red-400 text-[10px]">{matchError}</span>}
+          {matchOutcome !== null && (
+            <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded ${
+              matchOutcome ? 'text-green-400 bg-green-400/10' : 'text-red-400 bg-red-400/10'
+            }`}>
+              {matchOutcome ? 'Radiant Won' : 'Dire Won'}
+            </span>
+          )}
+        </div>
+
         {radiantTeam && direTeam ? (
           <button
             onClick={() => setShowCompare(true)}
