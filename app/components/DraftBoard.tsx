@@ -230,12 +230,12 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
             value={matchInput}
             onChange={e => { setMatchInput(e.target.value); setMatchError(null) }}
             onKeyDown={e => e.key === 'Enter' && loadMatch()}
-            className="w-28 sm:w-36 bg-white/5 border border-white/10 rounded px-2 py-1 text-xs text-white placeholder-white/30 focus:outline-none focus:border-white/30 tabular-nums"
+            className="w-28 sm:w-36 bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-white placeholder-white/50 focus:outline-none focus:border-blue-400/60 focus:bg-white/15 tabular-nums transition-colors"
           />
           <button
             onClick={loadMatch}
             disabled={matchLoading}
-            className="px-2 py-1 text-xs font-semibold rounded border border-white/20 bg-white/5 text-white/70 hover:bg-white/10 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            className="px-2.5 py-1 text-xs font-bold rounded border border-blue-400/50 bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 hover:text-blue-200 hover:border-blue-400 transition-colors disabled:opacity-40 disabled:cursor-not-allowed shadow-[0_0_8px_rgba(59,130,246,0.2)]"
           >
             {matchLoading ? '…' : 'Load'}
           </button>
