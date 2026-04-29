@@ -224,6 +224,7 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
 
         {/* Match ID input */}
         <div className="flex items-center gap-1.5">
+          <span className="text-white/60 text-xs font-medium">Match ID:</span>
           <input
             type="text"
             placeholder="Match ID"
