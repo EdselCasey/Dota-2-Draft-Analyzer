@@ -75,6 +75,12 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   vision:           0.5,  
   mana_regen:        -0.3,
   global:            0.6,  // global presence becomes more impactful late
+
+  // Spell Uptime
+  passive:           -0.6,  // always on = dominates early
+  short_cooldown:    -0.4,  // frequent rotations = early tempo
+  medium_cooldown:    0.1,  // slight late lean
+  long_cooldown:      0.5,  // big ult reliance = needs game to reach one decisive fight
 }
 
 export type TimingLabel =

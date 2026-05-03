@@ -59,6 +59,11 @@ export type AbilityTag =
   // ── Modifiers (non-scoring, used for combo logic) ─────────────────────────
   | 'aoe'
   | 'channelled'
+  // ── Spell Uptime (cooldown-based tempo tags) ────────────────────────────
+  | 'passive'           // always active, no cooldown
+  | 'short_cooldown'    // 6–15s cooldown
+  | 'medium_cooldown'   // 16–40s cooldown
+  | 'long_cooldown'     // 60s+ cooldown
 
 export type DraftDimension =
   | 'teamfight'
@@ -74,6 +79,7 @@ export type DraftDimension =
   | 'map_presence'        // global abilities, teleport, cross-map impact
   | 'resource_support'    // mana regen, cooldown auras, teamwide buffs
   | 'defensive_utility'   // dispel, purge, debuff immunity (reactive tools)
+  | 'spell_uptime'        // how frequently a team can use abilities (tempo axis)
 
 export const ALL_DIMENSIONS: DraftDimension[] = [
   'teamfight',
@@ -89,6 +95,7 @@ export const ALL_DIMENSIONS: DraftDimension[] = [
   'map_presence',
   'resource_support',
   'defensive_utility',
+  'spell_uptime',
 ]
 
 export interface CleanedAbility {

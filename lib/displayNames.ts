@@ -44,6 +44,7 @@ export const DIMENSION_LABELS: Record<DraftDimension, string> = {
   map_presence:     'Map Presence',
   resource_support: 'Resources',
   defensive_utility:'Def. Utility',
+  spell_uptime:     'Spell Uptime',
 }
 
 export const DIMENSION_COLORS: Record<DraftDimension, string> = {
@@ -60,4 +61,5 @@ export const DIMENSION_COLORS: Record<DraftDimension, string> = {
   map_presence:     '#8b5cf6',
   resource_support: '#6366f1',
   defensive_utility:'#0ea5e9',
+  spell_uptime:     '#fbbf24',
 }

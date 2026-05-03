@@ -301,4 +301,18 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'burst_damage',      weight: 1.5 },  // amplifies nuke output
     { dimension: 'pickoff',           weight: 0.5 },
   ],
+
+  // ── Spell Uptime (cooldown-based tempo) ────────────────────────────────────
+  passive: [
+    { dimension: 'spell_uptime',      weight: 3.0 },
+  ],
+  short_cooldown: [
+    { dimension: 'spell_uptime',      weight: 2.0 },
+  ],
+  medium_cooldown: [
+    { dimension: 'spell_uptime',      weight: 1.0 },
+  ],
+  long_cooldown: [
+    { dimension: 'spell_uptime',      weight: 0.3 },
+  ],
 }
