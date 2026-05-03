@@ -223,10 +223,10 @@ export function inferTags(name: string, ability: CleanedAbility): AbilityTag[] {
     hasEffectKey(e, 'heal', 'heal_amount', 'heal_per_second') &&
     (isFriendlyTargeting(ability) || isPassive(ability))
   ) {
-    tags.add('heal')
+    tags.add('medium_heal')
   }
   // Self-heal on enemy-targeted abilities (e.g. Death Coil)
-  if (hasEffectKey(e, 'self_heal', 'self_hp_regen')) tags.add('heal')
+  if (hasEffectKey(e, 'self_heal', 'self_hp_regen')) tags.add('medium_heal')
 
   if (
     hasEffectKey(e, 'damage_absorb', 'absorb', 'barrier', 'physical_barrier', 'shield')
@@ -237,7 +237,7 @@ export function inferTags(name: string, ability: CleanedAbility): AbilityTag[] {
   if (hasEffectKey(e, 'regen', 'hp_regen', 'base_mana_regen', 'mana_regen')) {
     const isHpRegen = hasEffectKey(e, 'hp_regen', 'regen')
     const isManaRegen = hasEffectKey(e, 'mana_regen', 'base_mana_regen')
-    if (isHpRegen) tags.add('regen')
+    if (isHpRegen) tags.add('medium_regen')
     if (isManaRegen) tags.add('mana_regen')
   }
 
