@@ -35,6 +35,7 @@
   "abyssal_underlord_fiend's_gate": [
     "teleport",
     "global",
-    "medium_duration"
+    "medium_duration",
+    "long_cooldown"
   ]
 }

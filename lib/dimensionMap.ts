@@ -158,13 +158,13 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
 
   // ── Sustained Damage (tiered) ─────────────────────────────────────────────
   low_sustained: [
-    { dimension: 'sustained_damage', weight: 1.0 },
+    { dimension: 'sustained_damage', weight: 0.7 },
   ],
   medium_sustained: [
-    { dimension: 'sustained_damage', weight: 2.0 },
+    { dimension: 'sustained_damage', weight: 1.3 },
   ],
   high_sustained: [
-    { dimension: 'sustained_damage', weight: 3.0 },
+    { dimension: 'sustained_damage', weight: 2.0 },
   ],
 
   // ── AOE (tiered) ──────────────────────────────────────────────────────────
