@@ -64,7 +64,7 @@ export function tagHero(abilities: HeroAbilitiesMap): TaggedAbility[] {
         effects: stripUpgradeKeys(ability.effects),
       }
       const tags = inferTags(name, cleaned)
-      const isBurstAbility = tags.includes('burst') || tags.includes('aoe_damage')
+      const isBurstAbility = tags.includes('low_burst') || tags.includes('medium_burst') || tags.includes('high_burst')
       const damageMagnitude = isBurstAbility ? extractMaxDamage(cleaned.effects) : undefined
       return { name, tags, damageMagnitude }
     })

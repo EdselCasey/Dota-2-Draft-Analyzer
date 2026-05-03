@@ -62,7 +62,7 @@ export function inferTags(name: string, ability: CleanedAbility): AbilityTag[] {
     (hasEffectKey(e, 'radius', 'aoe_radius', 'effect_radius') &&
       getMaxEffectValue(e, 'radius', 'aoe_radius', 'effect_radius') > 150)
   ) {
-    tags.add('aoe')
+    tags.add('medium_aoe')
   }
 
   // ── CHANNELLED ────────────────────────────────────────────────────────────
@@ -174,22 +174,22 @@ export function inferTags(name: string, ability: CleanedAbility): AbilityTag[] {
     'damage_per_tick'
   )
 
-  if (hasDps && isEnemyTargeting(ability)) tags.add('dps')
+  if (hasDps && isEnemyTargeting(ability)) tags.add('medium_sustained')
   // Passive AoE dps (e.g. Axe Counter Helix)
-  if (hasDps && isPassive(ability)) tags.add('dps')
+  if (hasDps && isPassive(ability)) tags.add('medium_sustained')
 
   if (hasDamage && isEnemyTargeting(ability)) {
     if (hasBehavior(ability, 'CHANNELLED')) {
       // Channelled damage is sustained output (Shackles, Dismember, etc.) not a nuke
-      tags.add('dps')
-    } else if (tags.has('aoe')) {
-      tags.add('aoe_damage')
+      tags.add('medium_sustained')
+    } else if (tags.has('medium_aoe')) {
+      tags.add('medium_burst')
     } else {
-      tags.add('burst')
+      tags.add('medium_burst')
     }
   }
   // Passive proc damage (e.g. Counter Helix)
-  if (hasDamage && isPassive(ability) && tags.has('aoe')) tags.add('aoe_damage')
+  if (hasDamage && isPassive(ability) && tags.has('medium_aoe')) tags.add('medium_burst')
 
   // ── DEFENSE / SURVIVABILITY ──────────────────────────────────────────────
   if (
