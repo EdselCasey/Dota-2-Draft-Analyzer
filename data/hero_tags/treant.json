@@ -11,11 +11,11 @@
   ],
   "treant_leech_seed": [
     "medium_aoe",
-    "heal",
+    "medium_heal",
     "medium_sustained"
   ],
   "treant_living_armor": [
-    "regen",
+    "medium_regen",
     "armor_gain"
   ],
   "treant_overgrowth": [

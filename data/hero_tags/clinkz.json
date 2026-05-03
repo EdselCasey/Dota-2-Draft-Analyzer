@@ -16,7 +16,7 @@
   ],
   "clinkz_death_pact": [
     "summon_units",
-    "heal"
+    "medium_heal"
   ],
   "clinkz_infernal_shred": [
     "armor_reduction"

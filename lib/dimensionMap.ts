@@ -211,17 +211,32 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'defense',           weight: 3.0 },
   ],
 
-  // ── Sustain ───────────────────────────────────────────────────────────────
-  heal: [
+  // ── Sustain (tiered) ────────────────────────────────────────────────────────
+  low_heal: [
+    { dimension: 'sustain',           weight: 1.0 },
+    { dimension: 'defensive_utility', weight: 0.5 },
+  ],
+  medium_heal: [
+    { dimension: 'sustain',           weight: 2.0 },
+    { dimension: 'defensive_utility', weight: 1.0 },
+    { dimension: 'push',             weight: 0.8 },
+  ],
+  high_heal: [
     { dimension: 'sustain',           weight: 3.0 },
     { dimension: 'defensive_utility', weight: 1.5 },
     { dimension: 'push',             weight: 1.2 },
   ],
+  low_regen: [
+    { dimension: 'sustain',           weight: 0.5 },
+  ],
+  medium_regen: [
+    { dimension: 'sustain',           weight: 1.5 },
+  ],
+  high_regen: [
+    { dimension: 'sustain',           weight: 2.5 },
+  ],
   shield: [
     { dimension: 'defensive_utility', weight: 3.0 },
-  ],
-  regen: [
-    { dimension: 'sustain',           weight: 1.5 },
   ],
   lifesteal: [
     { dimension: 'sustain',           weight: 2.0 },
@@ -230,6 +245,11 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'defense',           weight: 3.0 },
     { dimension: 'defensive_utility', weight: 1.5 },
   ],
+
+  // ── Duration (multiplier only — no direct dimension weight) ────────────────
+  short_duration: [],
+  medium_duration: [],
+  long_duration: [],
 
   // ── Mobility ──────────────────────────────────────────────────────────────
   blink: [

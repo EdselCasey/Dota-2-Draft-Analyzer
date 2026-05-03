@@ -10,7 +10,7 @@
     "leash"
   ],
   "slark_shadow_dance": [
-    "regen",
+    "medium_regen",
     "movement_speed_boost",
     "escape",
     "damage_reduction",
@@ -18,7 +18,7 @@
   ],
   "slark_saltwater_shiv": [
     "attack_modifier",
-    "regen",
+    "medium_regen",
     "slow",
     "movement_speed_boost"
   ],

@@ -13,7 +13,7 @@
   ],
   "life_stealer_infest": [
     "medium_aoe",
-    "regen",
+    "medium_regen",
     "movement_speed_boost"
   ],
   "life_stealer_feast": [

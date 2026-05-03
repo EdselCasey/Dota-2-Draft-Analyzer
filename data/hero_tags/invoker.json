@@ -5,7 +5,7 @@
   ],
   "invoker_ghost_walk": [
     "slow",
-    "regen",
+    "medium_regen",
     "mana_regen",
     "stealth",
     "escape"

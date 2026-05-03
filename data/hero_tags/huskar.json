@@ -12,7 +12,7 @@
   "huskar_berserkers_blood": [
     "attack_speed_boost",
     "damage_reduction",
-    "regen"
+    "medium_regen"
   ],
   "huskar_life_break": [
     "slow",

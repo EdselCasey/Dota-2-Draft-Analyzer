@@ -2,7 +2,7 @@
   "wisp_tether": [
     "medium_aoe",
     "slow",
-    "heal",
+    "medium_heal",
     "dash",
     "medium_sustained",
     "mana_regen"
@@ -13,7 +13,7 @@
   ],
   "wisp_overcharge": [
     "armor_gain",
-    "regen",
+    "medium_regen",
     "attack_speed_boost"
   ],
   "wisp_relocate": [

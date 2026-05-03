@@ -1,7 +1,7 @@
 {
   "necrolyte_death_pulse": [
     "medium_aoe",
-    "heal",
+    "medium_heal",
     "medium_burst"
   ],
   "necrolyte_heartstopper_aura": [
@@ -9,19 +9,19 @@
     "medium_sustained"
   ],
   "necrolyte_sadist": [
-    "heal",
-    "regen",
+    "medium_heal",
+    "medium_regen",
     "mana_regen"
   ],
   "necrolyte_ghost_shroud": [
     "slow",
     "damage_reduction",
-    "heal"
+    "medium_heal"
   ],
   "necrolyte_reapers_scythe": [
     "stun",
     "medium_burst",
-    "regen",
+    "medium_regen",
     "mana_regen"
   ]
 }

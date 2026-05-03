@@ -53,6 +53,6 @@
   "ringmaster_strongman_tonic": [
     "hp_growth",
     "save",
-    "heal"
+    "medium_heal"
   ]
 }

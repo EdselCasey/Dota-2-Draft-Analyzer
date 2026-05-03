@@ -5,13 +5,13 @@
   ],
   "abaddon_mist_coil": [
     "low_burst",
-    "heal",
+    "medium_heal",
     "short_cooldown",
     "long_range"
   ],
   "abaddon_aphotic_shield": [
     "shield",
-    "regen",
+    "medium_regen",
     "medium_aoe",
     "short_cooldown",
     "dispel",
@@ -28,6 +28,6 @@
   "abaddon_borrowed_time": [
     "invulnerability",
     "long_cooldown",
-    "heal"
+    "medium_heal"
   ]
 }

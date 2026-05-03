@@ -9,7 +9,7 @@
     "magic_amp",
     "slow",
     "damage_reduction",
-    "heal"
+    "medium_heal"
   ],
   "pugna_nether_ward": [
     "medium_aoe",
@@ -17,7 +17,7 @@
   ],
   "pugna_life_drain": [
     "channelled",
-    "heal",
+    "medium_heal",
     "medium_sustained",
     "save"
   ]

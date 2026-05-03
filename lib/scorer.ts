@@ -41,6 +41,7 @@ function zeroDimensions(): Record<DraftDimension, number> {
 // ── Tag sets for multiplier systems ───────────────────────────────────────────
 const AOE_TAGS = new Set(['small_aoe', 'medium_aoe', 'large_aoe'])
 const RANGE_TAGS = new Set(['short_range', 'medium_range', 'long_range', 'global'])
+const DURATION_TAGS = new Set(['short_duration', 'medium_duration', 'long_duration'])
 const PASSIVE_TAG = 'passive'
 
 // Dimensions that passive boosts (innate, always-on)
@@ -51,6 +52,11 @@ const PASSIVE_BOOST_DIMS = new Set<DraftDimension>([
 // Dimensions that range boosts (convenience for reactive tools)
 const RANGE_BOOST_DIMS = new Set<DraftDimension>([
   'defensive_utility', 'hard_control', 'soft_control', 'sustain', 'pickoff'
+])
+
+// Dimensions that duration boosts (longer = more impactful)
+const DURATION_BOOST_DIMS = new Set<DraftDimension>([
+  'hard_control', 'soft_control', 'sustained_damage'
 ])
 
 export function scoreAbility(
@@ -70,6 +76,11 @@ export function scoreAbility(
   else if (tagged.tags.includes('medium_range')) rangeMultiplier = 1.3
   // short_range = 1.0 (no boost)
 
+  let durationMultiplier = 1.0
+  if (tagged.tags.includes('long_duration'))        durationMultiplier = 1.6
+  else if (tagged.tags.includes('medium_duration')) durationMultiplier = 1.3
+  // short_duration = 1.0 (no boost)
+
   const hasPassive = tagged.tags.includes(PASSIVE_TAG)
   const passiveMultiplier = hasPassive ? 1.2 : 1.0
 
@@ -80,6 +91,7 @@ export function scoreAbility(
 
     // Skip multiplier tags themselves (they don't score directly)
     if (RANGE_TAGS.has(tag) && tag !== 'global') continue
+    if (DURATION_TAGS.has(tag)) continue
 
     for (const { dimension, weight } of weights) {
       let multiplier = 1.0
@@ -97,6 +109,11 @@ export function scoreAbility(
       // Range boost (applies to reactive/utility dimensions)
       if (rangeMultiplier > 1.0 && RANGE_BOOST_DIMS.has(dimension)) {
         multiplier *= rangeMultiplier
+      }
+
+      // Duration boost (applies to control and sustained damage)
+      if (durationMultiplier > 1.0 && DURATION_BOOST_DIMS.has(dimension)) {
+        multiplier *= durationMultiplier
       }
 
       scores[dimension] += weight * multiplier

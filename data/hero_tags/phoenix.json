@@ -26,6 +26,6 @@
   "phoenix_sun_ray": [
     "medium_aoe",
     "medium_sustained",
-    "heal"
+    "medium_heal"
   ]
 }

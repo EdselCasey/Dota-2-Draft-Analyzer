@@ -32,12 +32,20 @@ export type AbilityTag =
   | 'armor_gain'        // bonus armor from abilities
   | 'save'              // removes / shields an ally from incoming harm
   | 'hp_growth'         // raises ehp
-  // ── Sustain ──────────────────────────────────────────────────────────────
-  | 'heal'
+  // ── Sustain (tiered) ──────────────────────────────────────────────────────
+  | 'low_heal'            // small heal amount
+  | 'medium_heal'         // moderate heal
+  | 'high_heal'           // large / burst heal
+  | 'low_regen'           // minor HP regen
+  | 'medium_regen'        // moderate regen
+  | 'high_regen'          // strong persistent regen
   | 'shield'
-  | 'regen'
   | 'lifesteal'
   | 'invulnerability'
+  // ── Duration (multiplier tags) ─────────────────────────────────────────────
+  | 'short_duration'      // 0–2s effect
+  | 'medium_duration'     // 2–4s effect
+  | 'long_duration'       // 4s+ effect
   // ── Mobility (granular) ──────────────────────────────────────────────────
   | 'blink'               // instant repositioning with no travel time
   | 'dash'                // directional movement ability (leap, jump, charge)

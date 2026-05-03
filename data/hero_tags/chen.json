@@ -5,18 +5,18 @@
   ],
   "chen_divine_favor": [
     "armor_gain",
-    "regen"
+    "medium_regen"
   ],
   "chen_holy_persuasion": [
     "summon_units"
   ],
   "chen_hand_of_god": [
     "global",
-    "heal"
+    "medium_heal"
   ],
   "chen_zealot": [
     "summon_units",
-    "heal",
+    "medium_heal",
     "medium_sustained"
   ]
 }

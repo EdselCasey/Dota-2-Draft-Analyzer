@@ -25,7 +25,7 @@
     "damage_reduction"
   ],
   "alchemist_chemical_rage": [
-    "regen",
+    "medium_regen",
     "attack_speed_boost",
     "movement_speed_boost",
     "long_cooldown"

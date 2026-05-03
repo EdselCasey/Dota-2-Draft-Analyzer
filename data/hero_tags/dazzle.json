@@ -11,13 +11,13 @@
   "dazzle_shadow_wave": [
     "medium_aoe",
     "armor_gain",
-    "heal",
+    "medium_heal",
     "medium_burst",
     "armor_reduction"
   ],
   "dazzle_nothl_projection": [
     "invulnerability",
-    "heal"
+    "medium_heal"
   ],
   "dazzle_nothl_boon": [
     "shield"

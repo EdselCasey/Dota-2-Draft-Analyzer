@@ -11,7 +11,7 @@
     "global"
   ],
   "meepo_ransack": [
-    "heal",
+    "medium_heal",
     "attack_modifier",
     "attack_damage_boost"
   ],

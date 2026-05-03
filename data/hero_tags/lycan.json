@@ -13,7 +13,7 @@
   ],
   "lycan_feral_impulse": [
     "attack_damage_boost",
-    "regen"
+    "medium_regen"
   ],
   "lycan_shapeshift": [
     "vision",

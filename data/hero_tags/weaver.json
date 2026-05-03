@@ -21,7 +21,7 @@
     "slow"
   ],
   "weaver_time_lapse": [
-    "heal",
+    "medium_heal",
     "mana_regen",
     "teleport"
   ]

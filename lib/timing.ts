@@ -60,11 +60,20 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   dispel:            0.4,
   debuff_immunity:   0.2,
 
-  // Sustain
-  heal:              0.3,
+  // Sustain (tiered)
+  low_heal:          -0.3,
+  medium_heal:        0.0,
+  high_heal:          0.3,
+  low_regen:         -0.4,
+  medium_regen:      -0.2,
+  high_regen:         0.1,
   shield:            -0.5,
-  regen:             -0.5,
   lifesteal:         0.7,  // scales hard with attack damage
+
+  // Duration (multiplier — no direct timing bias)
+  short_duration:     0.0,
+  medium_duration:    0.0,
+  long_duration:      0.0,
 
   // Mobility
   blink:             -0.5,

@@ -11,7 +11,7 @@
   ],
   "shredder_reactive_armor": [
     "armor_gain",
-    "regen"
+    "medium_regen"
   ],
   "shredder_chakram": [
     "medium_aoe",

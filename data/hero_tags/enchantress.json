@@ -9,8 +9,8 @@
   ],
   "enchantress_natures_attendants": [
     "medium_aoe",
-    "heal",
-    "regen"
+    "medium_heal",
+    "medium_regen"
   ],
   "enchantress_impetus": [
     "attack_modifier",

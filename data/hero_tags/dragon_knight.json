@@ -10,13 +10,13 @@
   ],
   "dragon_knight_dragon_blood": [
     "armor_gain",
-    "regen"
+    "medium_regen"
   ],
   "dragon_knight_elder_dragon_form": [
     "attack_damage_boost",
     "movement_speed_boost",
     "attack_modifier",
-    "regen",
+    "medium_regen",
     "armor_gain"
   ],
   "dragon_knight_forms": [

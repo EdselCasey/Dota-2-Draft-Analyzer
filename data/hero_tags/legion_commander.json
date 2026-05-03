@@ -5,7 +5,7 @@
     "attack_speed_boost"
   ],
   "legion_commander_press_the_attack": [
-    "regen",
+    "medium_regen",
     "dispel",
     "save",
     "movement_speed_boost"

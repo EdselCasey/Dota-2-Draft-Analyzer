@@ -15,7 +15,7 @@
   ],
   "juggernaut_healing_ward": [
     "medium_aoe",
-    "heal"
+    "medium_heal"
   ],
   "juggernaut_omni_slash": [
     "medium_aoe",

@@ -3,7 +3,7 @@
     "medium_aoe",
     "movement_speed_boost",
     "attack_damage_boost",
-    "heal",
+    "medium_heal",
     "magic_amp",
     "armor_gain",
     "medium_burst"
@@ -18,7 +18,7 @@
     "medium_sustained"
   ],
   "largo_catchy_lick": [
-    "regen",
+    "medium_regen",
     "dispel",
     "medium_burst",
     "forced_movement"

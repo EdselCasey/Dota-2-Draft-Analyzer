@@ -14,20 +14,20 @@
   "oracle_false_promise": [
     "invulnerability",
     "dispel",
-    "heal",
+    "medium_heal",
     "armor_gain",
     "save"
   ],
   "oracle_rain_of_destiny": [
     "medium_aoe",
-    "heal",
-    "regen",
+    "medium_heal",
+    "medium_regen",
     "antiheal",
     "medium_sustained"
   ],
   "oracle_purifying_flames": [
-    "heal",
-    "regen",
+    "medium_heal",
+    "medium_regen",
     "medium_burst"
   ]
 }

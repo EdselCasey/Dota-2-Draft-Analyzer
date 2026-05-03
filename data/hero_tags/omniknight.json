@@ -6,12 +6,12 @@
   ],
   "omniknight_purification": [
     "medium_aoe",
-    "heal",
+    "medium_heal",
     "medium_burst"
   ],
   "omniknight_repel": [
     "damage_reduction",
-    "regen",
+    "medium_regen",
     "debuff_immunity",
     "hp_growth"
   ],

@@ -3,7 +3,7 @@
     "medium_aoe",
     "vision",
     "medium_burst",
-    "heal"
+    "medium_heal"
   ],
   "keeper_of_the_light_chakra_magic": [
     "mana_regen"

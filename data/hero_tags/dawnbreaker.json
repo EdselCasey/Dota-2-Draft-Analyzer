@@ -15,13 +15,13 @@
   "dawnbreaker_luminosity": [
     "attack_modifier",
     "attack_damage_boost",
-    "heal"
+    "medium_heal"
   ],
   "dawnbreaker_solar_guardian": [
     "medium_aoe",
     "channelled",
     "stun",
-    "heal",
+    "medium_heal",
     "global",
     "teleport"
   ],
