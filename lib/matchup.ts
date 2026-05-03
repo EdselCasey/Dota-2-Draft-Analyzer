@@ -91,7 +91,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
 
   // ── Mobility ──────────────────────────────────────────────────────────────
   mobility: [
-    { counters: 'control',          strength: 0.25 },
+    { counters: 'hard_control',     strength: 0.25 },
     { counters: 'pickoff',          strength: 0.40 },
   ],
 
@@ -103,7 +103,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
 
   // ── Defensive utility ─────────────────────────────────────────────────────
   defensive_utility: [
-    { counters: 'control',          strength: 0.20 },
+    { counters: 'soft_control',     strength: 0.20 },
     { counters: 'burst_damage',     strength: 0.35 },
     { counters: 'pickoff',          strength: 0.20 },
   ],

@@ -1,21 +1,31 @@
 {
   "antimage_persecutor": [
-    "slow"
+    "slow",
+    "attack_modifier",
+    "passive",
+    "short_range"
   ],
   "antimage_manaburn": [
     "attack_modifier",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive",
+    "medium_sustained",
+    "short_range"
   ],
-  "antimage_spell_shield": [
+  "antimage_blink": [
+    "blink",
+    "escape",
+    "short_cooldown",
+    "long_range"
+  ],
+  "antimage_counter_spell": [
     "damage_reduction",
-    "shield"
+    "shield",
+    "short_cooldown",
+    "short_range"
   ],
   "antimage_mana_void": [
     "medium_aoe",
     "stun"
-  ],
-  "antimage_blink": [
-    "blink",
-    "escape"
   ]
 }

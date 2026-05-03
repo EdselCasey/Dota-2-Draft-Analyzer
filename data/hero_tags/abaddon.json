@@ -1,18 +1,22 @@
 {
+  "abaddon_withering_mist": [
+    "antiheal",
+    "passive"
+  ],
   "abaddon_mist_coil": [
-    "medium_burst",
+    "low_burst",
     "heal",
-    "short_cooldown"
+    "short_cooldown",
+    "long_range"
   ],
   "abaddon_aphotic_shield": [
     "shield",
     "regen",
     "medium_aoe",
-    "short_cooldown"
-  ],
-  "abaddon_withering_mist": [
-    "antiheal",
-    "passive"
+    "short_cooldown",
+    "dispel",
+    "medium_range",
+    "low_burst"
   ],
   "abaddon_curse_of_avernus": [
     "slow",
@@ -23,6 +27,7 @@
   ],
   "abaddon_borrowed_time": [
     "invulnerability",
-    "long_cooldown"
+    "long_cooldown",
+    "heal"
   ]
 }

@@ -11,16 +11,19 @@ export interface TagWeight {
 // size determines how much to scale (small < medium < large).
 
 export const TAG_CATEGORY: Partial<Record<AbilityTag, string>> = {
-  // control
+  // hard control
   stun:             'control',
-  root:             'control',
-  silence:          'control',
   hex:              'control',
-  slow:             'control',
-  disarm:           'control',
-  knockback:        'control',
   taunt:            'control',
   forced_movement:  'control',
+  knockback:        'control',
+  knockup:          'control',
+  sleep:            'control',
+  // soft control
+  root:             'control',
+  silence:          'control',
+  slow:             'control',
+  disarm:           'control',
   antiheal:         'control',
   // damage
   low_burst:        'damage',
@@ -78,50 +81,64 @@ export const AOE_COMBO_BONUS: Partial<Record<AbilityTag, number>> =
 // ── Main dimension mapping ─────────────────────────────────────────────────
 
 export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
-  // ── Control ───────────────────────────────────────────────────────────────
+  // Hard Control (prevents casting + moving + attacking + items)
   stun: [
-    { dimension: 'control',      weight: 3.0 },
+    { dimension: 'hard_control', weight: 3.0 },
     { dimension: 'pickoff',      weight: 2.0 },
   ],
-  root: [
-    { dimension: 'control',      weight: 1.5 },
-    { dimension: 'pickoff',      weight: 1.5 },
-  ],
-  silence: [
-    { dimension: 'control',      weight: 1.0 },
-    { dimension: 'pickoff',      weight: 1.5 },
-    { dimension: 'defensive_utility', weight: 1.0 },
-  ],
   hex: [
-    { dimension: 'control',      weight: 3.0 },
+    { dimension: 'hard_control', weight: 3.0 },
     { dimension: 'pickoff',      weight: 2.5 },
     { dimension: 'defensive_utility', weight: 1.0 },
   ],
-  slow: [
-    { dimension: 'control',      weight: 0.5 },
-    { dimension: 'pickoff',      weight: 0.5 },
-  ],
-  disarm: [
-    { dimension: 'control',      weight: 2.0 },
-    { dimension: 'defensive_utility', weight: 1.0 },
-  ],
-  knockback: [
-    { dimension: 'control',      weight: 1.5 },
-  ],
   taunt: [
-    { dimension: 'control',      weight: 2.0 },
+    { dimension: 'hard_control', weight: 2.0 },
     { dimension: 'pickoff',      weight: 1.0 },
   ],
   forced_movement: [
-    { dimension: 'control',      weight: 1.5 },
+    { dimension: 'hard_control', weight: 1.5 },
+  ],
+  knockback: [
+    { dimension: 'hard_control', weight: 1.5 },
+  ],
+  knockup: [
+    { dimension: 'hard_control', weight: 2.5 },
+    { dimension: 'pickoff',      weight: 1.5 },
+  ],
+  sleep: [
+    { dimension: 'hard_control', weight: 2.0 },
+    { dimension: 'pickoff',      weight: 2.0 },
+  ],
+
+  // Soft Control (partial disable)
+  root: [
+    { dimension: 'soft_control', weight: 1.5 },
+    { dimension: 'pickoff',      weight: 1.5 },
+  ],
+  silence: [
+    { dimension: 'soft_control', weight: 1.0 },
+    { dimension: 'pickoff',      weight: 1.5 },
+    { dimension: 'defensive_utility', weight: 1.0 },
+  ],
+  slow: [
+    { dimension: 'soft_control', weight: 0.5 },
+    { dimension: 'pickoff',      weight: 0.5 },
+  ],
+  disarm: [
+    { dimension: 'soft_control', weight: 2.0 },
+    { dimension: 'defensive_utility', weight: 1.0 },
+  ],
+  antiheal: [
+    { dimension: 'soft_control', weight: 1.5 },
+    { dimension: 'pickoff',      weight: 1.5 },
   ],
   banish: [
-    { dimension: 'control',      weight: 1.5 },
+    { dimension: 'soft_control', weight: 1.5 },
     { dimension: 'pickoff',      weight: 1.0 },
     { dimension: 'defensive_utility', weight: 1.9 },
   ],
   leash: [
-    { dimension: 'control',      weight: 1.5 },
+    { dimension: 'soft_control', weight: 1.5 },
     { dimension: 'pickoff',      weight: 1.0 },
   ],
 
@@ -199,14 +216,12 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'sustain',           weight: 3.0 },
     { dimension: 'defensive_utility', weight: 1.5 },
     { dimension: 'push',             weight: 1.2 },
-    { dimension: 'resource_support',  weight: 2.5 },
   ],
   shield: [
     { dimension: 'defensive_utility', weight: 3.0 },
   ],
   regen: [
     { dimension: 'sustain',           weight: 1.5 },
-    { dimension: 'resource_support',  weight: 2.0 },
   ],
   lifesteal: [
     { dimension: 'sustain',           weight: 2.0 },
@@ -299,7 +314,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'map_presence',     weight: 1.0 },
   ],
   zone_control: [
-    { dimension: 'control',          weight: 2.0 },
+    { dimension: 'soft_control',     weight: 2.0 },
     { dimension: 'map_presence',     weight: 1.5 },
   ],
 
@@ -323,10 +338,6 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   mana_regen: [
     { dimension: 'resource_support',  weight: 3.0 },
-  ],
-  antiheal: [
-    { dimension: 'control',           weight: 1.5 },
-    { dimension: 'pickoff',           weight: 1.5 },
   ],
   magic_amp: [
     { dimension: 'burst_damage',      weight: 1.5 },

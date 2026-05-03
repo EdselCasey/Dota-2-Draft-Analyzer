@@ -13,7 +13,8 @@ const MIN_HERO_CEILING = 5.0
 
 // ── Teamfight composite ───────────────────────────────────────────────────────
 const TEAMFIGHT_WEIGHTS: Partial<Record<DraftDimension, number>> = {
-  control:           0.30,
+  hard_control:      0.20,
+  soft_control:      0.10,
   sustained_damage:  0.15,
   sustain:           0.15,
   defense:           0.12,
@@ -49,7 +50,7 @@ const PASSIVE_BOOST_DIMS = new Set<DraftDimension>([
 
 // Dimensions that range boosts (convenience for reactive tools)
 const RANGE_BOOST_DIMS = new Set<DraftDimension>([
-  'defensive_utility', 'control', 'sustain', 'pickoff'
+  'defensive_utility', 'hard_control', 'soft_control', 'sustain', 'pickoff'
 ])
 
 export function scoreAbility(

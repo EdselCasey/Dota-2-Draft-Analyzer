@@ -53,6 +53,8 @@ export type AbilityTag =
   | 'stealth'   // hero can go invisible (fade_delay on passive or active invis)
   | 'aerial'    // grants flying movement — sees over cliffs and trees
   | 'unobstructed'    // grants phasing or terrain traversal movement
+  | 'knockup'           // launches target into the air (disables + displacement)
+  | 'sleep'             // puts target to sleep, wakes on damage
   // ── Push / Objective ─────────────────────────────────────────────────────
   | 'summon_units'        // creates persistent units
   | 'illusion'            // creates hero illusions
@@ -79,7 +81,8 @@ export type AbilityTag =
 
 export type DraftDimension =
   | 'teamfight'
-  | 'control'
+  | 'hard_control'
+  | 'soft_control'
   | 'burst_damage'
   | 'sustained_damage'
   | 'sustain'
@@ -95,7 +98,8 @@ export type DraftDimension =
 
 export const ALL_DIMENSIONS: DraftDimension[] = [
   'teamfight',
-  'control',
+  'hard_control',
+  'soft_control',
   'burst_damage',
   'sustained_damage',
   'sustain',

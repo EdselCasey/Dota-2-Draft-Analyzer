@@ -12,16 +12,20 @@ import type { AbilityTag, TaggedAbility } from './types'
  *   hard CC                → slightly negative (most punishing early before BKB)
  */
 export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
-  // Control — slightly early-skewed (stuns punish before defensive items)
+  // Hard Control (prevents casting + moving + attacking + items)
   stun:             0.2,
-  root:             -0.5,
-  silence:          0.0,
   hex:              0.3,
-  slow:             -0.5,
-  disarm:           -0.3,
-  knockback:        -0.4,
   taunt:            0.2,
   forced_movement:  -0.1,
+  knockback:        -0.4,
+  knockup:          0.2,
+  sleep:            0.0,
+
+  // Soft Control (partial disable)
+  root:             -0.5,
+  silence:          0.0,
+  slow:             -0.5,
+  disarm:           -0.3,
   antiheal:         -0.1,
   banish:            0.4,
   leash:            -0.2,

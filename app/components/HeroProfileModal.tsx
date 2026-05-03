@@ -14,7 +14,7 @@ interface HeroProfileModalProps {
 const TAG_COLORS: Record<string, string> = {
   stun: '#a855f7', root: '#7c3aed', silence: '#6d28d9', hex: '#8b5cf6',
   slow: '#c084fc', disarm: '#9333ea', knockback: '#a78bfa', taunt: '#7e22ce',
-  forced_movement: '#c4b5fd',leash: '#5249ca',banish: '#b34792',
+  forced_movement: '#c4b5fd',leash: '#5249ca',banish: '#b34792',knockup: '#e11d48',sleep: '#f472b6',
   low_burst: '#fca5a5', medium_burst: '#ef4444', high_burst: '#b91c1c',
   low_sustained: '#fdba74', medium_sustained: '#f97316', high_sustained: '#c2410c',
   small_aoe: '#fde68a', medium_aoe: '#fb923c', large_aoe: '#9a3412',

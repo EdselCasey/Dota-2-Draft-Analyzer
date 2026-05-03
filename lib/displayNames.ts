@@ -32,7 +32,8 @@ export function toDisplayName(heroName: string): string {
 
 export const DIMENSION_LABELS: Record<DraftDimension, string> = {
   teamfight:        'Teamfight',
-  control:          'Control',
+  hard_control:     'Hard CC',
+  soft_control:     'Soft CC',
   burst_damage:     'Burst',
   sustained_damage: 'Sustained',
   sustain:          'Sustain',
@@ -49,7 +50,8 @@ export const DIMENSION_LABELS: Record<DraftDimension, string> = {
 
 export const DIMENSION_COLORS: Record<DraftDimension, string> = {
   teamfight:        '#f97316',
-  control:          '#a855f7',
+  hard_control:     '#dc2626',
+  soft_control:     '#a855f7',
   burst_damage:     '#ef4444',
   sustained_damage: '#f87171',
   sustain:          '#22c55e',

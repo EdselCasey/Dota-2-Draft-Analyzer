@@ -1,20 +1,34 @@
 {
   "bounty_hunter_shuriken_toss": [
     "slow",
-    "medium_burst"
+    "low_burst",
+    "medium_range",
+    "short_cooldown"
   ],
   "bounty_hunter_jinada": [
     "attack_modifier",
-    "medium_burst",
-    "attack_damage_boost"
+    "low_burst",
+    "attack_damage_boost",
+    "gold_gain",
+    "low_range",
+    "short_cooldown"
   ],
   "bounty_hunter_shadow_walk": [
     "stun",
     "damage_reduction",
-    "stealth"
+    "stealth",
+    "medium_cooldown"
   ],
   "bounty_hunter_track": [
     "magic_amp",
-    "vision"
+    "vision",
+    "gold_gain",
+    "short_cooldown",
+    "long_range"
+  ],
+  "bounty_hunter_big_game_hunter": [
+    "gold_gain",
+    "global",
+    "passive"
   ]
 }

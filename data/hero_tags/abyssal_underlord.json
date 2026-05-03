@@ -1,7 +1,14 @@
 {
+  "abyssal_underlord_invading_force": [
+    "global",
+    "movement_speed_boost",
+    "damage_reduction",
+    "passive",
+    "long_cooldown"
+  ],
   "abyssal_underlord_firestorm": [
     "medium_aoe",
-    "medium_sustained",
+    "high_sustained",
     "zone_control",
     "short_cooldown"
   ],
@@ -10,23 +17,17 @@
     "movement_speed_boost",
     "root",
     "zone_control",
-    "medium_cooldown"
+    "medium_cooldown",
+    "low_burst"
   ],
   "abyssal_underlord_atrophy_aura": [
-    "medium_aoe",
-    "damage_reduction",
-    "passive"
-  ],
-  "abyssal_underlord_fiend's_gate": [
-    "medium_aoe",
-    "teleport",
-    "global"
-  ],
-  "abyssal_underlord_invading_force": [
-    "global",
-    "movement_speed_boost",
+    "large_aoe",
     "damage_reduction",
     "passive",
-    "long_cooldown"
+    "attack_damage_boost"
+  ],
+  "abyssal_underlord_fiend's_gate": [
+    "teleport",
+    "global"
   ]
 }
