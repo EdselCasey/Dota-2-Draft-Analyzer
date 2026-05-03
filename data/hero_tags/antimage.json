@@ -3,7 +3,8 @@
     "slow",
     "attack_modifier",
     "passive",
-    "short_range"
+    "short_range",
+    "short_duration"
   ],
   "antimage_manaburn": [
     "attack_modifier",
@@ -22,10 +23,18 @@
     "damage_reduction",
     "shield",
     "short_cooldown",
-    "short_range"
+    "short_range",
+    "short_duration"
   ],
   "antimage_mana_void": [
     "medium_aoe",
-    "stun"
+    "large_burst",
+    "medium_range",
+    "long_cooldown"
+  ],
+  "antimage_mana_void_stun": [
+    "medium_aoe",
+    "stun",
+    "short_duration"
   ]
 }

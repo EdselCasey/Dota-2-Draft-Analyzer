@@ -10,24 +10,31 @@
     "medium_aoe",
     "high_sustained",
     "zone_control",
-    "short_cooldown"
+    "short_cooldown",
+    "low_duration"
   ],
   "abyssal_underlord_pit_of_malice": [
     "medium_aoe",
     "movement_speed_boost",
-    "root",
     "zone_control",
-    "medium_cooldown",
-    "low_burst"
+    "medium_cooldown"
+  ],
+  "abyssal_underlord_pit_of_malice_root": [
+    "low_burst",
+    "root",
+    "low_cooldown",
+    "low_duration"
   ],
   "abyssal_underlord_atrophy_aura": [
     "large_aoe",
     "damage_reduction",
     "passive",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "long_duration"
   ],
   "abyssal_underlord_fiend's_gate": [
     "teleport",
-    "global"
+    "global",
+    "medium_duration"
   ]
 }

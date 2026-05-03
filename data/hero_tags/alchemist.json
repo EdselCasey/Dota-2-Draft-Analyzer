@@ -9,25 +9,29 @@
     "armor_reduction",
     "medium_sustained",
     "medium_cooldown",
-    "long_range"
+    "long_range",
+    "medium_duration"
   ],
   "alchemist_unstable_concoction": [
     "small_aoe",
     "stun",
     "medium_cooldown",
     "medium_burst",
-    "medium_range"
+    "medium_range",
+    "short_duration"
   ],
   "alchemist_corrosive_weaponry": [
     "slow",
     "attack_modifier",
     "passive",
-    "damage_reduction"
+    "damage_reduction",
+    "short_duration"
   ],
   "alchemist_chemical_rage": [
-    "medium_regen",
+    "high_regen",
     "attack_speed_boost",
     "movement_speed_boost",
-    "long_cooldown"
+    "long_cooldown",
+    "medium_duration"
   ]
 }

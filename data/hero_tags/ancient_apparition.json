@@ -1,13 +1,15 @@
 {
   "ancient_apparition_bone_chill": [
     "slow",
-    "passive"
+    "passive",
+    "short_duration"
   ],
   "ancient_apparition_cold_feet": [
     "stun",
     "long_range",
     "medium_sustained",
-    "short_cooldown"
+    "short_cooldown",
+    "short_duration"
   ],
   "ancient_apparition_ice_vortex": [
     "small_aoe",
@@ -16,19 +18,25 @@
     "slow",
     "medium_sustained",
     "long_range",
-    "short_cooldown"
+    "short_cooldown",
+    "short_duration"
   ],
   "ancient_apparition_chilling_touch": [
-    "slow",
     "attack_modifier",
     "low_burst",
-    "medium_range"
+    "medium_range",
+    "short_duration"
+  ],
+  "ancient_apparition_chilling_touch_slow": [
+    "slow",
+    "short_duration"
   ],
   "ancient_apparition_ice_blast": [
     "medium_aoe",
     "stun",
     "antiheal",
     "medium_cooldown",
-    "global"
+    "global",
+    "short_duration"
   ]
 }
