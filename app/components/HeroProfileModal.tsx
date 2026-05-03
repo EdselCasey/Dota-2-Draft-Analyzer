@@ -27,8 +27,9 @@ const TAG_COLORS: Record<string, string> = {
   attack_speed_boost: '#fb923c', armor_reduction: '#e64709',
   attack_damage_boost: '#ea580c', attack_modifier: '#c2410c',magic_amp: '#f97316',
   dispel: '#14b8a6', debuff_immunity: '#0f766e', vision: '#5eead4',
-  mana_regen: '#6366f1', global: '#4f46e5',antiheal: '#9fc00a',
+  mana_regen: '#6366f1', global: '#4f46e5',antiheal: '#9fc00a',gold_gain: '#6376f2',
   aoe: '#76a4b3', channelled: '#3e74c0',
+  passive: '#fbbf24', short_cooldown: '#f59e0b', medium_cooldown: '#d97706', long_cooldown: '#92400e',
 }
 
 export default function HeroProfileModal({ profile, onClose }: HeroProfileModalProps) {
