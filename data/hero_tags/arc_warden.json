@@ -1,22 +1,42 @@
 {
+  "arc_warden_runic_infusion": [
+    "passive",
+    "hp_growth",
+    "attack_speed_boost",
+    "attack_damage_boost",
+    "armor_gain"
+  ],
   "arc_warden_flux": [
     "slow",
-    "medium_sustained"
+    "medium_sustained",
+    "medium_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "arc_warden_magnetic_field": [
     "medium_aoe",
     "attack_speed_boost",
     "damage_reduction",
-    "attack_modifier"
+    "attack_modifier",
+    "medium_cooldown",
+    "short_duration"
   ],
   "arc_warden_spark_wraith": [
-    "slow",
     "vision",
-    "medium_burst",
-    "zone_control"
+    "zone_control",
+    "long_range",
+    "small_aoe",
+    "short_cooldown",
+    "medium_duration"
+  ],
+  "arc_warden_spark_wraith_activation": [
+    "slow",
+    "medium_burst"
   ],
   "arc_warden_tempest_double": [
     "summon_units",
-    "push_structures"
+    "medium_duration",
+    "medium_cooldown",
+    "medium_range"
   ]
 }

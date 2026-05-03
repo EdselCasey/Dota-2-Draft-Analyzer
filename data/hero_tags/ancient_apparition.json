@@ -25,7 +25,7 @@
     "attack_modifier",
     "low_burst",
     "medium_range",
-    "short_duration"
+    "short_cooldown"
   ],
   "ancient_apparition_chilling_touch_slow": [
     "slow",
@@ -33,7 +33,6 @@
   ],
   "ancient_apparition_ice_blast": [
     "medium_aoe",
-    "stun",
     "antiheal",
     "medium_cooldown",
     "global",

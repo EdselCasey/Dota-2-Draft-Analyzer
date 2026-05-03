@@ -282,13 +282,13 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   aerial: [
     { dimension: 'vision_control',   weight: 2.5 },
     { dimension: 'pickoff',          weight: 1.0 },
-    { dimension: 'mobility',         weight: 0.5 },
+    { dimension: 'mobility',         weight: 1.0 },
     { dimension: 'map_presence',     weight: 1.0 },
   ],
   unobstructed: [
     { dimension: 'vision_control',   weight: 2.3 },
     { dimension: 'pickoff',          weight: 1.0 },
-    { dimension: 'mobility',         weight: 0.5 },
+    { dimension: 'mobility',         weight: 1.0 },
     { dimension: 'map_presence',     weight: 1.0 },
   ],
 

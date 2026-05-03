@@ -20,6 +20,7 @@
   ],
   "abaddon_curse_of_avernus": [
     "slow",
+    "attack_modifier",
     "attack_speed_boost",
     "medium_sustained",
     "building_damage",
