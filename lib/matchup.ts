@@ -43,11 +43,19 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   // CC must MATCH OR EXCEED the damage it's trying to lock down. If the enemy
   // has more sustained damage than you have control, one free damage dealer
   // still kills your team. requiresExcess enforces this.
-  control: [
-    { counters: 'sustained_damage', strength: 0.20, requiresExcess: true },  // needs enough CC to cover all DPS heroes
-    { counters: 'burst_damage',     strength: 0.08, requiresExcess: true },  // needs CC on each burst hero
-    { counters: 'mobility',         strength: 0.15, requiresExcess: true },                        // CC always pins mobility regardless
+  hard_control: [
+    { counters: 'sustained_damage', strength: 0.25, requiresExcess: true },
+    { counters: 'burst_damage',     strength: 0.10, requiresExcess: true },
+    { counters: 'mobility',         strength: 0.35, requiresExcess: true },
     { counters: 'push',             strength: 0.25 },
+    { counters: 'defensive_utility', strength: 0.20 },
+  ],
+  soft_control: [
+    { counters: 'sustained_damage', strength: 0.15, requiresExcess: true },
+    { counters: 'burst_damage',     strength: 0.05, requiresExcess: true },
+    { counters: 'mobility',         strength: 0.20, requiresExcess: true },
+    { counters: 'push',             strength: 0.15 },
+    { counters: 'defensive_utility', strength: 0.10 },
   ],
 
   // ── Burst damage ──────────────────────────────────────────────────────────
@@ -92,6 +100,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   // ── Mobility ──────────────────────────────────────────────────────────────
   mobility: [
     { counters: 'hard_control',     strength: 0.25 },
+    { counters: 'soft_control',     strength: 0.15 },
     { counters: 'pickoff',          strength: 0.40 },
   ],
 
@@ -103,6 +112,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
 
   // ── Defensive utility ─────────────────────────────────────────────────────
   defensive_utility: [
+    { counters: 'hard_control',     strength: 0.15 },
     { counters: 'soft_control',     strength: 0.20 },
     { counters: 'burst_damage',     strength: 0.35 },
     { counters: 'pickoff',          strength: 0.20 },
@@ -146,11 +156,19 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
     burst_damage:     'Your defensive tools absorb spike damage before it can kill teammates.',
     sustained_damage: 'Your team\'s durability lets them endure extended trades.',
   },
-  control: {
-    sustained_damage: 'Your crowd control locks down their damage dealers before they can output.',
-    burst_damage:     'Your CC disrupts their burst windows, buying time to react.',
-    mobility:         'Your lockdown punishes heroes trying to dive in and escape.',
-    push:             'Your control abilities hold the line and pick off pushers.',
+  hard_control: {
+    sustained_damage: 'Your hard CC locks down their damage dealers before they can output.',
+    burst_damage:     'Your stuns and disables interrupt their burst combos completely.',
+    mobility:         'Your hard lockdown catches mobile heroes mid-escape.',
+    push:             'Your hard CC holds the line and picks off pushers.',
+    defensive_utility:'Your stuns go through before their reactive tools can respond.',
+  },
+  soft_control: {
+    sustained_damage: 'Your slows and roots limit their damage dealers\' freedom.',
+    burst_damage:     'Your silences and disarms delay their burst timing.',
+    mobility:         'Your soft disables slow their rotations and escapes.',
+    push:             'Your soft CC disrupts their push coordination.',
+    defensive_utility:'Your silences prevent them from casting defensive spells.',
   },
   burst_damage: {
     sustain:          'Your burst kills faster than their healing can respond.',
@@ -181,14 +199,16 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
     mobility:         'Your fight presence denies their divers an easy escape.',
   },
   mobility: {
-    control:          'Your movement tools help dodge or reposition around their lockdown.',
+    hard_control:     'Your movement tools help dodge or reposition around their lockdown.',
+    soft_control:     'Your mobility lets you outrun their slows and roots.',
     pickoff:          'Your mobility lets you escape assassination attempts.',
   },
   map_presence: {
     pickoff:          'Your map vision and presence deters lone hunters.',
   },
   defensive_utility: {
-    control:          'Your dispels and immunity tools strip their CC off teammates.',
+    hard_control:     'Your dispels and immunity tools strip their hard CC off teammates.',
+    soft_control:     'Your defensive spells cleanse slows and silences from allies.',
     burst_damage:     'Your defensive spells absorb or negate key burst attempts.',
   },
   vision_control: {
@@ -202,11 +222,17 @@ const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<Dra
     burst_damage:     'Without enough tankiness or shields, your heroes crumble to spikes.',
     sustained_damage: 'Your team lacks the armor and durability to survive prolonged fights.',
   },
-  control: {
-    sustained_damage: 'You can\'t lock down their damage dealers — expect to be out-traded.',
-    burst_damage:     'Without CC to interrupt their combos, their burst will land freely.',
-    mobility:         'Your team can\'t pin down their divers, letting them engage and escape at will.',
-    push:             'You lack reliable tools to stop their push dead in its tracks.',
+  hard_control: {
+    sustained_damage: 'You lack hard CC to lock down their damage dealers — they output freely.',
+    burst_damage:     'Without stuns to interrupt their combos, their burst lands uncontested.',
+    mobility:         'Your team can\'t pin down their divers with hard disables.',
+    push:             'You lack reliable stuns to stop their push dead in its tracks.',
+  },
+  soft_control: {
+    sustained_damage: 'You lack slows and roots to limit their damage dealers\' movement.',
+    burst_damage:     'Without silences or disarms, their burst windows go uncontested.',
+    mobility:         'Your soft CC isn\'t enough to catch mobile heroes.',
+    push:             'You can\'t slow their push momentum with your limited soft disables.',
   },
   burst_damage: {
     sustain:          'You lack the kill pressure to cut through their sustain.',
@@ -237,14 +263,16 @@ const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<Dra
     mobility:         'Their dive heroes scatter your formation before you can react.',
   },
   mobility: {
-    control:          'Your team lacks the movement to dodge or escape their CC.',
+    hard_control:     'Your team lacks the movement to dodge their hard lockdown.',
+    soft_control:     'You can\'t escape their slows and roots once caught.',
     pickoff:          'You can\'t outrun their assassins once isolated.',
   },
   map_presence: {
     pickoff:          'Your vision gaps leave heroes exposed to solo kills.',
   },
   defensive_utility: {
-    control:          'You have no way to strip debuffs off your team in fights.',
+    hard_control:     'You have no way to strip hard disables off your team in fights.',
+    soft_control:     'You can\'t cleanse slows and silences when they pile on.',
     burst_damage:     'Your team has no protection against focused burst damage.',
   },
   vision_control: {
