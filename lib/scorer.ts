@@ -37,31 +37,68 @@ function zeroDimensions(): Record<DraftDimension, number> {
   >
 }
 
-// ── AOE tags that trigger combo bonus ─────────────────────────────────────────
+// ── Tag sets for multiplier systems ───────────────────────────────────────────
 const AOE_TAGS = new Set(['small_aoe', 'medium_aoe', 'large_aoe'])
+const RANGE_TAGS = new Set(['short_range', 'medium_range', 'long_range', 'global'])
+const PASSIVE_TAG = 'passive'
+
+// Dimensions that passive boosts (innate, always-on)
+const PASSIVE_BOOST_DIMS = new Set<DraftDimension>([
+  'defense', 'sustain', 'sustained_damage', 'burst_damage'
+])
+
+// Dimensions that range boosts (convenience for reactive tools)
+const RANGE_BOOST_DIMS = new Set<DraftDimension>([
+  'defensive_utility', 'control', 'sustain', 'pickoff'
+])
 
 export function scoreAbility(
   tagged: TaggedAbility,
 ): Record<DraftDimension, number> {
   const scores = zeroDimensions()
 
-  // Determine AOE combo multiplier from the highest AOE tag present
+  // ── Determine multipliers ─────────────────────────────────────────────────
   let aoeMultiplier = 1.0
   if (tagged.tags.includes('large_aoe'))       aoeMultiplier = 1.6
   else if (tagged.tags.includes('medium_aoe')) aoeMultiplier = 1.4
   else if (tagged.tags.includes('small_aoe'))  aoeMultiplier = 1.2
 
+  let rangeMultiplier = 1.0
+  if (tagged.tags.includes('global'))           rangeMultiplier = 2.0
+  else if (tagged.tags.includes('long_range'))  rangeMultiplier = 1.6
+  else if (tagged.tags.includes('medium_range')) rangeMultiplier = 1.3
+  // short_range = 1.0 (no boost)
+
+  const hasPassive = tagged.tags.includes(PASSIVE_TAG)
+  const passiveMultiplier = hasPassive ? 1.2 : 1.0
+
+  // ── Score each tag ────────────────────────────────────────────────────────
   for (const tag of tagged.tags) {
     const weights = TAG_DIMENSION_MAP[tag]
     if (!weights) continue
 
-    // Apply AOE combo bonus to non-AOE tags when an AOE tag is present
-    const aoeBonus = (aoeMultiplier > 1.0 && !AOE_TAGS.has(tag))
-      ? (AOE_COMBO_BONUS[tag] ?? 1.0) * (aoeMultiplier / 1.4) // scale relative to medium baseline
-      : 1.0
+    // Skip multiplier tags themselves (they don't score directly)
+    if (RANGE_TAGS.has(tag) && tag !== 'global') continue
 
     for (const { dimension, weight } of weights) {
-      scores[dimension] += weight * aoeBonus
+      let multiplier = 1.0
+
+      // AOE combo bonus (applies to non-AOE tags)
+      if (aoeMultiplier > 1.0 && !AOE_TAGS.has(tag)) {
+        multiplier *= (AOE_COMBO_BONUS[tag] ?? 1.0) * (aoeMultiplier / 1.4)
+      }
+
+      // Passive boost (applies to innate/always-on dimensions)
+      if (hasPassive && PASSIVE_BOOST_DIMS.has(dimension)) {
+        multiplier *= passiveMultiplier
+      }
+
+      // Range boost (applies to reactive/utility dimensions)
+      if (rangeMultiplier > 1.0 && RANGE_BOOST_DIMS.has(dimension)) {
+        multiplier *= rangeMultiplier
+      }
+
+      scores[dimension] += weight * multiplier
     }
   }
 

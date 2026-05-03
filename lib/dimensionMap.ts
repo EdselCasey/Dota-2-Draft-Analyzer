@@ -167,16 +167,16 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'sustained_damage', weight: 1.0 },
   ],
 
-  // ── Range (tiered) ────────────────────────────────────────────────────────
+  // ── Range (tiered) — range acts as multiplier, no direct dimension weights ──
   short_range: [
-    { dimension: 'pickoff',      weight: 0.5 },
+    { dimension: 'pickoff',      weight: 0.0 },
   ],
   medium_range: [
-    { dimension: 'pickoff',      weight: 1.5 },
+    { dimension: 'pickoff',      weight: 0.0 },
   ],
   long_range: [
-    { dimension: 'pickoff',      weight: 2.5 },
-    { dimension: 'map_presence', weight: 0.5 },
+    { dimension: 'pickoff',      weight: 0.0 },
+    { dimension: 'map_presence', weight: 0.0 },
   ],
 
   // ── Defense / Survivability ───────────────────────────────────────────────
@@ -188,7 +188,6 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'defense',  weight: 2.0 },
   ],
   save: [
-    { dimension: 'defense',           weight: 1.2 },
     { dimension: 'defensive_utility', weight: 2.5 },
   ],
   hp_growth: [
@@ -203,8 +202,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'resource_support',  weight: 2.5 },
   ],
   shield: [
-    { dimension: 'defense',           weight: 3.0 },
-    { dimension: 'defensive_utility', weight: 1.5 },
+    { dimension: 'defensive_utility', weight: 3.0 },
   ],
   regen: [
     { dimension: 'sustain',           weight: 1.5 },
