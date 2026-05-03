@@ -1,19 +1,19 @@
 {
   "axe_berserkers_call": [
-    "aoe",
+    "medium_aoe",
     "taunt",
     "armor_gain"
   ],
   "axe_battle_hunger": [
     "slow",
-    "dps"
+    "medium_sustained"
   ],
   "axe_counter_helix": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "axe_culling_blade": [
-    "burst",
+    "medium_burst",
     "armor_gain",
     "movement_speed_boost"
   ],

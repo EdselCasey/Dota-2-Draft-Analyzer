@@ -1,13 +1,13 @@
 {
   "huskar_inner_fire": [
-    "aoe",
+    "medium_aoe",
     "silence",
     "knockback",
-    "burst"
+    "medium_burst"
   ],
   "huskar_burning_spear": [
     "attack_modifier",
-    "dps"
+    "medium_sustained"
   ],
   "huskar_berserkers_blood": [
     "attack_speed_boost",
@@ -18,7 +18,7 @@
     "slow",
     "dash",
     "taunt",
-    "burst",
+    "medium_burst",
     "debuff_immune"
   ]
 }

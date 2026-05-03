@@ -1,14 +1,13 @@
 {
   "ringmaster_spotlight": [
-    "aoe",
-    "damage_reduction",
-    "aoe_damage"
+    "medium_aoe",
+    "damage_reduction"
   ],
   "ringmaster_tame_the_beasts": [
-    "aoe",
+    "medium_aoe",
     "channelled",
     "forced_movement",
-    "burst"
+    "medium_burst"
   ],
   "ringmaster_the_box": [
     "save",
@@ -18,25 +17,24 @@
     "movement_speed_boost"
   ],
   "ringmaster_wheel_of_wonder": [
-    "aoe",
+    "medium_aoe",
     "slow",
     "knockback",
     "zone_control",
     "vision",
-    "aoe_damage",
     "taunt",
     "forced_movement"
   ],
   "ringmaster_impalement": [
     "slow",
     "vision",
-    "dps"
+    "medium_sustained"
   ],
   "ringmaster_funhouse_mirror": [
     "illusion"
   ],
   "ringmaster_whoopee_cushion": [
-    "aoe",
+    "medium_aoe",
     "slow",
     "dash"
   ],

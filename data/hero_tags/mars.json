@@ -2,14 +2,13 @@
   "mars_spear": [
     "stun",
     "forced_movement",
-    "burst",
+    "medium_burst",
     "vision"
   ],
   "mars_gods_rebuke": [
-    "aoe",
+    "medium_aoe",
     "slow",
     "knockback",
-    "aoe_damage",
     "attack_damage_boost"
   ],
   "mars_dauntless": [
@@ -19,7 +18,7 @@
     "damage_reduction"
   ],
   "mars_arena_of_blood": [
-    "aoe",
+    "medium_aoe",
     "zone_control",
     "vision"
   ]

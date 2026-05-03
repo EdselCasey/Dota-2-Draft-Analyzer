@@ -1,28 +1,28 @@
 {
   "storm_spirit_electric_rave": [
-    "aoe",
+    "medium_aoe",
     "taunt"
   ],
   "storm_spirit_static_remnant": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "storm_spirit_electric_vortex": [
     "forced_movement",
-    "aoe",
+    "medium_aoe",
     "stun"
   ],
   "storm_spirit_overload": [
     "slow",
-    "burst",
-    "aoe",
+    "medium_burst",
+    "medium_aoe",
     "attack_modifier"
   ],
   "storm_spirit_ball_lightning": [
-    "aoe",
+    "medium_aoe",
     "dash",
     "escape",
-    "burst",
+    "medium_burst",
     "invulnerability"
   ]
 }

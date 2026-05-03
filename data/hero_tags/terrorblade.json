@@ -8,7 +8,7 @@
     "illusion"
   ],
   "terrorblade_sunder": [
-    "burst",
+    "medium_burst",
     "heal"
   ],
   "terrorblade_metamorphosis": [
@@ -16,7 +16,7 @@
     "attack_damage_boost"
   ],
   "terrorblade_dark_unity": [
-    "aoe",
+    "medium_aoe",
     "attack_damage_boost"
   ]
 }

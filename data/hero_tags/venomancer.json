@@ -1,19 +1,19 @@
 {
   "venomancer_venomous_gale": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "venomancer_poison_sting": [
     "slow",
     "antiheal",
-    "dps",
+    "medium_sustained",
     "attack_modifier"
   ],
   "venomancer_noxious_plague": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "dps"
+    "medium_sustained"
   ],
   "venomancer_plague_ward": [
     "summon_units",
@@ -22,7 +22,7 @@
     "zone_control"
   ],
   "venomancer_snakebite": [
-    "burst",
-    "dps"
+    "medium_burst",
+    "medium_sustained"
   ]
 }

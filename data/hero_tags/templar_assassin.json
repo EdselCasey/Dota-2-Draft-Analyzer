@@ -8,14 +8,14 @@
     "stealth",
     "armor_reduction",
     "attack_damage_boost",
-    "burst"
+    "medium_burst"
   ],
   "templar_assassin_psi_blades": [
     "slow",
     "attack_modifier"
   ],
   "templar_assassin_psionic_trap": [
-    "aoe",
+    "medium_aoe",
     "zone_control",
     "slow",
     "vision"

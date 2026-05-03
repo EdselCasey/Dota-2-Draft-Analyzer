@@ -1,28 +1,28 @@
 {
   "techies_proximity_mines": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "vision",
     "magic_amp",
     "zone_control"
   ],
   "techies_blast_off!": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "techies_sticky_bomb": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "techies_reactive_tazer": [
-    "aoe",
+    "medium_aoe",
     "disarm",
     "movement_speed_boost"
   ],
   "techies_m.a.d.": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ]
 }

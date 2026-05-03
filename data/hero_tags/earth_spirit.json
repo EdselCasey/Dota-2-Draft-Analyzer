@@ -1,29 +1,29 @@
 {
   "earth_spirit_boulder_smash": [
-    "aoe",
+    "medium_aoe",
     "forced_movement",
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "earth_spirit_rolling_boulder": [
     "stun",
     "dash",
     "escape",
     "invulnerability",
-    "burst"
+    "medium_burst"
   ],
   "earth_spirit_geomagnetic_grip": [
-    "aoe",
+    "medium_aoe",
     "forced_movement",
     "silence",
-    "burst"
+    "medium_burst"
   ],
   "earth_spirit_stone_remant": [
     "attack_damage_boost"
   ],
   "earth_spirit_magnetize": [
-    "aoe",
-    "dps",
+    "medium_aoe",
+    "medium_sustained",
     "slow"
   ]
 }

@@ -1,14 +1,14 @@
 {
   "windrunner_shackleshot": [
     "stun",
-    "aoe",
+    "medium_aoe",
     "attack_damage_boost"
   ],
   "windrunner_powershot": [
-    "aoe",
+    "medium_aoe",
     "slow",
     "vision",
-    "burst"
+    "medium_burst"
   ],
   "windrunner_windrun": [
     "movement_speed_boost",

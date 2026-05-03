@@ -1,6 +1,6 @@
 {
   "morphling_adaptive_strike_agi": [
-    "burst"
+    "medium_burst"
   ],
   "morphling_adaptive_strike_str": [
     "knockback",
@@ -14,7 +14,7 @@
   ],
   "morphling_waveform": [
     "dash",
-    "aoe",
+    "medium_aoe",
     "attack_modifier",
     "escape",
     "invulnerability"

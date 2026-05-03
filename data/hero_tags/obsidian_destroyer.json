@@ -6,11 +6,10 @@
   "obsidian_destroyer_astral_imprisonment": [
     "banish",
     "save",
-    "burst"
+    "medium_burst"
   ],
   "obsidian_destroyer_sanity_eclipse": [
-    "aoe",
-    "aoe_damage"
+    "medium_aoe"
   ],
   "obsidian_destroyer_essence_flux": [
     "mana_regen"

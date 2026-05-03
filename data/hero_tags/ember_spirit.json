@@ -1,29 +1,29 @@
 {
   "ember_spirit_searing_chains": [
-    "aoe",
+    "medium_aoe",
     "root",
-    "burst"
+    "medium_burst"
   ],
   "ember_spirit_sleight_of_fist": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "ember_spirit_flame_guard": [
-    "aoe",
+    "medium_aoe",
     "shield",
-    "dps"
+    "medium_sustained"
   ],
   "ember_spirit_immolation": [
-    "aoe",
-    "dps"
+    "medium_aoe",
+    "medium_sustained"
   ],
   "ember_spirit_fire_remnant": [
-    "aoe",
+    "medium_aoe",
     "global",
     "dash",
     "escape",
-    "burst",
+    "medium_burst",
     "invulnerability",
-    "dps"
+    "medium_sustained"
   ]
 }

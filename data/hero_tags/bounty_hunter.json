@@ -1,11 +1,11 @@
 {
   "bounty_hunter_shuriken_toss": [
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "bounty_hunter_jinada": [
     "attack_modifier",
-    "burst",
+    "medium_burst",
     "attack_damage_boost"
   ],
   "bounty_hunter_shadow_walk": [

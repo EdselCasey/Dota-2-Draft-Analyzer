@@ -1,15 +1,15 @@
 {
   "wisp_tether": [
-    "aoe",
+    "medium_aoe",
     "slow",
     "heal",
     "dash",
-    "dps",
+    "medium_sustained",
     "mana_regen"
   ],
   "wisp_spirits": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "wisp_overcharge": [
     "armor_gain",

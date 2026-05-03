@@ -1,15 +1,15 @@
 {
   "silencer_arcane_curse": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "dps"
+    "medium_sustained"
   ],
   "silencer_glaives_of_wisdom": [
     "attack_modifier",
     "attack_damage_boost"
   ],
   "silencer_last_word": [
-    "burst",
+    "medium_burst",
     "silence"
   ],
   "silencer_suffer_in_silence": [

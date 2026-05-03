@@ -1,23 +1,23 @@
 {
   "dark_willow_bramble_maze": [
-    "aoe",
+    "medium_aoe",
     "root",
-    "burst",
+    "medium_burst",
     "zone_control"
   ],
   "dark_willow_bedlam": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "dark_willow_terrorize": [
-    "aoe",
+    "medium_aoe",
     "forced_movement",
     "stun"
   ],
   "dark_willow_cursed_crown": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "dark_willow_pixie_dust": [
     "regen",
@@ -27,7 +27,6 @@
     "damage_reduction",
     "attack_damage_boost",
     "attack_modifier",
-    "burst"
+    "medium_burst"
   ]
-
 }

@@ -8,12 +8,12 @@
     "summon_units"
   ],
   "enchantress_natures_attendants": [
-    "aoe",
+    "medium_aoe",
     "heal",
     "regen"
   ],
   "enchantress_impetus": [
     "attack_modifier",
-    "burst"
+    "medium_burst"
   ]
 }

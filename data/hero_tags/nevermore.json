@@ -1,21 +1,21 @@
 {
   "nevermore_shadowraze1": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "magic_amp"
   ],
   "nevermore_shadowraze2": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "magic_amp"
   ],
   "nevermore_shadowraze3": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "magic_amp"
   ],
   "nevermore_dark_lord": [
-    "aoe",
+    "medium_aoe",
     "armor_reduction"
   ],
   "nevermore_feast_of_souls": [
@@ -23,9 +23,8 @@
     "attack_speed_boost"
   ],
   "nevermore_requiem": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "aoe_damage",
     "forced_movement",
     "magic_amp"
   ],

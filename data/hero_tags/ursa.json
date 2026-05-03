@@ -1,9 +1,9 @@
 {
   "ursa_earthshock": [
-    "aoe",
+    "medium_aoe",
     "slow",
     "dash",
-    "burst"
+    "medium_burst"
   ],
   "ursa_overpower": [
     "attack_damage_boost"

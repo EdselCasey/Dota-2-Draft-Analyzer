@@ -1,20 +1,20 @@
 {
   "razor_plasma_field": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "razor_static_link": [
     "damage_reduction"
   ],
   "razor_storm_surge": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "razor_eye_of_the_storm": [
-    "aoe",
-    "dps",
+    "medium_aoe",
+    "medium_sustained",
     "armor_reduction"
   ],
   "razor_unstable_current": [

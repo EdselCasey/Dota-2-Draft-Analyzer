@@ -5,12 +5,10 @@ export interface TagWeight {
   weight: number
 }
 
-// ── AOE combo system (extensible via categories) ───────────────────────────
-//
-// Tags are assigned to a broad category. When a tag co-occurs with 'aoe' on
-// the same ability, its dimension contributions are multiplied by the bonus
-// defined for that category. Adding a new tag only requires updating
-// TAG_CATEGORY; AOE_COMBO_BONUS is derived automatically.
+// ── AOE combo system ──────────────────────────────────────────────────────────
+// When an AOE size tag is present on an ability, other tags on that ability get
+// their dimension contributions multiplied by a category-based bonus. The AOE
+// size determines how much to scale (small < medium < large).
 
 export const TAG_CATEGORY: Partial<Record<AbilityTag, string>> = {
   // control
@@ -25,9 +23,12 @@ export const TAG_CATEGORY: Partial<Record<AbilityTag, string>> = {
   forced_movement:  'control',
   antiheal:         'control',
   // damage
-  burst:            'damage',
-  dps:              'damage',
-  aoe_damage:       'damage',
+  low_burst:        'damage',
+  medium_burst:     'damage',
+  high_burst:       'damage',
+  low_sustained:    'damage',
+  medium_sustained: 'damage',
+  high_sustained:   'damage',
   magic_amp:        'damage',
   // mobility
   blink:                 'mobility',
@@ -63,9 +64,10 @@ export const AOE_BONUS_BY_CATEGORY: Record<string, number> = {
   push:     1.2,
   stealth:  1.2,
   aerial:   1.1,
+  defense:  1.1,
 }
 
-// Derived automatically — scorer.ts continues to use this interface unchanged.
+// Derived automatically — scorer uses this for combo multiplier lookup.
 export const AOE_COMBO_BONUS: Partial<Record<AbilityTag, number>> =
   Object.fromEntries(
     Object.entries(TAG_CATEGORY)
@@ -86,76 +88,114 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'pickoff',      weight: 1.5 },
   ],
   silence: [
-    { dimension: 'control',      weight: 1.0 },  // removed teamfight — silence is CC, not teamfight
+    { dimension: 'control',      weight: 1.0 },
     { dimension: 'pickoff',      weight: 1.5 },
-    { dimension: 'defensive_utility',      weight: 1.0 },
+    { dimension: 'defensive_utility', weight: 1.0 },
   ],
   hex: [
     { dimension: 'control',      weight: 3.0 },
     { dimension: 'pickoff',      weight: 2.5 },
-    { dimension: 'defensive_utility',      weight: 1.0 },
+    { dimension: 'defensive_utility', weight: 1.0 },
   ],
   slow: [
-    { dimension: 'control',      weight: 0.5 },  // removed teamfight — slow alone doesn't win fights
+    { dimension: 'control',      weight: 0.5 },
     { dimension: 'pickoff',      weight: 0.5 },
   ],
   disarm: [
-    { dimension: 'control',      weight: 2.0 },  // removed 
-    { dimension: 'defensive_utility',      weight: 1.0 },
+    { dimension: 'control',      weight: 2.0 },
+    { dimension: 'defensive_utility', weight: 1.0 },
   ],
   knockback: [
-    { dimension: 'control',      weight: 1.5 },  // removed teamfight
+    { dimension: 'control',      weight: 1.5 },
   ],
   taunt: [
     { dimension: 'control',      weight: 2.0 },
     { dimension: 'pickoff',      weight: 1.0 },
   ],
   forced_movement: [
-    { dimension: 'control',      weight: 1.5 },  // removed teamfight
+    { dimension: 'control',      weight: 1.5 },
   ],
   banish: [
-    { dimension: 'control',      weight: 1.5 },  // removed teamfight
+    { dimension: 'control',      weight: 1.5 },
     { dimension: 'pickoff',      weight: 1.0 },
-    { dimension: 'defensive_utility',      weight: 1.9 },
+    { dimension: 'defensive_utility', weight: 1.9 },
   ],
   leash: [
-    { dimension: 'control',      weight: 1.5 },  // removed teamfight
+    { dimension: 'control',      weight: 1.5 },
     { dimension: 'pickoff',      weight: 1.0 },
   ],
 
-  // ── Damage pattern ────────────────────────────────────────────────────────
-  burst: [
-    { dimension: 'burst_damage', weight: 2.5 },
-    { dimension: 'pickoff',      weight: 2.0 },
+  // ── Burst Damage (tiered) ─────────────────────────────────────────────────
+  low_burst: [
+    { dimension: 'burst_damage', weight: 1.0 },
+    { dimension: 'pickoff',      weight: 0.5 },
   ],
-  dps: [
+  medium_burst: [
+    { dimension: 'burst_damage', weight: 2.0 },
+    { dimension: 'pickoff',      weight: 1.5 },
+  ],
+  high_burst: [
+    { dimension: 'burst_damage', weight: 3.0 },
+    { dimension: 'pickoff',      weight: 2.5 },
+  ],
+
+  // ── Sustained Damage (tiered) ─────────────────────────────────────────────
+  low_sustained: [
     { dimension: 'sustained_damage', weight: 1.0 },
   ],
-  // aoe_damage: AoE spells are burst by nature — teamfight composite picks them up via burst_damage
-  aoe_damage: [
-    { dimension: 'burst_damage',     weight: 1.5 },
+  medium_sustained: [
+    { dimension: 'sustained_damage', weight: 2.0 },
+  ],
+  high_sustained: [
+    { dimension: 'sustained_damage', weight: 3.0 },
+  ],
+
+  // ── AOE (tiered) ──────────────────────────────────────────────────────────
+  small_aoe: [
+    { dimension: 'burst_damage',     weight: 0.5 },
+    { dimension: 'push',             weight: 0.5 },
+    { dimension: 'sustained_damage', weight: 0.3 },
+  ],
+  medium_aoe: [
+    { dimension: 'burst_damage',     weight: 1.0 },
     { dimension: 'push',             weight: 1.5 },
-    { dimension: 'sustained_damage',             weight: 1.0 },
+    { dimension: 'sustained_damage', weight: 0.7 },
+  ],
+  large_aoe: [
+    { dimension: 'burst_damage',     weight: 1.5 },
+    { dimension: 'push',             weight: 2.5 },
+    { dimension: 'sustained_damage', weight: 1.0 },
+  ],
+
+  // ── Range (tiered) ────────────────────────────────────────────────────────
+  short_range: [
+    { dimension: 'pickoff',      weight: 0.5 },
+  ],
+  medium_range: [
+    { dimension: 'pickoff',      weight: 1.5 },
+  ],
+  long_range: [
+    { dimension: 'pickoff',      weight: 2.5 },
+    { dimension: 'map_presence', weight: 0.5 },
   ],
 
   // ── Defense / Survivability ───────────────────────────────────────────────
   damage_reduction: [
-    { dimension: 'defense',  weight: 2.5 },  // removed sustain
+    { dimension: 'defense',  weight: 2.5 },
     { dimension: 'defensive_utility', weight: 2.2 },
-
   ],
   armor_gain: [
-    { dimension: 'defense',  weight: 2.0 },  // removed sustain
+    { dimension: 'defense',  weight: 2.0 },
   ],
   save: [
     { dimension: 'defense',           weight: 1.2 },
-    { dimension: 'defensive_utility', weight: 2.5 },  // removed sustain
+    { dimension: 'defensive_utility', weight: 2.5 },
   ],
   hp_growth: [
     { dimension: 'defense',           weight: 3.0 },
   ],
 
-  // ── Sustain: heals, hp regen, lifesteal only ──────────────────────────────
+  // ── Sustain ───────────────────────────────────────────────────────────────
   heal: [
     { dimension: 'sustain',           weight: 3.0 },
     { dimension: 'defensive_utility', weight: 1.5 },
@@ -163,18 +203,18 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'resource_support',  weight: 2.5 },
   ],
   shield: [
-    { dimension: 'defense',           weight: 3.0 },  // removed sustain — shields are defense
+    { dimension: 'defense',           weight: 3.0 },
     { dimension: 'defensive_utility', weight: 1.5 },
   ],
   regen: [
-    { dimension: 'sustain',           weight: 1.5 },  // increased from 1.5
+    { dimension: 'sustain',           weight: 1.5 },
     { dimension: 'resource_support',  weight: 2.0 },
   ],
   lifesteal: [
-    { dimension: 'sustain',           weight: 2.0 },  // increased from 1.5
+    { dimension: 'sustain',           weight: 2.0 },
   ],
   invulnerability: [
-    { dimension: 'defense',           weight: 3.0 },  // removed sustain + teamfight
+    { dimension: 'defense',           weight: 3.0 },
     { dimension: 'defensive_utility', weight: 1.5 },
   ],
 
@@ -204,30 +244,28 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'pickoff',          weight: 2.5 },
     { dimension: 'vision_control',   weight: 1.5 },
     { dimension: 'mobility',         weight: 0.5 },
-    { dimension: 'map_presence',     weight: 1.0 }
+    { dimension: 'map_presence',     weight: 1.0 },
   ],
   aerial: [
     { dimension: 'vision_control',   weight: 2.5 },
     { dimension: 'pickoff',          weight: 1.0 },
     { dimension: 'mobility',         weight: 0.5 },
-    { dimension: 'map_presence',     weight: 1.0 }
+    { dimension: 'map_presence',     weight: 1.0 },
   ],
   unobstructed: [
     { dimension: 'vision_control',   weight: 2.3 },
     { dimension: 'pickoff',          weight: 1.0 },
     { dimension: 'mobility',         weight: 0.5 },
-    { dimension: 'map_presence',     weight: 1.0 }
+    { dimension: 'map_presence',     weight: 1.0 },
   ],
 
   // ── Attack / Right-click ──────────────────────────────────────────────────
-  // These explicitly signal a right-click / physical-attack playstyle,
-  // not spell damage — so they map to sustained_damage only.
   attack_speed_boost: [
     { dimension: 'sustained_damage', weight: 1.2 },
     { dimension: 'push',             weight: 1.2 },
   ],
   armor_reduction: [
-    { dimension: 'sustained_damage', weight: 1.5 }, // amplifies physical attack damage
+    { dimension: 'sustained_damage', weight: 1.5 },
     { dimension: 'pickoff',          weight: 0.5 },
   ],
   attack_damage_boost: [
@@ -236,20 +274,20 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   attack_modifier: [
     { dimension: 'sustained_damage', weight: 2.5 },
-    { dimension: 'pickoff',          weight: 0.5 }, // modifiers enable killing in range
+    { dimension: 'pickoff',          weight: 0.5 },
   ],
 
   // ── Push / Objective ──────────────────────────────────────────────────────
   summon_units: [
     { dimension: 'push',             weight: 2.5 },
     { dimension: 'sustained_damage', weight: 1.0 },
-    { dimension: 'vision_control', weight: 1.0 },
+    { dimension: 'vision_control',   weight: 1.0 },
     { dimension: 'map_presence',     weight: 1.0 },
   ],
   illusion: [
     { dimension: 'push',             weight: 2.0 },
     { dimension: 'sustained_damage', weight: 2.5 },
-    { dimension: 'vision_control', weight: 1.0 },
+    { dimension: 'vision_control',   weight: 1.0 },
     { dimension: 'map_presence',     weight: 1.0 },
   ],
   siege: [
@@ -267,18 +305,13 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'map_presence',     weight: 1.5 },
   ],
 
-  // ── AoE / Teamfight modifiers ─────────────────────────────────────────────
-  // aoe: modifier tag only — no dimension score; AoE damage signal comes from aoe_damage tag
-  aoe: [
-    { dimension: 'push', weight: 1.0 },
-  ],
-  // channelled: behavior marker only — damage from channelled abilities already scores via dps tag
+  // ── Modifiers ─────────────────────────────────────────────────────────────
   channelled: [],
   global: [
-    { dimension: 'map_presence',     weight: 3.0 },  // removed teamfight
+    { dimension: 'map_presence',     weight: 3.0 },
   ],
 
-  // ── Utility (disaggregated) ───────────────────────────────────────────────
+  // ── Utility ───────────────────────────────────────────────────────────────
   dispel: [
     { dimension: 'defensive_utility', weight: 3.0 },
     { dimension: 'defense',           weight: 1.0 },
@@ -291,15 +324,18 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'vision_control',    weight: 2.0 },
   ],
   mana_regen: [
-    { dimension: 'resource_support',  weight: 3.0 },  // removed sustain
+    { dimension: 'resource_support',  weight: 3.0 },
   ],
   antiheal: [
-    { dimension: 'control',           weight: 1.5 },  // denying healing is soft control
-    { dimension: 'pickoff',           weight: 1.5 },  // makes targets easier to kill
+    { dimension: 'control',           weight: 1.5 },
+    { dimension: 'pickoff',           weight: 1.5 },
   ],
   magic_amp: [
-    { dimension: 'burst_damage',      weight: 1.5 },  // amplifies nuke output
+    { dimension: 'burst_damage',      weight: 1.5 },
     { dimension: 'pickoff',           weight: 0.5 },
+  ],
+  gold_gain: [
+    { dimension: 'resource_support',  weight: 2.0 },
   ],
 
   // ── Spell Uptime (cooldown-based tempo) ────────────────────────────────────

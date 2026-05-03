@@ -5,9 +5,8 @@
     "attack_damage_boost"
   ],
   "bloodseeker_blood_rite": [
-    "aoe",
-    "silence",
-    "aoe_damage"
+    "medium_aoe",
+    "silence"
   ],
   "bloodseeker_thirst": [
     "movement_speed_boost",
@@ -15,8 +14,8 @@
   ],
   "bloodseeker_rupture": [
     "knockback",
-    "burst",
-    "dps"
+    "medium_burst",
+    "medium_sustained"
   ],
   "bloodseeker_sanguivore": [
     "heal",

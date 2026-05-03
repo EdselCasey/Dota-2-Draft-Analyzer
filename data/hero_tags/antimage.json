@@ -11,9 +11,8 @@
     "shield"
   ],
   "antimage_mana_void": [
-    "aoe",
-    "stun",
-    "aoe_damage"
+    "medium_aoe",
+    "stun"
   ],
   "antimage_blink": [
     "blink",

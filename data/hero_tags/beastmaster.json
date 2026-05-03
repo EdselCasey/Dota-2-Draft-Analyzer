@@ -1,7 +1,7 @@
 {
   "beastmaster_wild_axes": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "magic_amp"
   ],
   "beastmaster_summon_razorback": [
@@ -13,12 +13,12 @@
     "summon_units"
   ],
   "beastmaster_inner_beast": [
-    "aoe",
+    "medium_aoe",
     "attack_speed_boost"
   ],
   "beastmaster_primal_roar": [
     "stun",
     "slow",
-    "burst"
+    "medium_burst"
   ]
 }

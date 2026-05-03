@@ -1,24 +1,23 @@
 {
   "enigma_malefice": [
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "enigma_demonic_conversion": [
     "summon_units"
   ],
   "enigma_midnight_pulse": [
-    "aoe",
-    "dps"
+    "medium_aoe",
+    "medium_sustained"
   ],
   "enigma_black_hole": [
-    "aoe",
+    "medium_aoe",
     "channelled",
     "forced_movement",
-    "stun",
-    "aoe_damage"
+    "stun"
   ],
   "enigma_event_horizon": [
     "slow",
-    "aoe"
+    "medium_aoe"
   ]
 }

@@ -1,8 +1,8 @@
 {
   "oracle_fortunes_end": [
-    "aoe",
+    "medium_aoe",
     "channelled",
-    "burst",
+    "medium_burst",
     "root",
     "dispel"
   ],
@@ -19,15 +19,15 @@
     "save"
   ],
   "oracle_rain_of_destiny": [
-    "aoe",
+    "medium_aoe",
     "heal",
     "regen",
     "antiheal",
-    "dps"
+    "medium_sustained"
   ],
   "oracle_purifying_flames": [
     "heal",
     "regen",
-    "burst"
+    "medium_burst"
   ]
 }

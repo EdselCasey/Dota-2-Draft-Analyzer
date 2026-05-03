@@ -1,6 +1,6 @@
 {
   "spirit_breaker_charge_of_darkness": [
-    "aoe",
+    "medium_aoe",
     "stun",
     "movement_speed_boost",
     "vision",
@@ -13,10 +13,10 @@
     "knockback",
     "attack_modifier",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "spirit_breaker_nether_strike": [
-    "burst",
+    "medium_burst",
     "knockback",
     "stun",
     "blink"

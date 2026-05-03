@@ -1,8 +1,8 @@
 {
   "keeper_of_the_light_illuminate": [
-    "aoe",
+    "medium_aoe",
     "vision",
-    "burst",
+    "medium_burst",
     "heal"
   ],
   "keeper_of_the_light_chakra_magic": [
@@ -19,9 +19,9 @@
     "global"
   ],
   "keeper_of_the_light_blinding_light": [
-    "aoe",
+    "medium_aoe",
     "knockback",
-    "burst"
+    "medium_burst"
   ],
   "keeper_of_the_light_spirit_form": [
     "movement_speed_boost"

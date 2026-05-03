@@ -1,7 +1,6 @@
 {
   "legion_commander_overwhelming_odds": [
-    "aoe",
-    "aoe_damage",
+    "medium_aoe",
     "shield",
     "attack_speed_boost"
   ],

@@ -1,15 +1,15 @@
 {
   "weaver_the_swarm": [
-    "aoe",
+    "medium_aoe",
     "summon_units",
     "armor_reduction",
-    "dps"
+    "medium_sustained"
   ],
   "weaver_shukuchi": [
-    "aoe",
+    "medium_aoe",
     "slow",
     "movement_speed_boost",
-    "burst",
+    "medium_burst",
     "stealth",
     "escape"
   ],

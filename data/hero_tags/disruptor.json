@@ -1,24 +1,24 @@
 {
   "disruptor_thunder_strike": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "disruptor_glimpse": [
     "forced_movement",
-    "burst"
+    "medium_burst"
   ],
   "disruptor_kinetic_field": [
-    "aoe",
+    "medium_aoe",
     "zone_control"
   ],
   "disruptor_static_storm": [
-    "aoe",
+    "medium_aoe",
     "silence",
-    "dps"
+    "medium_sustained"
   ],
   "disruptor_electromagnetic_repulsion": [
-    "aoe",
+    "medium_aoe",
     "knockback"
   ]
 }

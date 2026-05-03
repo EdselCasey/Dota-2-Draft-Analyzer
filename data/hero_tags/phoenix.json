@@ -1,31 +1,31 @@
 {
   "phoenix_icarus_dive": [
-    "aoe",
+    "medium_aoe",
     "slow",
     "dash",
     "escape",
-    "dps"
+    "medium_sustained"
   ],
   "phoenix_supernova": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "dps",
+    "medium_sustained",
     "zone_control",
     "escape",
     "save"
   ],
   "phoenix_fire_spirit": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "dps"
+    "medium_sustained"
   ],
   "phoenix_dying_light": [
-    "aoe",
-    "dps"
+    "medium_aoe",
+    "medium_sustained"
   ],
   "phoenix_sun_ray": [
-    "aoe",
-    "dps",
+    "medium_aoe",
+    "medium_sustained",
     "heal"
   ]
 }

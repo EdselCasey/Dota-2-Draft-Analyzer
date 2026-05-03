@@ -1,15 +1,15 @@
 {
   "kunkka_torrent": [
-    "aoe",
+    "medium_aoe",
     "forced_movement",
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "kunkka_tidebringer": [
     "slow",
     "attack_damage_boost",
-    "burst",
-    "aoe"
+    "medium_burst",
+    "medium_aoe"
   ],
   "kunkka_x_marks_the_spot": [
     "teleport",
@@ -19,8 +19,8 @@
     "stun",
     "damage_reduction",
     "movement_speed_boost",
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "kunkka_admirals_rum": [
     "damage_reduction",

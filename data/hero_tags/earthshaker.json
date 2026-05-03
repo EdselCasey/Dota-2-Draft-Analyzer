@@ -1,20 +1,19 @@
 {
   "earthshaker_fissure": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "burst",
+    "medium_burst",
     "zone_control"
   ],
   "earthshaker_enchant_totem": [
     "attack_damage_boost"
   ],
   "earthshaker_echo_slam": [
-    "aoe",
-    "aoe_damage"
+    "medium_aoe"
   ],
   "earthshaker_aftershock": [
     "stun",
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ]
 }

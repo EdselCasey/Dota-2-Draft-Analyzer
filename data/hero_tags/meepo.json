@@ -1,11 +1,11 @@
 {
   "meepo_earthbind": [
-    "aoe",
+    "medium_aoe",
     "root"
   ],
   "meepo_poof": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "teleport",
     "escape",
     "global"

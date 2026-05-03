@@ -2,7 +2,7 @@
   "mirana_arrow": [
     "vision",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "mirana_moonlight_shadow": [
     "movement_speed_boost",
@@ -18,11 +18,11 @@
     "movement_speed_boost"
   ],
   "mirana_starfall": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "mirana_celestial_quiver": [
     "attack_modifier",
-    "burst"
+    "medium_burst"
   ]
 }

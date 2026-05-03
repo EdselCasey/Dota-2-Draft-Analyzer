@@ -10,14 +10,14 @@
     "damage_reduction"
   ],
   "slardar_slithereen_crush": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "slardar_bash": [
     "attack_modifier",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "slardar_corrosive_haze": [
     "armor_reduction",

@@ -1,16 +1,15 @@
 {
   "skywrath_mage_arcane_bolt": [
-    "burst"
+    "medium_burst"
   ],
   "skywrath_mage_concussive_shot": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst",
+    "medium_burst",
     "vision"
   ],
   "skywrath_mage_mystic_flare": [
-    "aoe",
-    "aoe_damage"
+    "medium_aoe"
   ],
   "skywrath_mage_shield_of_the_scion": [
     "shield"

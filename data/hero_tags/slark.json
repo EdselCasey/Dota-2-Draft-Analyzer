@@ -1,7 +1,7 @@
 {
   "slark_dark_pact": [
-    "aoe",
-    "dps",
+    "medium_aoe",
+    "medium_sustained",
     "dispel"
   ],
   "slark_pounce": [

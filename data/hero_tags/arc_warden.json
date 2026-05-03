@@ -1,10 +1,10 @@
 {
   "arc_warden_flux": [
     "slow",
-    "dps"
+    "medium_sustained"
   ],
   "arc_warden_magnetic_field": [
-    "aoe",
+    "medium_aoe",
     "attack_speed_boost",
     "damage_reduction",
     "attack_modifier"
@@ -12,7 +12,7 @@
   "arc_warden_spark_wraith": [
     "slow",
     "vision",
-    "burst",
+    "medium_burst",
     "zone_control"
   ],
   "arc_warden_tempest_double": [

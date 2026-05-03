@@ -1,14 +1,14 @@
 {
   "hoodwink_acorn_shot": [
     "slow",
-    "burst",
-    "aoe"
+    "medium_burst",
+    "medium_aoe"
   ],
   "hoodwink_bushwhack": [
-    "aoe",
+    "medium_aoe",
     "stun",
     "forced_movement",
-    "dps"
+    "medium_sustained"
   ],
   "hoodwink_scurry": [
     "movement_speed_boost",
@@ -17,7 +17,7 @@
   "hoodwink_sharpshooter": [
     "slow",
     "vision",
-    "burst"
+    "medium_burst"
   ],
   "hoodwink_mistwoods_wayfarer": [
     "damage_reduction"

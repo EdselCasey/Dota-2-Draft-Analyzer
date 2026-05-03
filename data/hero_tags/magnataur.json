@@ -1,23 +1,23 @@
 {
   "magnataur_shockwave": [
     "slow",
-    "burst",
+    "medium_burst",
     "forced_movement"
   ],
   "magnataur_empower": [
     "attack_damage_boost",
-    "aoe"
+    "medium_aoe"
   ],
   "magnataur_skewer": [
-    "aoe",
+    "medium_aoe",
     "forced_movement",
     "dash",
     "escape"
   ],
   "magnataur_reverse_polarity": [
-    "aoe",
+    "medium_aoe",
     "stun",
     "forced_movement",
-    "burst"
+    "medium_burst"
   ]
 }

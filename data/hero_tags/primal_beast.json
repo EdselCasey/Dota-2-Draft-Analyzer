@@ -1,25 +1,24 @@
 {
   "primal_beast_onslaught": [
-    "aoe",
+    "medium_aoe",
     "stun",
     "knockback",
-    "burst",
+    "medium_burst",
     "dash",
     "escape"
   ],
   "primal_beast_trample": [
-    "aoe",
-    "dps"
+    "medium_aoe",
+    "medium_sustained"
   ],
   "primal_beast_uproar": [
-    "aoe",
+    "medium_aoe",
     "slow",
     "armor_gain",
     "attack_damage_boost"
   ],
   "primal_beast_pulverize": [
-    "aoe",
-    "aoe_damage",
+    "medium_aoe",
     "stun",
     "magic_amp"
   ]

@@ -1,27 +1,27 @@
 {
   "void_spirit_aether_remnant": [
-    "burst",
+    "medium_burst",
     "vision",
     "taunt"
   ],
   "void_spirit_dissimilate": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "escape",
     "teleport",
     "invulnerability"
   ],
   "void_spirit_astral_step": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst",
+    "medium_burst",
     "dash",
     "escape"
   ],
   "void_spirit_resonant_pulse": [
-    "aoe",
+    "medium_aoe",
     "shield",
-    "burst"
+    "medium_burst"
   ],
   "void_spirit_intrinsic_edge": [
     "attack_speed_boost",

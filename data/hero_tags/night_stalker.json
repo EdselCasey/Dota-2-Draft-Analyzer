@@ -1,12 +1,12 @@
 {
   "night_stalker_void": [
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "night_stalker_crippling_fear": [
-    "aoe",
+    "medium_aoe",
     "silence",
-    "dps"
+    "medium_sustained"
   ],
   "night_stalker_hunter_in_the_night": [
     "attack_speed_boost",

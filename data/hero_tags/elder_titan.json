@@ -1,23 +1,22 @@
 {
   "elder_titan_echo_stomp": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "elder_titan_ancestral_spirit": [
-    "aoe"
+    "medium_aoe"
   ],
   "elder_titan_natural_order": [
-    "aoe",
+    "medium_aoe",
     "armor_reduction",
     "magic_amp"
   ],
   "elder_titan_earth_splitter": [
     "slow",
-    "burst",
+    "medium_burst",
     "vision",
-    "aoe",
-    "aoe_damage"
+    "medium_aoe"
   ],
   "elder_titan_momentum": [
     "armor_gain"

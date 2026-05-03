@@ -1,22 +1,20 @@
 {
   "lich_frost_nova": [
-    "aoe",
-    "slow",
-    "aoe_damage"
+    "medium_aoe",
+    "slow"
   ],
   "lich_sinister_gaze": [
     "forced_movement"
   ],
   "lich_frost_shield": [
-    "aoe",
+    "medium_aoe",
     "slow",
     "damage_reduction",
-    "dps"
+    "medium_sustained"
   ],
   "lich_chain_frost": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "aoe_damage",
     "vision",
     "magic_amp"
   ]

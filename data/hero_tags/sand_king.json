@@ -1,31 +1,30 @@
 {
   "sand_king_sand_storm": [
-    "aoe",
+    "medium_aoe",
     "stealth",
     "escape",
     "zone_control",
-    "dps",
+    "medium_sustained",
     "damage_reduction"
   ],
   "sand_king_caustic_finale": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "sand_king_stinger": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "slow"
   ],
   "sand_king_epicenter": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "aoe_damage",
     "magic_amp"
   ],
   "sand_king_burrow_strike": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst",
+    "medium_burst",
     "escape",
     "dash",
     "stun"

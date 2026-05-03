@@ -1,14 +1,14 @@
 {
   "spectre_spectral_dagger": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "vision",
     "aerial",
     "slow"
   ],
   "spectre_dispersion": [
-    "aoe",
-    "dps",
+    "medium_aoe",
+    "medium_sustained",
     "damage_reduction"
   ],
   "spectre_haunt": [

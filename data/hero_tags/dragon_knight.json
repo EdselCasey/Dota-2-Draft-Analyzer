@@ -1,12 +1,12 @@
 {
   "dragon_knight_breathe_fire": [
-    "aoe",
+    "medium_aoe",
     "damage_reduction",
-    "burst"
+    "medium_burst"
   ],
   "dragon_knight_dragon_tail": [
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "dragon_knight_dragon_blood": [
     "armor_gain",
@@ -21,8 +21,8 @@
   ],
   "dragon_knight_forms": [
     "armor_reduction",
-    "dps",
-    "aoe",
+    "medium_sustained",
+    "medium_aoe",
     "siege",
     "slow",
     "antiheal"

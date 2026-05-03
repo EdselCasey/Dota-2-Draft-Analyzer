@@ -1,15 +1,15 @@
 {
   "vengefulspirit_magic_missile": [
-    "burst",
+    "medium_burst",
     "stun"
   ],
   "vengefulspirit_vengeance_aura": [
-    "aoe",
+    "medium_aoe",
     "attack_damage_boost"
   ],
   "vengefulspirit_wave_of_terror": [
     "vision",
-    "aoe",
+    "medium_aoe",
     "armor_reduction",
     "damage_reduction"
   ],
@@ -17,7 +17,7 @@
     "shield",
     "save",
     "forced_movement",
-    "burst"
+    "medium_burst"
   ],
   "vengefulspirit_retribution": [
     "attack_damage_boost"

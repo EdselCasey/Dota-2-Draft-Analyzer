@@ -4,8 +4,8 @@
     "forced_movement"
   ],
   "rubick_fade_bolt": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "damage_reduction"
   ],
   "rubick_might_and_magus": [

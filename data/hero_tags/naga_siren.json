@@ -3,15 +3,15 @@
     "illusion"
   ],
   "naga_siren_rip_tide": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "armor_reduction"
   ],
   "naga_siren_eelskin": [
     "damage_reduction"
   ],
   "naga_siren_song_of_the_siren": [
-    "aoe",
+    "medium_aoe",
     "regen",
     "stun",
     "save"

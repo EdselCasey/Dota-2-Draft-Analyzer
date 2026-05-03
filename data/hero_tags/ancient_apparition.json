@@ -3,25 +3,24 @@
     "stun"
   ],
   "ancient_apparition_ice_vortex": [
-    "aoe",
+    "medium_aoe",
     "vision",
     "magic_amp",
     "slow",
-    "dps"
+    "medium_sustained"
   ],
   "ancient_apparition_chilling_touch": [
     "slow",
     "attack_modifier",
-    "burst"
+    "medium_burst"
   ],
   "ancient_apparition_ice_blast": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "antiheal",
-    "aoe_damage"
+    "antiheal"
   ],
   "ancient_apparition_bone_chill": [
     "slow",
-    "dps"
+    "medium_sustained"
   ]
 }

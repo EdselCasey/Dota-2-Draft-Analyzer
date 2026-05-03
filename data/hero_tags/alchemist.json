@@ -1,23 +1,30 @@
 {
   "alchemist_acid_spray": [
-    "aoe",
+    "medium_aoe",
     "slow",
     "armor_reduction",
-    "dps"
+    "medium_sustained",
+    "medium_cooldown"
   ],
   "alchemist_unstable_concoction": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "aoe_damage"
+    "medium_cooldown"
   ],
   "alchemist_chemical_rage": [
     "regen",
     "mana_regen",
     "attack_speed_boost",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "long_cooldown"
   ],
   "alchemist_corrosive_weaponry": [
     "slow",
-    "attack_modifier"
+    "attack_modifier",
+    "passive"
+  ],
+  "alchemist_greevil's_greed": [
+    "gold_gain",
+    "passive"
   ]
 }

@@ -1,20 +1,20 @@
 {
   "undying_decay": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "hp_growth",
     "magic_amp"
   ],
   "undying_soul_rip": [
-    "aoe",
+    "medium_aoe",
     "heal",
-    "burst"
+    "medium_burst"
   ],
   "undying_tombstone": [
-    "aoe",
+    "medium_aoe",
     "summon_units",
     "slow",
-    "dps",
+    "medium_sustained",
     "zone_control"
   ],
   "undying_flesh_golem": [

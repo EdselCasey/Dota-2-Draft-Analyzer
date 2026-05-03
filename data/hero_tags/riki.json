@@ -1,6 +1,6 @@
 {
   "riki_smoke_screen": [
-    "aoe",
+    "medium_aoe",
     "silence",
     "damage_reduction"
   ],
@@ -8,7 +8,7 @@
     "slow",
     "blink",
     "escape",
-    "burst",
+    "medium_burst",
     "attack_damage_boost"
   ],
   "riki_backstab": [
@@ -18,10 +18,10 @@
     "stealth"
   ],
   "riki_tricks_of_the_trade": [
-    "aoe",
+    "medium_aoe",
     "channelled",
     "attack_damage_boost",
-    "dps",
+    "medium_sustained",
     "invulnerability",
     "escape"
   ]

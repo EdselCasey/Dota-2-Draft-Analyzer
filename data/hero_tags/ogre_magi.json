@@ -1,12 +1,12 @@
 {
   "ogre_magi_fireblast": [
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "ogre_magi_ignite": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "dps"
+    "medium_sustained"
   ],
   "ogre_magi_bloodlust": [
     "attack_speed_boost",

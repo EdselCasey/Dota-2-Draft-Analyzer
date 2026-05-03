@@ -1,12 +1,12 @@
 {
   "crystal_maiden_crystal_nova": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "crystal_maiden_frostbite": [
     "root",
-    "dps",
+    "medium_sustained",
     "slow"
   ],
   "crystal_maiden_brilliance_aura": [
@@ -14,12 +14,11 @@
     "mana_regen"
   ],
   "crystal_maiden_freezing_field": [
-    "aoe",
+    "medium_aoe",
     "channelled",
-    "slow",
-    "aoe_damage"
+    "slow"
   ],
-    "crystal_maiden_glacial_guard": [
+  "crystal_maiden_glacial_guard": [
     "shield"
   ]
 }

@@ -1,22 +1,22 @@
 {
   "tiny_avalanche": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "tiny_toss": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "forced_movement",
     "save"
   ],
   "tiny_tree_grab": [
-    "aoe",
+    "medium_aoe",
     "attack_damage_boost"
   ],
   "tiny_tree_throw": [
-    "burst",
-    "aoe",
+    "medium_burst",
+    "medium_aoe",
     "slow"
   ],
   "tiny_grow": [

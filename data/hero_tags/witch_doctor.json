@@ -1,21 +1,20 @@
 {
   "witch_doctor_paralyzing_cask": [
-    "burst",
+    "medium_burst",
     "stun",
-    "aoe"
+    "medium_aoe"
   ],
   "witch_doctor_voodoo_restoration": [
-    "aoe",
+    "medium_aoe",
     "heal"
   ],
   "witch_doctor_maledict": [
-    "aoe",
-    "dps",
-    "burst"
+    "medium_aoe",
+    "medium_sustained",
+    "medium_burst"
   ],
   "witch_doctor_death_ward": [
     "channelled",
-    "aoe_damage",
-    "aoe"
+    "medium_aoe"
   ]
 }

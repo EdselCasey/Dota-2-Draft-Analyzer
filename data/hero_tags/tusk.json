@@ -2,27 +2,27 @@
   "tusk_ice_shards": [
     "slow",
     "zone_control",
-    "burst",
-    "aoe"
+    "medium_burst",
+    "medium_aoe"
   ],
   "tusk_snowball": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "burst",
+    "medium_burst",
     "movement_speed_boost"
   ],
   "tusk_tag_team": [
-    "aoe",
+    "medium_aoe",
     "slow",
     "attack_damage_boost"
   ],
   "tusk_bitter_chill": [
-    "aoe",
+    "medium_aoe",
     "slow"
   ],
   "tusk_walrus_punch": [
     "stun",
     "attack_modifier",
-    "burst"
+    "medium_burst"
   ]
 }

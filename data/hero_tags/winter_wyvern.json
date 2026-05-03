@@ -4,12 +4,12 @@
     "escape",
     "slow",
     "attack_modifier",
-    "dps"
+    "medium_sustained"
   ],
   "winter_wyvern_splinter_blast": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "winter_wyvern_cold_embrace": [
     "heal",
@@ -17,7 +17,7 @@
     "damage_reduction"
   ],
   "winter_wyvern_winters_curse": [
-    "aoe",
+    "medium_aoe",
     "taunt",
     "magic_amp"
   ]

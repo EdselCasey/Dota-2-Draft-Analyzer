@@ -1,14 +1,14 @@
 {
   "dawnbreaker_starbreaker": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "dawnbreaker_celestial_hammer": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "slow",
-    "dps",
+    "medium_sustained",
     "dash",
     "escape"
   ],
@@ -18,7 +18,7 @@
     "heal"
   ],
   "dawnbreaker_solar_guardian": [
-    "aoe",
+    "medium_aoe",
     "channelled",
     "stun",
     "heal",

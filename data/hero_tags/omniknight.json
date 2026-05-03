@@ -2,12 +2,12 @@
   "omniknight_hammer_of_purity": [
     "slow",
     "attack_modifier",
-    "burst"
+    "medium_burst"
   ],
   "omniknight_purification": [
-    "aoe",
+    "medium_aoe",
     "heal",
-    "burst"
+    "medium_burst"
   ],
   "omniknight_repel": [
     "damage_reduction",
@@ -16,12 +16,12 @@
     "hp_growth"
   ],
   "omniknight_degen_aura": [
-    "aoe",
+    "medium_aoe",
     "attack_damage_boost",
     "slow"
   ],
   "omniknight_guardian_angel": [
-    "aoe",
+    "medium_aoe",
     "damage_reduction"
   ]
 }

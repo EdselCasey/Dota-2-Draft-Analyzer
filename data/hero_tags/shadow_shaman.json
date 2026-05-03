@@ -1,13 +1,13 @@
 {
   "shadow_shaman_ether_shock": [
-    "burst"
+    "medium_burst"
   ],
   "shadow_shaman_voodoo": [
     "hex"
   ],
   "shadow_shaman_shackles": [
     "channelled",
-    "dps",
+    "medium_sustained",
     "stun"
   ],
   "shadow_shaman_mass_serpent_ward": [

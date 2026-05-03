@@ -4,23 +4,23 @@
   ],
   "grimstroke_phantom's_embrace": [
     "silence",
-    "burst",
+    "medium_burst",
     "summon_units",
     "vision"
   ],
   "grimstroke_stroke_of_fate": [
-    "burst",
-    "aoe",
+    "medium_burst",
+    "medium_aoe",
     "slow"
   ],
   "grimstroke_ink_swell": [
-    "aoe",
+    "medium_aoe",
     "movement_speed_boost",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "grimstroke_soul_chain": [
-    "aoe",
+    "medium_aoe",
     "forced_movement",
     "magic_amp"
   ]

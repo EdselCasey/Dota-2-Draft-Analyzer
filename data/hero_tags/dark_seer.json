@@ -1,13 +1,13 @@
 {
   "dark_seer_vacuum": [
-    "aoe",
+    "medium_aoe",
     "forced_movement",
-    "burst"
+    "medium_burst"
   ],
   "dark_seer_ion_shell": [
-    "aoe",
+    "medium_aoe",
     "root",
-    "dps"
+    "medium_sustained"
   ],
   "dark_seer_surge": [
     "movement_speed_boost"

@@ -1,21 +1,21 @@
 {
   "lina_dragon_slave": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "lina_light_strike_array": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "lina_fiery_soul": [
     "attack_speed_boost",
     "movement_speed_boost"
   ],
   "lina_laguna_blade": [
-    "burst"
+    "medium_burst"
   ],
   "lina_slow_burn": [
-    "dps"
+    "medium_sustained"
   ]
 }

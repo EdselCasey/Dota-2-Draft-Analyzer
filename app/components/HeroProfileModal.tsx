@@ -15,7 +15,10 @@ const TAG_COLORS: Record<string, string> = {
   stun: '#a855f7', root: '#7c3aed', silence: '#6d28d9', hex: '#8b5cf6',
   slow: '#c084fc', disarm: '#9333ea', knockback: '#a78bfa', taunt: '#7e22ce',
   forced_movement: '#c4b5fd',leash: '#5249ca',banish: '#b34792',
-  burst: '#ef4444', dps: '#f97316', aoe_damage: '#fb923c',
+  low_burst: '#fca5a5', medium_burst: '#ef4444', high_burst: '#b91c1c',
+  low_sustained: '#fdba74', medium_sustained: '#f97316', high_sustained: '#c2410c',
+  small_aoe: '#fde68a', medium_aoe: '#fb923c', large_aoe: '#9a3412',
+  short_range: '#a5f3fc', medium_range: '#22d3ee', long_range: '#0891b2',
   damage_reduction: '#3b82f6', armor_gain: '#2563eb', save: '#1d4ed8',
   heal: '#22c55e', shield: '#16a34a', regen: '#4ade80', lifesteal: '#86efac',
   invulnerability: '#059669',hp_growth: '#4ade80',
@@ -28,8 +31,8 @@ const TAG_COLORS: Record<string, string> = {
   attack_damage_boost: '#ea580c', attack_modifier: '#c2410c',magic_amp: '#f97316',
   dispel: '#14b8a6', debuff_immunity: '#0f766e', vision: '#5eead4',
   mana_regen: '#6366f1', global: '#4f46e5',antiheal: '#9fc00a',gold_gain: '#6376f2',
-  aoe: '#76a4b3', channelled: '#3e74c0',
-  passive: '#fbbf24', short_cooldown: '#f59e0b', medium_cooldown: '#d97706', long_cooldown: '#92400e',
+  channelled: '#3e74c0',
+  passive: '#fbbf24', short_cooldown: '#f59e0b', medium_cooldown: '#d97706', long_cooldown: '#bd6717',
 }
 
 export default function HeroProfileModal({ profile, onClose }: HeroProfileModalProps) {

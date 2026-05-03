@@ -1,19 +1,19 @@
 {
   "pudge_meat_hook": [
-    "aoe",
+    "medium_aoe",
     "stun",
     "forced_movement",
-    "burst",
+    "medium_burst",
     "save"
   ],
   "pudge_rot": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "dps"
+    "medium_sustained"
   ],
   "pudge_dismember": [
     "channelled",
-    "dps",
+    "medium_sustained",
     "stun",
     "forced_movement"
   ],

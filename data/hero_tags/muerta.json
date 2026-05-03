@@ -2,20 +2,20 @@
   "muerta_dead_shot": [
     "slow",
     "forced_movement",
-    "burst",
-    "aoe"
+    "medium_burst",
+    "medium_aoe"
   ],
   "muerta_the_calling": [
-    "aoe",
+    "medium_aoe",
     "silence",
     "slow",
-    "dps",
+    "medium_sustained",
     "zone_control"
   ],
   "muerta_gun_slinger": [
     "attack_damage_boost",
     "attack_modifier",
-    "aoe"
+    "medium_aoe"
   ],
   "muerta_pierce_the_veil": [
     "damage_reduction",

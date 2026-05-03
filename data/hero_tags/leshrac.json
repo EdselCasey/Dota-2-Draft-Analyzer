@@ -1,20 +1,20 @@
 {
   "leshrac_split_earth": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "leshrac_diabolic_edict": [
-    "aoe",
-    "dps"
+    "medium_aoe",
+    "medium_sustained"
   ],
   "leshrac_lightning_storm": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "leshrac_pulse_nova": [
-    "aoe",
-    "dps"
+    "medium_aoe",
+    "medium_sustained"
   ]
 }

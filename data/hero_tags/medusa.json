@@ -1,20 +1,19 @@
 {
   "medusa_mystic_snake": [
-    "aoe",
-    "mana_regen",
-    "aoe_damage"
+    "medium_aoe",
+    "mana_regen"
   ],
   "medusa_mana_shield": [
     "damage_reduction"
   ],
   "medusa_stone_gaze": [
-    "aoe",
+    "medium_aoe",
     "stun",
     "slow",
     "attack_damage_boost"
   ],
   "medusa_gorgon_grasp": [
-    "aoe",
+    "medium_aoe",
     "root"
   ],
   "medusa_venomous_volley": [
@@ -22,7 +21,7 @@
     "attack_modifier"
   ],
   "medusa_split_shot": [
-    "aoe",
+    "medium_aoe",
     "attack_modifier"
   ]
 }

@@ -2,10 +2,10 @@
   "broodmother_spawn_spiderlings": [
     "slow",
     "summon_units",
-    "burst"
+    "medium_burst"
   ],
   "broodmother_spin_web": [
-    "aoe",
+    "medium_aoe",
     "movement_speed_boost",
     "unobstructed",
     "antiheal"

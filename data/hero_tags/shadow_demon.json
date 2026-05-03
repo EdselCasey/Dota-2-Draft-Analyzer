@@ -5,20 +5,20 @@
     "save"
   ],
   "shadow_demon_shadow_poison": [
-    "aoe",
+    "medium_aoe",
     "vision",
-    "burst"
+    "medium_burst"
   ],
   "shadow_demon_demonic_purge": [
     "slow",
-    "burst",
+    "medium_burst",
     "dispel"
   ],
   "shadow_demon_menace": [
     "magic_amp"
   ],
   "shadow_demon_disseminate": [
-    "aoe",
-    "dps"
+    "medium_aoe",
+    "medium_sustained"
   ]
 }

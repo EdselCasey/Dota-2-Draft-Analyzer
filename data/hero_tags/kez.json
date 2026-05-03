@@ -1,8 +1,8 @@
 {
   "kez_echo_slash": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst",
+    "medium_burst",
     "dash",
     "escape"
   ],
@@ -13,11 +13,11 @@
   ],
   "kez_kazurai_katana": [
     "attack_modifier",
-    "dps"
+    "medium_sustained"
   ],
   "kez_raptor_dance": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "lifesteal",
     "dispel",
     "damage_reduction",
@@ -29,14 +29,14 @@
   ],
   "kez_talon_toss": [
     "silence",
-    "burst"
+    "medium_burst"
   ],
   "kez_shodo_sai": [
     "stun",
     "attack_damage_boost"
   ],
   "kez_ravens_veil": [
-    "aoe",
+    "medium_aoe",
     "movement_speed_boost",
     "stealth",
     "escape"

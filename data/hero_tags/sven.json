@@ -1,16 +1,16 @@
 {
   "sven_storm_hammer": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "sven_warcry": [
-    "aoe",
+    "medium_aoe",
     "movement_speed_boost",
     "armor_gain"
   ],
   "sven_great_cleave": [
-    "aoe",
+    "medium_aoe",
     "attack_modifier"
   ],
   "sven_gods_strength": [

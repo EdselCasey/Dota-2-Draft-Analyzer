@@ -1,13 +1,13 @@
 {
   "visage_grave_chill": [
-    "aoe",
+    "medium_aoe",
     "movement_speed_boost",
     "slow",
     "attack_speed_boost"
   ],
   "visage_soul_assumption": [
-    "burst",
-    "aoe"
+    "medium_burst",
+    "medium_aoe"
   ],
   "visage_gravekeepers_cloak": [
     "damage_reduction"
@@ -20,7 +20,7 @@
     "armor_reduction"
   ],
   "visage_summon_familiars_stone_form": [
-    "aoe",
+    "medium_aoe",
     "stun"
   ],
   "visage_silent_as_the_grave": [

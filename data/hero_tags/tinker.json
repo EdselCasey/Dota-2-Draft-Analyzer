@@ -1,9 +1,9 @@
 {
   "tinker_deploy_turrets": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "summon_units",
-    "dps",
+    "medium_sustained",
     "knockback"
   ],
   "tinker_keen_conveyance": [
@@ -12,12 +12,12 @@
     "teleport"
   ],
   "tinker_laser": [
-    "burst",
+    "medium_burst",
     "damage_reduction"
   ],
   "tinker_march_of_the_machines": [
-    "aoe",
-    "dps",
+    "medium_aoe",
+    "medium_sustained",
     "zone_control"
   ]
 }

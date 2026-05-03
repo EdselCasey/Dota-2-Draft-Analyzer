@@ -12,10 +12,9 @@
     "movement_speed_boost"
   ],
   "life_stealer_infest": [
-    "aoe",
+    "medium_aoe",
     "regen",
-    "movement_speed_boost",
-    "aoe_damage"
+    "movement_speed_boost"
   ],
   "life_stealer_feast": [
     "lifesteal",

@@ -1,24 +1,14 @@
 import fs from 'fs'
 import path from 'path'
-import type { HeroProfile, TaggedAbility, AbilityTag, TagProps } from './types'
+import type { HeroProfile, TaggedAbility, AbilityTag } from './types'
 import { buildHeroProfile } from './scorer'
-import { buildGlobalNorms, type GlobalPropNorms } from './tagProps'
 
 const HERO_TAGS_DIR = path.join(process.cwd(), 'data', 'hero_tags')
 
 // ── Tag file format ───────────────────────────────────────────────────────────
-// Old format: { "ability_name": ["tag1", "tag2"] }
-// New format: { "ability_name": { "tags": ["tag1"], "props": { "stun": { duration: 2 } } } }
+// Format: { "ability_name": ["tag1", "tag2"] }
 
-type OldManualEntry  = AbilityTag[]
-type NewManualEntry  = { tags: AbilityTag[]; props?: Partial<Record<AbilityTag, TagProps>> }
-type ManualFileEntry = OldManualEntry | NewManualEntry
-type ManualFile      = Record<string, ManualFileEntry>
-
-function normalizeEntry(entry: ManualFileEntry): NewManualEntry {
-  if (Array.isArray(entry)) return { tags: entry }
-  return entry
-}
+type ManualFile = Record<string, AbilityTag[]>
 
 function loadTagFile(heroName: string): ManualFile | null {
   const filePath = path.join(HERO_TAGS_DIR, `${heroName}.json`)
@@ -32,14 +22,11 @@ function loadTagFile(heroName: string): ManualFile | null {
 
 function buildTaggedAbilities(tagFile: ManualFile): TaggedAbility[] {
   const result: TaggedAbility[] = []
-  for (const [name, rawEntry] of Object.entries(tagFile)) {
-    const { tags, props } = normalizeEntry(rawEntry)
-    if (tags.length === 0) continue
-    result.push({
-      name,
-      tags,
-      ...(props && Object.keys(props).length > 0 ? { props } : {}),
-    })
+  for (const [name, tags] of Object.entries(tagFile)) {
+    // Support both old format (array) and new format (object with tags key)
+    const tagArr = Array.isArray(tags) ? tags : (tags as unknown as { tags: AbilityTag[] }).tags ?? []
+    if (tagArr.length === 0) continue
+    result.push({ name, tags: tagArr })
   }
   return result
 }
@@ -55,21 +42,12 @@ export function loadAllHeroes(): Map<string, HeroProfile> {
     .filter(f => f.endsWith('.json'))
     .map(f => f.replace('.json', ''))
 
-  // Pass 1: collect tagged abilities for every hero
-  const heroAbilities = new Map<string, TaggedAbility[]>()
+  const profiles = new Map<string, HeroProfile>()
   for (const heroName of heroNames) {
     const tagFile = loadTagFile(heroName)
     if (!tagFile) continue
-    heroAbilities.set(heroName, buildTaggedAbilities(tagFile))
-  }
-
-  // Pass 2: build global norms from all abilities for proportional scaling
-  const norms: GlobalPropNorms = buildGlobalNorms([...heroAbilities.values()].flat())
-
-  // Pass 3: build scored hero profiles
-  const profiles = new Map<string, HeroProfile>()
-  for (const [heroName, tagged] of heroAbilities) {
-    profiles.set(heroName, buildHeroProfile(heroName, tagged, norms))
+    const tagged = buildTaggedAbilities(tagFile)
+    profiles.set(heroName, buildHeroProfile(heroName, tagged))
   }
 
   _cache = profiles

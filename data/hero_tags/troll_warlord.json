@@ -4,17 +4,16 @@
     "attack_modifier",
     "attack_speed_boost",
     "slow",
-    "burst",
+    "medium_burst",
     "attack_damage_boost"
   ],
   "troll_warlord_whirling_axes_ranged": [
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "troll_warlord_whirling_axes_melee": [
     "dispel",
-    "aoe",
-    "aoe_damage"
+    "medium_aoe"
   ],
   "troll_warlord_fervor": [
     "attack_speed_boost",

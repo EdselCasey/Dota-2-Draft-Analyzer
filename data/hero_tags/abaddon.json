@@ -1,23 +1,28 @@
 {
-  "abaddon_death_coil": [
-    "burst",
-    "heal"
+  "abaddon_mist_coil": [
+    "medium_burst",
+    "heal",
+    "short_cooldown"
   ],
   "abaddon_aphotic_shield": [
     "shield",
     "regen",
-    "aoe_damage"
+    "medium_aoe",
+    "short_cooldown"
   ],
   "abaddon_withering_mist": [
-    "antiheal"
+    "antiheal",
+    "passive"
   ],
   "abaddon_curse_of_avernus": [
     "slow",
     "attack_speed_boost",
-    "dps",
-    "building_damage"
+    "medium_sustained",
+    "building_damage",
+    "passive"
   ],
   "abaddon_borrowed_time": [
-    "invulnerability"
+    "invulnerability",
+    "long_cooldown"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "tidehunter_gush": [
-    "burst",
+    "medium_burst",
     "slow",
     "armor_reduction"
   ],
@@ -9,13 +9,13 @@
     "dispel"
   ],
   "tidehunter_anchor_smash": [
-    "aoe",
+    "medium_aoe",
     "damage_reduction",
-    "burst"
+    "medium_burst"
   ],
   "tidehunter_ravage": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "burst"
+    "medium_burst"
   ]
 }

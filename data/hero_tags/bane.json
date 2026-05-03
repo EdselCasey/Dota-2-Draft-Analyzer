@@ -1,15 +1,15 @@
 {
   "bane_enfeeble": [
-    "dps",
+    "medium_sustained",
     "damage_reduction"
   ],
   "bane_brain_sap": [
-    "burst",
+    "medium_burst",
     "heal"
   ],
   "bane_fiends_grip": [
     "channelled",
-    "dps",
+    "medium_sustained",
     "stun"
   ],
   "bane_nightmare": [

@@ -1,21 +1,20 @@
 {
   "nyx_assassin_impale": [
-    "burst",
-    "aoe",
+    "medium_burst",
+    "medium_aoe",
     "stun"
   ],
   "nyx_assassin_mind_flare": [
-    "burst"
+    "medium_burst"
   ],
   "nyx_assassin_spiked_carapace": [
     "stun",
     "invulnerability",
-    "aoe",
-    "aoe_damage"
+    "medium_aoe"
   ],
   "nyx_assassin_vendetta": [
     "magic_amp",
-    "burst",
+    "medium_burst",
     "movement_speed_boost",
     "stealth",
     "unobstructed",

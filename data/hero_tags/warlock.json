@@ -1,38 +1,37 @@
 {
   "warlock_fatal_bonds": [
-    "aoe",
-    "dps",
+    "medium_aoe",
+    "medium_sustained",
     "magic_amp"
   ],
   "warlock_shadow_word": [
-    "dps",
-    "aoe",
+    "medium_sustained",
+    "medium_aoe",
     "regen"
   ],
   "warlock_upheaval": [
-    "aoe",
+    "medium_aoe",
     "channelled",
     "slow",
     "zone_control",
     "magic_amp",
-    "dps"
+    "medium_sustained"
   ],
   "warlock_chaotic_offering": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "summon_units",
-    "aoe_damage"
+    "summon_units"
   ],
   "warlock_golem_flaming_fists": [
-    "dps"
+    "medium_sustained"
   ],
   "warlock_golem_permanent_immolation": [
-    "aoe",
-    "dps"
+    "medium_aoe",
+    "medium_sustained"
   ],
   "warlock_imp_explode": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "warlock_eldritch_summoning": [
     "summon_units"

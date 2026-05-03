@@ -1,20 +1,19 @@
 {
   "gyrocopter_rocket_barrage": [
-    "aoe",
+    "medium_aoe",
     "movement_speed_boost",
-    "dps"
+    "medium_sustained"
   ],
   "gyrocopter_homing_missile": [
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "gyrocopter_flak_cannon": [
-    "aoe",
+    "medium_aoe",
     "attack_modifier"
   ],
   "gyrocopter_call_down": [
-    "aoe",
-    "slow",
-    "aoe_damage"
+    "medium_aoe",
+    "slow"
   ]
 }

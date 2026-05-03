@@ -8,7 +8,7 @@
     "movement_speed_boost"
   ],
   "lone_druid_savage_roar": [
-    "aoe",
+    "medium_aoe",
     "forced_movement"
   ],
   "lone_druid_true_form": [
@@ -19,12 +19,12 @@
   "lone_druid_spirit_bear_entangle": [
     "root",
     "attack_modifier",
-    "dps"
+    "medium_sustained"
   ],
   "lone_druid_entangle": [
-    "aoe",
+    "medium_aoe",
     "root",
-    "dps"
+    "medium_sustained"
   ],
   "lone_druid_spirit_bear_fetch": [
     "stun",

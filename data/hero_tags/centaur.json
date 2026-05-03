@@ -1,16 +1,16 @@
 {
   "centaur_hoof_stomp": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "centaur_double_edge": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "centaur_retaliate": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "centaur_stampede": [
     "slow",

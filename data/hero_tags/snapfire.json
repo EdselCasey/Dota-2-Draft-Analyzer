@@ -1,28 +1,28 @@
 {
   "snapfire_scatterblast": [
     "slow",
-    "burst",
-    "aoe"
+    "medium_burst",
+    "medium_aoe"
   ],
   "snapfire_mortimer_kisses": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst",
+    "medium_burst",
     "vision",
-    "dps"
+    "medium_sustained"
   ],
   "snapfire_firesnap_cookie": [
-    "aoe",
+    "medium_aoe",
     "stun",
     "save",
-    "burst",
+    "medium_burst",
     "dash",
     "escape"
   ],
   "snapfire_lil_shredder": [
     "attack_speed_boost",
     "armor_reduction",
-    "burst"
+    "medium_burst"
   ],
   "boomstick": [
     "magic_amp"

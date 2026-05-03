@@ -4,8 +4,8 @@
     "lifesteal"
   ],
   "juggernaut_blade_fury": [
-    "aoe",
-    "dps"
+    "medium_aoe",
+    "medium_sustained"
   ],
   "juggernaut_blade_form": [
     "armor_gain",
@@ -14,12 +14,12 @@
     "attack_damage_boost"
   ],
   "juggernaut_healing_ward": [
-    "aoe",
+    "medium_aoe",
     "heal"
   ],
   "juggernaut_omni_slash": [
-    "aoe",
-    "dps",
+    "medium_aoe",
+    "medium_sustained",
     "dispel",
     "invulnerability",
     "attack_speed_boost"

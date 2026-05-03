@@ -1,7 +1,7 @@
 {
   "invoker_cold_snap": [
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "invoker_ghost_walk": [
     "slow",
@@ -14,38 +14,37 @@
     "forced_movement"
   ],
   "invoker_emp": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "invoker_alacrity": [
     "attack_speed_boost",
     "attack_damage_boost"
   ],
   "invoker_chaos_meteor": [
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "invoker_sun_strike": [
-    "aoe",
+    "medium_aoe",
     "vision",
-    "burst"
+    "medium_burst"
   ],
   "invoker_ice_wall": [
-    "dps",
-    "aoe",
+    "medium_sustained",
+    "medium_aoe",
     "slow",
     "zone_control"
   ],
   "invoker_deafening_blast": [
-    "aoe",
+    "medium_aoe",
     "disarm",
     "knockback",
     "forced_movement",
-    "burst"
+    "medium_burst"
   ],
   "invoker_forge_spirit": [
     "summon_units",
     "armor_reduction"
   ]
-
 }

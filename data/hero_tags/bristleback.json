@@ -4,14 +4,14 @@
     "armor_reduction"
   ],
   "bristleback_quill_spray": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "magic_amp"
   ],
   "bristleback_bristleback": [
     "damage_reduction",
-    "aoe",
-    "burst"
+    "medium_aoe",
+    "medium_burst"
   ],
   "bristleback_warpath": [
     "attack_damage_boost",

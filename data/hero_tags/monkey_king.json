@@ -1,8 +1,8 @@
 {
   "monkey_king_boundless_strike": [
     "stun",
-    "burst",
-    "aoe",
+    "medium_burst",
+    "medium_aoe",
     "attack_damage_boost"
   ],
   "monkey_king_mischief": [
@@ -16,12 +16,12 @@
     "vision"
   ],
   "monkey_king_primal_spring": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "monkey_king_wukongs_command": [
-    "aoe",
+    "medium_aoe",
     "armor_gain",
     "zone_control",
     "summon_units"

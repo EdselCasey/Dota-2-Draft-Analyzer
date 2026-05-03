@@ -6,22 +6,22 @@
   "treant_natures_grasp": [
     "slow",
     "zone_control",
-    "aoe",
-    "dps"
+    "medium_aoe",
+    "medium_sustained"
   ],
   "treant_leech_seed": [
-    "aoe",
+    "medium_aoe",
     "heal",
-    "dps"
+    "medium_sustained"
   ],
   "treant_living_armor": [
     "regen",
     "armor_gain"
   ],
   "treant_overgrowth": [
-    "aoe",
+    "medium_aoe",
     "disarm",
     "root",
-    "dps"
+    "medium_sustained"
   ]
 }

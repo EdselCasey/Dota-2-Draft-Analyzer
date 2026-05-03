@@ -1,23 +1,32 @@
 {
   "abyssal_underlord_firestorm": [
-    "aoe",
-    "dps",
-    "aoe_damage",
-    "zone_control"
+    "medium_aoe",
+    "medium_sustained",
+    "zone_control",
+    "short_cooldown"
   ],
   "abyssal_underlord_pit_of_malice": [
-    "aoe",
+    "medium_aoe",
     "movement_speed_boost",
     "root",
-    "zone_control"
+    "zone_control",
+    "medium_cooldown"
   ],
   "abyssal_underlord_atrophy_aura": [
-    "aoe",
-    "damage_reduction"
+    "medium_aoe",
+    "damage_reduction",
+    "passive"
   ],
-  "abyssal_underlord_dark_rift": [
-    "aoe",
+  "abyssal_underlord_fiend's_gate": [
+    "medium_aoe",
     "teleport",
     "global"
+  ],
+  "abyssal_underlord_invading_force": [
+    "global",
+    "movement_speed_boost",
+    "damage_reduction",
+    "passive",
+    "long_cooldown"
   ]
 }

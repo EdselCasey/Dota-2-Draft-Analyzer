@@ -1,8 +1,8 @@
 {
   "skeleton_king_wraithfire_blast": [
     "stun",
-    "burst",
-    "dps",
+    "medium_burst",
+    "medium_sustained",
     "slow"
   ],
   "skeleton_king_bone_guard": [
@@ -14,7 +14,7 @@
     "attack_damage_boost"
   ],
   "skeleton_king_reincarnation": [
-    "aoe",
+    "medium_aoe",
     "invulnerability"
   ],
   "skeleton_king_vampiric_spirit": [

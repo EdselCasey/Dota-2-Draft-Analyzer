@@ -6,17 +6,12 @@ import type {
 } from './types'
 import { ALL_DIMENSIONS } from './types'
 import { TAG_DIMENSION_MAP, AOE_COMBO_BONUS } from './dimensionMap'
-import { propScaleFactor, type GlobalPropNorms } from './tagProps'
 import { computeTimingScore } from './timing'
 
 // Soft floor for per-hero normalisation ceiling.
-// Prevents a hero with a single weak ability from inflating to 10/10 on that dimension.
-// Any hero whose highest raw dimension exceeds this naturally raises their own ceiling.
 const MIN_HERO_CEILING = 5.0
 
 // ── Teamfight composite ───────────────────────────────────────────────────────
-// Teamfight is not scored directly by tags. It is derived from a weighted blend
-// of the hero's other dimension scores after normalisation.
 const TEAMFIGHT_WEIGHTS: Partial<Record<DraftDimension, number>> = {
   control:           0.30,
   sustained_damage:  0.15,
@@ -42,25 +37,31 @@ function zeroDimensions(): Record<DraftDimension, number> {
   >
 }
 
+// ── AOE tags that trigger combo bonus ─────────────────────────────────────────
+const AOE_TAGS = new Set(['small_aoe', 'medium_aoe', 'large_aoe'])
+
 export function scoreAbility(
   tagged: TaggedAbility,
-  norms?: GlobalPropNorms
 ): Record<DraftDimension, number> {
   const scores = zeroDimensions()
-  const hasAoe = tagged.tags.includes('aoe')
+
+  // Determine AOE combo multiplier from the highest AOE tag present
+  let aoeMultiplier = 1.0
+  if (tagged.tags.includes('large_aoe'))       aoeMultiplier = 1.6
+  else if (tagged.tags.includes('medium_aoe')) aoeMultiplier = 1.4
+  else if (tagged.tags.includes('small_aoe'))  aoeMultiplier = 1.2
 
   for (const tag of tagged.tags) {
     const weights = TAG_DIMENSION_MAP[tag]
     if (!weights) continue
 
-    const aoeBonus   = hasAoe ? (AOE_COMBO_BONUS[tag] ?? 1.0) : 1.0
-    // Prop-based scale: normalised within [0.5, 1.5] against all heroes globally.
-    // Falls back to 1.0 when norms are absent or no props are defined for this tag.
-    const tagProps   = tagged.props?.[tag]
-    const propScale  = norms ? propScaleFactor(tag, tagProps, norms) : 1.0
+    // Apply AOE combo bonus to non-AOE tags when an AOE tag is present
+    const aoeBonus = (aoeMultiplier > 1.0 && !AOE_TAGS.has(tag))
+      ? (AOE_COMBO_BONUS[tag] ?? 1.0) * (aoeMultiplier / 1.4) // scale relative to medium baseline
+      : 1.0
 
     for (const { dimension, weight } of weights) {
-      scores[dimension] += weight * aoeBonus * propScale
+      scores[dimension] += weight * aoeBonus
     }
   }
 
@@ -69,12 +70,11 @@ export function scoreAbility(
 
 export function scoreHero(
   taggedAbilities: TaggedAbility[],
-  norms?: GlobalPropNorms
 ): Record<DraftDimension, number> {
   const totals = zeroDimensions()
 
   for (const ability of taggedAbilities) {
-    const abilityScores = scoreAbility(ability, norms)
+    const abilityScores = scoreAbility(ability)
     for (const dim of ALL_DIMENSIONS) {
       totals[dim] += abilityScores[dim]
     }
@@ -91,13 +91,9 @@ export function normalise(raw: number, ceiling: number): number {
 export function buildHeroProfile(
   name: string,
   taggedAbilities: TaggedAbility[],
-  norms?: GlobalPropNorms
 ): HeroProfile {
-  const rawScores = scoreHero(taggedAbilities, norms)
+  const rawScores = scoreHero(taggedAbilities)
 
-  // Per-hero ceiling: the hero's own highest raw dimension score.
-  // Clamped to MIN_HERO_CEILING so sparse heroes don't inflate to 10/10 on a single weak tag.
-  // Invoker with 11 abilities and Ogre Magi with 4 both get fair relative scores.
   const heroMax = Math.max(...Object.values(rawScores), MIN_HERO_CEILING)
 
   const dimensionScores = Object.fromEntries(
@@ -112,7 +108,6 @@ export function buildHeroProfile(
 }
 
 // Aggregate five hero profiles into a team profile.
-// Uses a diminishing-returns model so stacking one dimension yields less than 5×.
 function diminishingSum(values: number[]): number {
   return values.reduce((acc, v, i) => acc + v / Math.sqrt(i + 1), 0)
 }

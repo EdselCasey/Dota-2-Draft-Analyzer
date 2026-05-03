@@ -26,11 +26,27 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   banish:            0.4,
   leash:            -0.2,
 
-  // Damage pattern
-  burst:            -1.0,  // hard falls off vs tankier late-game targets
-  aoe_damage:       0.4,  // teamfight nukes peak mid, before BKB / dispels
-  dps:               -0.5,  // spell DoT bypasses scaling — stays flat all game
-  magic_amp:        -0.5,  // more effective early before magic resist stacks
+  // Burst damage (tiered — gradient from early to mid)
+  low_burst:        -1.0,
+  medium_burst:     -0.7,
+  high_burst:       -0.4,
+
+  // Sustained damage (tiered — gradient from early to mid-late)
+  low_sustained:    -0.5,
+  medium_sustained: -0.3,
+  high_sustained:   -0.1,
+
+  // AOE (tiered — larger AOE = more teamfight-oriented = later)
+  small_aoe:        -0.2,
+  medium_aoe:        0.2,
+  large_aoe:         0.4,
+
+  // Range (tiered — long range dominates early, less decisive late)
+  short_range:       0.0,
+  medium_range:     -0.2,
+  long_range:       -0.4,
+
+  magic_amp:        -0.5,
 
   // Defense / survivability
   damage_reduction:  0.2,
@@ -75,6 +91,7 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   vision:           0.5,  
   mana_regen:        -0.3,
   global:            0.6,  // global presence becomes more impactful late
+  gold_gain:          -0.3,
 
   // Spell Uptime
   passive:           -0.6,  // always on = dominates early

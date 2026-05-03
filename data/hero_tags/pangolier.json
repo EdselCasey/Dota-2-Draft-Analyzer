@@ -1,15 +1,15 @@
 {
   "pangolier_swashbuckle": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst",
+    "medium_burst",
     "dash",
     "escape"
   ],
   "pangolier_shield_crash": [
-    "aoe",
+    "medium_aoe",
     "shield",
-    "burst",
+    "medium_burst",
     "dash",
     "escape"
   ],
@@ -18,12 +18,12 @@
     "slow"
   ],
   "pangolier_gyroshell": [
-    "aoe",
+    "medium_aoe",
     "stun",
     "knockback",
     "damage_reduction",
     "movement_speed_boost",
-    "burst"
+    "medium_burst"
   ],
   "pangolier_fortune_favors_the_bold": [
     "damage_reduction"

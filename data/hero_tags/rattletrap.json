@@ -1,20 +1,20 @@
 {
   "rattletrap_battery_assault": [
-    "aoe",
+    "medium_aoe",
     "stun",
-    "dps"
+    "medium_sustained"
   ],
   "rattletrap_power_cogs": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "zone_control",
     "knockback"
   ],
   "rattletrap_rocket_flare": [
-    "aoe",
+    "medium_aoe",
     "slow",
     "vision",
-    "burst"
+    "medium_burst"
   ],
   "rattletrap_hookshot": [
     "stun",

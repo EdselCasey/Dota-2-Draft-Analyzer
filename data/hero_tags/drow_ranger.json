@@ -6,12 +6,12 @@
   ],
   "drow_ranger_multishot": [
     "channelled",
-    "burst",
-    "aoe",
+    "medium_burst",
+    "medium_aoe",
     "slow"
   ],
   "drow_ranger_silence": [
-    "aoe",
+    "medium_aoe",
     "silence",
     "knockback",
     "vision"

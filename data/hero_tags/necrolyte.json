@@ -1,12 +1,12 @@
 {
   "necrolyte_death_pulse": [
-    "aoe",
+    "medium_aoe",
     "heal",
-    "burst"
+    "medium_burst"
   ],
   "necrolyte_heartstopper_aura": [
-    "aoe",
-    "dps"
+    "medium_aoe",
+    "medium_sustained"
   ],
   "necrolyte_sadist": [
     "heal",
@@ -20,7 +20,7 @@
   ],
   "necrolyte_reapers_scythe": [
     "stun",
-    "burst",
+    "medium_burst",
     "regen",
     "mana_regen"
   ]

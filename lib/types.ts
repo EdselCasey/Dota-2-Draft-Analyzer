@@ -11,15 +11,27 @@ export type AbilityTag =
   | 'forced_movement'
   | 'banish'
   | 'leash'
-  // ── Damage pattern ───────────────────────────────────────────────────────
-  | 'burst'        // single-target nuke
-  | 'dps'          // damage over time / repeated tick damage
-  | 'aoe_damage'   // area-of-effect damage
+  // ── Burst Damage (tiered) ──────────────────────────────────────────────
+  | 'low_burst'       // 0–250 base damage
+  | 'medium_burst'    // 251–400 base damage
+  | 'high_burst'      // 401+ base damage
+  // ── Sustained Damage (tiered) ──────────────────────────────────────────
+  | 'low_sustained'   // 0–30 DPS
+  | 'medium_sustained'// 31–80 DPS
+  | 'high_sustained'  // 81+ DPS
+  // ── AOE (tiered, replaces aoe + aoe_damage) ────────────────────────────
+  | 'small_aoe'       // ~200–300 radius
+  | 'medium_aoe'      // ~300–500 radius
+  | 'large_aoe'       // ~500+ radius
+  // ── Range (tiered) ─────────────────────────────────────────────────────
+  | 'short_range'     // 0–300 (melee range)
+  | 'medium_range'    // 300–600
+  | 'long_range'      // 600+
   // ── Defense / Survivability ───────────────────────────────────────────────
   | 'damage_reduction'  // % or flat damage reduction on self or allies
   | 'armor_gain'        // bonus armor from abilities
   | 'save'              // removes / shields an ally from incoming harm
-  | 'hp_growth'              // raises ehp
+  | 'hp_growth'         // raises ehp
   // ── Sustain ──────────────────────────────────────────────────────────────
   | 'heal'
   | 'shield'
@@ -40,7 +52,7 @@ export type AbilityTag =
   // ── Stealth / Aerial ─────────────────────────────────────────────────────
   | 'stealth'   // hero can go invisible (fade_delay on passive or active invis)
   | 'aerial'    // grants flying movement — sees over cliffs and trees
-  | 'unobstructed'    // grants phasing or terrain traversal movement — sees over cliffs and trees
+  | 'unobstructed'    // grants phasing or terrain traversal movement
   // ── Push / Objective ─────────────────────────────────────────────────────
   | 'summon_units'        // creates persistent units
   | 'illusion'            // creates hero illusions
@@ -56,8 +68,8 @@ export type AbilityTag =
   | 'global'
   | 'antiheal'           // reduces or blocks enemy healing / regen
   | 'magic_amp'          // amplifies magic damage taken by the target
-  // ── Modifiers (non-scoring, used for combo logic) ─────────────────────────
-  | 'aoe'
+  | 'gold_gain'
+  // ── Modifiers (non-scoring) ──────────────────────────────────────────────
   | 'channelled'
   // ── Spell Uptime (cooldown-based tempo tags) ────────────────────────────
   | 'passive'           // always active, no cooldown
@@ -68,18 +80,18 @@ export type AbilityTag =
 export type DraftDimension =
   | 'teamfight'
   | 'control'
-  | 'burst_damage'        // replaces old 'burst'
-  | 'sustained_damage'    // new: DPS / damage-over-time pressure
+  | 'burst_damage'
+  | 'sustained_damage'
   | 'sustain'
-  | 'defense'             // new: reactive protection (shield, dispel, debuff immunity)
+  | 'defense'
   | 'mobility'
   | 'push'
   | 'pickoff'
-  | 'vision_control'      // replaces utility/vision
-  | 'map_presence'        // global abilities, teleport, cross-map impact
-  | 'resource_support'    // mana regen, cooldown auras, teamwide buffs
-  | 'defensive_utility'   // dispel, purge, debuff immunity (reactive tools)
-  | 'spell_uptime'        // how frequently a team can use abilities (tempo axis)
+  | 'vision_control'
+  | 'map_presence'
+  | 'resource_support'
+  | 'defensive_utility'
+  | 'spell_uptime'
 
 export const ALL_DIMENSIONS: DraftDimension[] = [
   'teamfight',
@@ -109,49 +121,21 @@ export interface CleanedAbility {
   effects: Record<string, number | number[] | string>
 }
 
-/**
- * Optional numeric properties attached to a single tag on an ability.
- * Used for global proportional scaling: a blink with higher range weights more than a short one.
- */
-export interface TagProps {
-  /** Base damage (for burst / aoe_damage) */
-  damage?: number
-  /** Heal amount per cast (for heal) */
-  heal_amount?: number
-  /** Heal or damage per second (for heal, dps) */
-  hps?: number
-  /** Cast / effect range in units */
-  range?: number
-  /** Effect duration in seconds (for stuns, roots, slows, etc.) */
-  duration?: number
-  /** Base cooldown in seconds */
-  cooldown?: number
-  /** AoE radius in units */
-  radius?: number
-}
-
 export interface TaggedAbility {
   name: string
   tags: AbilityTag[]
-  /** Max damage value extracted from effects, set for burst / aoe_damage abilities only */
-  damageMagnitude?: number
-  /** Per-tag numeric properties used for proportional global scaling */
-  props?: Partial<Record<AbilityTag, TagProps>>
 }
 
 export interface HeroProfile {
   name: string
   taggedAbilities: TaggedAbility[]
   dimensionScores: Record<DraftDimension, number>
-  /** Timing result derived from ability tags — indicates when the hero peaks */
   timing: import('./timing').TimingResult
 }
 
 export interface TeamProfile {
   heroes: HeroProfile[]
-  /** Normalized 0-10 scores, relative to this team's own highest dimension */
   aggregateScores: Record<DraftDimension, number>
-  /** Pre-normalization sums — used for cross-team comparison with a shared scale */
   rawAggregates: Record<DraftDimension, number>
   strengths: DraftDimension[]
   weaknesses: DraftDimension[]

@@ -1,8 +1,8 @@
 {
   "pugna_nether_blast": [
-    "aoe",
+    "medium_aoe",
     "siege",
-    "burst"
+    "medium_burst"
   ],
   "pugna_decrepify": [
     "save",
@@ -12,14 +12,13 @@
     "heal"
   ],
   "pugna_nether_ward": [
-    "aoe",
-    "aoe_damage",
+    "medium_aoe",
     "zone_control"
   ],
   "pugna_life_drain": [
     "channelled",
     "heal",
-    "dps",
+    "medium_sustained",
     "save"
   ]
 }

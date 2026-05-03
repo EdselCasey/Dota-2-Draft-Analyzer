@@ -1,13 +1,13 @@
 {
   "brewmaster_thunder_clap": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "brewmaster_cinder_brew": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "burst"
+    "medium_burst"
   ],
   "brewmaster_drunken_brawler": [
     "armor_gain",
@@ -21,7 +21,7 @@
   ],
   "brewmaster_earth_hurl_boulder": [
     "stun",
-    "burst"
+    "medium_burst"
   ],
   "brewmaster_earth_spell_immunity": [
     "debuff_immunity"
@@ -30,16 +30,16 @@
     "siege"
   ],
   "brewmaster_storm_dispel_magic": [
-    "aoe",
-    "burst",
+    "medium_aoe",
+    "medium_burst",
     "dispel"
   ],
   "brewmaster_fire_permanent_immolation": [
-    "aoe",
-    "dps"
+    "medium_aoe",
+    "medium_sustained"
   ],
   "brewmaster_cyclone": [
-   "stun",
-   "forced_movement" 
+    "stun",
+    "forced_movement"
   ]
 }

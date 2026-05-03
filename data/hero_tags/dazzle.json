@@ -1,18 +1,18 @@
 {
   "dazzle_poison_touch": [
-    "aoe",
+    "medium_aoe",
     "slow",
-    "dps"
+    "medium_sustained"
   ],
   "dazzle_shallow_grave": [
     "save",
     "invulnerability"
   ],
   "dazzle_shadow_wave": [
-    "aoe",
+    "medium_aoe",
     "armor_gain",
     "heal",
-    "burst",
+    "medium_burst",
     "armor_reduction"
   ],
   "dazzle_nothl_projection": [

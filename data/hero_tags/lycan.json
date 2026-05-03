@@ -6,7 +6,7 @@
     "attack_damage_boost"
   ],
   "lycan_howl": [
-    "aoe",
+    "medium_aoe",
     "armor_reduction",
     "damage_reduction",
     "global"
