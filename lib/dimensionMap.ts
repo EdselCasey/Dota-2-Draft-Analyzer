@@ -371,6 +371,14 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   gold_gain: [
     { dimension: 'resource_support',  weight: 2.0 },
   ],
+  status_resist_reduction: [
+    { dimension: 'soft_control',      weight: 1.5 },
+    { dimension: 'pickoff',           weight: 0.5 },
+  ],
+  cooldown_reduction: [
+    { dimension: 'spell_uptime',      weight: 2.0 },
+    { dimension: 'resource_support',  weight: 1.0 },
+  ],
 
   // ── Spell Uptime (cooldown-based tempo) ────────────────────────────────────
   passive: [
