@@ -101,9 +101,8 @@ export function scoreAbility(
     const weights = TAG_DIMENSION_MAP[tag]
     if (!weights) continue
 
-    // Skip pure multiplier tags (duration, cooldown don't score directly)
+    // Skip pure multiplier tags (duration doesn't score directly)
     if (DURATION_TAGS.has(tag)) continue
-    if (COOLDOWN_TAGS.has(tag)) continue
 
     for (const { dimension, weight } of weights) {
       let multiplier = 1.0
