@@ -29,6 +29,7 @@
   ],
   "spectre_desolate": [
     "attack_damage_boost",
-    "attack_modifier"
+    "attack_modifier",
+    "passive"
   ]
 }
