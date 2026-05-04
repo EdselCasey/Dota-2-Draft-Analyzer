@@ -79,6 +79,7 @@ export type AbilityTag =
   | 'antiheal'           // reduces or blocks enemy healing / regen
   | 'magic_amp'          // amplifies magic damage taken by the target
   | 'gold_gain'
+  | 'status_resist_reduction'
   // ── Modifiers (non-scoring) ──────────────────────────────────────────────
   | 'channelled'
   // ── Spell Uptime (cooldown-based tempo tags) ────────────────────────────

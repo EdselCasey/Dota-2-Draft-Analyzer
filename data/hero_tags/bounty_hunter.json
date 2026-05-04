@@ -3,7 +3,8 @@
     "slow",
     "low_burst",
     "medium_range",
-    "short_cooldown"
+    "short_cooldown",
+    "short_duration"
   ],
   "bounty_hunter_jinada": [
     "attack_modifier",
@@ -14,17 +15,22 @@
     "short_cooldown"
   ],
   "bounty_hunter_shadow_walk": [
-    "stun",
     "damage_reduction",
     "stealth",
-    "medium_cooldown"
+    "medium_cooldown",
+    "medium_duration"
+  ],
+  "bounty_hunter_shadow_walk_stun": [
+    "stun",
+    "short_duration"
   ],
   "bounty_hunter_track": [
     "magic_amp",
     "vision",
     "gold_gain",
     "short_cooldown",
-    "long_range"
+    "long_range",
+    "long_duration"
   ],
   "bounty_hunter_big_game_hunter": [
     "gold_gain",

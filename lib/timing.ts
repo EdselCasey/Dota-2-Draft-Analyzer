@@ -105,6 +105,7 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   mana_regen:        -0.3,
   global:            0.6,  // global presence becomes more impactful late
   gold_gain:          -0.3,
+  status_resist_reduction:      0.4,
 
   // Spell Uptime
   passive:           -0.6,  // always on = dominates early

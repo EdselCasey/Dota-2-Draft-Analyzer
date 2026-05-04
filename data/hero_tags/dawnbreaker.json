@@ -1,21 +1,29 @@
 {
   "dawnbreaker_starbreaker": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
-    "medium_burst"
+    "low_burst",
+    "short_cooldown",
+    "short_duration",
+    "short_range"
   ],
   "dawnbreaker_celestial_hammer": [
     "medium_aoe",
-    "medium_burst",
+    "low_burst",
+    "low_sustained",
     "slow",
-    "medium_sustained",
     "dash",
-    "escape"
+    "escape",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "dawnbreaker_luminosity": [
     "attack_modifier",
     "attack_damage_boost",
-    "medium_heal"
+    "medium_heal",
+    "passive",
+    "large_aoe"
   ],
   "dawnbreaker_solar_guardian": [
     "medium_aoe",
@@ -23,9 +31,13 @@
     "stun",
     "medium_heal",
     "global",
-    "teleport"
+    "teleport",
+    "medium_sustained",
+    "long_cooldown",
+    "short_duration"
   ],
   "dawnbreaker_break_of_dawn": [
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive"
   ]
 }

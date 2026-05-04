@@ -2,23 +2,33 @@
   "crystal_maiden_crystal_nova": [
     "medium_aoe",
     "slow",
-    "medium_burst"
+    "low_burst",
+    "short_cooldown",
+    "short_duration",
+    "medium_range"
   ],
   "crystal_maiden_frostbite": [
     "root",
-    "medium_sustained",
-    "slow"
+    "low_sustained",
+    "short_cooldown",
+    "medium_range",
+    "short_duration"
   ],
-  "crystal_maiden_brilliance_aura": [
+  "crystal_maiden_arcane_aura": [
     "global",
-    "mana_regen"
+    "mana_regen",
+    "passive"
   ],
   "crystal_maiden_freezing_field": [
-    "medium_aoe",
+    "large_aoe",
     "channelled",
-    "slow"
+    "slow",
+    "high_sustained",
+    "long_cooldown",
+    "short_duration"
   ],
   "crystal_maiden_glacial_guard": [
-    "shield"
+    "shield",
+    "passive"
   ]
 }

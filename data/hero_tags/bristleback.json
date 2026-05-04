@@ -1,20 +1,33 @@
 {
+  "bristleback_prickly": [
+    "magic_amp",
+    "status_resistance_reduction",
+    "passive"
+  ],
   "bristleback_viscous_nasal_goo": [
     "slow",
-    "armor_reduction"
+    "armor_reduction",
+    "medium_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "bristleback_quill_spray": [
     "medium_aoe",
-    "medium_burst",
-    "magic_amp"
+    "low_burst",
+    "magic_amp",
+    "short_cooldown",
+    "short_duration"
   ],
   "bristleback_bristleback": [
     "damage_reduction",
     "medium_aoe",
-    "medium_burst"
+    "low_burst",
+    "passive",
+    "short_duration"
   ],
   "bristleback_warpath": [
     "attack_damage_boost",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "medium_duration"
   ]
 }

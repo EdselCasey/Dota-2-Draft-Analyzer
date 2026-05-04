@@ -198,17 +198,17 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
 
   // ── Defense / Survivability ───────────────────────────────────────────────
   damage_reduction: [
-    { dimension: 'defense',  weight: 2.5 },
-    { dimension: 'defensive_utility', weight: 2.2 },
+    { dimension: 'defense',  weight: 1.5 },
+    { dimension: 'defensive_utility', weight: 2.0 },
   ],
   armor_gain: [
-    { dimension: 'defense',  weight: 2.0 },
+    { dimension: 'defense',  weight: 1.5 },
   ],
   save: [
     { dimension: 'defensive_utility', weight: 2.5 },
   ],
   hp_growth: [
-    { dimension: 'defense',           weight: 3.0 },
+    { dimension: 'defense',           weight: 1.5 },
   ],
 
   // ── Sustain (tiered) ────────────────────────────────────────────────────────
@@ -237,6 +237,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   shield: [
     { dimension: 'defensive_utility', weight: 3.0 },
+    { dimension: 'defense', weight: 1.7 }
   ],
   lifesteal: [
     { dimension: 'sustain',           weight: 2.0 },
@@ -306,7 +307,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'push',             weight: 1.3 },
   ],
   attack_modifier: [
-    { dimension: 'sustained_damage', weight: 2.5 },
+    { dimension: 'sustained_damage', weight: 2.0 },
     { dimension: 'pickoff',          weight: 0.5 },
   ],
 
@@ -351,7 +352,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   debuff_immunity: [
     { dimension: 'defensive_utility', weight: 3.0 },
-    { dimension: 'defense',           weight: 1.5 },
+    { dimension: 'defense',           weight: 2.5 },
   ],
   vision: [
     { dimension: 'vision_control',    weight: 2.0 },
@@ -365,6 +366,9 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   gold_gain: [
     { dimension: 'resource_support',  weight: 2.0 },
+  ],
+  status_resist_reduction: [
+    { dimension: 'pickoff',  weight: 1.0 },
   ],
 
   // ── Spell Uptime (cooldown-based tempo) ────────────────────────────────────

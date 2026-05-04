@@ -2,26 +2,37 @@
   "brewmaster_thunder_clap": [
     "medium_aoe",
     "slow",
-    "medium_burst"
+    "medium_burst",
+    "short_cooldown",
+    "short_duration"
   ],
   "brewmaster_cinder_brew": [
     "medium_aoe",
     "slow",
-    "medium_burst"
+    "low_burst",
+    "long_range",
+    "medium_sustained",
+    "short_duration"
   ],
   "brewmaster_drunken_brawler": [
     "armor_gain",
     "movement_speed_boost",
     "damage_reduction",
     "attack_speed_boost",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "short_duration",
+    "short_cooldown"
   ],
   "brewmaster_liquid_courage": [
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "passive"
   ],
   "brewmaster_earth_hurl_boulder": [
     "stun",
-    "medium_burst"
+    "low_burst",
+    "long_cooldown",
+    "short_duration",
+    "medium_range"
   ],
   "brewmaster_earth_spell_immunity": [
     "debuff_immunity"
@@ -31,15 +42,26 @@
   ],
   "brewmaster_storm_dispel_magic": [
     "medium_aoe",
-    "medium_burst",
-    "dispel"
+    "low_burst",
+    "dispel",
+    "short_cooldown",
+    "medium_range"
   ],
   "brewmaster_fire_permanent_immolation": [
-    "medium_aoe",
-    "medium_sustained"
+    "small_aoe",
+    "low_sustained"
   ],
   "brewmaster_cyclone": [
     "stun",
-    "forced_movement"
+    "forced_movement",
+    "short_duration",
+    "short_cooldown",
+    "low_burst",
+    "medium_range"
+  ],
+  "brewmaster_primal_split": [
+    "long_cooldown",
+    "medium_duration",
+    "invulnerability"
   ]
 }

@@ -2,23 +2,40 @@
   "disruptor_thunder_strike": [
     "medium_aoe",
     "slow",
-    "medium_burst"
+    "low_burst",
+    "medium_cooldown",
+    "medium_range",
+    "short_duration"
   ],
   "disruptor_glimpse": [
     "forced_movement",
-    "medium_burst"
+    "low_burst",
+    "long_range",
+    "medium_cooldown",
+    "small_burst",
+    "short_duration"
   ],
   "disruptor_kinetic_field": [
     "medium_aoe",
-    "zone_control"
+    "zone_control",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "disruptor_static_storm": [
     "medium_aoe",
     "silence",
-    "medium_sustained"
+    "medium_sustained",
+    "zone_control",
+    "short_duration",
+    "medium_range",
+    "vision",
+    "long_cooldown"
   ],
   "disruptor_electromagnetic_repulsion": [
     "medium_aoe",
-    "knockback"
+    "knockback",
+    "low_burst",
+    "long_cooldown"
   ]
 }

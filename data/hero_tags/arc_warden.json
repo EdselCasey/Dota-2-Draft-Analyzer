@@ -1,11 +1,4 @@
 {
-  "arc_warden_runic_infusion": [
-    "passive",
-    "hp_growth",
-    "attack_speed_boost",
-    "attack_damage_boost",
-    "armor_gain"
-  ],
   "arc_warden_flux": [
     "slow",
     "medium_sustained",

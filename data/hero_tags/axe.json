@@ -1,23 +1,36 @@
 {
   "axe_berserkers_call": [
-    "medium_aoe",
+    "small_aoe",
     "taunt",
-    "armor_gain"
+    "armor_gain",
+    "short_duration",
+    "short_range",
+    "short_cooldown"
   ],
   "axe_battle_hunger": [
     "slow",
-    "medium_sustained"
+    "low_sustained",
+    "short_duration",
+    "long_range",
+    "short_cooldown"
   ],
   "axe_counter_helix": [
-    "medium_aoe",
-    "medium_burst"
+    "small_aoe",
+    "low_burst",
+    "passive"
   ],
   "axe_culling_blade": [
     "medium_burst",
+    "long_cooldown",
+    "short_range"
+  ],
+  "axe_culling_blade_bonus": [
     "armor_gain",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "short_duration"
   ],
   "axe_one_man_army": [
-    "hp_growth"
+    "hp_growth",
+    "passive"
   ]
 }

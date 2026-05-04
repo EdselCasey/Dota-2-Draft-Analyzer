@@ -2,22 +2,34 @@
   "dark_seer_vacuum": [
     "medium_aoe",
     "forced_movement",
-    "medium_burst"
+    "low_burst",
+    "medium_cooldown",
+    "medium_range"
   ],
   "dark_seer_ion_shell": [
-    "medium_aoe",
-    "root",
-    "medium_sustained"
+    "small_aoe",
+    "medium_sustained",
+    "long_range",
+    "long_duration",
+    "short_cooldown"
   ],
   "dark_seer_surge": [
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "dark_seer_wall_of_replica": [
     "slow",
     "summon_units",
-    "zone_control"
+    "zone_control",
+    "long_cooldown",
+    "medium_duration",
+    "long_range",
+    "large_aoe"
   ],
   "dark_seer_quick_wit": [
-    "attack_speed_boost"
+    "attack_speed_boost",
+    "passive"
   ]
 }

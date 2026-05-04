@@ -1,22 +1,35 @@
 {
   "chen_penitence": [
     "slow",
-    "attack_speed_boost"
+    "attack_speed_boost",
+    "medium_range",
+    "short_duration",
+    "short_cooldown",
+    "low_burst"
   ],
   "chen_divine_favor": [
     "armor_gain",
-    "medium_regen"
+    "low_regen",
+    "large_aoe",
+    "medium_cooldown",
+    "long_range"
   ],
   "chen_holy_persuasion": [
-    "summon_units"
+    "summon_units",
+    "gold_gain",
+    "short_cooldown",
+    "medium_range"
   ],
   "chen_hand_of_god": [
     "global",
-    "medium_heal"
+    "medium_heal",
+    "medium_regen",
+    "short_duration",
+    "long_cooldown"
   ],
   "chen_zealot": [
     "summon_units",
-    "medium_heal",
-    "medium_sustained"
+    "passive",
+    "short_cooldown"
   ]
 }

@@ -1,19 +1,27 @@
 {
   "chaos_knight_chaos_bolt": [
     "medium_burst",
-    "stun"
+    "stun",
+    "short_duration",
+    "medium_range",
+    "short_cooldown"
   ],
   "chaos_knight_reality_rift": [
     "armor_reduction",
-    "forced_movement"
+    "forced_movement",
+    "medium_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "chaos_knight_chaos_strike": [
     "lifesteal",
     "attack_damage_boost",
-    "attack_modifier"
+    "attack_modifier",
+    "passive"
   ],
   "chaos_knight_phantasm": [
     "illusion",
-    "vision"
+    "long_cooldown",
+    "medium_duration"
   ]
 }

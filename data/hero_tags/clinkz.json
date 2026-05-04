@@ -1,24 +1,34 @@
 {
   "clinkz_strafe": [
-    "attack_speed_boost"
+    "attack_speed_boost",
+    "attack_modifier",
+    "short_duration",
+    "short_cooldown"
   ],
   "clinkz_searing_arrows": [
     "attack_modifier",
-    "attack_damage_boost",
+    "low_burst",
     "siege",
-    "armor_reduction"
+    "passive"
   ],
   "clinkz_skeleton_walk": [
     "movement_speed_boost",
     "stealth",
     "escape",
-    "summon_units"
+    "summon_units",
+    "medium_duration",
+    "medium_cooldown"
   ],
   "clinkz_death_pact": [
     "summon_units",
-    "medium_heal"
+    "medium_heal",
+    "medium_range",
+    "medium_cooldown"
   ],
   "clinkz_infernal_shred": [
-    "armor_reduction"
+    "armor_reduction",
+    "passive",
+    "attack_modifier",
+    "short_duration"
   ]
 }

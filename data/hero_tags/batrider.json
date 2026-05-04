@@ -1,27 +1,45 @@
 {
   "batrider_sticky_napalm": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
-    "magic_amp"
+    "magic_amp",
+    "medium_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "batrider_flamebreak": [
     "medium_aoe",
     "slow",
-    "knockback"
+    "long_range",
+    "short_duration",
+    "low_sustained",
+    "low_burst",
+    "medium_cooldown"
+  ],
+  "batrider_flamebreak_knockback": [
+    "knockback",
+    "short_duration"
   ],
   "batrider_firefly": [
-    "medium_aoe",
+    "small_aoe",
     "medium_sustained",
     "aerial",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "medium_duration",
+    "medium_cooldown"
   ],
   "batrider_flaming_lasso": [
     "stun",
     "forced_movement",
-    "medium_sustained"
+    "high_sustained",
+    "low_range",
+    "short_duration",
+    "long_cooldown"
   ],
   "batrider_smoldering_resin": [
-    "medium_sustained",
-    "attack_modifier"
+    "low_sustained",
+    "attack_modifier",
+    "short_duration",
+    "passive"
   ]
 }

@@ -1,20 +1,36 @@
 {
+  "bane_ichor_of_nyctasha": [
+    "passive",
+    "status_resist_reduction"
+  ],
   "bane_enfeeble": [
-    "medium_sustained",
-    "damage_reduction"
+    "low_sustained",
+    "damage_reduction",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "bane_brain_sap": [
-    "medium_burst",
-    "medium_heal"
+    "low_burst",
+    "low_heal",
+    "short_range",
+    "short_cooldown"
   ],
   "bane_fiends_grip": [
     "channelled",
     "medium_sustained",
-    "stun"
+    "stun",
+    "medium_range",
+    "long_cooldown",
+    "medium_duration"
   ],
   "bane_nightmare": [
     "forced_movement",
-    "stun",
-    "save"
+    "sleep",
+    "save",
+    "short_range",
+    "medium_cooldown",
+    "short_duration",
+    "invulnerability"
   ]
 }

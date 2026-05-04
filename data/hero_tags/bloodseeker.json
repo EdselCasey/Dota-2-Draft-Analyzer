@@ -1,24 +1,32 @@
 {
   "bloodseeker_bloodrage": [
     "attack_speed_boost",
-    "attack_modifier",
-    "attack_damage_boost"
+    "medium_cooldown",
+    "medium_duration"
   ],
   "bloodseeker_blood_rite": [
     "medium_aoe",
-    "silence"
+    "long_range",
+    "medium_cooldown",
+    "low_burst"
+  ],
+  "bloodseeker_blood_rite_silence": [
+    "silence",
+    "short_duration"
   ],
   "bloodseeker_thirst": [
     "movement_speed_boost",
     "global"
   ],
   "bloodseeker_rupture": [
-    "knockback",
     "medium_burst",
-    "medium_sustained"
+    "medium_sustained",
+    "medium_range",
+    "medium_cooldown",
+    "medium_duration"
   ],
   "bloodseeker_sanguivore": [
     "medium_heal",
-    "lifesteal"
+    "passive"
   ]
 }

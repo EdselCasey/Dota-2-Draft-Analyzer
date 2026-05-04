@@ -1,23 +1,33 @@
 {
   "centaur_hoof_stomp": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
-    "medium_burst"
+    "medium_burst",
+    "short_duration",
+    "short_cooldown",
+    "short_range"
   ],
   "centaur_double_edge": [
-    "medium_aoe",
-    "medium_burst"
+    "small_aoe",
+    "medium_burst",
+    "short_cooldown",
+    "short_range"
   ],
   "centaur_retaliate": [
     "medium_aoe",
-    "medium_burst"
+    "low_burst",
+    "short_range",
+    "passive"
   ],
   "centaur_stampede": [
     "slow",
     "global",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "short_duration",
+    "long_cooldown"
   ],
   "centaur_horsepower": [
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "passive"
   ]
 }

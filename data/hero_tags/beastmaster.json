@@ -1,24 +1,37 @@
 {
   "beastmaster_wild_axes": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
-    "magic_amp"
+    "magic_amp",
+    "medium_cooldown",
+    "medium_duration",
+    "long_range"
   ],
   "beastmaster_summon_razorback": [
     "slow",
-    "summon_units"
+    "summon_units",
+    "long_duration"
   ],
   "beastmaster_summon_raptors": [
     "root",
-    "summon_units"
+    "summon_units",
+    "medium_duration",
+    "medium_cooldown",
+    "medium_aoe",
+    "low_burst"
   ],
   "beastmaster_inner_beast": [
-    "medium_aoe",
-    "attack_speed_boost"
+    "passive",
+    "attack_speed_boost",
+    "large_aoe"
   ],
   "beastmaster_primal_roar": [
     "stun",
     "slow",
-    "medium_burst"
+    "low_burst",
+    "medium_range",
+    "medium_duration",
+    "medium_aoe",
+    "long_cooldown"
   ]
 }

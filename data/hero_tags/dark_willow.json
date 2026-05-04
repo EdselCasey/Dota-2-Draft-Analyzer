@@ -1,32 +1,46 @@
 {
   "dark_willow_bramble_maze": [
-    "medium_aoe",
+    "large_aoe",
     "root",
-    "medium_burst",
-    "zone_control"
+    "low_sustained",
+    "zone_control",
+    "long_range",
+    "short_duration",
+    "medium_cooldown"
   ],
   "dark_willow_bedlam": [
-    "medium_aoe",
-    "medium_burst"
+    "small_aoe",
+    "high_sustained",
+    "short_duration",
+    "medium_cooldown",
+    "short_range"
   ],
   "dark_willow_terrorize": [
     "medium_aoe",
     "forced_movement",
-    "stun"
+    "stun",
+    "long_range",
+    "long_cooldown",
+    "short_duration"
   ],
   "dark_willow_cursed_crown": [
     "medium_aoe",
     "stun",
-    "medium_burst"
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "dark_willow_pixie_dust": [
     "medium_regen",
-    "mana_regen"
+    "mana_regen",
+    "passive"
   ],
   "dark_willow_shadow_realm": [
-    "damage_reduction",
-    "attack_damage_boost",
+    "invulnerability",
     "attack_modifier",
-    "medium_burst"
+    "medium_burst",
+    "medium_cooldown",
+    "short_duration",
+    "long_range"
   ]
 }
