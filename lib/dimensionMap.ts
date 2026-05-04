@@ -348,9 +348,6 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
 
   // ── Modifiers ─────────────────────────────────────────────────────────────
   channelled: [],
-  global: [
-    { dimension: 'map_presence',     weight: 3.0 },
-  ],
 
   // ── Utility ───────────────────────────────────────────────────────────────
   dispel: [
@@ -366,10 +363,6 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   mana_regen: [
     { dimension: 'resource_support',  weight: 3.0 },
-  ],
-  antiheal: [
-    { dimension: 'soft_control',      weight: 1.5 },
-    { dimension: 'pickoff',           weight: 1.5 },
   ],
   magic_amp: [
     { dimension: 'burst_damage',      weight: 1.5 },
