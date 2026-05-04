@@ -101,8 +101,7 @@ export function scoreAbility(
     const weights = TAG_DIMENSION_MAP[tag]
     if (!weights) continue
 
-    // Skip multiplier-only tags (they don't score directly, only boost other tags)
-    if (tag === 'short_range' || tag === 'medium_range') continue
+    // Skip pure multiplier tags (duration, cooldown don't score directly)
     if (DURATION_TAGS.has(tag)) continue
     if (COOLDOWN_TAGS.has(tag)) continue
 
