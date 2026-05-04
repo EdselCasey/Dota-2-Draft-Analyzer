@@ -2,22 +2,31 @@
   "drow_ranger_frost_arrows": [
     "attack_modifier",
     "attack_damage_boost",
-    "slow"
+    "slow",
+    "long_range",
+    "short_duration"
   ],
   "drow_ranger_multishot": [
     "channelled",
-    "medium_burst",
-    "medium_aoe",
-    "slow"
+    "medium_sustained",
+    "large_aoe",
+    "slow",
+    "short_duration",
+    "long_range",
+    "medium_cooldown"
   ],
   "drow_ranger_silence": [
     "medium_aoe",
     "silence",
     "knockback",
-    "vision"
+    "vision",
+    "medium_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "drow_ranger_marksmanship": [
     "attack_damage_boost",
-    "attack_modifier"
+    "attack_modifier",
+    "passive"
   ]
 }

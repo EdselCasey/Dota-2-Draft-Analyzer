@@ -1,27 +1,41 @@
 {
   "treant_natures_guise": [
     "unobstructed",
-    "stealth"
+    "stealth",
+    "movement_speed_boost",
+    "medium_cooldown"
   ],
   "treant_natures_grasp": [
     "slow",
     "zone_control",
     "medium_aoe",
-    "medium_sustained"
+    "medium_sustained",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "treant_leech_seed": [
     "medium_aoe",
     "medium_heal",
-    "medium_sustained"
+    "medium_sustained",
+    "short_range",
+    "root",
+    "short_duration",
+    "short_cooldown"
   ],
   "treant_living_armor": [
     "medium_regen",
-    "armor_gain"
+    "armor_gain",
+    "medium_cooldown",
+    "short_duration",
+    "global"
   ],
   "treant_overgrowth": [
-    "medium_aoe",
+    "large_aoe",
     "disarm",
     "root",
-    "medium_sustained"
+    "medium_sustained",
+    "short_duration",
+    "long_cooldown"
   ]
 }

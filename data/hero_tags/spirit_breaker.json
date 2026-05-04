@@ -1,27 +1,39 @@
 {
   "spirit_breaker_charge_of_darkness": [
-    "medium_aoe",
     "stun",
     "movement_speed_boost",
     "vision",
-    "dash"
+    "dash",
+    "short_duration",
+    "global",
+    "small_aoe",
+    "medium_cooldown"
   ],
   "spirit_breaker_bulldoze": [
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "short_duration",
+    "medium_cooldown"
   ],
   "spirit_breaker_greater_bash": [
     "knockback",
     "attack_modifier",
     "stun",
-    "medium_burst"
+    "medium_burst",
+    "passive",
+    "short_cooldown",
+    "short_duration"
   ],
   "spirit_breaker_nether_strike": [
     "medium_burst",
     "knockback",
     "stun",
-    "blink"
+    "long_range",
+    "long_cooldown",
+    "short_duration"
   ],
   "spirit_breaker_empowering_haste": [
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "passive",
+    "short_duration"
   ]
 }

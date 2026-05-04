@@ -1,23 +1,43 @@
 {
+  "templar_assassin_inner_peace": [
+    "low_regen",
+    "mana_regen",
+    "passive"
+  ],
   "templar_assassin_refraction": [
     "shield",
     "invulnerability",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "medium_duration",
+    "short_cooldown"
   ],
   "templar_assassin_meld": [
     "stealth",
     "armor_reduction",
     "attack_damage_boost",
-    "medium_burst"
+    "medium_burst",
+    "short_cooldown",
+    "short_duration"
   ],
   "templar_assassin_psi_blades": [
     "slow",
-    "attack_modifier"
+    "attack_modifier",
+    "small_aoe",
+    "passive"
   ],
   "templar_assassin_psionic_trap": [
     "medium_aoe",
     "zone_control",
+    "vision",
+    "long_range",
+    "long_duration",
+    "short_cooldown"
+  ],
+  "templar_assassin_psionic_trap_detonation": [
+    "medium_aoe",
     "slow",
-    "vision"
+    "medium_burst",
+    "short_duration",
+    "short_cooldown"
   ]
 }

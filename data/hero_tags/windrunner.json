@@ -2,22 +2,32 @@
   "windrunner_shackleshot": [
     "stun",
     "medium_aoe",
-    "attack_damage_boost"
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "windrunner_powershot": [
     "medium_aoe",
     "slow",
     "vision",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "short_cooldown"
   ],
   "windrunner_windrun": [
     "movement_speed_boost",
-    "damage_reduction"
+    "damage_reduction",
+    "short_duration",
+    "short_cooldown"
   ],
   "windrunner_focusfire": [
-    "attack_speed_boost"
+    "attack_speed_boost",
+    "long_range",
+    "medium_duration",
+    "medium_cooldown"
   ],
   "windrunner_tailwind": [
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "passive"
   ]
 }

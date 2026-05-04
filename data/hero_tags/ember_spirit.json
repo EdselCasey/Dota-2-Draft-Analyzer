@@ -2,28 +2,39 @@
   "ember_spirit_searing_chains": [
     "medium_aoe",
     "root",
-    "medium_burst"
+    "medium_sustained",
+    "short_duration",
+    "short_cooldown"
   ],
   "ember_spirit_sleight_of_fist": [
     "medium_aoe",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "short_cooldown"
   ],
   "ember_spirit_flame_guard": [
     "medium_aoe",
     "shield",
-    "medium_sustained"
+    "low_sustained",
+    "medium_cooldown",
+    "medium_duration"
   ],
   "ember_spirit_immolation": [
     "medium_aoe",
-    "medium_sustained"
+    "low_sustained",
+    "passive"
   ],
   "ember_spirit_fire_remnant": [
+    "medium_aoe",
+    "long_range",
+    "long_duration"
+  ],
+  "ember_spirit_fire_remnant_activate": [
     "medium_aoe",
     "global",
     "dash",
     "escape",
     "medium_burst",
-    "invulnerability",
-    "medium_sustained"
+    "invulnerability"
   ]
 }

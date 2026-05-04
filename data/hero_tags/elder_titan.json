@@ -1,24 +1,40 @@
 {
   "elder_titan_echo_stomp": [
     "medium_aoe",
+    "sleep",
     "stun",
-    "medium_burst"
+    "medium_burst",
+    "short_duration",
+    "short_cooldown"
   ],
   "elder_titan_ancestral_spirit": [
-    "medium_aoe"
+    "medium_aoe",
+    "long_range",
+    "medium_cooldown",
+    "low_burst",
+    "vision",
+    "zone_control",
+    "short_duration",
+    "attack_damage_boost"
   ],
   "elder_titan_natural_order": [
     "medium_aoe",
     "armor_reduction",
-    "magic_amp"
+    "magic_amp",
+    "passive"
   ],
   "elder_titan_earth_splitter": [
     "slow",
-    "medium_burst",
+    "high_burst",
     "vision",
-    "medium_aoe"
+    "medium_aoe",
+    "forced_movement",
+    "long_range",
+    "long_cooldown",
+    "short_duration"
   ],
   "elder_titan_momentum": [
-    "armor_gain"
+    "armor_gain",
+    "passive"
   ]
 }

@@ -1,19 +1,35 @@
 {
+  "earthshaker_slugger": [
+    "low_burst",
+    "large_aoe",
+    "passive"
+  ],
   "earthshaker_fissure": [
     "medium_aoe",
     "stun",
     "medium_burst",
-    "zone_control"
+    "zone_control",
+    "long_range",
+    "medium_duration",
+    "medium_cooldown"
   ],
   "earthshaker_enchant_totem": [
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "short_cooldown",
+    "short_duration",
+    "short_range",
+    "small_aoe"
   ],
   "earthshaker_echo_slam": [
-    "medium_aoe"
+    "medium_aoe",
+    "large_burst",
+    "long_cooldown",
+    "short_range"
   ],
   "earthshaker_aftershock": [
     "stun",
     "medium_aoe",
-    "medium_burst"
+    "low_burst",
+    "pasive"
   ]
 }

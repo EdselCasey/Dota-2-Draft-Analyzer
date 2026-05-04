@@ -47,7 +47,7 @@ export const TAG_CATEGORY: Partial<Record<AbilityTag, string>> = {
   armor_reduction:      'damage',
   attack_damage_boost:  'damage',
   attack_modifier:      'damage',
-  // push
+  // objective pressure
   summon_units:     'push',
   illusion:         'push',
   siege:            'push',
@@ -81,7 +81,7 @@ export const AOE_COMBO_BONUS: Partial<Record<AbilityTag, number>> =
 // ── Main dimension mapping ─────────────────────────────────────────────────
 
 export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
-  // Hard Control (prevents casting + moving + attacking + items)
+  // ── Hard Control ──────────────────────────────────────────────────────────
   stun: [
     { dimension: 'hard_control', weight: 3.0 },
     { dimension: 'pickoff',      weight: 2.0 },
@@ -110,7 +110,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'pickoff',      weight: 2.0 },
   ],
 
-  // Soft Control (partial disable)
+  // ── Soft Control ──────────────────────────────────────────────────────────
   root: [
     { dimension: 'soft_control', weight: 1.5 },
     { dimension: 'pickoff',      weight: 1.5 },
@@ -146,63 +146,72 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   low_burst: [
     { dimension: 'burst_damage', weight: 1.0 },
     { dimension: 'pickoff',      weight: 0.5 },
+    { dimension: 'waveclear',    weight: 0.5 },
   ],
   medium_burst: [
     { dimension: 'burst_damage', weight: 2.0 },
     { dimension: 'pickoff',      weight: 1.5 },
+    { dimension: 'waveclear',    weight: 1.0 },
   ],
   high_burst: [
     { dimension: 'burst_damage', weight: 3.0 },
     { dimension: 'pickoff',      weight: 2.5 },
+    { dimension: 'waveclear',    weight: 1.5 },
   ],
 
   // ── Sustained Damage (tiered) ─────────────────────────────────────────────
   low_sustained: [
-    { dimension: 'sustained_damage', weight: 0.7 },
+    { dimension: 'sustained_damage', weight: 1.0 },
+    { dimension: 'waveclear',        weight: 0.5 },
   ],
   medium_sustained: [
-    { dimension: 'sustained_damage', weight: 1.3 },
+    { dimension: 'sustained_damage', weight: 2.0 },
+    { dimension: 'waveclear',        weight: 1.5 },
   ],
   high_sustained: [
-    { dimension: 'sustained_damage', weight: 2.0 },
+    { dimension: 'sustained_damage', weight: 3.0 },
+    { dimension: 'waveclear',        weight: 2.0 },
   ],
 
   // ── AOE (tiered) ──────────────────────────────────────────────────────────
   small_aoe: [
     { dimension: 'burst_damage',     weight: 0.5 },
-    { dimension: 'push',             weight: 0.5 },
+    { dimension: 'waveclear',        weight: 1.0 },
     { dimension: 'sustained_damage', weight: 0.3 },
   ],
   medium_aoe: [
     { dimension: 'burst_damage',     weight: 1.0 },
-    { dimension: 'push',             weight: 1.5 },
+    { dimension: 'waveclear',        weight: 2.0 },
     { dimension: 'sustained_damage', weight: 0.7 },
   ],
   large_aoe: [
     { dimension: 'burst_damage',     weight: 1.5 },
-    { dimension: 'push',             weight: 2.5 },
+    { dimension: 'waveclear',        weight: 3.0 },
     { dimension: 'sustained_damage', weight: 1.0 },
   ],
 
-  // ── Range (tiered) — range acts as multiplier, no direct dimension weights ──
+  // ── Reach ─────────────────────────────────────────────────────────────────
   short_range: [
-    { dimension: 'pickoff',      weight: 0.0 },
+    { dimension: 'reach',            weight: 0.5 },
   ],
   medium_range: [
-    { dimension: 'pickoff',      weight: 0.0 },
+    { dimension: 'reach',            weight: 1.5 },
   ],
   long_range: [
-    { dimension: 'pickoff',      weight: 0.0 },
-    { dimension: 'map_presence', weight: 0.0 },
+    { dimension: 'reach',            weight: 2.5 },
+  ],
+  global: [
+    { dimension: 'reach',            weight: 3.0 },
+    { dimension: 'map_presence',     weight: 3.0 },
   ],
 
   // ── Defense / Survivability ───────────────────────────────────────────────
   damage_reduction: [
-    { dimension: 'defense',  weight: 1.5 },
+    { dimension: 'defense',           weight: 1.5 },
     { dimension: 'defensive_utility', weight: 2.0 },
   ],
   armor_gain: [
-    { dimension: 'defense',  weight: 1.5 },
+    { dimension: 'defense',           weight: 1.5 },
   ],
   save: [
     { dimension: 'defensive_utility', weight: 2.5 },
@@ -219,12 +228,10 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   medium_heal: [
     { dimension: 'sustain',           weight: 2.0 },
     { dimension: 'defensive_utility', weight: 1.0 },
-    { dimension: 'push',             weight: 0.8 },
   ],
   high_heal: [
     { dimension: 'sustain',           weight: 3.0 },
     { dimension: 'defensive_utility', weight: 1.5 },
-    { dimension: 'push',             weight: 1.2 },
   ],
   low_regen: [
     { dimension: 'sustain',           weight: 0.5 },
@@ -237,7 +244,6 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   shield: [
     { dimension: 'defensive_utility', weight: 3.0 },
-    { dimension: 'defense', weight: 1.7 }
   ],
   lifesteal: [
     { dimension: 'sustain',           weight: 2.0 },
@@ -295,8 +301,9 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
 
   // ── Attack / Right-click ──────────────────────────────────────────────────
   attack_speed_boost: [
-    { dimension: 'sustained_damage', weight: 1.2 },
-    { dimension: 'push',             weight: 1.2 },
+    { dimension: 'sustained_damage', weight: 2.0 },
+    { dimension: 'waveclear',        weight: 1.0 },
+    { dimension: 'objective_pressure', weight: 1.5 },
   ],
   armor_reduction: [
     { dimension: 'sustained_damage', weight: 1.5 },
@@ -304,39 +311,39 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   attack_damage_boost: [
     { dimension: 'sustained_damage', weight: 2.5 },
-    { dimension: 'push',             weight: 1.3 },
+    { dimension: 'waveclear',        weight: 1.0 },
+    { dimension: 'objective_pressure', weight: 2.0 },
   ],
   attack_modifier: [
     { dimension: 'sustained_damage', weight: 2.0 },
     { dimension: 'pickoff',          weight: 0.5 },
   ],
 
-  // ── Push / Objective ──────────────────────────────────────────────────────
+  // ── Objective Pressure ────────────────────────────────────────────────────
   summon_units: [
-    { dimension: 'push',             weight: 2.5 },
-    { dimension: 'sustained_damage', weight: 1.0 },
-    { dimension: 'vision_control',   weight: 1.0 },
-    { dimension: 'map_presence',     weight: 1.0 },
+    { dimension: 'objective_pressure', weight: 2.0 },
+    { dimension: 'vision_control',     weight: 1.0 },
+    { dimension: 'map_presence',       weight: 1.0 },
   ],
   illusion: [
-    { dimension: 'push',             weight: 2.0 },
-    { dimension: 'sustained_damage', weight: 2.5 },
-    { dimension: 'vision_control',   weight: 1.0 },
-    { dimension: 'map_presence',     weight: 1.0 },
+    { dimension: 'objective_pressure', weight: 2.5 },
+    { dimension: 'sustained_damage',   weight: 2.5 },
+    { dimension: 'vision_control',     weight: 1.0 },
+    { dimension: 'map_presence',       weight: 1.0 },
   ],
   siege: [
-    { dimension: 'push',             weight: 3.0 },
+    { dimension: 'objective_pressure', weight: 3.0 },
   ],
   building_damage: [
-    { dimension: 'push',             weight: 2.5 },
+    { dimension: 'objective_pressure', weight: 2.5 },
   ],
   push_structures: [
-    { dimension: 'push',             weight: 2.0 },
-    { dimension: 'map_presence',     weight: 1.0 },
+    { dimension: 'objective_pressure', weight: 2.0 },
+    { dimension: 'map_presence',       weight: 1.0 },
   ],
   zone_control: [
-    { dimension: 'soft_control',     weight: 2.0 },
-    { dimension: 'map_presence',     weight: 1.5 },
+    { dimension: 'soft_control',       weight: 2.0 },
+    { dimension: 'map_presence',       weight: 1.5 },
   ],
 
   // ── Modifiers ─────────────────────────────────────────────────────────────
@@ -360,15 +367,16 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   mana_regen: [
     { dimension: 'resource_support',  weight: 3.0 },
   ],
+  antiheal: [
+    { dimension: 'soft_control',      weight: 1.5 },
+    { dimension: 'pickoff',           weight: 1.5 },
+  ],
   magic_amp: [
     { dimension: 'burst_damage',      weight: 1.5 },
     { dimension: 'pickoff',           weight: 0.5 },
   ],
   gold_gain: [
     { dimension: 'resource_support',  weight: 2.0 },
-  ],
-  status_resist_reduction: [
-    { dimension: 'pickoff',  weight: 1.0 },
   ],
 
   // ── Spell Uptime (cooldown-based tempo) ────────────────────────────────────

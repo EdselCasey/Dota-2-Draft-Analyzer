@@ -2,12 +2,17 @@
   "warlock_fatal_bonds": [
     "medium_aoe",
     "medium_sustained",
-    "magic_amp"
+    "magic_amp",
+    "long_range",
+    "medium_cooldown"
   ],
   "warlock_shadow_word": [
     "medium_sustained",
     "medium_aoe",
-    "medium_regen"
+    "medium_regen",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "warlock_upheaval": [
     "medium_aoe",
@@ -15,25 +20,38 @@
     "slow",
     "zone_control",
     "magic_amp",
-    "medium_sustained"
+    "medium_sustained",
+    "long_range",
+    "medium_cooldown"
   ],
-  "warlock_chaotic_offering": [
-    "medium_aoe",
+  "warlock_chaotic_offering_blast": [
+    "large_aoe",
     "stun",
-    "summon_units"
+    "long_cooldown",
+    "short_duration"
+  ],
+  "warlock_chaotic_offering_golems": [
+    "summon_units",
+    "long_duration"
   ],
   "warlock_golem_flaming_fists": [
-    "medium_sustained"
+    "medium_sustained",
+    "small_aoe",
+    "short_range"
   ],
   "warlock_golem_permanent_immolation": [
-    "medium_aoe",
-    "medium_sustained"
+    "small_aoe",
+    "medium_sustained",
+    "short_range",
+    "passive"
   ],
   "warlock_imp_explode": [
     "medium_aoe",
-    "medium_burst"
+    "low_burst"
   ],
   "warlock_eldritch_summoning": [
-    "summon_units"
+    "summon_units",
+    "passive",
+    "medium_duration"
   ]
 }

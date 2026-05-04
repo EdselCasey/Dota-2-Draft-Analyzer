@@ -2,27 +2,36 @@
   "furion_sprout": [
     "medium_aoe",
     "medium_burst",
-    "medium_heal",
     "vision",
     "save",
-    "root"
+    "root",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "furion_teleportation": [
     "medium_aoe",
     "teleport",
     "escape",
-    "global"
+    "global",
+    "medium_cooldown",
+    "shield",
+    "short_duration"
   ],
   "furion_wrath_of_nature": [
     "medium_burst",
     "global",
-    "medium_aoe"
+    "long_cooldown"
   ],
   "furion_nature's_call": [
     "summon_units",
-    "medium_aoe"
+    "medium_aoe",
+    "long_range",
+    "long_duration",
+    "medium_cooldown"
   ],
   "furion_spirit_of_the_forest": [
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive"
   ]
 }

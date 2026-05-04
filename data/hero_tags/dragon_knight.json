@@ -2,29 +2,37 @@
   "dragon_knight_breathe_fire": [
     "medium_aoe",
     "damage_reduction",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "dragon_knight_dragon_tail": [
     "stun",
-    "medium_burst"
+    "low_burst",
+    "short_duration",
+    "short_range",
+    "short_cooldown",
+    "small_aoe"
   ],
   "dragon_knight_dragon_blood": [
     "armor_gain",
-    "medium_regen"
+    "medium_regen",
+    "passive"
   ],
   "dragon_knight_elder_dragon_form": [
     "attack_damage_boost",
     "movement_speed_boost",
     "attack_modifier",
     "medium_regen",
-    "armor_gain"
-  ],
-  "dragon_knight_forms": [
-    "armor_reduction",
+    "armor_gain",
     "medium_sustained",
-    "medium_aoe",
-    "siege",
-    "slow",
-    "antiheal"
+    "long_cooldown",
+    "medium_duration"
+  ],
+  "dragon_knight_wyrm's_wrath": [
+    "attack_modifier",
+    "passive",
+    "small_aoe"
   ]
 }

@@ -30,25 +30,47 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   banish:            0.4,
   leash:            -0.2,
 
-  // Burst damage (tiered — gradient from early to mid)
+  // Reach
+  short_range:       0.0,
+  medium_range:     -0.2,
+  long_range:       -0.4,
+  global:           -0.6,
+
+  // Waveclear (damage + AOE)
   low_burst:        -1.0,
   medium_burst:     -0.7,
   high_burst:       -0.4,
-
-  // Sustained damage (tiered — gradient from early to mid-late)
   low_sustained:    -0.5,
   medium_sustained: -0.3,
   high_sustained:   -0.1,
-
-  // AOE (tiered — larger AOE = more teamfight-oriented = later)
   small_aoe:        -0.2,
   medium_aoe:        0.2,
   large_aoe:         0.4,
 
-  // Range (tiered — long range dominates early, less decisive late)
-  short_range:       0.0,
-  medium_range:     -0.2,
-  long_range:       -0.4,
+  // Objective Pressure
+  summon_units:      0.2,
+  illusion:          0.3,
+  siege:             0.4,
+  building_damage:   0.3,
+  push_structures:   0.2,
+  zone_control:      0.1,
+
+  // Attack modifiers (right-click scaling)
+  attack_speed_boost: 0.7,
+  armor_reduction:    0.5,
+  attack_damage_boost: 0.6,
+  attack_modifier:    0.5,
+
+  // Duration (no direct timing bias — acts as multiplier)
+  short_duration:     0.0,
+  medium_duration:    0.0,
+  long_duration:      0.0,
+
+  // Cooldown (no direct timing bias — acts as multiplier)
+  passive:           -0.6,
+  short_cooldown:    -0.4,
+  medium_cooldown:    0.1,
+  long_cooldown:      0.5,
 
   magic_amp:        -0.5,
 
@@ -112,6 +134,7 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   short_cooldown:    -0.4,  // frequent rotations = early tempo
   medium_cooldown:    0.1,  // slight late lean
   long_cooldown:      0.5,  // big ult reliance = needs game to reach one decisive fight
+  cooldown_reduction: 0.0
 }
 
 export type TimingLabel =

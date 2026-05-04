@@ -3,26 +3,39 @@
     "slow",
     "zone_control",
     "medium_burst",
-    "medium_aoe"
+    "medium_aoe",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "tusk_snowball": [
     "medium_aoe",
     "stun",
     "medium_burst",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "long_range",
+    "save",
+    "invulnerability",
+    "medium_cooldown"
   ],
   "tusk_tag_team": [
     "medium_aoe",
     "slow",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "medium_cooldown",
+    "short_duration"
   ],
   "tusk_bitter_chill": [
     "medium_aoe",
-    "slow"
+    "slow",
+    "passive"
   ],
   "tusk_walrus_punch": [
-    "stun",
+    "knockup",
     "attack_modifier",
-    "medium_burst"
+    "medium_burst",
+    "short_cooldown",
+    "short_range",
+    "short_duration"
   ]
 }

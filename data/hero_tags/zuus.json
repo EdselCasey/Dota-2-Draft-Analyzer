@@ -2,23 +2,34 @@
   "zuus_heavenly_jump": [
     "slow",
     "dash",
-    "medium_burst"
+    "low_burst",
+    "medium_range",
+    "medium_cooldown",
+    "medium_aoe"
   ],
   "zuus_arc_lightning": [
     "medium_aoe",
-    "medium_burst"
+    "low_burst",
+    "short_cooldown",
+    "long_range"
   ],
   "zuus_lightning_bolt": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
     "medium_burst",
-    "vision"
+    "vision",
+    "short_duration",
+    "short_cooldown",
+    "long_range"
   ],
   "zuus_static_field": [
-    "magic_amp"
+    "magic_amp",
+    "passive"
   ],
   "zuus_thundergods_wrath": [
     "global",
-    "medium_aoe"
+    "high_burst",
+    "long_cooldown",
+    "vision"
   ]
 }

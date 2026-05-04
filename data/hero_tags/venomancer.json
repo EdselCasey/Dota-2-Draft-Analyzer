@@ -2,27 +2,43 @@
   "venomancer_venomous_gale": [
     "medium_aoe",
     "slow",
-    "medium_burst"
+    "low_burst",
+    "medium_sustained",
+    "long_range",
+    "medium_cooldown",
+    "medium_duration"
   ],
   "venomancer_poison_sting": [
     "slow",
     "antiheal",
-    "medium_sustained",
-    "attack_modifier"
+    "low_sustained",
+    "attack_modifier",
+    "passive",
+    "short_duration"
   ],
   "venomancer_noxious_plague": [
     "medium_aoe",
     "slow",
-    "medium_sustained"
+    "medium_sustained",
+    "large_aoe",
+    "medium_burst",
+    "long_cooldown",
+    "short_duration"
   ],
   "venomancer_plague_ward": [
     "summon_units",
     "push",
     "vision",
-    "zone_control"
+    "zone_control",
+    "long_range",
+    "medium_duration",
+    "short_cooldown"
   ],
   "venomancer_snakebite": [
-    "medium_burst",
-    "medium_sustained"
+    "low_burst",
+    "low_sustained",
+    "short_duration",
+    "medium_cooldown",
+    "long_range"
   ]
 }

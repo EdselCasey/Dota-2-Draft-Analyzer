@@ -1,29 +1,40 @@
 {
   "undying_decay": [
     "medium_aoe",
-    "medium_burst",
+    "low_burst",
     "hp_growth",
-    "magic_amp"
+    "magic_amp",
+    "long_range",
+    "short_cooldown",
+    "medium_duration"
   ],
   "undying_soul_rip": [
-    "medium_aoe",
+    "large_aoe",
     "medium_heal",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "short_cooldown"
   ],
   "undying_tombstone": [
-    "medium_aoe",
+    "large_aoe_aoe",
     "summon_units",
     "slow",
-    "medium_sustained",
-    "zone_control"
+    "low_sustained",
+    "zone_control",
+    "medium_duration",
+    "long_cooldown",
+    "medium_range"
   ],
   "undying_flesh_golem": [
     "slow",
     "summon_units",
     "hp_growth",
-    "magic_amp"
+    "magic_amp",
+    "long_cooldown",
+    "medium_duration"
   ],
   "undying_ceaseless_dirge": [
-    "invulnerability"
+    "invulnerability",
+    "long_cooldown"
   ]
 }

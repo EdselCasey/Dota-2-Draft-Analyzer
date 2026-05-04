@@ -29,7 +29,6 @@
   ],
   "chen_zealot": [
     "summon_units",
-    "passive",
-    "short_cooldown"
+    "passive"
   ]
 }

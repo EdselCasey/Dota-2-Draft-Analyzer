@@ -63,7 +63,7 @@ export type AbilityTag =
   | 'unobstructed'    // grants phasing or terrain traversal movement
   | 'knockup'           // launches target into the air (disables + displacement)
   | 'sleep'             // puts target to sleep, wakes on damage
-  // ── Push / Objective ─────────────────────────────────────────────────────
+  // ── Objective Pressure ────────────────────────────────────────────────────
   | 'summon_units'        // creates persistent units
   | 'illusion'            // creates hero illusions
   | 'siege'               // direct bonus vs buildings
@@ -87,6 +87,7 @@ export type AbilityTag =
   | 'short_cooldown'    // 6–15s cooldown
   | 'medium_cooldown'   // 16–40s cooldown
   | 'long_cooldown'     // 60s+ cooldown
+  | 'cooldown_reduction'
 
 export type DraftDimension =
   | 'teamfight'
@@ -97,7 +98,9 @@ export type DraftDimension =
   | 'sustain'
   | 'defense'
   | 'mobility'
-  | 'push'
+  | 'reach'
+  | 'waveclear'
+  | 'objective_pressure'
   | 'pickoff'
   | 'vision_control'
   | 'map_presence'
@@ -114,7 +117,9 @@ export const ALL_DIMENSIONS: DraftDimension[] = [
   'sustain',
   'defense',
   'mobility',
-  'push',
+  'reach',
+  'waveclear',
+  'objective_pressure',
   'pickoff',
   'vision_control',
   'map_presence',

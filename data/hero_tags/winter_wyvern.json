@@ -4,21 +4,33 @@
     "escape",
     "slow",
     "attack_modifier",
-    "medium_sustained"
+    "medium_sustained",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "winter_wyvern_splinter_blast": [
     "medium_aoe",
     "slow",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "winter_wyvern_cold_embrace": [
     "medium_heal",
     "save",
-    "damage_reduction"
+    "long_range",
+    "damage_reduction",
+    "medium_cooldown",
+    "short_duration"
   ],
   "winter_wyvern_winters_curse": [
     "medium_aoe",
     "taunt",
-    "magic_amp"
+    "magic_amp",
+    "long_range",
+    "short_duration",
+    "long_cooldown"
   ]
 }

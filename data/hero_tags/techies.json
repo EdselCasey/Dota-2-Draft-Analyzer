@@ -1,28 +1,42 @@
 {
   "techies_proximity_mines": [
     "medium_aoe",
-    "medium_burst",
+    "high_burst",
     "vision",
     "magic_amp",
-    "zone_control"
+    "zone_control",
+    "medium_range",
+    "long_duration",
+    "short_cooldown"
   ],
   "techies_blast_off!": [
     "medium_aoe",
     "stun",
-    "medium_burst"
+    "high_burst",
+    "short_duration",
+    "medium_cooldown",
+    "long_range"
   ],
   "techies_sticky_bomb": [
     "medium_aoe",
     "slow",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "techies_reactive_tazer": [
     "medium_aoe",
     "disarm",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "long_range",
+    "medium_cooldown",
+    "low_burst"
   ],
   "techies_m.a.d.": [
     "medium_aoe",
-    "medium_burst"
+    "medium_burst",
+    "pasive",
+    "mana_regen"
   ]
 }

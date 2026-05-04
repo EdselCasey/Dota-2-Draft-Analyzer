@@ -1,19 +1,35 @@
 {
   "enchantress_untouchable": [
     "slow",
-    "damage_reduction"
+    "damage_reduction",
+    "passive"
   ],
   "enchantress_enchant": [
     "slow",
-    "summon_units"
+    "short_duration",
+    "long_range"
+  ],
+  "enchantress_enchant_creep": [
+    "long_range",
+    "summon_units",
+    "long_duration",
+    "medium_cooldown"
   ],
   "enchantress_natures_attendants": [
     "medium_aoe",
-    "medium_heal",
-    "medium_regen"
+    "medium_regen",
+    "short_duration",
+    "medium_cooldown"
   ],
   "enchantress_impetus": [
     "attack_modifier",
-    "medium_burst"
+    "medium_burst",
+    "medium_range",
+    "short_cooldown"
+  ],
+  "enchantress_rabble-rouser": [
+    "global",
+    "passive",
+    "attack_damage_boost"
   ]
 }

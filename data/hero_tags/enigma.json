@@ -1,23 +1,36 @@
 {
   "enigma_malefice": [
     "stun",
-    "medium_burst"
+    "low_burst",
+    "short_duration",
+    "medium_cooldown",
+    "medium_range"
   ],
-  "enigma_demonic_conversion": [
-    "summon_units"
+  "enigma_demonic_summoning": [
+    "summon_units",
+    "long_duration",
+    "medium_range",
+    "medium_cooldown"
   ],
   "enigma_midnight_pulse": [
-    "medium_aoe",
-    "medium_sustained"
+    "large_aoe",
+    "medium_sustained",
+    "short_duration",
+    "long_cooldown",
+    "long_range"
   ],
   "enigma_black_hole": [
     "medium_aoe",
     "channelled",
     "forced_movement",
-    "stun"
+    "stun",
+    "short_range",
+    "high_sustained",
+    "long_cooldown"
   ],
   "enigma_event_horizon": [
     "slow",
-    "medium_aoe"
+    "large_aoe",
+    "passive"
   ]
 }

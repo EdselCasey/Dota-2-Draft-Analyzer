@@ -1,30 +1,51 @@
 {
   "void_spirit_aether_remnant": [
-    "medium_burst",
     "vision",
-    "taunt"
+    "zone_control",
+    "medium_duration",
+    "small_aoe",
+    "long_range",
+    "short_cooldown"
+  ],
+  "void_spirit_aether_remnant_damage": [
+    "low_burst"
+  ],
+  "void_spirit_aether_remnant_taunt": [
+    "taunt",
+    "short_range",
+    "short_duration"
   ],
   "void_spirit_dissimilate": [
     "medium_aoe",
     "medium_burst",
     "escape",
     "teleport",
-    "invulnerability"
+    "invulnerability",
+    "short_cooldown",
+    "short_duration",
+    "medium_range"
   ],
   "void_spirit_astral_step": [
     "medium_aoe",
     "slow",
     "medium_burst",
     "dash",
-    "escape"
+    "escape",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "void_spirit_resonant_pulse": [
     "medium_aoe",
     "shield",
-    "medium_burst"
+    "medium_burst",
+    "medium_cooldown",
+    "short_duration",
+    "short_range"
   ],
   "void_spirit_intrinsic_edge": [
     "attack_speed_boost",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive"
   ]
 }

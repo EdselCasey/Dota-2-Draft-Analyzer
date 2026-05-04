@@ -1,29 +1,43 @@
 {
   "earth_spirit_boulder_smash": [
-    "medium_aoe",
+    "small_aoe",
     "forced_movement",
     "slow",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "earth_spirit_rolling_boulder": [
     "stun",
     "dash",
     "escape",
     "invulnerability",
-    "medium_burst"
+    "low_burst",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "earth_spirit_geomagnetic_grip": [
     "medium_aoe",
     "forced_movement",
     "silence",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "earth_spirit_stone_remant": [
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive",
+    "long_range"
   ],
   "earth_spirit_magnetize": [
     "medium_aoe",
     "medium_sustained",
-    "slow"
+    "slow",
+    "long_cooldown",
+    "short_range",
+    "long_duration"
   ]
 }

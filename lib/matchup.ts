@@ -58,6 +58,22 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
     { counters: 'defensive_utility', strength: 0.05 },
   ],
 
+  // ── Reach ─────────────────────────────────────────────────────────────────
+  reach: [
+    { counters: 'mobility',         strength: 0.30 },
+  ],
+
+  // ── Waveclear ─────────────────────────────────────────────────────────────
+  waveclear: [
+    { counters: 'objective_pressure', strength: 0.25 },
+  ],
+
+  // ── Objective Pressure ────────────────────────────────────────────────────
+  objective_pressure: [
+    { counters: 'teamfight',        strength: 0.65 },
+    { counters: 'map_presence',     strength: 0.40 },
+  ],
+
   // ── Burst damage ──────────────────────────────────────────────────────────
   burst_damage: [
     { counters: 'sustain',          strength: 0.30 },
@@ -78,14 +94,8 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
 
   // ── Pickoff ───────────────────────────────────────────────────────────────
   pickoff: [
-    { counters: 'push',             strength: 0.30 },
+    { counters: 'objective_pressure', strength: 0.30 },
     { counters: 'map_presence',     strength: 0.60 },
-  ],
-
-  // ── Push ──────────────────────────────────────────────────────────────────
-  push: [
-    { counters: 'teamfight',        strength: 0.65 },
-    { counters: 'map_presence',     strength: 0.40 },
   ],
 
   // ── Teamfight ─────────────────────────────────────────────────────────────
@@ -93,7 +103,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
     { counters: 'map_presence',     strength: 0.25 },
     { counters: 'burst_damage',     strength: 0.25 },
     { counters: 'sustained_damage', strength: 0.40, requiresExcess: true },  // teamfight must dominate to force carries off
-    { counters: 'push',             strength: 1.0 },
+    { counters: 'objective_pressure', strength: 1.0 },
     { counters: 'mobility',         strength: 0.35 },
   ],
 
@@ -160,14 +170,14 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
     sustained_damage: 'Your hard CC locks down their damage dealers before they can output.',
     burst_damage:     'Your stuns and disables interrupt their burst combos completely.',
     mobility:         'Your hard lockdown catches mobile heroes mid-escape.',
-    push:             'Your hard CC holds the line and picks off pushers.',
+    objective_pressure: 'Your hard CC holds the line and picks off pushers.',
     defensive_utility:'Your stuns go through before their reactive tools can respond.',
   },
   soft_control: {
     sustained_damage: 'Your slows and roots limit their damage dealers\' freedom.',
     burst_damage:     'Your silences and disarms delay their burst timing.',
     mobility:         'Your soft disables slow their rotations and escapes.',
-    push:             'Your soft CC disrupts their push coordination.',
+    objective_pressure: 'Your soft CC disrupts their push coordination.',
     defensive_utility:'Your silences prevent them from casting defensive spells.',
   },
   burst_damage: {
@@ -184,10 +194,17 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
     sustained_damage: 'Your sustain keeps your team alive through extended fights.',
   },
   pickoff: {
-    push:             'You can eliminate isolated pushers before they do structural damage.',
+    objective_pressure: 'You can eliminate isolated pushers before they do structural damage.',
     map_presence:     'You punish heroes that overextend across the map.',
   },
-  push: {
+  reach: {
+    mobility:         'Your range keeps mobile heroes at a distance.',
+    pickoff:          'You can strike from safety before they can close the gap.',
+  },
+  waveclear: {
+    objective_pressure: 'You clear waves faster than they can siege.',
+  },
+  objective_pressure: {
     teamfight:        'You can split push and force them to respond rather than fight.',
     map_presence:     'Your pushing pressure collapses their map control over time.',
   },
@@ -195,7 +212,7 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
     map_presence:     'Your team fights better as a unit, negating their spread map game.',
     burst_damage:     'Your team synergy blunts isolated burst attempts.',
     sustained_damage: 'Your grouped strength overwhelms their damage output in fights.',
-    push:             'You can force a fight and collapse their push attempts.',
+    objective_pressure: 'You can force a fight and collapse their push attempts.',
     mobility:         'Your fight presence denies their divers an easy escape.',
   },
   mobility: {
@@ -226,13 +243,13 @@ const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<Dra
     sustained_damage: 'You lack hard CC to lock down their damage dealers — they output freely.',
     burst_damage:     'Without stuns to interrupt their combos, their burst lands uncontested.',
     mobility:         'Your team can\'t pin down their divers with hard disables.',
-    push:             'You lack reliable stuns to stop their push dead in its tracks.',
+    objective_pressure: 'You lack reliable stuns to stop their push dead in its tracks.',
   },
   soft_control: {
     sustained_damage: 'You lack slows and roots to limit their damage dealers\' movement.',
     burst_damage:     'Without silences or disarms, their burst windows go uncontested.',
     mobility:         'Your soft CC isn\'t enough to catch mobile heroes.',
-    push:             'You can\'t slow their push momentum with your limited soft disables.',
+    objective_pressure: 'You can\'t slow their push momentum with your limited soft disables.',
   },
   burst_damage: {
     sustain:          'You lack the kill pressure to cut through their sustain.',
@@ -248,18 +265,25 @@ const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<Dra
     sustained_damage: 'Without sustain, your team bleeds out under constant pressure.',
   },
   pickoff: {
-    push:             'Your team is vulnerable to getting picked before teamfights start.',
+    objective_pressure: 'Your team is vulnerable to getting picked before teamfights start.',
     map_presence:     'Enemy hunters can patrol and isolate your heroes freely.',
   },
-  push: {
-    teamfight:        'You can\'t hard push objectives — their teamfight foffers formidable resistance.',
+  reach: {
+    mobility:         'Your team can\'t keep mobile heroes at a distance.',
+    pickoff:          'Your short range leaves you exposed to their ranged threats.',
+  },
+  waveclear: {
+    objective_pressure: 'You can\'t clear waves fast enough to stop their siege.',
+  },
+  objective_pressure: {
+    teamfight:        'You can\'t hard push objectives — their teamfight offers formidable resistance.',
     map_presence:     'Your pushing game is too fragile against their wide map control.',
   },
   teamfight: {
     map_presence:     'You struggle to contest their spread, forcing unfavorable fights.',
     burst_damage:     'Their burst can dismantle your team before a fight even begins.',
     sustained_damage: 'Their sustained output keeps grinding your grouped heroes down.',
-    push:             'Their push threats pull you away from fights you\'re suited for.',
+    objective_pressure: 'Their push threats pull you away from fights you\'re suited for.',
     mobility:         'Their dive heroes scatter your formation before you can react.',
   },
   mobility: {

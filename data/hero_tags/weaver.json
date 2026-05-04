@@ -1,28 +1,38 @@
 {
   "weaver_the_swarm": [
     "medium_aoe",
-    "summon_units",
     "armor_reduction",
-    "medium_sustained"
+    "medium_sustained",
+    "long_range",
+    "medium_cooldown",
+    "medium_duration"
   ],
   "weaver_shukuchi": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "movement_speed_boost",
-    "medium_burst",
+    "low_burst",
     "stealth",
-    "escape"
+    "escape",
+    "short_cooldown",
+    "short_duration"
   ],
   "weaver_geminate_attack": [
     "attack_modifier",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "short_cooldown",
+    "medium_range"
   ],
   "weaver_threads_of_fate": [
-    "slow"
+    "slow",
+    "passive",
+    "short_duration"
   ],
   "weaver_time_lapse": [
     "medium_heal",
     "mana_regen",
-    "teleport"
+    "teleport",
+    "escape",
+    "long_cooldown"
   ]
 }

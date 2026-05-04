@@ -2,21 +2,32 @@
   "terrorblade_reflection": [
     "slow",
     "illusion",
-    "vision"
+    "vision",
+    "medium_cooldown",
+    "short_duration",
+    "long_range",
+    "medium_aoe"
   ],
   "terrorblade_conjure_image": [
-    "illusion"
+    "illusion",
+    "medium_duration",
+    "medium_cooldown"
   ],
   "terrorblade_sunder": [
     "medium_burst",
-    "medium_heal"
+    "medium_heal",
+    "long_cooldown",
+    "medium_range"
   ],
   "terrorblade_metamorphosis": [
     "attack_modifier",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "medium_duration",
+    "long_cooldown"
   ],
   "terrorblade_dark_unity": [
-    "medium_aoe",
-    "attack_damage_boost"
+    "large_aoe",
+    "attack_damage_boost",
+    "passive"
   ]
 }

@@ -1,23 +1,42 @@
 {
+  "tinker_uereka!": [
+    "passive",
+    "cooldown_reduction"
+  ],
   "tinker_deploy_turrets": [
     "medium_aoe",
-    "medium_burst",
+    "low_burst",
     "summon_units",
-    "medium_sustained",
-    "knockback"
+    "low_sustained",
+    "knockback",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "tinker_keen_conveyance": [
     "global",
     "channelled",
-    "teleport"
+    "teleport",
+    "medium_cooldown"
   ],
   "tinker_laser": [
     "medium_burst",
-    "damage_reduction"
+    "damage_reduction",
+    "short_duration",
+    "medium_cooldown",
+    "long_range"
   ],
   "tinker_march_of_the_machines": [
-    "medium_aoe",
-    "medium_sustained",
-    "zone_control"
+    "large_aoe",
+    "low_sustained",
+    "zone_control",
+    "short_duration",
+    "short_range",
+    "medium_cooldown"
+  ],
+  "tinker_rearm": [
+    "cooldown_reduction",
+    "short_cooldown",
+    "channelled"
   ]
 }

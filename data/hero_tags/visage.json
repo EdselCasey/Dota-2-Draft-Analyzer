@@ -1,31 +1,48 @@
 {
   "visage_grave_chill": [
-    "medium_aoe",
     "movement_speed_boost",
     "slow",
-    "attack_speed_boost"
+    "attack_speed_boost",
+    "short_duration",
+    "short_cooldown",
+    "long_range"
   ],
   "visage_soul_assumption": [
     "medium_burst",
-    "medium_aoe"
+    "medium_aoe",
+    "long_range",
+    "short_cooldown"
   ],
   "visage_gravekeepers_cloak": [
-    "damage_reduction"
+    "damage_reduction",
+    "passive"
   ],
   "visage_summon_familiars": [
     "summon_units",
-    "vision",
     "siege",
-    "aerial",
-    "armor_reduction"
+    "aerial"
   ],
-  "visage_summon_familiars_stone_form": [
+  "visage_stone_form": [
     "medium_aoe",
-    "stun"
+    "medium_cooldown",
+    "short_duration",
+    "stun",
+    "low_burst",
+    "invulnerability",
+    "medium_heal",
+    "escape"
+  ],
+  "visage_summon_familiars_stone_form_stun": [
+    "medium_aoe",
+    "stun",
+    "short_cooldown",
+    "short_duration"
   ],
   "visage_silent_as_the_grave": [
     "aerial",
     "movement_speed_boost",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "medium_duration",
+    "medium_cooldown"
   ]
 }

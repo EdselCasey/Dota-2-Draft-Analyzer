@@ -1,20 +1,35 @@
 {
+  "witch_doctor_gris_gris": [
+    "gold_gain",
+    "passive"
+  ],
   "witch_doctor_paralyzing_cask": [
-    "medium_burst",
+    "low_burst",
     "stun",
-    "medium_aoe"
+    "medium_aoe",
+    "medium_cooldown",
+    "medium_range",
+    "short_duration"
   ],
   "witch_doctor_voodoo_restoration": [
     "medium_aoe",
-    "medium_heal"
+    "medium_heal",
+    "short_cooldown"
   ],
   "witch_doctor_maledict": [
-    "medium_aoe",
-    "medium_sustained",
-    "medium_burst"
+    "large_aoe",
+    "low_sustained",
+    "medium_burst",
+    "medium_range",
+    "medium_cooldown",
+    "medium_duration"
   ],
   "witch_doctor_death_ward": [
     "channelled",
-    "medium_aoe"
+    "medium_aoe",
+    "high_sustained",
+    "long_cooldown",
+    "medium_range",
+    "short_duration"
   ]
 }

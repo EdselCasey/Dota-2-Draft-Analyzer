@@ -1,22 +1,38 @@
 {
   "faceless_void_backtrack": [
-    "damage_reduction"
+    "damage_reduction",
+    "passive"
+  ],
+  "faceless_void_time_walk": [
+    "dash",
+    "long_range",
+    "short_cooldown",
+    "medium_heal",
+    "escape"
   ],
   "faceless_void_time_lock": [
     "attack_damage_boost",
     "stun",
     "medium_burst",
-    "attack_modifier"
+    "attack_modifier",
+    "short_duration",
+    "passive"
   ],
   "faceless_void_time_dilation": [
-    "medium_aoe",
+    "large_aoe",
     "slow",
-    "medium_sustained"
+    "low_sustained",
+    "short_duration",
+    "medium_cooldown"
   ],
   "faceless_void_chronosphere": [
     "medium_aoe",
     "stun",
     "attack_speed_boost",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "long_cooldown",
+    "short_duration",
+    "medium_range",
+    "zone_control"
   ]
 }

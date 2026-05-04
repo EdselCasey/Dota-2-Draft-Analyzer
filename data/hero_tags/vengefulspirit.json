@@ -1,25 +1,36 @@
 {
   "vengefulspirit_magic_missile": [
     "medium_burst",
-    "stun"
+    "stun",
+    "short_duration",
+    "long_range",
+    "short_cooldown"
   ],
   "vengefulspirit_vengeance_aura": [
-    "medium_aoe",
-    "attack_damage_boost"
+    "large_aoe",
+    "attack_damage_boost",
+    "passive"
   ],
   "vengefulspirit_wave_of_terror": [
     "vision",
     "medium_aoe",
     "armor_reduction",
-    "damage_reduction"
+    "damage_reduction",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "vengefulspirit_nether_swap": [
     "shield",
     "save",
     "forced_movement",
-    "medium_burst"
+    "medium_burst",
+    "medium_cooldown",
+    "long_range",
+    "short_duration"
   ],
   "vengefulspirit_retribution": [
-    "attack_damage_boost"
+    "magic_amp",
+    "passive"
   ]
 }

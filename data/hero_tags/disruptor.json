@@ -23,7 +23,7 @@
     "short_duration"
   ],
   "disruptor_static_storm": [
-    "medium_aoe",
+    "large_aoe",
     "silence",
     "medium_sustained",
     "zone_control",
@@ -36,6 +36,6 @@
     "medium_aoe",
     "knockback",
     "low_burst",
-    "long_cooldown"
+    "short_cooldown"
   ]
 }

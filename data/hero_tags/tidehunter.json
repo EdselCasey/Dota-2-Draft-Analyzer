@@ -2,20 +2,39 @@
   "tidehunter_gush": [
     "medium_burst",
     "slow",
-    "armor_reduction"
+    "armor_reduction",
+    "short_duration",
+    "short_cooldown",
+    "long_range"
   ],
   "tidehunter_kraken_shell": [
     "damage_reduction",
-    "dispel"
+    "dispel",
+    "passive"
+  ],
+  "tidehunter_kraken_shell_active": [
+    "damage_reduction",
+    "short_duration",
+    "medium_cooldown"
   ],
   "tidehunter_anchor_smash": [
     "medium_aoe",
     "damage_reduction",
-    "medium_burst"
+    "medium_burst",
+    "short_cooldown",
+    "short_range",
+    "short_duration"
   ],
   "tidehunter_ravage": [
-    "medium_aoe",
+    "large_aoe",
     "stun",
-    "medium_burst"
+    "medium_burst",
+    "long_cooldown",
+    "short_duration"
+  ],
+  "tidehunter_leviathan's_crush": [
+    "hp_growth",
+    "attack_modifier",
+    "damage_reduction"
   ]
 }

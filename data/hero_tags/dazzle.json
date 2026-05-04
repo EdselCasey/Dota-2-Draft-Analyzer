@@ -1,25 +1,38 @@
 {
+  "dazzle_weave": [
+    "armor_gain",
+    "armor_reduction",
+    "passive"
+  ],
   "dazzle_poison_touch": [
     "medium_aoe",
     "slow",
-    "medium_sustained"
+    "long_range",
+    "low_sustained",
+    "short_duration",
+    "medium_cooldown",
+    "small_aoe"
   ],
   "dazzle_shallow_grave": [
     "save",
-    "invulnerability"
+    "invulnerability",
+    "long_range",
+    "short_duration",
+    "medium_cooldown"
   ],
   "dazzle_shadow_wave": [
     "medium_aoe",
     "armor_gain",
-    "medium_heal",
-    "medium_burst",
-    "armor_reduction"
+    "low_heal",
+    "low_burst",
+    "armor_reduction",
+    "long_range",
+    "short_cooldown"
   ],
   "dazzle_nothl_projection": [
     "invulnerability",
-    "medium_heal"
-  ],
-  "dazzle_nothl_boon": [
-    "shield"
+    "medium_range",
+    "short_duration",
+    "long_cooldown"
   ]
 }

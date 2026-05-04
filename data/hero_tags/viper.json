@@ -3,23 +3,36 @@
     "attack_modifier",
     "slow",
     "medium_sustained",
-    "magic_amp"
+    "magic_amp",
+    "short_cooldown",
+    "short_duration",
+    "long_range"
   ],
   "viper_nethertoxin": [
     "medium_aoe",
     "slow",
-    "medium_sustained"
+    "medium_sustained",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "viper_corrosive_skin": [
-    "medium_sustained",
+    "low_sustained",
     "damage_reduction",
-    "slow"
+    "slow",
+    "short_duration",
+    "passive",
+    "large_aoe"
   ],
   "viper_viper_strike": [
     "slow",
-    "medium_sustained"
+    "high_sustained",
+    "short_duration",
+    "long_cooldown",
+    "long_range"
   ],
   "viper_predator": [
-    "attack_damage_boost"
+    "attack_modifier",
+    "passive"
   ]
 }

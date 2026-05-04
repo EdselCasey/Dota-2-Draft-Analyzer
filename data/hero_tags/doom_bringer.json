@@ -1,21 +1,37 @@
 {
   "doom_bringer_lvl?_pain": [
-    "medium_burst"
+    "medium_burst",
+    "passive",
+    "attack_modifier"
+  ],
+  "doom_bringer_devour": [
+    "gold_gain",
+    "short_range",
+    "long_cooldown",
+    "long_duration"
   ],
   "doom_bringer_scorched_earth": [
-    "medium_aoe",
+    "large_aoe",
     "movement_speed_boost",
     "medium_sustained",
-    "medium_regen"
+    "low_regen",
+    "medium_duration",
+    "medium_cooldown"
   ],
   "doom_bringer_infernal_blade": [
     "stun",
     "attack_modifier",
-    "medium_burst"
+    "medium_sustained",
+    "short_duration",
+    "short_range",
+    "short_cooldown"
   ],
   "doom_bringer_doom": [
     "medium_sustained",
     "antiheal",
-    "silence"
+    "silence",
+    "medium_duration",
+    "medium_range",
+    "long_cooldown"
   ]
 }

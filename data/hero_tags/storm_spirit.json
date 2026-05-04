@@ -1,28 +1,38 @@
 {
-  "storm_spirit_electric_rave": [
-    "medium_aoe",
-    "taunt"
-  ],
   "storm_spirit_static_remnant": [
-    "medium_aoe",
-    "medium_burst"
+    "small_aoe",
+    "medium_burst",
+    "long_range",
+    "vision",
+    "short_cooldown",
+    "short_duration"
   ],
   "storm_spirit_electric_vortex": [
     "forced_movement",
     "medium_aoe",
-    "stun"
+    "stun",
+    "short_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "storm_spirit_overload": [
     "slow",
-    "medium_burst",
+    "low_burst",
     "medium_aoe",
-    "attack_modifier"
+    "attack_modifier",
+    "passive"
   ],
   "storm_spirit_ball_lightning": [
-    "medium_aoe",
+    "small_aoe",
     "dash",
     "escape",
     "medium_burst",
-    "invulnerability"
+    "invulnerability",
+    "global",
+    "short_cooldown"
+  ],
+  "storm_spirit_galvanized": [
+    "mana_regen",
+    "passive"
   ]
 }

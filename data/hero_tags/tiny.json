@@ -2,26 +2,35 @@
   "tiny_avalanche": [
     "medium_aoe",
     "stun",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "tiny_toss": [
     "medium_aoe",
     "medium_burst",
     "forced_movement",
-    "save"
+    "save",
+    "long_range",
+    "short_cooldown"
   ],
   "tiny_tree_grab": [
     "medium_aoe",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "short_cooldown",
+    "medium_duration"
   ],
   "tiny_tree_throw": [
     "medium_burst",
     "medium_aoe",
-    "slow"
+    "slow",
+    "long_range"
   ],
   "tiny_grow": [
     "attack_damage_boost",
     "armor_gain",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "passive"
   ]
 }

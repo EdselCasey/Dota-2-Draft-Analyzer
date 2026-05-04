@@ -1,22 +1,31 @@
 {
   "sven_storm_hammer": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "sven_warcry": [
-    "medium_aoe",
+    "large_aoe",
     "movement_speed_boost",
-    "armor_gain"
+    "armor_gain",
+    "medium_cooldown",
+    "short_duration"
   ],
   "sven_great_cleave": [
     "medium_aoe",
-    "attack_modifier"
+    "attack_modifier",
+    "passive"
   ],
   "sven_gods_strength": [
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "medium_duration",
+    "long_cooldown"
   ],
   "sven_wrath_of_god": [
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive"
   ]
 }

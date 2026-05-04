@@ -5,23 +5,35 @@
     "attack_speed_boost",
     "slow",
     "medium_burst",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive"
   ],
   "troll_warlord_whirling_axes_ranged": [
     "slow",
-    "medium_burst"
+    "long_cooldown",
+    "long_range",
+    "medium_aoe",
+    "low_burst",
+    "short_duration"
   ],
   "troll_warlord_whirling_axes_melee": [
-    "dispel",
-    "medium_aoe"
+    "medium_aoe",
+    "damage_reduction",
+    "short_duration",
+    "low_burst",
+    "long_cooldown",
+    "short_range"
   ],
   "troll_warlord_fervor": [
     "attack_speed_boost",
-    "armor_gain"
+    "armor_gain",
+    "passive"
   ],
   "troll_warlord_battle_trance": [
     "attack_speed_boost",
     "lifesteal",
-    "invulnerability"
+    "invulnerability",
+    "long_cooldown",
+    "short_duration"
   ]
 }

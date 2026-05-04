@@ -1,24 +1,35 @@
 {
+  "wisp_equillibrium": [
+    "magic_amp",
+    "passive"
+  ],
   "wisp_tether": [
-    "medium_aoe",
+    "large_aoe",
     "slow",
-    "medium_heal",
-    "dash",
     "medium_sustained",
-    "mana_regen"
+    "dash",
+    "low_sustained",
+    "mana_regen",
+    "long_range",
+    "short_cooldown"
   ],
   "wisp_spirits": [
     "medium_aoe",
-    "medium_burst"
+    "low_burst",
+    "short_duration",
+    "short_cooldown"
   ],
   "wisp_overcharge": [
-    "armor_gain",
     "medium_regen",
-    "attack_speed_boost"
+    "attack_speed_boost",
+    "medium_cooldown",
+    "short_duration"
   ],
   "wisp_relocate": [
     "teleport",
     "global",
-    "save"
+    "save",
+    "long_cooldown",
+    "short_duration"
   ]
 }
