@@ -92,10 +92,6 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   shield:            -0.5,
   lifesteal:         0.7,  // scales hard with attack damage
 
-  // Duration (multiplier — no direct timing bias)
-  short_duration:     0.0,
-  medium_duration:    0.0,
-  long_duration:      0.0,
 
   // Mobility
   blink:             -0.5,
@@ -105,35 +101,20 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   teleport:          0.4,
 
   // Right-click DPS — all positive (farm/item dependent)
-  attack_speed_boost:  0.6,
-  attack_damage_boost: 0.3,
-  attack_modifier:     0.7,
-  armor_reduction:     0.0,  // physical amp, better as attack damage climbs
 
   // Stealth / aerial
   stealth:          -0.5,  // gank/pickoff window = early-mid
   aerial:            0.2,
   unobstructed:      0.2,
   // Push / objective
-  summon_units:      -0.5,  // exponential with levels and farm
-  illusion:          0.8,
-  siege:             0.4,
-  building_damage:   0.4,
-  push_structures:   0.4,
-  zone_control:      0.2,
 
   // Utility
   vision:           0.5,  
   mana_regen:        -0.3,
-  global:            0.6,  // global presence becomes more impactful late
   gold_gain:          -0.3,
   status_resist_reduction:      0.4,
 
-  // Spell Uptime
-  passive:           -0.6,  // always on = dominates early
-  short_cooldown:    -0.4,  // frequent rotations = early tempo
-  medium_cooldown:    0.1,  // slight late lean
-  long_cooldown:      0.5,  // big ult reliance = needs game to reach one decisive fight
+
   cooldown_reduction: 0.0
 }
 
