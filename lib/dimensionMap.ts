@@ -89,17 +89,21 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   hex: [
     { dimension: 'hard_control', weight: 3.0 },
     { dimension: 'pickoff',      weight: 2.5 },
-    { dimension: 'defensive_utility', weight: 1.0 },
+    { dimension: 'defensive_utility', weight: 1.7 },
   ],
   taunt: [
     { dimension: 'hard_control', weight: 2.0 },
     { dimension: 'pickoff',      weight: 1.0 },
   ],
+  fear: [
+    { dimension: 'hard_control', weight: 1.5 },
+    { dimension: 'pickoff',      weight: 0.7 },
+  ],
   forced_movement: [
     { dimension: 'hard_control', weight: 1.5 },
   ],
   knockback: [
-    { dimension: 'hard_control', weight: 1.5 },
+    { dimension: 'soft_control', weight: 1.5 },
   ],
   knockup: [
     { dimension: 'hard_control', weight: 2.5 },
@@ -118,7 +122,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   silence: [
     { dimension: 'soft_control', weight: 1.0 },
     { dimension: 'pickoff',      weight: 1.5 },
-    { dimension: 'defensive_utility', weight: 1.0 },
+    { dimension: 'defensive_utility', weight: 0.65 },
   ],
   slow: [
     { dimension: 'soft_control', weight: 0.5 },
@@ -126,7 +130,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   disarm: [
     { dimension: 'soft_control', weight: 2.0 },
-    { dimension: 'defensive_utility', weight: 1.0 },
+    { dimension: 'defensive_utility', weight: 0.65 },
   ],
   antiheal: [
     { dimension: 'soft_control', weight: 1.5 },
@@ -134,6 +138,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   banish: [
     { dimension: 'soft_control', weight: 1.5 },
+    { dimension: 'hard_control', weight: 1.0 },
     { dimension: 'pickoff',      weight: 1.0 },
     { dimension: 'defensive_utility', weight: 1.9 },
   ],
@@ -146,17 +151,17 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   low_burst: [
     { dimension: 'burst_damage', weight: 1.0 },
     { dimension: 'pickoff',      weight: 0.5 },
-    { dimension: 'waveclear',    weight: 0.5 },
+    { dimension: 'waveclear',    weight: 0.8 },
   ],
   medium_burst: [
     { dimension: 'burst_damage', weight: 2.0 },
     { dimension: 'pickoff',      weight: 1.5 },
-    { dimension: 'waveclear',    weight: 1.0 },
+    { dimension: 'waveclear',    weight: 1.6 },
   ],
   high_burst: [
     { dimension: 'burst_damage', weight: 3.0 },
     { dimension: 'pickoff',      weight: 2.5 },
-    { dimension: 'waveclear',    weight: 1.5 },
+    { dimension: 'waveclear',    weight: 2.4 },
   ],
 
   // ── Sustained Damage (tiered) ─────────────────────────────────────────────
@@ -254,21 +259,30 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
 
   // ── Duration (multiplier only — no direct dimension weight) ────────────────
-  short_duration: [],
-  medium_duration: [],
-  long_duration: [],
+  short_duration: [
+    { dimension: 'spell_uptime',       weight: 0.7 },
+  ],
+  medium_duration: [
+    { dimension: 'spell_uptime',       weight: 1.4 },
+  ],
+  long_duration: [
+    { dimension: 'spell_uptime',       weight: 2.1 },
+  ],
 
   // ── Mobility ──────────────────────────────────────────────────────────────
   blink: [
     { dimension: 'mobility',         weight: 3.0 },
     { dimension: 'pickoff',          weight: 1.5 },
+    { dimension: 'map_presence',          weight: 1.8 },
   ],
   dash: [
     { dimension: 'mobility',         weight: 2.0 },
     { dimension: 'pickoff',          weight: 0.5 },
+    { dimension: 'map_presence',          weight: 1.5 },
   ],
   movement_speed_boost: [
     { dimension: 'mobility',         weight: 1.0 },
+    { dimension: 'map_presence',          weight: 1.2 },
   ],
   escape: [
     { dimension: 'mobility',         weight: 1.0 },
@@ -284,19 +298,19 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'pickoff',          weight: 2.5 },
     { dimension: 'vision_control',   weight: 1.5 },
     { dimension: 'mobility',         weight: 0.5 },
-    { dimension: 'map_presence',     weight: 1.0 },
+    { dimension: 'map_presence',     weight: 1.7 },
   ],
   aerial: [
     { dimension: 'vision_control',   weight: 2.5 },
     { dimension: 'pickoff',          weight: 1.0 },
     { dimension: 'mobility',         weight: 1.0 },
-    { dimension: 'map_presence',     weight: 1.0 },
+    { dimension: 'map_presence',     weight: 1.7 },
   ],
   unobstructed: [
     { dimension: 'vision_control',   weight: 2.3 },
     { dimension: 'pickoff',          weight: 1.0 },
     { dimension: 'mobility',         weight: 1.0 },
-    { dimension: 'map_presence',     weight: 1.0 },
+    { dimension: 'map_presence',     weight: 1.7 },
   ],
 
   // ── Attack / Right-click ──────────────────────────────────────────────────
@@ -316,6 +330,9 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   attack_modifier: [
     { dimension: 'sustained_damage', weight: 2.0 },
+    { dimension: 'pickoff',          weight: 0.5 },
+  ],
+  mana_burn: [
     { dimension: 'pickoff',          weight: 0.5 },
   ],
 
@@ -343,11 +360,20 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   zone_control: [
     { dimension: 'soft_control',       weight: 2.0 },
-    { dimension: 'map_presence',       weight: 1.5 },
+  ],
+  bouncing_attacks: [
+    { dimension: 'waveclear',       weight: 1.7 },
+    { dimension: 'sustained_damage',       weight: 1.7 },
+    { dimension: 'objective_pressure',       weight: 1.5 },
   ],
 
   // ── Modifiers ─────────────────────────────────────────────────────────────
-  channelled: [],
+  channelled: [
+    { dimension: 'spell_uptime',       weight: 0.5 },
+  ],
+  toggle: [
+    { dimension: 'spell_uptime',       weight: 1.5 },
+  ],
 
   // ── Utility ───────────────────────────────────────────────────────────────
   dispel: [
@@ -360,6 +386,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   vision: [
     { dimension: 'vision_control',    weight: 2.0 },
+    { dimension: 'map_presence',    weight: 2.0 },
   ],
   mana_regen: [
     { dimension: 'resource_support',  weight: 3.0 },
@@ -371,6 +398,9 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   gold_gain: [
     { dimension: 'resource_support',  weight: 2.0 },
   ],
+  xp_gain: [
+    { dimension: 'resource_support',  weight: 2.0 },
+  ],
   status_resist_reduction: [
     { dimension: 'soft_control',      weight: 1.5 },
     { dimension: 'pickoff',           weight: 0.5 },
@@ -378,6 +408,14 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   cooldown_reduction: [
     { dimension: 'spell_uptime',      weight: 2.0 },
     { dimension: 'resource_support',  weight: 1.0 },
+  ],
+  second_life: [
+    { dimension: 'defense',  weight: 1.5 },
+    { dimension: 'objective_pressure',  weight: 2.0 },
+  ],
+  increase_buff_duration: [
+    { dimension: 'resource_support',  weight: 1.5 },
+    { dimension: 'defensive_utility',  weight: 1.5 },
   ],
 
   // ── Spell Uptime (cooldown-based tempo) ────────────────────────────────────

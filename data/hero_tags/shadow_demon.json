@@ -2,23 +2,37 @@
   "shadow_demon_disruption": [
     "summon_units",
     "banish",
-    "save"
+    "save",
+    "long_range",
+    "short_duration",
+    "medium_cooldown"
   ],
   "shadow_demon_shadow_poison": [
     "medium_aoe",
     "vision",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "short_cooldown"
   ],
   "shadow_demon_demonic_purge": [
     "slow",
     "medium_burst",
-    "dispel"
+    "dispel",
+    "long_range",
+    "short_duration",
+    "long_cooldown"
   ],
   "shadow_demon_menace": [
-    "magic_amp"
+    "magic_amp",
+    "passive",
+    "attack_modifier"
   ],
   "shadow_demon_disseminate": [
-    "medium_aoe",
-    "medium_sustained"
+    "large_aoe",
+    "medium_sustained",
+    "long_range",
+    "medium_cooldown",
+    "magic_amp",
+    "short_duration"
   ]
 }

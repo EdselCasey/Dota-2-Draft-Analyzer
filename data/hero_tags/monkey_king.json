@@ -3,31 +3,46 @@
     "stun",
     "medium_burst",
     "medium_aoe",
-    "attack_damage_boost"
+    "attack_modifier", 
+    "long_range",
+    "medium_cooldown", 
+    "short_duration"
   ],
   "monkey_king_mischief": [
     "escape",
-    "stealth"
+    "stealth", 
+    "movement_speed_boost", 
+    "medium_cooldown"
   ],
   "monkey_king_tree_dance": [
     "aerial",
     "escape",
     "dash",
-    "vision"
+    "vision", 
+    "short_cooldown",
+    "long_range"
   ],
   "monkey_king_primal_spring": [
     "medium_aoe",
     "slow",
-    "medium_burst"
+    "medium_burst", 
+    "long_range",
+    "short_duration", 
+    "medium_cooldown"
   ],
   "monkey_king_wukongs_command": [
     "medium_aoe",
     "armor_gain",
     "zone_control",
-    "summon_units"
+    "summon_units", 
+    "medium_sustained",
+    "medium_range", 
+    "medium_duration"
   ],
   "monkey_king_jingu_mastery": [
     "attack_damage_boost",
-    "lifesteal"
+    "lifesteal", 
+    "passive", 
+    "medium_duration"
   ]
 }

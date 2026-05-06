@@ -3,14 +3,19 @@
     "medium_aoe",
     "slow",
     "medium_burst",
-    "forced_movement"
+    "forced_movement",
+    "short_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "marci_unleash": [
     "medium_aoe",
     "slow",
     "attack_speed_boost",
     "movement_speed_boost",
-    "medium_burst"
+    "medium_burst",
+    "medium_duration",
+    "long_cooldown"
   ],
   "marci_rebound": [
     "medium_aoe",
@@ -18,10 +23,17 @@
     "escape",
     "save",
     "stun",
-    "medium_burst"
+    "medium_burst",
+    "medium_range",
+    "medium_cooldown",
+    "movement_speed_boost"
   ],
   "marci_bodyguard": [
     "attack_damage_boost",
-    "lifesteal"
+    "lifesteal",
+    "passive",
+    "medium_range",
+    "medium_cooldown",
+    "short_duration"
   ]
 }

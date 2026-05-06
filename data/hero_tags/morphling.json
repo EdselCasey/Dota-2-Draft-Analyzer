@@ -1,25 +1,37 @@
 {
   "morphling_adaptive_strike_agi": [
-    "medium_burst"
+    "medium_burst",
+    "short_cooldown", 
+    "long_range"
   ],
   "morphling_adaptive_strike_str": [
     "knockback",
-    "stun"
+    "stun", 
+    "long_range", 
+    "short_cooldown", 
+    "short_duration"
   ],
-  "morphling_hybrid": [
+  "morphling_attribute_shift": [
     "hp_growth",
     "attack_damage_boost",
     "attack_speed_boost",
-    "armor_gain"
+    "armor_gain", 
+    "passive",
+    "toggle"
   ],
   "morphling_waveform": [
     "dash",
     "medium_aoe",
-    "attack_modifier",
     "escape",
-    "invulnerability"
+    "invulnerability", 
+    "long_range", 
+    "medium_cooldown", 
+    "medium_burst"
   ],
   "morphling_ebb_and_flow": [
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "attack_modifier",
+    "slow_resistance",
+    "passive"
   ]
 }

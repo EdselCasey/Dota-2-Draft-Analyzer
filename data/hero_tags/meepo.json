@@ -1,21 +1,35 @@
 {
+  "meepo_geomancy": [
+    "passive",
+    "low_regen",
+    "slow",
+    "movement_speed_boost",
+    "short_duration",
+    "attack_modifier"
+  ],
   "meepo_earthbind": [
     "medium_aoe",
-    "root"
+    "root",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "meepo_poof": [
     "medium_aoe",
     "medium_burst",
     "teleport",
     "escape",
-    "global"
+    "global",
+    "short_cooldown"
   ],
   "meepo_ransack": [
     "medium_heal",
     "attack_modifier",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive"
   ],
   "meepo_divided_we_stand": [
-    "summon_units"
+    "summon_units",
+    "passive"
   ]
 }

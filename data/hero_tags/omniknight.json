@@ -2,26 +2,38 @@
   "omniknight_hammer_of_purity": [
     "slow",
     "attack_modifier",
-    "medium_burst"
+    "medium_burst",
+    "short_duration",
+    "short_cooldown",
+    "short_range"
   ],
   "omniknight_purification": [
     "medium_aoe",
     "medium_heal",
-    "medium_burst"
+    "medium_burst",
+    "short_cooldown",
+    "long_range"
   ],
   "omniknight_repel": [
     "damage_reduction",
     "medium_regen",
     "debuff_immunity",
-    "hp_growth"
+    "hp_growth",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "omniknight_degen_aura": [
     "medium_aoe",
     "attack_damage_boost",
-    "slow"
+    "slow", 
+    "passive"
   ],
   "omniknight_guardian_angel": [
     "medium_aoe",
-    "damage_reduction"
+    "damage_reduction",
+    "short_range",
+    "short_duration",
+    "long_cooldown"
   ]
 }

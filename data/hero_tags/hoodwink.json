@@ -1,25 +1,36 @@
 {
   "hoodwink_acorn_shot": [
     "slow",
-    "medium_burst",
-    "medium_aoe"
+    "low_burst",
+    "medium_aoe",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "hoodwink_bushwhack": [
     "medium_aoe",
     "stun",
-    "forced_movement",
-    "medium_sustained"
+    "medium_sustained",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "hoodwink_scurry": [
     "movement_speed_boost",
-    "unobstructed"
+    "unobstructed",
+    "short_duration",
+    "medium_cooldown"
   ],
   "hoodwink_sharpshooter": [
     "slow",
     "vision",
-    "medium_burst"
+    "high_burst",
+    "long_range",
+    "short_duration",
+    "medium_cooldown"
   ],
   "hoodwink_mistwoods_wayfarer": [
-    "damage_reduction"
+    "damage_reduction",
+    "passive"
   ]
 }

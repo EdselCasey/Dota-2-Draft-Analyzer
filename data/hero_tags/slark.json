@@ -1,30 +1,42 @@
 {
   "slark_dark_pact": [
     "medium_aoe",
-    "medium_sustained",
-    "dispel"
+    "medium_burst",
+    "dispel",
+    "short_duration",
+    "short_cooldown",
+    "short_range"
   ],
   "slark_pounce": [
     "dash",
     "escape",
-    "leash"
+    "leash",
+    "short_duration",
+    "medium_cooldown",
+    "long_range"
   ],
   "slark_shadow_dance": [
     "medium_regen",
     "movement_speed_boost",
     "escape",
     "damage_reduction",
-    "stealth"
+    "stealth",
+    "medium_cooldown",
+    "short_duration"
   ],
   "slark_saltwater_shiv": [
     "attack_modifier",
     "medium_regen",
     "slow",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "short_cooldown",
+    "short_range",
+    "short_duration"
   ],
   "slark_essence_shift": [
     "attack_modifier",
     "attack_damage_boost",
-    "attack_speed_boost"
+    "attack_speed_boost",
+    "passive"
   ]
 }

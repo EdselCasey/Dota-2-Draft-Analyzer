@@ -1,19 +1,28 @@
 {
   "rubick_telekinesis": [
-    "stun",
-    "forced_movement"
+    "forced_movement",
+    "short_duration",
+    "medium_cooldown",
+    "medium_range",
+    "medium_aoe"
   ],
   "rubick_fade_bolt": [
     "medium_aoe",
     "medium_burst",
-    "damage_reduction"
-  ],
-  "rubick_might_and_magus": [
-    "attack_damage_boost",
-    "damage_resistance",
-    "magic_amp"
+    "damage_reduction",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "rubick_arcane_supremacy": [
-    "magic_amp"
+    "magic_amp",
+    "medium_range",
+    "passive"
+  ],
+  "rubick_curiosity": [
+    "attack_damage_boost",
+    "passive",
+    "magic_amp",
+    "status_resist_reduction"
   ]
 }

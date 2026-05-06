@@ -1,15 +1,19 @@
 {
   "spectre_spectral_dagger": [
     "medium_aoe",
-    "medium_burst",
+    "low_burst",
     "vision",
     "aerial",
-    "slow"
+    "slow",
+    "short_duration",
+    "long_range",
+    "medium_cooldown"
   ],
   "spectre_dispersion": [
     "medium_aoe",
     "medium_sustained",
-    "damage_reduction"
+    "damage_reduction",
+    "passive"
   ],
   "spectre_haunt": [
     "slow",
@@ -17,15 +21,16 @@
     "illusion",
     "teleport",
     "global",
-    "escape"
+    "escape",
+    "vision",
+    "long_cooldown"
   ],
   "spectre_shadow_step": [
     "teleport",
     "illusion",
-    "escape"
-  ],
-  "spectre_spectral": [
-    "movement_speed_boost"
+    "escape",
+    "long_range",
+    "medium_cooldown"
   ],
   "spectre_desolate": [
     "attack_damage_boost",

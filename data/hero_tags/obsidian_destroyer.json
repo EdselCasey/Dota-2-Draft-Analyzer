@@ -1,20 +1,34 @@
 {
   "obsidian_destroyer_arcane_orb": [
     "attack_modifier",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "short_cooldown",
+    "medium_range",
+    "medium_burst"
   ],
   "obsidian_destroyer_astral_imprisonment": [
     "banish",
     "save",
-    "medium_burst"
+    "medium_burst",
+    "mana_burn",
+    "mana_regen",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "obsidian_destroyer_sanity_eclipse": [
-    "medium_aoe"
+    "medium_aoe",
+    "long_range",
+    "long_cooldown",
+    "high_burst"
   ],
   "obsidian_destroyer_essence_flux": [
-    "mana_regen"
+    "mana_regen",
+    "passive"
   ],
   "obsidian_destroyer_objurgation": [
-    "shield"
+    "shield",
+    "medium_cooldown",
+    "short_duration"
   ]
 }

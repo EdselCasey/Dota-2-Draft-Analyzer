@@ -1,25 +1,37 @@
 {
-  "mars_spear": [
+  "mars_spear_of_mars": [
     "stun",
     "forced_movement",
     "medium_burst",
-    "vision"
+    "vision",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "mars_gods_rebuke": [
     "medium_aoe",
     "slow",
     "knockback",
-    "attack_damage_boost"
+    "medium_burst",
+    "short_duration",
+    "short_range",
+    "short_cooldown"
   ],
   "mars_dauntless": [
-    "medium_regen"
+    "medium_regen",
+    "passive"
   ],
   "mars_bulwark": [
-    "damage_reduction"
+    "damage_reduction",
+    "passive",
+    "short_cooldown"
   ],
   "mars_arena_of_blood": [
     "medium_aoe",
     "zone_control",
-    "vision"
+    "vision",
+    "medium_range",
+    "long_cooldown",
+    "short_duration"
   ]
 }

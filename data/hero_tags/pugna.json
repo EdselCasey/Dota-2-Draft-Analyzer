@@ -2,23 +2,38 @@
   "pugna_nether_blast": [
     "medium_aoe",
     "siege",
-    "medium_burst"
+    "medium_burst",
+    "short_cooldown",
+    "long_range"
   ],
   "pugna_decrepify": [
     "save",
     "magic_amp",
     "slow",
     "damage_reduction",
-    "medium_heal"
+    "medium_heal",
+    "short_cooldown",
+    "short_duration",
+    "long_range"
   ],
   "pugna_nether_ward": [
-    "medium_aoe",
-    "zone_control"
+    "large_aoe",
+    "zone_control",
+    "medium_burst",
+    "medium_cooldown",
+    "medium_duration"
   ],
   "pugna_life_drain": [
     "channelled",
-    "medium_heal",
-    "medium_sustained",
-    "save"
+    "high_regen",
+    "high_sustained",
+    "save",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
+  ],
+  "pugna_oblivion_savant": [
+    "magic_amp",
+    "passive"
   ]
 }

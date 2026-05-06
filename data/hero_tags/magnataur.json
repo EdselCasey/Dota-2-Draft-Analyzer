@@ -1,23 +1,39 @@
 {
+  "magnataur_solid_core": [
+    "slow_resistance",
+    "passive"
+  ],
   "magnataur_shockwave": [
     "slow",
     "medium_burst",
-    "forced_movement"
+    "forced_movement",
+    "long_range",
+    "short_cooldown",
+    "small_aoe",
+    "short_duration"
   ],
   "magnataur_empower": [
     "attack_damage_boost",
-    "medium_aoe"
+    "medium_aoe",
+    "long_range",
+    "short_cooldown",
+    "medium_duration"
   ],
   "magnataur_skewer": [
     "medium_aoe",
     "forced_movement",
     "dash",
-    "escape"
+    "escape",
+    "long_range",
+    "short_duration",
+    "medium_cooldown"
   ],
   "magnataur_reverse_polarity": [
     "medium_aoe",
     "stun",
     "forced_movement",
-    "medium_burst"
+    "medium_burst",
+    "long_cooldown",
+    "short_duration"
   ]
 }

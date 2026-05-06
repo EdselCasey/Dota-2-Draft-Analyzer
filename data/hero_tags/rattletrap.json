@@ -1,27 +1,42 @@
 {
   "rattletrap_battery_assault": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
-    "medium_sustained"
+    "medium_sustained",
+    "short_duration",
+    "medium_cooldown",
+    "short_range"
   ],
   "rattletrap_power_cogs": [
     "medium_aoe",
     "medium_burst",
     "zone_control",
-    "knockback"
+    "knockback",
+    "mana_burn",
+    "short_duration",
+    "short_range",
+    "medium_cooldown"
   ],
   "rattletrap_rocket_flare": [
-    "medium_aoe",
+    "large_aoe",
     "slow",
     "vision",
-    "medium_burst"
+    "low_burst",
+    "global",
+    "medium_cooldown",
+    "short_duration"
   ],
   "rattletrap_hookshot": [
     "stun",
     "shield",
-    "dash"
+    "dash",
+    "long_range",
+    "small_aoe",
+    "low_burst",
+    "medium_cooldown"
   ],
   "rattletrap_armor_power": [
-    "armor_gain"
+    "armor_gain",
+    "passive"
   ]
 }

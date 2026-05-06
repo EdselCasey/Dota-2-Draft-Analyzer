@@ -1,28 +1,41 @@
 {
-  "mirana_arrow": [
+  "mirana_sacred_arrow": [
     "vision",
     "stun",
-    "medium_burst"
+    "medium_burst", 
+    "long_range",
+    "short_duration",
+    "medium_cooldown"
   ],
   "mirana_moonlight_shadow": [
     "movement_speed_boost",
+    "magic_amp",
     "stealth",
     "global",
     "save",
-    "escape"
+    "escape", 
+    "long_cooldown"
   ],
   "mirana_leap": [
     "root",
     "dash",
     "attack_speed_boost",
-    "movement_speed_boost"
+    "movement_speed_boost", 
+    "long_range",
+    "escape",
+    "medium_cooldown", 
+    "short_duration"
   ],
-  "mirana_starfall": [
+  "mirana_starstorm": [
     "medium_aoe",
-    "medium_burst"
+    "medium_burst",
+    "short_range",
+    "short_cooldown"
   ],
   "mirana_celestial_quiver": [
     "attack_modifier",
-    "medium_burst"
+    "attack_damage_boost",
+    "long_range",
+    "short_cooldown"
   ]
 }

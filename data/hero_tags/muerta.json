@@ -1,25 +1,38 @@
 {
+  "muerta_supernatural": [
+    "magic_amp",
+    "passive"
+  ],
   "muerta_dead_shot": [
     "slow",
-    "forced_movement",
+    "fear",
     "medium_burst",
-    "medium_aoe"
+    "medium_aoe",
+    "short_cooldown",
+    "short_duration",
+    "long_range"
   ],
   "muerta_the_calling": [
     "medium_aoe",
     "silence",
     "slow",
     "medium_sustained",
-    "zone_control"
+    "zone_control",
+    "medium_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "muerta_gun_slinger": [
     "attack_damage_boost",
     "attack_modifier",
-    "medium_aoe"
+    "large_aoe",
+    "passive"
   ],
   "muerta_pierce_the_veil": [
     "damage_reduction",
     "attack_damage_boost",
-    "attack_modifier"
+    "attack_modifier",
+    "long_cooldown",
+    "short_duration"
   ]
 }

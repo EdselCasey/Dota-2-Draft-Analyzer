@@ -9,13 +9,13 @@
   "dark_seer_ion_shell": [
     "small_aoe",
     "medium_sustained",
-    "long_range",
+    "medium_range",
     "long_duration",
     "short_cooldown"
   ],
   "dark_seer_surge": [
     "movement_speed_boost",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "short_duration"
   ],
@@ -25,8 +25,8 @@
     "zone_control",
     "long_cooldown",
     "medium_duration",
-    "long_range",
-    "large_aoe"
+    "short_range",
+    "medium_aoe"
   ],
   "dark_seer_quick_wit": [
     "attack_speed_boost",

@@ -2,28 +2,42 @@
   "keeper_of_the_light_illuminate": [
     "medium_aoe",
     "vision",
-    "medium_burst",
-    "medium_heal"
+    "high_burst",
+    "medium_heal",
+    "long_range",
+    "short_cooldown"
   ],
   "keeper_of_the_light_chakra_magic": [
-    "mana_regen"
+    "mana_regen",
+    "long_range",
+    "short_cooldown",
+    "cooldown_reduction"
   ],
   "keeper_of_the_light_solar_bind": [
     "magic_amp",
-    "slow"
+    "slow",
+    "short_duration",
+    "short_cooldown",
+    "long_range",
+    ""
   ],
-  "keeper_of_the_light_recall": [
+  "keeper_of_the_light_bright_speed": [
     "movement_speed_boost",
-    "teleport",
-    "save",
-    "global"
+    "passive"
   ],
   "keeper_of_the_light_blinding_light": [
     "medium_aoe",
     "knockback",
-    "medium_burst"
+    "damage_reduction",
+    "medium_burst",
+    "medium_cooldown",
+    "short_duration",
+    "medium_range"
   ],
   "keeper_of_the_light_spirit_form": [
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "medium_range",
+    "medium_duration",
+    "long_cooldown"
   ]
 }

@@ -2,22 +2,37 @@
   "phantom_lancer_spirit_lance": [
     "medium_burst",
     "illusion",
-    "slow"
+    "slow",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "phantom_lancer_doppelganger": [
     "illusion",
-    "blink"
+    "blink", 
+    "escape",
+    "invulnerable",
+    "medium_cooldown",
+    "medium_range",
+    "short_duration"
   ],
   "phantom_lancer_juxtapose": [
     "illusion",
-    "attack_modifier"
+    "attack_modifier",
+    "passive"
   ],
   "phantom_lancer_phantom_rush": [
     "dash",
     "movement_speed_boost",
-    "damage_reduction"
+    "damage_reduction",
+    "passive",
+    "short_cooldown",
+    "short_duration",
+    "long_range"
   ],
   "phantom_lancer_illusory_armaments": [
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "short_duration",
+    "passive"
   ]
 }

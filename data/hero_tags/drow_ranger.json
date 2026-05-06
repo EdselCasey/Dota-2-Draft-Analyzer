@@ -4,7 +4,8 @@
     "attack_damage_boost",
     "slow",
     "long_range",
-    "short_duration"
+    "short_duration",
+    "toggle"
   ],
   "drow_ranger_multishot": [
     "channelled",

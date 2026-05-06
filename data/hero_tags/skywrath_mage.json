@@ -1,20 +1,33 @@
 {
   "skywrath_mage_arcane_bolt": [
-    "medium_burst"
+    "low_burst",
+    "long_range",
+    "short_cooldown"
   ],
   "skywrath_mage_concussive_shot": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "medium_burst",
-    "vision"
+    "vision",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "skywrath_mage_mystic_flare": [
-    "medium_aoe"
+    "small_aoe",
+    "long_range",
+    "high_burst",
+    "long_cooldown"
   ],
   "skywrath_mage_shield_of_the_scion": [
-    "shield"
+    "shield",
+    "passive"
   ],
-  "skywrath_mage_ruin_and_restoration": [
-    "lifesteal"
+  "skywrath_mage_ancient_seal": [
+    "silence",
+    "magic_amp",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ]
 }

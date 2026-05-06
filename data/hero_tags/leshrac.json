@@ -1,20 +1,35 @@
 {
+  "leshrac_defilement": [
+    "large_aoe",
+    "passive"
+  ],
   "leshrac_split_earth": [
     "medium_aoe",
     "stun",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "leshrac_diabolic_edict": [
     "medium_aoe",
-    "medium_sustained"
+    "high_sustained",
+    "short_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "leshrac_lightning_storm": [
     "medium_aoe",
     "slow",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "leshrac_pulse_nova": [
     "medium_aoe",
-    "medium_sustained"
+    "high_sustained",
+    "toggle",
+    "short_range"
   ]
 }

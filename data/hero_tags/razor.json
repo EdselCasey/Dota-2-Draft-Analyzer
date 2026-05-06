@@ -1,23 +1,35 @@
 {
   "razor_plasma_field": [
-    "medium_aoe",
+    "large_aoe",
     "slow",
-    "medium_burst"
+    "medium_burst",
+    "short_cooldown",
+    "short_duration"
   ],
   "razor_static_link": [
-    "damage_reduction"
+    "damage_reduction",
+    "medium_duration",
+    "attack_damage_boost",
+    "medium_range",
+    "medium_cooldown"
   ],
   "razor_storm_surge": [
-    "medium_aoe",
+    "large_aoe",
     "slow",
-    "medium_burst"
+    "low_burst",
+    "passive",
+    "global",
+    "short_duration"
   ],
   "razor_eye_of_the_storm": [
     "medium_aoe",
     "medium_sustained",
-    "armor_reduction"
+    "armor_reduction",
+    "medium_duration",
+    "long_cooldown"
   ],
   "razor_unstable_current": [
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "passive"
   ]
 }

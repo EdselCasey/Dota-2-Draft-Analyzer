@@ -2,26 +2,35 @@
   "necrolyte_death_pulse": [
     "medium_aoe",
     "medium_heal",
-    "medium_burst"
+    "medium_burst",
+    "short_cooldown",
+    "short_range"
   ],
   "necrolyte_heartstopper_aura": [
-    "medium_aoe",
-    "medium_sustained"
+    "large_aoe",
+    "medium_sustained",
+    "passive"
   ],
   "necrolyte_sadist": [
-    "medium_heal",
     "medium_regen",
-    "mana_regen"
+    "mana_regen",
+    "passive"
   ],
   "necrolyte_ghost_shroud": [
     "slow",
     "damage_reduction",
-    "medium_heal"
+    "medium_heal",
+    "medium_cooldown",
+    "short_duration",
+    "large_aoe"
   ],
   "necrolyte_reapers_scythe": [
     "stun",
-    "medium_burst",
+    "high_burst",
     "medium_regen",
-    "mana_regen"
+    "mana_regen",
+    "long_range",
+    "short_duration",
+    "long_cooldown"
   ]
 }

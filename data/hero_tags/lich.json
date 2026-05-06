@@ -1,21 +1,41 @@
 {
-  "lich_frost_nova": [
+  "lich_sacrifice": [
+    "mana_regen",
+    "xp_gain",
+    "passive"
+  ],
+  "lich_frost_blast": [
     "medium_aoe",
-    "slow"
+    "slow",
+    "medium_burst",
+    "short_duration",
+    "short_cooldown",
+    "medium_range"
   ],
   "lich_sinister_gaze": [
-    "forced_movement"
+    "forced_movement",
+    "long_range",
+    "medium_cooldown",
+    "mana_regen",
+    "short_duration"
   ],
   "lich_frost_shield": [
     "medium_aoe",
     "slow",
     "damage_reduction",
-    "medium_sustained"
+    "medium_sustained",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "lich_chain_frost": [
     "medium_aoe",
     "slow",
     "vision",
-    "magic_amp"
+    "magic_amp",
+    "long_range",
+    "long_cooldown",
+    "high_sustained",
+    "medium_duration"
   ]
 }

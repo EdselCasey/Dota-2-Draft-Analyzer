@@ -1,26 +1,42 @@
 {
+  "puck_puckish": [
+    "low_heal",
+    "mana_regen",
+    "passive"
+  ],
   "puck_illusory_orb": [
     "medium_aoe",
     "vision",
     "medium_burst",
     "teleport",
-    "escape"
+    "escape",
+    "short_cooldown",
+    "short_duration",
+    "long_range"
   ],
   "puck_waning_rift": [
     "medium_aoe",
     "silence",
     "blink",
     "escape",
-    "medium_burst"
+    "medium_burst",
+    "medium_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "puck_phase_shift": [
     "escape",
-    "invulnerability"
+    "invulnerability",
+    "short_duration",
+    "short_cooldown"
   ],
   "puck_dream_coil": [
     "medium_aoe",
     "stun",
     "leash",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "long_cooldown",
+    "short_duration"
   ]
 }

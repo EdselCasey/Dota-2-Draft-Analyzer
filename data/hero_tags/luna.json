@@ -1,24 +1,34 @@
 {
   "luna_lucent_beam": [
     "stun",
-    "medium_burst"
+    "medium_burst",
+    "short_duration",
+    "short_cooldown",
+    "long_range"
   ],
   "luna_lunar_orbit": [
     "medium_aoe",
     "damage_reduction",
-    "movement_speed_boost",
-    "medium_sustained"
+    "medium_sustained",
+    "medium_cooldown",
+    "short_duration"
   ],
   "luna_moon_glaive": [
     "medium_aoe",
-    "attack_modifier"
+    "attack_modifier",
+    "passive",
+    "bouncing_attacks"
   ],
   "luna_eclipse": [
-    "medium_aoe"
+    "large_aoe",
+    "high_burst",
+    "short_duration",
+    "long_cooldown"
   ],
   "luna_lunar_blessing": [
     "global",
     "attack_damage_boost",
-    "medium_aoe"
+    "large_aoe",
+    "passive"
   ]
 }

@@ -1,29 +1,44 @@
 {
   "kunkka_torrent": [
     "medium_aoe",
-    "forced_movement",
+    "knockup",
     "slow",
-    "medium_burst"
+    "stun",
+    "medium_burst",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "kunkka_tidebringer": [
     "slow",
+    "attack_modifier",
     "attack_damage_boost",
     "medium_burst",
-    "medium_aoe"
+    "medium_aoe",
+    "short_cooldown",
+    "medium_range",
+    "short_duration"
   ],
   "kunkka_x_marks_the_spot": [
     "teleport",
-    "forced_movement"
+    "forced_movement",
+    "long_range",
+    "medium_cooldown"
   ],
   "kunkka_ghostship": [
     "stun",
     "damage_reduction",
     "movement_speed_boost",
     "medium_aoe",
-    "medium_burst"
+    "high_burst",
+    "long_cooldown",
+    "short_duration",
+    "long_range"
   ],
   "kunkka_admirals_rum": [
     "damage_reduction",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "passive",
+    "long_cooldown"
   ]
 }

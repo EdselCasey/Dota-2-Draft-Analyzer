@@ -3,22 +3,31 @@
     "medium_aoe",
     "silence",
     "knockback",
-    "medium_burst"
+    "medium_burst",
+    "short_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "huskar_burning_spear": [
     "attack_modifier",
-    "medium_sustained"
+    "medium_sustained",
+    "short_duration",
+    "toggle",
+    "medium_range"
   ],
   "huskar_berserkers_blood": [
     "attack_speed_boost",
     "damage_reduction",
-    "medium_regen"
+    "high_regen",
+    "passive"
   ],
   "huskar_life_break": [
     "slow",
     "dash",
-    "taunt",
     "medium_burst",
-    "debuff_immune"
+    "debuff_immune",
+    "short_cooldown",
+    "medium_range",
+    "short_duration"
   ]
 }

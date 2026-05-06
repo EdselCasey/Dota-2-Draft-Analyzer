@@ -1,21 +1,33 @@
 {
   "queenofpain_shadow_strike": [
     "slow",
-    "medium_sustained"
+    "medium_sustained",
+    "medium_range",
+    "low_burst",
+    "medium_duration",
+    "short_cooldown"
   ],
   "queenofpain_sonic_wave": [
     "knockback",
-    "medium_aoe"
+    "large_aoe",
+    "long_range",
+    "high_burst",
+    "long_cooldown",
+    "short_duration"
   ],
   "queeofpain_blink": [
     "blink",
-    "escape"
+    "escape",
+    "long_range",
+    "short_cooldown"
   ],
   "queenofpain_succubus": [
-    "lifesteal"
+    "lifesteal",
+    "passive"
   ],
   "queenofpain_scream_of_pain": [
-    "medium_aoe",
-    "medium_burst"
+    "large_aoe",
+    "medium_burst",
+    "short_cooldown"
   ]
 }

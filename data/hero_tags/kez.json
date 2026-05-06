@@ -4,16 +4,23 @@
     "slow",
     "medium_burst",
     "dash",
-    "escape"
+    "escape",
+    "medium_cooldown",
+    "short_range",
+    "short_duration"
   ],
   "kez_grappling_claw": [
     "slow",
     "dash",
-    "escape"
+    "escape",
+    "short_cooldown",
+    "long_range",
+    "short_duration"
   ],
   "kez_kazurai_katana": [
     "attack_modifier",
-    "medium_sustained"
+    "medium_sustained",
+    "passive"
   ],
   "kez_raptor_dance": [
     "medium_aoe",
@@ -21,28 +28,43 @@
     "lifesteal",
     "dispel",
     "damage_reduction",
-    "invulnerability"
+    "invulnerability",
+    "medium_cooldown",
+    "short_range"
   ],
   "kez_falcon_rush": [
     "movement_speed_boost",
-    "dash"
+    "dash",
+    "short_duration",
+    "medium_cooldown",
+    "medium_range"
   ],
   "kez_talon_toss": [
     "silence",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "kez_shodo_sai": [
     "stun",
-    "attack_damage_boost"
+    "attack_modifier",
+    "passive",
+    "short_duration"
   ],
   "kez_ravens_veil": [
     "medium_aoe",
     "movement_speed_boost",
     "stealth",
-    "escape"
+    "escape",
+    "medium_cooldown",
+    "short_duration"
   ],
   "kez_parry": [
     "damage_reduction",
-    "stun"
+    "stun",
+    "short_range",
+    "medium_cooldown",
+    "short_duration"
   ]
 }

@@ -1,25 +1,41 @@
 {
+  "primal_beast_colossal": [
+    "passive",
+    "slow_resistance",
+    "medium_aoe"
+  ],
   "primal_beast_onslaught": [
     "medium_aoe",
     "stun",
     "knockback",
     "medium_burst",
     "dash",
-    "escape"
+    "escape",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "primal_beast_trample": [
     "medium_aoe",
-    "medium_sustained"
+    "medium_sustained",
+    "short_duration",
+    "medium_cooldown"
   ],
   "primal_beast_uproar": [
     "medium_aoe",
     "slow",
     "armor_gain",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive",
+    "short_duration"
   ],
   "primal_beast_pulverize": [
     "medium_aoe",
     "stun",
-    "magic_amp"
+    "magic_amp",
+    "short_duration",
+    "medium_cooldown",
+    "medium_burst",
+    "short_range"
   ]
 }

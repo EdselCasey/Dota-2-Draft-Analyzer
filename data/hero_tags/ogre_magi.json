@@ -1,18 +1,33 @@
 {
+  "ogre_magi_dumb_luck": [
+    "mana_regen",
+    "passive"
+  ],
   "ogre_magi_fireblast": [
     "stun",
-    "medium_burst"
+    "medium_burst", 
+    "short_duration",
+    "medium_range", 
+    "short_cooldown"
   ],
   "ogre_magi_ignite": [
     "medium_aoe",
     "slow",
-    "medium_sustained"
+    "medium_sustained", 
+    "short_duration", 
+    "medium_cooldown", 
+    "long_range"
   ],
   "ogre_magi_bloodlust": [
     "attack_speed_boost",
-    "movement_speed_boost"
+    "movement_speed_boost", 
+    "medium_cooldown", 
+    "medium_duration", 
+    "long_range", 
+    "medium_aoe"
   ],
   "ogre_magi_multicast": [
-    "magic_amp"
+    "magic_amp",
+    "passive"
   ]
 }

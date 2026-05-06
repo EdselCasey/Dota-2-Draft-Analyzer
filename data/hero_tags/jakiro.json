@@ -2,12 +2,19 @@
   "jakiro_dual_breath": [
     "medium_aoe",
     "slow",
-    "medium_sustained"
+    "medium_sustained",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "jakiro_ice_path": [
     "stun",
     "medium_aoe",
-    "medium_burst"
+    "low_burst",
+    "long_range",
+    "long_cooldown",
+    "short_duration",
+    "zone_control"
   ],
   "jakiro_liquid_fire_and ice": [
     "medium_aoe",
@@ -21,5 +28,9 @@
     "medium_burst",
     "medium_aoe",
     "medium_sustained"
+  ],
+  "jakiro_double_trouble": [
+    "attack_modifier",
+    "passive"
   ]
 }

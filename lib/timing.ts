@@ -20,6 +20,7 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   knockback:        -0.4,
   knockup:          0.2,
   sleep:            0.0,
+  fear:              -0.1,
 
   // Soft Control (partial disable)
   root:             -0.5,
@@ -54,17 +55,20 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   building_damage:   0.3,
   push_structures:   0.2,
   zone_control:      0.1,
+  bouncing_attacks:  0.3,
 
   // Attack modifiers (right-click scaling)
   attack_speed_boost: 0.7,
   armor_reduction:    0.5,
   attack_damage_boost: 0.6,
   attack_modifier:    0.5,
+  mana_burn:          0.0,
 
   // Duration (no direct timing bias — acts as multiplier)
   short_duration:     0.0,
   medium_duration:    0.0,
   long_duration:      0.0,
+  toggle:             0.2,
 
   // Cooldown (no direct timing bias — acts as multiplier)
   passive:           -0.6,
@@ -112,7 +116,10 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   vision:           0.5,  
   mana_regen:        -0.3,
   gold_gain:          -0.3,
+  xp_gain:            -0.1,
   status_resist_reduction:      0.4,
+  second_life:                 -0.3,
+  increase_buff_duration:       0.1,
 
 
   cooldown_reduction: 0.0

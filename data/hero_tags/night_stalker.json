@@ -1,24 +1,34 @@
 {
   "night_stalker_void": [
     "slow",
-    "medium_burst"
+    "medium_burst",
+    "medium_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "night_stalker_crippling_fear": [
     "medium_aoe",
     "silence",
-    "medium_sustained"
+    "low_sustained",
+    "medium_cooldown",
+    "short_duration"
   ],
   "night_stalker_hunter_in_the_night": [
     "attack_speed_boost",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "passive"
   ],
   "night_stalker_dark_ascension": [
     "aerial",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "medium_duration",
+    "long_cooldown"
   ],
   "night_stalker_midnight_feast": [
     "lifesteal",
-    "medium_regen",
-    "mana_regen"
+    "medium_heal",
+    "mana_regen",
+    "short_range",
+    "medium_cooldown"
   ]
 }

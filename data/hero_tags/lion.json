@@ -1,20 +1,38 @@
 {
-  "lion_impale": [
+  "lion_to_hell_and_back": [
+    "status_resist_reduction",
+    "passive",
+    "long_duration"
+  ],
+  "lion_earth_spike": [
     "medium_burst",
     "stun",
-    "medium_aoe"
+    "medium_aoe",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "lion_mana_drain": [
     "channelled",
     "movement_speed_boost",
     "mana_regen",
+    "mana_burn",
     "slow",
-    "medium_sustained"
+    "low_sustained",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "lion_finger_of_death": [
-    "medium_burst"
+    "high_burst",
+    "magic_amp",
+    "long_range",
+    "long_cooldown"
   ],
   "lion_hex": [
-    "hex"
+    "hex",
+    "medium_range",
+    "short_duration",
+    "medium_cooldown"
   ]
 }

@@ -1,24 +1,32 @@
 {
   "lycan_summon_wolves": [
-    "summon_units"
+    "summon_units",
+    "long_duration",
+    "medium_cooldown"
   ],
   "lycan_apex_predator": [
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive"
   ],
   "lycan_howl": [
-    "medium_aoe",
+    "large_aoe",
     "armor_reduction",
     "damage_reduction",
-    "global"
+    "global",
+    "short_duration",
+    "medium_cooldown"
   ],
   "lycan_feral_impulse": [
     "attack_damage_boost",
-    "medium_regen"
+    "medium_regen",
+    "passive"
   ],
   "lycan_shapeshift": [
     "vision",
     "hp_growth",
     "movement_speed_boost",
-    "attack_damage_boost"
+    "medium_duration",
+    "long_cooldown",
+    "attack_modifier"
   ]
 }

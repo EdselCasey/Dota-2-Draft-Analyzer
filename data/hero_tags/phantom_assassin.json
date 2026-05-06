@@ -2,18 +2,30 @@
   "phantom_assassin_stifling_dagger": [
     "slow",
     "medium_burst",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "phantom_assassin_phantom_strike": [
-    "attack_speed_boost"
+    "attack_speed_boost",
+    "blink",
+    "short_duration",
+    "short_cooldown"
   ],
   "phantom_assassin_blur": [
-    "move_speed_boost"
+    "move_speed_boost",
+    "medium_duration",
+    "medium_cooldown",
+    "damage_reduction"
   ],
   "phantom_assassin_coup_de_grace": [
-    "attack_damage_boost"
+    "passive",
+    "attack_modifier",
+    "short_duration"
   ],
   "phantom_assassin_immaterial": [
-    "damage_reduction"
+    "damage_reduction",
+    "passive"
   ]
 }

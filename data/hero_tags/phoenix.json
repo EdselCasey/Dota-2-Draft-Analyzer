@@ -4,28 +4,42 @@
     "slow",
     "dash",
     "escape",
-    "medium_sustained"
+    "low_sustained",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "phoenix_supernova": [
-    "medium_aoe",
+    "large_aoe",
     "stun",
     "medium_sustained",
     "zone_control",
     "escape",
-    "save"
+    "second_life",
+    "large_heal",
+    "mana_regen",
+    "long_cooldown",
+    "short_duration"
   ],
   "phoenix_fire_spirit": [
     "medium_aoe",
     "slow",
-    "medium_sustained"
+    "medium_sustained",
+    "medium_cooldown",
+    "medium_duration",
+    "long_range"
   ],
   "phoenix_dying_light": [
     "medium_aoe",
-    "medium_sustained"
+    "medium_sustained",
+    "passive"
   ],
   "phoenix_sun_ray": [
     "medium_aoe",
     "medium_sustained",
-    "medium_heal"
+    "medium_heal",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ]
 }

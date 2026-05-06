@@ -2,22 +2,34 @@
   "silencer_arcane_curse": [
     "medium_aoe",
     "slow",
-    "medium_sustained"
+    "medium_sustained",
+    "long_range",
+    "short_duration",
+    "medium_cooldown"
   ],
   "silencer_glaives_of_wisdom": [
     "attack_modifier",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "toggle",
+    "medium_range",
+    "medium_duration"
   ],
   "silencer_last_word": [
     "medium_burst",
-    "silence"
+    "silence",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "silencer_suffer_in_silence": [
     "magic_amp",
-    "damage_reduction"
+    "damage_reduction",
+    "passive"
   ],
   "silencer_global_silence": [
     "global",
-    "silence"
+    "silence",
+    "long_cooldown",
+    "short_duration"
   ]
 }

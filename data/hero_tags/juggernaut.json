@@ -1,27 +1,38 @@
 {
   "juggernaut_blade_dance": [
     "attack_damage_boost",
-    "lifesteal"
+    "lifesteal",
+    "passive"
   ],
   "juggernaut_blade_fury": [
-    "medium_aoe",
-    "medium_sustained"
+    "small_aoe",
+    "medium_sustained",
+    "short_duration",
+    "medium_cooldown"
   ],
   "juggernaut_blade_form": [
     "armor_gain",
     "attack_speed_boost",
     "movement_speed_boost",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive"
   ],
   "juggernaut_healing_ward": [
     "medium_aoe",
-    "medium_heal"
+    "medium_regen",
+    "short_range",
+    "long_cooldown",
+    "medium_duration"
   ],
   "juggernaut_omni_slash": [
-    "medium_aoe",
-    "medium_sustained",
+    "small_aoe",
+    "high_sustained",
     "dispel",
     "invulnerability",
-    "attack_speed_boost"
+    "attack_speed_boost",
+    "short_range",
+    "short_duration",
+    "long_cooldown",
+    "dash"
   ]
 }

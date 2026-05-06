@@ -2,20 +2,29 @@
   "riki_smoke_screen": [
     "medium_aoe",
     "silence",
-    "damage_reduction"
+    "damage_reduction",
+    "short_cooldown",
+    "short_duration",
+    "medium_range"
   ],
   "riki_blink_strike": [
     "slow",
     "blink",
     "escape",
     "medium_burst",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "short_duration",
+    "short_cooldown",
+    "long_range"
   ],
   "riki_backstab": [
-    "attack_modifier"
+    "attack_modifier",
+    "passive"
   ],
   "riki_cloak_and_dagger": [
-    "stealth"
+    "stealth",
+    "passive",
+    "xp_gain"
   ],
   "riki_tricks_of_the_trade": [
     "medium_aoe",
@@ -23,6 +32,9 @@
     "attack_damage_boost",
     "medium_sustained",
     "invulnerability",
-    "escape"
+    "escape",
+    "short_cooldown",
+    "short_duration",
+    "medium_range"
   ]
 }

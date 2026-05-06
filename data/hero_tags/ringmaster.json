@@ -1,20 +1,22 @@
 {
-  "ringmaster_spotlight": [
-    "medium_aoe",
-    "damage_reduction"
-  ],
   "ringmaster_tame_the_beasts": [
     "medium_aoe",
     "channelled",
-    "forced_movement",
-    "medium_burst"
+    "fear",
+    "medium_burst",
+    "short_cooldown",
+    "long_range",
+    "short_duration"
   ],
   "ringmaster_the_box": [
     "save",
     "escape",
     "debuff_immunity",
     "damage_reduction",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "medium_cooldown",
+    "medium_range",
+    "short_duration"
   ],
   "ringmaster_wheel_of_wonder": [
     "medium_aoe",
@@ -23,36 +25,40 @@
     "zone_control",
     "vision",
     "taunt",
-    "forced_movement"
+    "long_cooldown",
+    "long_range",
+    "short_duration",
+    "medium_burst",
+    "medium_sustained"
   ],
   "ringmaster_impalement": [
     "slow",
     "vision",
-    "medium_sustained"
+    "medium_sustained",
+    "medium_cooldown",
+    "short_duration",
+    "long_range"
   ],
   "ringmaster_funhouse_mirror": [
-    "illusion"
+    "illusion",
+    "medium_duration"
   ],
   "ringmaster_whoopee_cushion": [
     "medium_aoe",
     "slow",
-    "dash"
+    "dash",
+    "escape",
+    "short_range"
   ],
   "ringmaster_summon_unicycle": [
     "knockback",
-    "movement_speed_boost"
-  ],
-  "ringmaster_weighted_pie": [
-    "slow",
-    "knockback"
-  ],
-  "ringmaster_crystal_ball": [
-    "global",
-    "vision"
+    "movement_speed_boost",
+    "short_duration"
   ],
   "ringmaster_strongman_tonic": [
     "hp_growth",
-    "save",
-    "medium_heal"
+    "medium_heal",
+    "long_range",
+    "short_duration"
   ]
 }

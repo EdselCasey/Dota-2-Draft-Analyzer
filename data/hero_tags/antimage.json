@@ -11,7 +11,8 @@
     "attack_damage_boost",
     "passive",
     "medium_sustained",
-    "short_range"
+    "short_range",
+    "mana_burn"
   ],
   "antimage_blink": [
     "blink",

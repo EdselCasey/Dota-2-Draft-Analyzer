@@ -1,25 +1,36 @@
 {
   "legion_commander_overwhelming_odds": [
-    "medium_aoe",
+    "large_aoe",
     "shield",
-    "attack_speed_boost"
+    "attack_speed_boost",
+    "medium_burst",
+    "short_duration",
+    "medium_cooldown"
   ],
   "legion_commander_press_the_attack": [
     "medium_regen",
     "dispel",
     "save",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "long_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "legion_commander_duel": [
     "taunt",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "short_range",
+    "long_cooldown",
+    "short_duration"
   ],
   "legion_commander_outfight_them": [
-    "armor_gain"
+    "armor_gain",
+    "passive"
   ],
   "legion_commander_moment_of_courage": [
     "lifesteal",
     "attack_modifier",
-    "attack_speed_boost"
+    "attack_speed_boost",
+    "passive"
   ]
 }

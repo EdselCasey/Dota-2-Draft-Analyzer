@@ -3,24 +3,36 @@
     "medium_regen",
     "armor_gain",
     "attack_damage_boost",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "passive"
   ],
   "slardar_sprint": [
     "movement_speed_boost",
-    "damage_reduction"
+    "damage_reduction",
+    "short_duration",
+    "medium_cooldown"
   ],
   "slardar_slithereen_crush": [
     "medium_aoe",
     "stun",
-    "medium_burst"
+    "medium_burst",
+    "slow",
+    "short_duration",
+    "short_range",
+    "short_cooldown"
   ],
   "slardar_bash": [
     "attack_modifier",
     "stun",
-    "medium_burst"
+    "medium_burst",
+    "passive",
+    "short_range"
   ],
   "slardar_corrosive_haze": [
     "armor_reduction",
-    "vision"
+    "vision",
+    "long_range",
+    "short_cooldown",
+    "medium_duration"
   ]
 }

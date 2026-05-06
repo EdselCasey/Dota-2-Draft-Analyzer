@@ -2,21 +2,30 @@
   "sniper_shrapnel": [
     "medium_aoe",
     "slow",
-    "medium_burst"
+    "medium_sustained",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "sniper_headshot": [
     "attack_modifier",
-    "knockback"
+    "knockback",
+    "passive"
   ],
   "sniper_take_aim": [
-    "slow",
     "attack_modifier",
-    "vision"
+    "short_duration",
+    "medium_cooldown"
   ],
   "sniper_assassinate": [
-    "medium_burst"
+    "high_burst",
+    "long_range",
+    "medium_cooldown",
+    "stun",
+    "short_duration"
   ],
   "sniper_keen_scope": [
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive"
   ]
 }

@@ -11,6 +11,7 @@ export type AbilityTag =
   | 'forced_movement'
   | 'banish'
   | 'leash'
+  | 'fear'
   // ── Burst Damage (tiered) ──────────────────────────────────────────────
   | 'low_burst'       // 0–250 base damage
   | 'medium_burst'    // 251–400 base damage
@@ -57,6 +58,7 @@ export type AbilityTag =
   | 'armor_reduction'      // reduces enemy armor — amplifies physical attack damage
   | 'attack_damage_boost'  // passive or self-buff bonus attack damage (not spell damage)
   | 'attack_modifier'      // ATTACK behavior or enemy-targeted AUTOCAST — procs on right-click
+  | 'mana_burn'
   // ── Stealth / Aerial ─────────────────────────────────────────────────────
   | 'stealth'   // hero can go invisible (fade_delay on passive or active invis)
   | 'aerial'    // grants flying movement — sees over cliffs and trees
@@ -70,6 +72,7 @@ export type AbilityTag =
   | 'building_damage'     // passive or on-hit building damage
   | 'push_structures'     // explicit push-lane / structure-pressure mechanic
   | 'zone_control'        // spawns a persistent structure or area denial zone
+  | 'bouncing_attacks'
   // ── Utility ──────────────────────────────────────────────────────────────
   | 'dispel'
   | 'debuff_immunity'
@@ -79,9 +82,13 @@ export type AbilityTag =
   | 'antiheal'           // reduces or blocks enemy healing / regen
   | 'magic_amp'          // amplifies magic damage taken by the target
   | 'gold_gain'
+  | 'xp_gain'
   | 'status_resist_reduction'
+  | 'second_life'
+  | 'increase_buff_duration'
   // ── Modifiers (non-scoring) ──────────────────────────────────────────────
   | 'channelled'
+  | 'toggle'
   // ── Spell Uptime (cooldown-based tempo tags) ────────────────────────────
   | 'passive'           // always active, no cooldown
   | 'short_cooldown'    // 6–15s cooldown

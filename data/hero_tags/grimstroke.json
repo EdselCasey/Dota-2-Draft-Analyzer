@@ -1,27 +1,42 @@
 {
   "grimstroke_ink_trail": [
-    "vision"
+    "vision",
+    "damage_reduction",
+    "short_duration",
+    "passive"
   ],
   "grimstroke_phantom's_embrace": [
     "silence",
     "medium_burst",
-    "summon_units",
-    "vision"
+    "low_sustained",
+    "vision",
+    "short_duration",
+    "medium_cooldown",
+    "long_range"
   ],
   "grimstroke_stroke_of_fate": [
     "medium_burst",
-    "medium_aoe",
-    "slow"
+    "small_aoe",
+    "slow",
+    "short_duration",
+    "long_range",
+    "short_cooldown"
   ],
   "grimstroke_ink_swell": [
     "medium_aoe",
     "movement_speed_boost",
     "stun",
-    "medium_burst"
+    "medium_burst",
+    "medium_sustained",
+    "short_duration",
+    "medium_cooldown",
+    "long_range"
   ],
-  "grimstroke_soul_chain": [
+  "grimstroke_soul_bind": [
     "medium_aoe",
-    "forced_movement",
-    "magic_amp"
+    "leash",
+    "long_range",
+    "long_cooldown",
+    "short_duration"
   ]
 }

@@ -1,50 +1,85 @@
 {
   "invoker_cold_snap": [
     "stun",
-    "medium_burst"
+    "low_burst",
+    "short_duration",
+    "long_range",
+    "medium_cooldown"
   ],
   "invoker_ghost_walk": [
     "slow",
-    "medium_regen",
+    "low_regen",
     "mana_regen",
     "stealth",
-    "escape"
+    "escape",
+    "medium_aoe",
+    "medium_cooldown",
+    "long_duration"
   ],
   "invoker_tornado": [
-    "forced_movement"
+    "forced_movement",
+    "small_aoe",
+    "long_range",
+    "low_burst",
+    "medium_cooldown",
+    "short_duration"
   ],
   "invoker_emp": [
     "medium_aoe",
-    "medium_burst"
+    "low_burst",
+    "medium_cooldown",
+    "long_range"
   ],
   "invoker_alacrity": [
     "attack_speed_boost",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "short_duration",
+    "medium_cooldown",
+    "long_range"
   ],
   "invoker_chaos_meteor": [
     "medium_aoe",
-    "medium_burst"
+    "medium_burst",
+    "low_sustained",
+    "long_cooldown",
+    "long_range",
+    "short_duration"
   ],
   "invoker_sun_strike": [
-    "medium_aoe",
+    "small_aoe",
     "vision",
-    "medium_burst"
+    "high_burst",
+    "global",
+    "medium_cooldown"
   ],
   "invoker_ice_wall": [
     "medium_sustained",
     "medium_aoe",
     "slow",
-    "zone_control"
+    "zone_control",
+    "short_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "invoker_deafening_blast": [
     "medium_aoe",
     "disarm",
     "knockback",
     "forced_movement",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "invoker_forge_spirit": [
     "summon_units",
-    "armor_reduction"
+    "armor_reduction",
+    "medium_cooldown",
+    "long_duration",
+    "short_range"
+  ],
+  "invoker_invoke": [
+    "passive",
+    "cooldown_reduction"
   ]
 }

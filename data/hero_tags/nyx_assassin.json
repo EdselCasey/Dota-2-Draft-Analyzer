@@ -1,23 +1,37 @@
 {
+  "nyx_assassin_mana_burn": [
+    "mana_burn",
+    "passive"
+  ],
   "nyx_assassin_impale": [
     "medium_burst",
     "medium_aoe",
-    "stun"
+    "stun",
+    "short_cooldown",
+    "long_range",
+    "short_duration"
   ],
   "nyx_assassin_mind_flare": [
-    "medium_burst"
+    "medium_burst",
+    "short_duration",
+    "long_range"
   ],
   "nyx_assassin_spiked_carapace": [
     "stun",
     "invulnerability",
-    "medium_aoe"
+    "medium_aoe",
+    "global",
+    "medium_cooldown",
+    "short_duration"
   ],
   "nyx_assassin_vendetta": [
     "magic_amp",
     "medium_burst",
     "movement_speed_boost",
     "stealth",
-    "unobstructed",
-    "escape"
+    "escape",
+    "long_cooldown",
+    "long_duration",
+    "attack_modifier"
   ]
 }

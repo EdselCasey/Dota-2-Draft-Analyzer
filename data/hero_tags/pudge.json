@@ -1,26 +1,36 @@
 {
   "pudge_meat_hook": [
-    "medium_aoe",
     "stun",
     "forced_movement",
     "medium_burst",
-    "save"
+    "save",
+    "long_range",
+    "short_cooldown",
+    ""
   ],
   "pudge_rot": [
     "medium_aoe",
     "slow",
-    "medium_sustained"
+    "medium_sustained",
+    "short_cooldown",
+    "toggle",
+    "short_range"
   ],
   "pudge_dismember": [
     "channelled",
-    "medium_sustained",
+    "high_sustained",
     "stun",
-    "forced_movement"
+    "forced_movement",
+    "short_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "pudge_flesh_heap": [
-    "hp_growth"
+    "hp_growth",
+    "passive"
   ],
   "pudge_meat_shield": [
-    "damage_reduction"
+    "damage_reduction",
+    "passive"
   ]
 }

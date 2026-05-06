@@ -25,7 +25,7 @@
     "attack_modifier",
     "medium_burst",
     "medium_range",
-    "short_cooldown"
+    "toggle"
   ],
   "enchantress_rabble-rouser": [
     "global",

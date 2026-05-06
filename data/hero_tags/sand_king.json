@@ -5,28 +5,42 @@
     "escape",
     "zone_control",
     "medium_sustained",
-    "damage_reduction"
+    "damage_reduction",
+    "short_range",
+    "medium_cooldown",
+    "medium_duration"
   ],
   "sand_king_caustic_finale": [
     "medium_aoe",
-    "medium_burst"
+    "medium_burst",
+    "passive"
   ],
   "sand_king_stinger": [
     "medium_aoe",
     "medium_burst",
-    "slow"
+    "slow",
+    "short_cooldown",
+    "short_duration",
+    "short_range"
   ],
   "sand_king_epicenter": [
-    "medium_aoe",
+    "large_aoe",
     "slow",
-    "magic_amp"
+    "magic_amp",
+    "high_sustained",
+    "short_duration",
+    "long_cooldown",
+    "short_range"
   ],
   "sand_king_burrow_strike": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "medium_burst",
     "escape",
     "dash",
-    "stun"
+    "stun",
+    "medium_range",
+    "short_cooldown",
+    "short_duration"
   ]
 }

@@ -52,7 +52,7 @@ const PASSIVE_BOOST_DIMS = new Set<DraftDimension>([
 
 // Dimensions that range boosts (convenience for reactive tools)
 const RANGE_BOOST_DIMS = new Set<DraftDimension>([
-  'defensive_utility', 'hard_control', 'soft_control', 'sustain', 'pickoff', 'mobility'
+  'defensive_utility', 'hard_control', 'soft_control', 'sustain', 'pickoff', 'mobility','reach'
 ])
 
 // Dimensions that duration boosts (longer = more impactful)

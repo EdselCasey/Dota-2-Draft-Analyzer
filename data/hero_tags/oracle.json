@@ -4,30 +4,42 @@
     "channelled",
     "medium_burst",
     "root",
-    "dispel"
+    "dispel",
+    "long_range",
+    "short_duration",
+    "short_cooldown"
   ],
   "oracle_fates_edict": [
     "damage_reduction",
     "disarm",
-    "save"
+    "save",
+    "long_range",
+    "short_duration",
+    "medium_cooldown"
   ],
   "oracle_false_promise": [
     "invulnerability",
     "dispel",
     "medium_heal",
     "armor_gain",
-    "save"
-  ],
-  "oracle_rain_of_destiny": [
-    "medium_aoe",
-    "medium_heal",
-    "medium_regen",
-    "antiheal",
-    "medium_sustained"
+    "save", 
+    "long_range",
+    "short_duration", 
+    "long_cooldown"
   ],
   "oracle_purifying_flames": [
     "medium_heal",
     "medium_regen",
-    "medium_burst"
+    "medium_burst",
+    "short_cooldown",
+    "short_duration",
+    "long_range"
+  ],
+  "oracle_diviner's_deck": [
+    "magic_amp",
+    "shield",
+    "mana_regen",
+    "gold_gain",
+    "medium_heal"
   ]
 }

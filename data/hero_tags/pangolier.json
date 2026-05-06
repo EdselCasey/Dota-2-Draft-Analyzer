@@ -4,28 +4,40 @@
     "slow",
     "medium_burst",
     "dash",
-    "escape"
+    "escape",
+    "short_cooldown",
+    "medium_range",
+    "short_duration"
   ],
   "pangolier_shield_crash": [
     "medium_aoe",
     "shield",
     "medium_burst",
     "dash",
-    "escape"
+    "escape",
+    "short_range",
+    "short_cooldown",
+    "short_duration"
   ],
   "pangolier_lucky_shot": [
     "armor_reduction",
-    "slow"
+    "slow",
+    "short_duration",
+    "passive"
   ],
-  "pangolier_gyroshell": [
+  "pangolier_rolling_thunder": [
     "medium_aoe",
     "stun",
     "knockback",
     "damage_reduction",
     "movement_speed_boost",
-    "medium_burst"
+    "medium_burst",
+    "long_cooldown",
+    "low_burst",
+    "short_duration"
   ],
   "pangolier_fortune_favors_the_bold": [
-    "damage_reduction"
+    "damage_reduction",
+    "passive"
   ]
 }

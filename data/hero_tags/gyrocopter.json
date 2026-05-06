@@ -1,19 +1,34 @@
 {
+  "gyrocopter_afterburner": [
+    "passive",
+    "movement_speed_boost",
+    "short_duration"
+  ],
   "gyrocopter_rocket_barrage": [
     "medium_aoe",
-    "movement_speed_boost",
-    "medium_sustained"
+    "short_cooldown",
+    "medium_sustained",
+    "short_duration"
   ],
   "gyrocopter_homing_missile": [
     "stun",
-    "medium_burst"
+    "medium_burst",
+    "long_range",
+    "medium_cooldown",
+    "short_duration"
   ],
   "gyrocopter_flak_cannon": [
-    "medium_aoe",
-    "attack_modifier"
+    "attack_modifier",
+    "short_duration",
+    "medium_cooldown",
+    "large_aoe"
   ],
   "gyrocopter_call_down": [
     "medium_aoe",
-    "slow"
+    "slow",
+    "long_range",
+    "medium_burst",
+    "long_cooldown",
+    "short_duration"
   ]
 }

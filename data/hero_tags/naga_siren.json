@@ -1,23 +1,33 @@
 {
   "naga_siren_mirror_image": [
-    "illusion"
+    "illusion",
+    "medium_cooldown",
+    "medium_duration"
   ],
   "naga_siren_rip_tide": [
     "medium_aoe",
     "medium_burst",
-    "armor_reduction"
+    "armor_reduction",
+    "passive",
+    "short_duration"
   ],
   "naga_siren_eelskin": [
-    "damage_reduction"
+    "damage_reduction",
+    "passive"
   ],
   "naga_siren_song_of_the_siren": [
-    "medium_aoe",
+    "large_aoe",
     "medium_regen",
     "stun",
-    "save"
+    "save",
+    "short_duration",
+    "long_cooldown"
   ],
   "naga_siren_ensnare": [
     "root",
-    "forced_movement"
+    "forced_movement",
+    "medium_range",
+    "medium_cooldown",
+    "short_duration"
   ]
 }

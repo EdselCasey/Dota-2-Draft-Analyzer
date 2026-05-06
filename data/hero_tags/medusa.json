@@ -1,20 +1,30 @@
 {
   "medusa_mystic_snake": [
     "medium_aoe",
-    "mana_regen"
+    "mana_regen",
+    "long_range",
+    "short_cooldown",
+    "medium_burst"
   ],
   "medusa_mana_shield": [
-    "damage_reduction"
+    "damage_reduction",
+    "passive"
   ],
   "medusa_stone_gaze": [
-    "medium_aoe",
+    "large_aoe",
     "stun",
     "slow",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "short_duration",
+    "long_cooldown"
   ],
   "medusa_gorgon_grasp": [
     "medium_aoe",
-    "root"
+    "root",
+    "long_range",
+    "medium_cooldown",
+    "short_duration",
+    "low_burst"
   ],
   "medusa_venomous_volley": [
     "slow",
@@ -22,6 +32,7 @@
   ],
   "medusa_split_shot": [
     "medium_aoe",
-    "attack_modifier"
+    "attack_modifier",
+    "toggle"
   ]
 }

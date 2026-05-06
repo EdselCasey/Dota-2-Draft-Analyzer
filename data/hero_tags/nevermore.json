@@ -2,33 +2,46 @@
   "nevermore_shadowraze1": [
     "medium_aoe",
     "medium_burst",
-    "magic_amp"
+    "magic_amp",
+    "short_cooldown",
+    "short_range"
   ],
   "nevermore_shadowraze2": [
     "medium_aoe",
     "medium_burst",
-    "magic_amp"
+    "magic_amp",
+    "short_cooldown",
+    "medium_range"
   ],
   "nevermore_shadowraze3": [
     "medium_aoe",
     "medium_burst",
-    "magic_amp"
+    "magic_amp",
+    "short_cooldown",
+    "long_range"
   ],
-  "nevermore_dark_lord": [
-    "medium_aoe",
-    "armor_reduction"
+  "nevermore_presence_of_the_dark_lord": [
+    "large_aoe",
+    "armor_reduction",
+    "passive"
   ],
   "nevermore_feast_of_souls": [
     "movement_speed_boost",
-    "attack_speed_boost"
+    "attack_speed_boost",
+    "short_duration",
+    "medium_cooldown"
   ],
-  "nevermore_requiem": [
-    "medium_aoe",
+  "nevermore_requiem_of_souls": [
+    "large_aoe",
     "slow",
-    "forced_movement",
-    "magic_amp"
+    "fear",
+    "magic_amp",
+    "high_burst",
+    "long_cooldown",
+    "short_duration"
   ],
   "nevermore_necromastery": [
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive"
   ]
 }

@@ -1,26 +1,44 @@
 {
+  "largo_encore": [
+    "increase_buff_duration",
+    "passive"
+  ],
   "largo_amphibian_rhapsody": [
     "medium_aoe",
     "movement_speed_boost",
     "attack_damage_boost",
-    "medium_heal",
+    "high_heal",
     "magic_amp",
     "armor_gain",
-    "medium_burst"
+    "low_burst",
+    "short_range",
+    "short_cooldown"
   ],
   "largo_frogstomp": [
     "medium_aoe",
     "stun",
-    "slow"
+    "slow",
+    "long_range",
+    "medium_cooldown",
+    "short_duration",
+    "medium_sustained"
   ],
   "largo_croak_of_genius": [
     "magic_amp",
-    "medium_sustained"
+    "medium_sustained",
+    "mana_regen",
+    "medium_duration",
+    "medium_cooldown",
+    "long_range"
   ],
   "largo_catchy_lick": [
     "medium_regen",
     "dispel",
     "medium_burst",
-    "forced_movement"
+    "forced_movement",
+    "save",
+    "short_cooldown",
+    "long_range",
+    "short_duration"
   ]
 }

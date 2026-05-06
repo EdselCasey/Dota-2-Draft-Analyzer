@@ -1,26 +1,37 @@
 {
   "skeleton_king_wraithfire_blast": [
     "stun",
-    "medium_burst",
-    "medium_sustained",
-    "slow"
+    "low_burst",
+    "low_sustained",
+    "slow",
+    "short_duration",
+    "medium_range",
+    "short_cooldown"
   ],
   "skeleton_king_bone_guard": [
     "push",
-    "summon_units"
+    "summon_units",
+    "medium_duration",
+    "medium_cooldown"
   ],
   "skeleton_king_mortal_strike": [
     "attack_modifier",
-    "attack_damage_boost"
+    "attack_damage_boost",
+    "passive",
+    "short_range"
   ],
   "skeleton_king_reincarnation": [
     "medium_aoe",
-    "invulnerability"
+    "second_life",
+    "slow",
+    "short_duration",
+    "long_cooldown"
   ],
   "skeleton_king_vampiric_spirit": [
     "lifesteal",
-    "invulnerability",
     "attack_speed_boost",
-    "movement_speed_boost"
+    "movement_speed_boost",
+    "passive",
+    "second_life"
   ]
 }
