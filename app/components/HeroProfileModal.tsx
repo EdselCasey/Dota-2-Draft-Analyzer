@@ -26,7 +26,7 @@ const TAG_COLORS: Record<string, string> = {
   heal: '#22c55e', shield: '#16a34a', regen: '#4ade80', lifesteal: '#86efac',
   invulnerability: '#059669',hp_growth: '#4ade80',increase_buff_duration: '#4adf69',
   blink: '#06b6d4', dash: '#0891b2', movement_speed_boost: '#67e8f9',
-  escape: '#0e7490', teleport: '#0284c7',
+  escape: '#0e7490', teleport: '#0284c7',grant_armor: '#2745eb',
   summon_units: '#eab308', illusion: '#ca8a04', siege: '#a16207',
   building_damage: '#92400e', push_structures: '#d97706', zone_control: '#f59e0b',bouncing_attacks: '#d5780b',
   stealth: '#6366f1', aerial: '#818cf8',unobstructed: '#818cf8',

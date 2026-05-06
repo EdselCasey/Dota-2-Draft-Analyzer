@@ -1,6 +1,6 @@
 {
   "dazzle_weave": [
-    "armor_gain",
+    "grant_armor",
     "armor_reduction",
     "passive"
   ],
@@ -22,7 +22,7 @@
   ],
   "dazzle_shadow_wave": [
     "medium_aoe",
-    "armor_gain",
+    "grant_armor",
     "low_heal",
     "low_burst",
     "armor_reduction",

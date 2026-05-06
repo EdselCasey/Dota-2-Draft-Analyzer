@@ -416,6 +416,10 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'resource_support',  weight: 1.5 },
     { dimension: 'defensive_utility',  weight: 1.5 },
   ],
+  grant_armor: [
+    { dimension: 'resource_support',  weight: 1.5 },
+    { dimension: 'defensive_utility',  weight: 1.5 },
+  ],
 
   // ── Spell Uptime (cooldown-based tempo) ────────────────────────────────────
   passive: [
