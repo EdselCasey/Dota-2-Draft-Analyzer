@@ -44,7 +44,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   // has more sustained damage than you have control, one free damage dealer
   // still kills your team. requiresExcess enforces this.
   hard_control: [
-    { counters: 'sustained_damage', strength: 0.40, requiresExcess: true },
+    { counters: 'sustained_damage', strength: 0.50 },
     { counters: 'burst_damage',     strength: 0.10, requiresExcess: true },
     { counters: 'mobility',         strength: 0.35, requiresExcess: true },
     { counters: 'objective_pressure',             strength: 0.25 },
@@ -78,12 +78,13 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   burst_damage: [
     { counters: 'sustain',          strength: 0.30 },
     { counters: 'defense',          strength: 0.25 },
+    { counters: 'sustained_damage', strength: 0.50 },
   ],
 
   // ── Sustained damage ──────────────────────────────────────────────────────
   sustained_damage: [
-    { counters: 'sustain',          strength: 0.55 },
-    { counters: 'defense',          strength: 0.60, requiresExcess: true },  // sustained must exceed defense to wear through
+    { counters: 'sustain',          strength: 0.30 },
+    { counters: 'defense',          strength: 0.35, requiresExcess: true },
   ],
 
   // ── Sustain ───────────────────────────────────────────────────────────────
@@ -94,7 +95,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
 
   // ── Pickoff ───────────────────────────────────────────────────────────────
   pickoff: [
-    { counters: 'sustained_damage', strength: 0.25, requiresExcess: true },
+    { counters: 'sustained_damage', strength: 0.55 },
     { counters: 'objective_pressure', strength: 0.30 },
     { counters: 'map_presence',     strength: 0.60 },
   ],
@@ -192,6 +193,7 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
     sustain:          'Your burst kills faster than their healing can respond.',
     defense:          'Your nukes punch through their tankiness in a single window.',
     resource_support: 'Your burst eliminates their backline before they can provide support.',
+    sustained_damage: 'Your burst eliminates their damage dealers before they can ramp up sustained output.',
   },
   sustained_damage: {
     sustain:          'Your constant damage pressure overwhelms their regen over time.',
@@ -274,6 +276,8 @@ const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<Dra
     sustain:          'Your DPS is too slow to outpace their healing.',
     defense:          'Their defense outlasts your damage output in extended fights.',
     pickoff: 'Your damage dealers are vulnerable to being picked off before fights even start.',
+    burst_damage: 'Your damage dealers die to burst before they can ramp up meaningful DPS.',
+    hard_control: 'Your damage dealers get locked down and can\'t output — they die before contributing.',
   },
   sustain: {
     burst_damage:     'You have no recovery tools — a single burst combo could end a fight.',
