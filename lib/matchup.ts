@@ -58,10 +58,6 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
     { counters: 'defensive_utility', strength: 0.05 },
   ],
 
-  // ── Reach ─────────────────────────────────────────────────────────────────
-  reach: [
-    { counters: 'mobility',         strength: 0.30 },
-  ],
 
   // ── Waveclear ─────────────────────────────────────────────────────────────
   waveclear: [
@@ -208,7 +204,6 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
     burst_damage:     'Your pick off catches their bursty spell casters and divers off guard'
   },
   reach: {
-    mobility:         'Your range keeps mobile heroes at a distance.',
     pickoff:          'You can strike from safety before they can close the gap.',
   },
   waveclear: {
@@ -282,10 +277,6 @@ const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<Dra
   pickoff: {
     objective_pressure: 'Your team is vulnerable to getting picked before teamfights start.',
     map_presence:     'Enemy hunters can patrol and isolate your heroes freely.',
-  },
-  reach: {
-    mobility:         'Your team can\'t keep mobile heroes at a distance.',
-    pickoff:          'Your short range leaves you exposed to their ranged threats.',
   },
   waveclear: {
     objective_pressure: 'You can\'t clear waves fast enough to stop their siege.',
