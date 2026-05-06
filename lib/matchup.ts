@@ -388,19 +388,37 @@ function clamp(v: number, lo: number, hi: number) {
 function winConditionText(
   label: UrgencyLabel,
   favored: boolean,
-  timing: 'early' | 'mid' | 'late'
+  timing: 'early' | 'mid' | 'late',
+  enemyTiming: 'early' | 'mid' | 'late'
 ): string {
+  // ── Favored scenarios ────────────────────────────────────────────────────
   if (favored && timing === 'late')
-    return 'Farm safely and execute your power spike — time is on your side.'
+    return 'Play for late — your composition outscales. Farm safely, avoid unnecessary fights, and execute at your power spike.'
+  if (favored && timing === 'early' && enemyTiming === 'late')
+    return 'You have the window — press the map, take objectives, and close before they scale. Do not let the game stall.'
   if (favored && timing === 'early')
-    return 'You have the advantage — control the map, play your game, and avoid giving the enemy openings to stabilize.'
-  if (favored)
-    return 'Flexible win condition — maintain pressure and respond to opponent moves.'
-  if (!favored && timing === 'early')
-    return 'Must generate leads now — your window is closing fast and the matchup is against you.'
+    return 'You have the advantage — control the map, force fights on your terms, and deny them space to recover.'
+  if (favored && timing === 'mid')
+    return 'Flexible win condition — maintain tempo, respond to threats, and play your game confidently.'
+
+  // ── Unfavored scenarios ──────────────────────────────────────────────────
+  if (!favored && timing === 'late' && enemyTiming === 'early')
+    return 'Survive the early pressure — your comp outscales if you reach your timing. Trade space for time, avoid overcommitting.'
   if (!favored && timing === 'late')
-    return 'Structurally behind — force early fights to steal momentum before the disadvantage compounds.'
-  return 'Uphill battle — look for picks that directly address structural weaknesses.'
+    return 'Behind but you scale — play defensive, secure farm, and look for a fight at your power spike to turn the game.'
+  if (!favored && timing === 'early' && enemyTiming === 'early')
+    return 'Must win lanes decisively — both teams peak early but the matchup favors them. Outplay or fall behind permanently.'
+  if (!favored && timing === 'early' && enemyTiming === 'late')
+    return 'Your window is now — generate kills, take towers, and choke their farm before their scaling kicks in.'
+  if (!favored && timing === 'early')
+    return 'Must generate leads now — your window is closing and the matchup is against you. Force the pace.'
+  if (!favored && timing === 'mid' && enemyTiming === 'late')
+    return 'You have a mid-game window before they spike — group up, force objectives, and build an insurmountable lead.'
+  if (!favored && timing === 'mid' && enemyTiming === 'early')
+    return 'Survive their early aggression — your mid-game is stronger. Play safe until you can turn fights.'
+
+  // Fallback
+  return 'Contested matchup — look for picks and plays that tilt the structural balance in your favor.'
 }
 
 function timingCategory(score: number): 'early' | 'mid' | 'late' {
@@ -412,7 +430,9 @@ function timingCategory(score: number): 'early' | 'mid' | 'late' {
 export function computeTeamUrgency(
   /** From THIS team's perspective: positive = this team is favored */
   matchupEdgeForThisTeam: number,
-  timingScore: number   // -1 (early) to +1 (late)
+  timingScore: number,   // -1 (early) to +1 (late)
+  enemyTimingScore: number,  // enemy's timing score
+  executionPressure: number = 0  // 0–0.4, how hard it is to convert advantage
 ): TeamUrgency {
   // Normalize matchup edge to [0, 1] — 1 = fully favored, 0 = fully unfavored.
   // Edge values are typically small floats; scale by 3 to give reasonable spread.
@@ -420,13 +440,21 @@ export function computeTeamUrgency(
   // Earlyness: 1 = very early, 0 = very late
   const earlyness     = clamp((1 - timingScore) / 2, 0, 1)
 
-  const raw   = (1 - matchupFavor) * 0.60 + earlyness * 0.40
+  // Base urgency: unfavored teams feel more urgency, early teams feel more urgency
+  let raw = (1 - matchupFavor) * 0.60 + earlyness * 0.40
+
+  // Execution pressure amplifies urgency for favored teams that can't easily convert.
+  // A favored early team that can't close feels MORE urgent — their window is slipping.
+  // A favored late team that can't survive feels MORE urgent — they might not reach spike.
+  raw += executionPressure * 0.50
+
   const score = Math.round(clamp(raw, 0, 1) * 100) / 100
 
   const [, label] = URGENCY_LABEL_THRESHOLDS.find(([t]) => score <= t)!
 
   const favored  = matchupFavor >= 0.5
   const timing   = timingCategory(timingScore)
+  const enemyTiming = timingCategory(enemyTimingScore)
 
   const recommendationBias: RecommendationBias =
     score >= 0.62 ? 'early'    :
@@ -435,7 +463,7 @@ export function computeTeamUrgency(
   return {
     score,
     label,
-    winCondition:       winConditionText(label, favored, timing),
+    winCondition:       winConditionText(label, favored, timing, enemyTiming),
     recommendationBias,
   }
 }
@@ -557,6 +585,131 @@ function analyzeOneSide(
   })
 }
 
+// ── Execution viability ───────────────────────────────────────────────────────
+// Measures whether a favored team can actually convert their advantage.
+// Does NOT modify the edge — only feeds into urgency amplification.
+// Returns a factor 0.6–1.0 where 1.0 = full execution possible, 0.6 = very hard.
+
+const EARLY_THRESHOLD = -0.15
+const LATE_THRESHOLD  =  0.15
+
+function earlyVsLateExecution(
+  early: Record<DraftDimension, number>,
+  late:  Record<DraftDimension, number>
+): number {
+  const uptimeDelta = (early.spell_uptime - late.spell_uptime) * 0.10
+
+  // Phase 2: Take objectives vs enemy waveclear/defense
+  const pushPower = Math.max(
+    early.objective_pressure,
+    (early.pickoff + early.hard_control) / 2,
+    early.teamfight,
+    (early.reach + early.objective_pressure) / 2
+  )
+  const pushResistance = (
+    late.waveclear * 0.40 +
+    late.defense * 0.30 +
+    late.hard_control * 0.30
+  )
+  const objectiveDelta = pushPower - pushResistance + uptimeDelta
+
+  // Phase 3: Strangle map vs enemy ability to farm safely
+  const stranglePower = (
+    early.map_presence * 0.20 +
+    early.pickoff * 0.25 +
+    early.hard_control * 0.20 +
+    early.mobility * 0.15 +
+    early.vision_control * 0.10 +
+    early.reach * 0.10
+  )
+  const farmSafety = (
+    late.mobility * 0.20 +
+    late.defensive_utility * 0.25 +
+    late.hard_control * 0.20 +
+    late.vision_control * 0.10 +
+    late.sustain * 0.15 +
+    late.reach * 0.10
+  )
+  const strangleDelta = stranglePower - farmSafety + uptimeDelta
+
+  // Phase 4: Breach high ground vs enemy HG defense
+  const breachPower = Math.max(
+    early.teamfight,
+    (early.pickoff + early.hard_control) / 2,
+    (early.reach + early.teamfight) / 2
+  )
+  const hgDefense = (
+    late.waveclear * 0.25 +
+    late.teamfight * 0.25 +
+    late.hard_control * 0.20 +
+    late.defensive_utility * 0.15 +
+    late.spell_uptime * 0.15
+  )
+  const breachDelta = breachPower - hgDefense + uptimeDelta
+
+  const chainMin = Math.min(objectiveDelta, strangleDelta, breachDelta)
+  return clamp(0.8 + (chainMin / 5.0) * 0.2, 0.6, 1.0)
+}
+
+function lateVsEarlySurvival(
+  late:  Record<DraftDimension, number>,
+  early: Record<DraftDimension, number>
+): number {
+  const uptimeDelta = (late.spell_uptime - early.spell_uptime) * 0.10
+
+  // Can they stall objectives?
+  const stallPower = (
+    late.waveclear * 0.35 +
+    late.defense * 0.25 +
+    late.hard_control * 0.25 +
+    late.defensive_utility * 0.15
+  )
+  const enemyPush = Math.max(
+    early.objective_pressure,
+    (early.pickoff + early.hard_control) / 2,
+    early.teamfight,
+    (early.reach + early.objective_pressure) / 2
+  )
+  const stallDelta = stallPower - enemyPush + uptimeDelta
+
+  // Can they farm safely?
+  const farmPower = (
+    late.mobility * 0.20 +
+    late.defensive_utility * 0.25 +
+    late.hard_control * 0.20 +
+    late.vision_control * 0.10 +
+    late.sustain * 0.15 +
+    late.reach * 0.10
+  )
+  const enemyStrangle = (
+    early.map_presence * 0.20 +
+    early.pickoff * 0.25 +
+    early.hard_control * 0.20 +
+    early.mobility * 0.15 +
+    early.vision_control * 0.10 +
+    early.reach * 0.10
+  )
+  const farmDelta = farmPower - enemyStrangle + uptimeDelta
+
+  // Can they hold high ground?
+  const hgHold = (
+    late.waveclear * 0.25 +
+    late.teamfight * 0.25 +
+    late.hard_control * 0.20 +
+    late.defensive_utility * 0.15 +
+    late.spell_uptime * 0.15
+  )
+  const enemyBreach = Math.max(
+    early.teamfight,
+    (early.pickoff + early.hard_control) / 2,
+    (early.reach + early.teamfight) / 2
+  )
+  const hgDelta = hgHold - enemyBreach + uptimeDelta
+
+  const chainMin = Math.min(stallDelta, farmDelta, hgDelta)
+  return clamp(0.8 + (chainMin / 5.0) * 0.2, 0.6, 1.0)
+}
+
 export function analyzeMatchup(
   radiant: TeamProfile,
   dire:    TeamProfile
@@ -591,8 +744,31 @@ export function analyzeMatchup(
     ? dire.heroes.reduce((s, h) => s + h.timing.score, 0) / dire.heroes.length
     : 0
 
-  const radiantUrgency = computeTeamUrgency(radiantEdge, radiantTimingScore)
-  const direUrgency    = computeTeamUrgency(-radiantEdge, direTimingScore)
+  // ── Execution pressure ──────────────────────────────────────────────────
+  // Measures how hard it is for the favored team to convert their advantage.
+  // Does NOT change the edge — only amplifies urgency (time pressure).
+  // A value of 0 = no extra pressure. Positive = harder to execute = more urgent.
+  let radiantExecPressure = 0
+  let direExecPressure = 0
+
+  if (radiantEdge > 0.15 && radiantTimingScore <= EARLY_THRESHOLD) {
+    // Radiant favored + early — how hard is it to close vs Dire's stall?
+    radiantExecPressure = 1 - earlyVsLateExecution(radiantNorm, direNorm)
+  } else if (radiantEdge > 0.15 && radiantTimingScore >= LATE_THRESHOLD) {
+    // Radiant favored + late — how hard is it to survive Dire's aggression?
+    radiantExecPressure = 1 - lateVsEarlySurvival(radiantNorm, direNorm)
+  }
+
+  if (radiantEdge < -0.15 && direTimingScore <= EARLY_THRESHOLD) {
+    // Dire favored + early — how hard is it to close vs Radiant's stall?
+    direExecPressure = 1 - earlyVsLateExecution(direNorm, radiantNorm)
+  } else if (radiantEdge < -0.15 && direTimingScore >= LATE_THRESHOLD) {
+    // Dire favored + late — how hard is it to survive Radiant's aggression?
+    direExecPressure = 1 - lateVsEarlySurvival(direNorm, radiantNorm)
+  }
+
+  const radiantUrgency = computeTeamUrgency(radiantEdge, radiantTimingScore, direTimingScore, radiantExecPressure)
+  const direUrgency    = computeTeamUrgency(-radiantEdge, direTimingScore, radiantTimingScore, direExecPressure)
 
   return { insights: allInsights, radiantEdge, overallFavored, radiantUrgency, direUrgency }
 }
