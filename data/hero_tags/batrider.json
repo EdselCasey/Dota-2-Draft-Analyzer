@@ -5,7 +5,8 @@
     "magic_amp",
     "medium_range",
     "short_duration",
-    "short_cooldown"
+    "short_cooldown",
+    "low_burst"
   ],
   "batrider_flamebreak": [
     "medium_aoe",
@@ -26,7 +27,8 @@
     "aerial",
     "movement_speed_boost",
     "medium_duration",
-    "medium_cooldown"
+    "medium_cooldown",
+    "short_range"
   ],
   "batrider_flaming_lasso": [
     "stun",
