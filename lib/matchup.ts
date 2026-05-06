@@ -45,8 +45,8 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   // still kills your team. requiresExcess enforces this.
   hard_control: [
     { counters: 'sustained_damage', strength: 0.50 },
-    { counters: 'burst_damage',     strength: 0.10, requiresExcess: true },
-    { counters: 'mobility',         strength: 0.35, requiresExcess: true },
+    { counters: 'burst_damage',     strength: 0.40},
+    { counters: 'mobility',         strength: 0.50},
     { counters: 'objective_pressure',             strength: 0.25 },
     { counters: 'defensive_utility', strength: 0.20 },
   ],
@@ -96,6 +96,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   // ── Pickoff ───────────────────────────────────────────────────────────────
   pickoff: [
     { counters: 'sustained_damage', strength: 0.55 },
+    { counters: 'burst_damage', strength: 0.40 },
     { counters: 'objective_pressure', strength: 0.30 },
     { counters: 'map_presence',     strength: 0.60 },
   ],
@@ -111,9 +112,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
 
   // ── Mobility ──────────────────────────────────────────────────────────────
   mobility: [
-    { counters: 'hard_control',     strength: 0.25 },
     { counters: 'soft_control',     strength: 0.15 },
-    { counters: 'pickoff',          strength: 0.40 },
   ],
 
   // ── Map presence ──────────────────────────────────────────────────────────
@@ -139,7 +138,6 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   // ── Utility ────────────────────────────────────────────────────────
   spell_uptime: [
     { counters: 'spell_uptime',     strength: 0.20, requiresExcess: true },
-    { counters: 'sustained_damage', strength: 0.20 },
     { counters: 'defense',          strength: 0.15 },
 ],
 }
@@ -207,6 +205,7 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
     objective_pressure: 'You can eliminate isolated pushers before they do structural damage.',
     map_presence:     'You punish heroes that overextend across the map.',
     sustained_damage: 'Your pick potential eliminates their damage dealers before they can output in fights.',
+    burst_damage:     'Your pick off catches their bursty spell casters and divers off guard'
   },
   reach: {
     mobility:         'Your range keeps mobile heroes at a distance.',
@@ -227,9 +226,7 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
     mobility:         'Your fight presence denies their divers an easy escape.',
   },
   mobility: {
-    hard_control:     'Your movement tools help dodge or reposition around their lockdown.',
     soft_control:     'Your mobility lets you outrun their slows and roots.',
-    pickoff:          'Your mobility lets you escape assassination attempts.',
   },
   map_presence: {
     pickoff:          'Your map vision and presence deters lone hunters.',
@@ -245,7 +242,6 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
   },
   spell_uptime: {
     spell_uptime:     'Your abilities cycle faster — you get more casts in every fight window.',
-    sustained_damage: 'Your consistent spell pressure disrupts their damage dealers before they can output.',
     defense:          'Your constant ability uptime wears down even durable heroes over time.',
 },
 }
@@ -306,9 +302,7 @@ const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<Dra
     mobility:         'Their dive heroes scatter your formation before you can react.',
   },
   mobility: {
-    hard_control:     'Your team lacks the movement to dodge their hard lockdown.',
     soft_control:     'You can\'t escape their slows and roots once caught.',
-    pickoff:          'You can\'t outrun their assassins once isolated.',
   },
   map_presence: {
     pickoff:          'Your vision gaps leave heroes exposed to solo kills.',
@@ -324,7 +318,6 @@ const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<Dra
   },
   spell_uptime: {
     spell_uptime:     'Their abilities are always available — you lose the casting battle in extended fights.',
-    sustained_damage: 'You lack the spell frequency to disrupt their damage dealers consistently.',
     defense:          'Their relentless ability pressure erodes your durability over time.',
 },
 }
