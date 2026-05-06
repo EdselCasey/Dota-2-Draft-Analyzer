@@ -44,7 +44,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   // has more sustained damage than you have control, one free damage dealer
   // still kills your team. requiresExcess enforces this.
   hard_control: [
-    { counters: 'sustained_damage', strength: 0.25, requiresExcess: true },
+    { counters: 'sustained_damage', strength: 0.40, requiresExcess: true },
     { counters: 'burst_damage',     strength: 0.10, requiresExcess: true },
     { counters: 'mobility',         strength: 0.35, requiresExcess: true },
     { counters: 'objective_pressure',             strength: 0.25 },
@@ -65,7 +65,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
 
   // ── Waveclear ─────────────────────────────────────────────────────────────
   waveclear: [
-    { counters: 'objective_pressure', strength: 0.25 },
+    { counters: 'objective_pressure', strength: 0.40 },
   ],
 
   // ── Objective Pressure ────────────────────────────────────────────────────
@@ -94,6 +94,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
 
   // ── Pickoff ───────────────────────────────────────────────────────────────
   pickoff: [
+    { counters: 'sustained_damage', strength: 0.25, requiresExcess: true },
     { counters: 'objective_pressure', strength: 0.30 },
     { counters: 'map_presence',     strength: 0.60 },
   ],
@@ -133,6 +134,13 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
     { counters: 'pickoff',          strength: 0.60 },
     { counters: 'map_presence',     strength: 0.40 },
   ],
+
+  // ── Utility ────────────────────────────────────────────────────────
+  spell_uptime: [
+    { counters: 'spell_uptime',     strength: 0.20, requiresExcess: true },
+    { counters: 'sustained_damage', strength: 0.20 },
+    { counters: 'defense',          strength: 0.15 },
+],
 }
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -196,6 +204,7 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
   pickoff: {
     objective_pressure: 'You can eliminate isolated pushers before they do structural damage.',
     map_presence:     'You punish heroes that overextend across the map.',
+    sustained_damage: 'Your pick potential eliminates their damage dealers before they can output in fights.',
   },
   reach: {
     mobility:         'Your range keeps mobile heroes at a distance.',
@@ -232,6 +241,11 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
     pickoff:          'Your vision coverage exposes their gankers before they strike.',
     map_presence:     'You control information, denying their map presence advantage.',
   },
+  spell_uptime: {
+    spell_uptime:     'Your abilities cycle faster — you get more casts in every fight window.',
+    sustained_damage: 'Your consistent spell pressure disrupts their damage dealers before they can output.',
+    defense:          'Your constant ability uptime wears down even durable heroes over time.',
+},
 }
 
 const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDimension, string>>>> = {
@@ -259,6 +273,7 @@ const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<Dra
   sustained_damage: {
     sustain:          'Your DPS is too slow to outpace their healing.',
     defense:          'Their defense outlasts your damage output in extended fights.',
+    pickoff: 'Your damage dealers are vulnerable to being picked off before fights even start.',
   },
   sustain: {
     burst_damage:     'You have no recovery tools — a single burst combo could end a fight.',
@@ -303,6 +318,11 @@ const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<Dra
     pickoff:          'Blind spots on the map give their hunters easy targets.',
     map_presence:     'You\'re fighting without information — their map game runs unchecked.',
   },
+  spell_uptime: {
+    spell_uptime:     'Their abilities are always available — you lose the casting battle in extended fights.',
+    sustained_damage: 'You lack the spell frequency to disrupt their damage dealers consistently.',
+    defense:          'Their relentless ability pressure erodes your durability over time.',
+},
 }
 
 function buildNarrative(

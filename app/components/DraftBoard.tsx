@@ -206,7 +206,7 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
             />
           ))}
         </div>
-        <TeamDimensionBars team={teamObj} accentColor={accent} />
+        <TeamDimensionBars team={teamObj} opposingTeam={team === 'radiant' ? direTeam : radiantTeam} accentColor={accent} />
       </>
     )
   }

@@ -1,15 +1,16 @@
 'use client'
 
 import { ALL_DIMENSIONS } from '../../lib/types'
-import type { TeamProfile } from '../../lib/types'
+import type { TeamProfile, DraftDimension } from '../../lib/types'
 import { DIMENSION_LABELS, DIMENSION_COLORS } from '../../lib/displayNames'
 
 interface TeamDimensionBarsProps {
   team: TeamProfile | null
+  opposingTeam?: TeamProfile | null
   accentColor: string
 }
 
-export default function TeamDimensionBars({ team, accentColor }: TeamDimensionBarsProps) {
+export default function TeamDimensionBars({ team, opposingTeam, accentColor }: TeamDimensionBarsProps) {
   if (!team) {
     return (
       <div className="px-3 py-4 text-center text-white/20 text-xs">
@@ -18,16 +19,32 @@ export default function TeamDimensionBars({ team, accentColor }: TeamDimensionBa
     )
   }
 
+  // Shared normalization: use the max raw value across BOTH teams as the ceiling
+  const sharedMax = (() => {
+    if (!opposingTeam) {
+      // Fallback to self-normalization if no opposing team
+      return Math.max(...Object.values(team.rawAggregates), 1)
+    }
+    return Math.max(
+      ...ALL_DIMENSIONS.flatMap(d => [
+        team.rawAggregates[d] ?? 0,
+        opposingTeam.rawAggregates[d] ?? 0,
+      ]),
+      1
+    )
+  })()
+
   return (
     <div className="px-3 py-3 border-t border-white/10 space-y-1.5">
       <p className="text-[10px] font-semibold uppercase tracking-widest text-white/30 mb-2">
         Team Analysis
       </p>
       {ALL_DIMENSIONS.map(dim => {
-        const score    = team.aggregateScores[dim] ?? 0
+        const raw      = team.rawAggregates[dim] ?? 0
+        const score    = Math.round((raw / sharedMax) * 100) / 10
         const pct      = Math.min((score / 10) * 100, 100)
-        const isWeak   = team.weaknesses.includes(dim)
-        const isStrong = team.strengths.includes(dim)
+        const isWeak   = score < 3.0
+        const isStrong = score >= 7.0
 
         return (
           <div key={dim} className="flex items-center gap-2">
