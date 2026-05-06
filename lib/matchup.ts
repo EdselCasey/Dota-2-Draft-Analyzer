@@ -744,27 +744,44 @@ export function analyzeMatchup(
     ? dire.heroes.reduce((s, h) => s + h.timing.score, 0) / dire.heroes.length
     : 0
 
-  // ── Execution pressure ──────────────────────────────────────────────────
-  // Measures how hard it is for the favored team to convert their advantage.
-  // Does NOT change the edge — only amplifies urgency (time pressure).
-  // A value of 0 = no extra pressure. Positive = harder to execute = more urgent.
+  // ── Execution pressure (bidirectional) ──────────────────────────────────
+  // Both teams are evaluated for offensive (can they close?) and defensive
+  // (can they stall?) execution. Pressure is high when you can't close AND
+  // the enemy can counter-push. Pressure is low when you can't close but
+  // they also can't threaten — safe to grind them out.
   let radiantExecPressure = 0
   let direExecPressure = 0
 
-  if (radiantEdge > 0.15 && radiantTimingScore <= EARLY_THRESHOLD) {
-    // Radiant favored + early — how hard is it to close vs Dire's stall?
-    radiantExecPressure = 1 - earlyVsLateExecution(radiantNorm, direNorm)
-  } else if (radiantEdge > 0.15 && radiantTimingScore >= LATE_THRESHOLD) {
-    // Radiant favored + late — how hard is it to survive Dire's aggression?
-    radiantExecPressure = 1 - lateVsEarlySurvival(radiantNorm, direNorm)
-  }
+  // Compute all four execution factors
+  const radiantOffense = earlyVsLateExecution(radiantNorm, direNorm)  // Radiant push vs Dire stall
+  const direOffense    = earlyVsLateExecution(direNorm, radiantNorm)  // Dire push vs Radiant stall
+  const radiantDefense = lateVsEarlySurvival(radiantNorm, direNorm)   // Radiant stall vs Dire push
+  const direDefense    = lateVsEarlySurvival(direNorm, radiantNorm)   // Dire stall vs Radiant push
 
-  if (radiantEdge < -0.15 && direTimingScore <= EARLY_THRESHOLD) {
-    // Dire favored + early — how hard is it to close vs Radiant's stall?
-    direExecPressure = 1 - earlyVsLateExecution(direNorm, radiantNorm)
-  } else if (radiantEdge < -0.15 && direTimingScore >= LATE_THRESHOLD) {
-    // Dire favored + late — how hard is it to survive Radiant's aggression?
-    direExecPressure = 1 - lateVsEarlySurvival(direNorm, radiantNorm)
+  if (radiantEdge > 0.15) {
+    // Radiant is favored:
+    //   Pressure = how hard to close + can Dire counter-push?
+    //   If Dire can't push back, pressure is halved (safe to be patient)
+    const cantClose   = 1 - radiantOffense
+    const theyCanFlip = Math.max(direOffense - 0.6, 0)
+    radiantExecPressure = clamp(cantClose * 0.5 + theyCanFlip * 0.5, 0, 0.4)
+
+    // Dire is unfavored:
+    //   Pressure = how hard to stall + can Radiant close fast?
+    //   If Radiant can't close, pressure is lower (you have time)
+    const cantStall    = 1 - direDefense
+    const enemyCloses  = Math.max(radiantOffense - 0.6, 0)
+    direExecPressure = clamp(cantStall * 0.5 + enemyCloses * 0.5, 0, 0.4)
+  } else if (radiantEdge < -0.15) {
+    // Dire is favored:
+    const cantClose   = 1 - direOffense
+    const theyCanFlip = Math.max(radiantOffense - 0.6, 0)
+    direExecPressure = clamp(cantClose * 0.5 + theyCanFlip * 0.5, 0, 0.4)
+
+    // Radiant is unfavored:
+    const cantStall    = 1 - radiantDefense
+    const enemyCloses  = Math.max(direOffense - 0.6, 0)
+    radiantExecPressure = clamp(cantStall * 0.5 + enemyCloses * 0.5, 0, 0.4)
   }
 
   const radiantUrgency = computeTeamUrgency(radiantEdge, radiantTimingScore, direTimingScore, radiantExecPressure)
