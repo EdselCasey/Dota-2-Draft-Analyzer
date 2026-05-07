@@ -48,11 +48,11 @@ export const TAG_CATEGORY: Partial<Record<AbilityTag, string>> = {
   attack_damage_boost:  'damage',
   attack_modifier:      'damage',
   // objective pressure
-  summon_units:     'push',
-  illusion:         'push',
-  siege:            'push',
-  building_damage:  'push',
-  push_structures:  'push',
+  summon_units:     'objective_pressure',
+  illusion:         'objective_pressure',
+  siege:            'objective_pressure',
+  building_damage:  'objective_pressure',
+  push_structures:  'objective_pressure',
   zone_control:     'control',
   // defense
   damage_reduction: 'defense',
@@ -61,13 +61,13 @@ export const TAG_CATEGORY: Partial<Record<AbilityTag, string>> = {
 }
 
 export const AOE_BONUS_BY_CATEGORY: Record<string, number> = {
-  control:  1.5,
-  damage:   1.3,
-  mobility: 1.1,
-  push:     1.2,
-  stealth:  1.2,
-  aerial:   1.1,
-  defense:  1.1,
+  control:             1.5,
+  damage:              1.3,
+  mobility:            1.1,
+  objective_pressure:  1.2,
+  stealth:             1.2,
+  aerial:              1.1,
+  defense:             1.1,
 }
 
 // Derived automatically — scorer uses this for combo multiplier lookup.
@@ -316,7 +316,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   attack_speed_boost: [
     { dimension: 'sustained_damage', weight: 2.0 },
     { dimension: 'waveclear',        weight: 1.0 },
-    { dimension: 'objective_pressure', weight: 1.5 },
+    { dimension: 'objective_pressure', weight: 2.0 },
   ],
   armor_reduction: [
     { dimension: 'sustained_damage', weight: 1.5 },
