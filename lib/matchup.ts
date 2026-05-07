@@ -785,8 +785,26 @@ export function analyzeMatchup(
     direExecPressure    = clamp((1 - direClose) * 0.5, 0, 0.2)
   }
 
+  // ── Execution favor shift ──────────────────────────────────────────────
+  // How much better is each team at executing vs the other team's resistance?
+  // Positive = Radiant executes better, negative = Dire executes better.
+  const radiantClosingGap = radiantClose - direStall    // Can Radiant push through Dire?
+  const direClosingGap    = direClose - radiantStall    // Can Dire push through Radiant?
+  const radiantExecEdge   = radiantClosingGap - direClosingGap
+
+  // Shift favor toward the team with better execution
+  // Capped at ±0.25 so execution can flip close matchups but not override strong structure
+  const execFavorShift = clamp(radiantExecEdge * 0.5, -0.25, 0.25)
+  radiantEdge += execFavorShift
+  radiantEdge = Math.round(radiantEdge * 100) / 100
+
+  // Recompute overallFavored with the shifted edge
+  const overallFavoredShifted: 'radiant' | 'dire' | 'even' =
+    radiantEdge >  0.15 ? 'radiant' :
+    radiantEdge < -0.15 ? 'dire'    : 'even'
+
   const radiantUrgency = computeTeamUrgency(radiantEdge, radiantTimingScore, direTimingScore, radiantExecPressure)
   const direUrgency    = computeTeamUrgency(-radiantEdge, direTimingScore, radiantTimingScore, direExecPressure)
 
-  return { insights: allInsights, radiantEdge, overallFavored, radiantUrgency, direUrgency }
+  return { insights: allInsights, radiantEdge, overallFavored: overallFavoredShifted, radiantUrgency, direUrgency }
 }
