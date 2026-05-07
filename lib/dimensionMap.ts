@@ -330,6 +330,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   attack_modifier: [
     { dimension: 'sustained_damage', weight: 2.0 },
     { dimension: 'pickoff',          weight: 0.5 },
+    { dimension: 'objective_pressure', weight: 2.0 },
   ],
   mana_burn: [
     { dimension: 'pickoff',          weight: 0.5 },
