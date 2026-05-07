@@ -330,7 +330,7 @@ function buildNarrative(
 export interface MatchupAnalysis {
   insights:       MatchupInsight[]
   radiantEdge:    number
-  overallFavored: 'radiant' | 'dire' | 'even'
+  overallFavored: 'radiant_slightly' | 'radiant' | 'radiant_strongly' | 'dire_slightly' | 'dire' | 'dire_strongly' | 'even'
   radiantUrgency: TeamUrgency
   direUrgency:    TeamUrgency
 }
@@ -788,15 +788,19 @@ export function analyzeMatchup(
   const radiantExecEdge   = radiantClosingGap - direClosingGap
 
   // Shift favor toward the team with better execution
-  // Execution can override strong structural edges — it reflects actual game reality
-  const execFavorShift = clamp(radiantExecEdge * 1.5, -0.50, 0.50)
+  // Capped at ±0.50 — execution can flip matchups but not create landslides
+  const execFavorShift = clamp(radiantExecEdge * 1.0, -0.50, 0.50)
   radiantEdge += execFavorShift
   radiantEdge = Math.round(radiantEdge * 100) / 100
 
-  // Recompute overallFavored with the shifted edge
-  const overallFavoredShifted: 'radiant' | 'dire' | 'even' =
-    radiantEdge >  0.15 ? 'radiant' :
-    radiantEdge < -0.15 ? 'dire'    : 'even'
+  // Recompute overallFavored with the shifted edge — gradient labels
+  const overallFavoredShifted: MatchupAnalysis['overallFavored'] =
+    radiantEdge >  0.40 ? 'radiant_strongly' :
+    radiantEdge >  0.25 ? 'radiant'           :
+    radiantEdge >  0.15 ? 'radiant_slightly'  :
+    radiantEdge < -0.40 ? 'dire_strongly'     :
+    radiantEdge < -0.25 ? 'dire'              :
+    radiantEdge < -0.15 ? 'dire_slightly'     : 'even'
 
   const radiantUrgency = computeTeamUrgency(radiantEdge, radiantTimingScore, direTimingScore)
   const direUrgency    = computeTeamUrgency(-radiantEdge, direTimingScore, radiantTimingScore)

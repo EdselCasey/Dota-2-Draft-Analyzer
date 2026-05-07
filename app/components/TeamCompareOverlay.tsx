@@ -233,19 +233,25 @@ export default function TeamCompareOverlay({ radiant, dire, onClose }: TeamCompa
               className="text-xs font-bold px-2.5 py-1 rounded"
               style={{
                 color:
-                  matchup.overallFavored === 'radiant' ? '#4ade80' :
-                  matchup.overallFavored === 'dire'    ? '#f87171' : '#94a3b8',
+                  matchup.overallFavored === 'radiant_slightly' || matchup.overallFavored === 'radiant' || matchup.overallFavored === 'radiant_strongly' ? '#4ade80' :
+                  matchup.overallFavored === 'dire_slightly'    || matchup.overallFavored === 'dire'    || matchup.overallFavored === 'dire_strongly'    ? '#f87171' : '#94a3b8',
                 backgroundColor:
-                  matchup.overallFavored === 'radiant' ? 'rgba(74,222,128,0.12)' :
-                  matchup.overallFavored === 'dire'    ? 'rgba(248,113,113,0.12)' : 'rgba(148,163,184,0.1)',
+                  matchup.overallFavored === 'radiant_slightly' || matchup.overallFavored === 'radiant' || matchup.overallFavored === 'radiant_strongly' ? 'rgba(74,222,128,0.12)' :
+                  matchup.overallFavored === 'dire_slightly'    || matchup.overallFavored === 'dire'    || matchup.overallFavored === 'dire_strongly'    ? 'rgba(248,113,113,0.12)' : 'rgba(148,163,184,0.1)',
                 border: `1px solid ${
-                  matchup.overallFavored === 'radiant' ? 'rgba(74,222,128,0.3)' :
-                  matchup.overallFavored === 'dire'    ? 'rgba(248,113,113,0.3)' : 'rgba(148,163,184,0.2)'
+                  matchup.overallFavored === 'radiant_slightly' || matchup.overallFavored === 'radiant' || matchup.overallFavored === 'radiant_strongly' ? 'rgba(74,222,128,0.3)' :
+                  matchup.overallFavored === 'dire_slightly'    || matchup.overallFavored === 'dire'    || matchup.overallFavored === 'dire_strongly'    ? 'rgba(248,113,113,0.3)' : 'rgba(148,163,184,0.2)'
                 }`,
               }}
             >
               {matchup.overallFavored === 'even' ? 'Even matchup' :
-               `${matchup.overallFavored === 'radiant' ? 'Radiant' : 'Dire'} favored`}
+               `${(() => {
+                 const isRadiant = matchup.overallFavored === 'radiant_slightly' || matchup.overallFavored === 'radiant' || matchup.overallFavored === 'radiant_strongly'
+                 const team = isRadiant ? 'Radiant' : 'Dire'
+                 const strength = matchup.overallFavored === 'radiant_strongly' || matchup.overallFavored === 'dire_strongly' ? 'strongly ' :
+                                  matchup.overallFavored === 'radiant_slightly' || matchup.overallFavored === 'dire_slightly' ? 'slightly ' : ''
+                 return `${team} ${strength}favored`
+               })()}`}
             </span>
           </div>
 

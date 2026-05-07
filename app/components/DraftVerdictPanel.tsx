@@ -14,12 +14,13 @@ interface DraftVerdictPanelProps {
 }
 
 function verdictSubtitle(
-  favored: 'radiant' | 'dire' | 'even',
+  favored: 'radiant_slightly' | 'radiant' | 'radiant_strongly' | 'dire_slightly' | 'dire' | 'dire_strongly' | 'even',
   radiantTiming: TimingResult | null,
   direTiming:    TimingResult | null,
 ): string {
   if (favored === 'even') return 'Closely Contested — no clear structural edge'
-  const t = favored === 'radiant' ? radiantTiming?.label : direTiming?.label
+  const isRadiant = favored === 'radiant_slightly' || favored === 'radiant' || favored === 'radiant_strongly'
+  const t = isRadiant ? radiantTiming?.label : direTiming?.label
   if (t === 'Early Game' || t === 'Early-Mid') return 'Early–mid dominance — can control and close the map'
   if (t === 'Late Game'  || t === 'Mid-Late' ) return 'Farm to your power spike and scale to win'
   return 'Maintain pressure and respond to threats'
@@ -82,12 +83,16 @@ export default function DraftVerdictPanel({
   const { overallFavored, radiantUrgency, direUrgency } = matchup
 
   const verdictText =
-    overallFavored === 'radiant' ? 'Radiant Favored' :
-    overallFavored === 'dire'    ? 'Dire Favored'    : 'Even Matchup'
+    overallFavored === 'radiant_strongly' ? 'Radiant Strongly Favored' :
+    overallFavored === 'radiant'          ? 'Radiant Favored'           :
+    overallFavored === 'radiant_slightly' ? 'Radiant Slightly Favored' :
+    overallFavored === 'dire_strongly'    ? 'Dire Strongly Favored'    :
+    overallFavored === 'dire'             ? 'Dire Favored'             :
+    overallFavored === 'dire_slightly'    ? 'Dire Slightly Favored'    : 'Even Matchup'
 
   const verdictColor =
-    overallFavored === 'radiant' ? '#4ade80' :
-    overallFavored === 'dire'    ? '#f87171' : '#94a3b8'
+    overallFavored === 'radiant_strongly' || overallFavored === 'radiant' || overallFavored === 'radiant_slightly' ? '#4ade80' :
+    overallFavored === 'dire_strongly'    || overallFavored === 'dire'    || overallFavored === 'dire_slightly'    ? '#f87171' : '#94a3b8'
 
   const subtitle = verdictSubtitle(overallFavored, radiantTiming, direTiming)
 

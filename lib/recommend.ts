@@ -61,8 +61,8 @@ function scoreForTeam(
 
   const currentEdge = currentMatchup.radiantEdge  // positive = radiant favored
   const enemyFavored =
-    isRadiant ? currentMatchup.overallFavored === 'dire'
-              : currentMatchup.overallFavored === 'radiant'
+    isRadiant ? currentMatchup.overallFavored === 'dire' || currentMatchup.overallFavored === 'dire_slightly' || currentMatchup.overallFavored === 'dire_strongly'
+              : currentMatchup.overallFavored === 'radiant' || currentMatchup.overallFavored === 'radiant_slightly' || currentMatchup.overallFavored === 'radiant_strongly'
 
   // ── 1. Favor shift simulation ──────────────────────────────────────────────
   // Build a hypothetical team with this hero added and re-run the matchup.
@@ -83,7 +83,10 @@ function scoreForTeam(
 
   if (favorShiftPos > 0.25) {
     const simFavored = simMatchup.overallFavored
-    if (simFavored === (isRadiant ? 'radiant' : 'dire')) {
+    const ourTeamFavored = isRadiant
+      ? simFavored === 'radiant' || simFavored === 'radiant_slightly' || simFavored === 'radiant_strongly'
+      : simFavored === 'dire' || simFavored === 'dire_slightly' || simFavored === 'dire_strongly'
+    if (ourTeamFavored) {
       reasons.push('Swings the matchup in your favor')
     } else {
       reasons.push('Significantly improves your standing')
