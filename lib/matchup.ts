@@ -108,7 +108,8 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
 
   // ── Mobility ──────────────────────────────────────────────────────────────
   mobility: [
-    { counters: 'soft_control',     strength: 0.15 },
+    { counters: 'hard_control', strength: 0.20, requiresExcess: true },
+    { counters: 'soft_control', strength: 0.30, requiresExcess: true },
   ],
 
   // ── Map presence ──────────────────────────────────────────────────────────
@@ -221,6 +222,7 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
     mobility:         'Your fight presence denies their divers an easy escape.',
   },
   mobility: {
+    hard_control:     'Your mobility lets you dodge or escape their hard lockdown.',
     soft_control:     'Your mobility lets you outrun their slows and roots.',
   },
   map_presence: {
@@ -293,6 +295,7 @@ const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<Dra
     mobility:         'Their dive heroes scatter your formation before you can react.',
   },
   mobility: {
+    hard_control:     'Your team lacks the movement to dodge their hard lockdown.',
     soft_control:     'You can\'t escape their slows and roots once caught.',
   },
   map_presence: {
