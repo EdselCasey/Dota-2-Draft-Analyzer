@@ -149,7 +149,7 @@ const LABEL_THRESHOLDS: [number, TimingLabel][] = [
 export const TIMING_LABEL_COLORS: Record<TimingLabel, string> = {
   'Early Game': '#f97316',   // orange
   'Early-Mid':  '#facc15',   // yellow
-  'Mid Game':   '#ad0600',   // slate
+  'Mid Game':   '#81ee04',   // slate
   'Mid-Late':   '#34d399',   // green
   'Late Game':  '#a78bfa',   // purple
 }
