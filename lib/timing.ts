@@ -129,7 +129,7 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
 export type TimingLabel =
   | 'Early Game'
   | 'Early-Mid'
-  | 'All Game'
+  | 'Mid Game'
   | 'Mid-Late'
   | 'Late Game'
 
@@ -141,7 +141,7 @@ export interface TimingResult {
 const LABEL_THRESHOLDS: [number, TimingLabel][] = [
   [-0.30, 'Early Game'],
   [-0.10, 'Early-Mid'],
-  [ 0.10, 'All Game'],
+  [ 0.10, 'Mid Game'],
   [ 0.30, 'Mid-Late'],
   [ Infinity, 'Late Game'],
 ]
@@ -149,7 +149,7 @@ const LABEL_THRESHOLDS: [number, TimingLabel][] = [
 export const TIMING_LABEL_COLORS: Record<TimingLabel, string> = {
   'Early Game': '#f97316',   // orange
   'Early-Mid':  '#facc15',   // yellow
-  'All Game':   '#94a3b8',   // slate
+  'Mid Game':   '#ad0600',   // slate
   'Mid-Late':   '#34d399',   // green
   'Late Game':  '#a78bfa',   // purple
 }
@@ -175,7 +175,7 @@ export function computeTimingScore(abilities: TaggedAbility[]): TimingResult {
 }
 
 export function teamTimingScore(labels: TimingResult[]): TimingResult {
-  if (labels.length === 0) return { score: 0, label: 'All Game' }
+  if (labels.length === 0) return { score: 0, label: 'Mid Game' }
   const avg = labels.reduce((s, t) => s + t.score, 0) / labels.length
   const score = Math.round(avg * 100) / 100
   const [, label] = LABEL_THRESHOLDS.find(([threshold]) => score <= threshold)!
