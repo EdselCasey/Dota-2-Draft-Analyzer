@@ -151,17 +151,17 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   low_burst: [
     { dimension: 'burst_damage', weight: 1.0 },
     { dimension: 'pickoff',      weight: 0.5 },
-    { dimension: 'waveclear',    weight: 0.8 },
+    { dimension: 'waveclear',    weight: 0.5 },
   ],
   medium_burst: [
     { dimension: 'burst_damage', weight: 2.0 },
     { dimension: 'pickoff',      weight: 1.5 },
-    { dimension: 'waveclear',    weight: 1.6 },
+    { dimension: 'waveclear',    weight: 1.5 },
   ],
   high_burst: [
     { dimension: 'burst_damage', weight: 3.0 },
     { dimension: 'pickoff',      weight: 2.5 },
-    { dimension: 'waveclear',    weight: 2.4 },
+    { dimension: 'waveclear',    weight: 2.0 },
   ],
 
   // ── Sustained Damage (tiered) ─────────────────────────────────────────────
@@ -316,7 +316,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   attack_speed_boost: [
     { dimension: 'sustained_damage', weight: 2.0 },
     { dimension: 'waveclear',        weight: 1.0 },
-    { dimension: 'objective_pressure', weight: 2.0 },
+    { dimension: 'objective_pressure', weight: 2.5 },
   ],
   armor_reduction: [
     { dimension: 'sustained_damage', weight: 1.5 },
@@ -325,7 +325,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   attack_damage_boost: [
     { dimension: 'sustained_damage', weight: 2.5 },
     { dimension: 'waveclear',        weight: 1.0 },
-    { dimension: 'objective_pressure', weight: 2.0 },
+    { dimension: 'objective_pressure', weight: 3.0 },
   ],
   attack_modifier: [
     { dimension: 'sustained_damage', weight: 2.0 },
@@ -342,7 +342,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'map_presence',       weight: 1.0 },
   ],
   illusion: [
-    { dimension: 'objective_pressure', weight: 2.5 },
+    { dimension: 'objective_pressure', weight: 3.0 },
     { dimension: 'sustained_damage',   weight: 2.5 },
     { dimension: 'vision_control',     weight: 1.0 },
     { dimension: 'map_presence',       weight: 1.0 },
