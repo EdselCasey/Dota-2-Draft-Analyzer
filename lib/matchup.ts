@@ -594,64 +594,62 @@ function analyzeOneSide(
 }
 
 // ── Execution viability ───────────────────────────────────────────────────────
-// Measures whether a favored team can actually convert their advantage.
+// Measures whether a team can actually convert advantages or survive pressure.
 // Does NOT modify the edge — only feeds into urgency amplification.
 // Returns a factor 0.6–1.0 where 1.0 = full execution possible, 0.6 = very hard.
+// Always computed for both teams regardless of timing — every game is an execution test.
 
-const EARLY_THRESHOLD = -0.15
-const LATE_THRESHOLD  =  0.15
-
-function earlyVsLateExecution(
-  early: Record<DraftDimension, number>,
-  late:  Record<DraftDimension, number>
+function closingPower(
+  attacker: Record<DraftDimension, number>,
+  defender: Record<DraftDimension, number>
 ): number {
-  const uptimeDelta = (early.spell_uptime - late.spell_uptime) * 0.10
+  const uptimeDelta = (attacker.spell_uptime - defender.spell_uptime) * 0.10
 
   // Phase 2: Take objectives vs enemy waveclear/defense
   const pushPower = Math.max(
-    early.objective_pressure,
-    (early.pickoff + early.hard_control) / 2,
-    early.teamfight,
-    (early.reach + early.objective_pressure) / 2
+    attacker.objective_pressure,
+    (attacker.pickoff + attacker.hard_control) / 2,
+    attacker.teamfight,
+    (attacker.reach + attacker.objective_pressure) / 2
   )
   const pushResistance = (
-    late.waveclear * 0.40 +
-    late.defense * 0.30 +
-    late.hard_control * 0.30
+    defender.waveclear * 0.40 +
+    defender.defense * 0.30 +
+    defender.hard_control * 0.30
   )
   const objectiveDelta = pushPower - pushResistance + uptimeDelta
 
   // Phase 3: Strangle map vs enemy ability to farm safely
   const stranglePower = (
-    early.map_presence * 0.20 +
-    early.pickoff * 0.25 +
-    early.hard_control * 0.20 +
-    early.mobility * 0.15 +
-    early.vision_control * 0.10 +
-    early.reach * 0.10
+    attacker.map_presence * 0.20 +
+    attacker.pickoff * 0.25 +
+    attacker.hard_control * 0.20 +
+    attacker.mobility * 0.15 +
+    attacker.vision_control * 0.10 +
+    attacker.reach * 0.10
   )
   const farmSafety = (
-    late.mobility * 0.20 +
-    late.defensive_utility * 0.25 +
-    late.hard_control * 0.20 +
-    late.vision_control * 0.10 +
-    late.sustain * 0.15 +
-    late.reach * 0.10
+    defender.mobility * 0.20 +
+    defender.defensive_utility * 0.25 +
+    defender.hard_control * 0.20 +
+    defender.vision_control * 0.10 +
+    defender.sustain * 0.15 +
+    defender.reach * 0.10
   )
   const strangleDelta = stranglePower - farmSafety + uptimeDelta
 
   // Phase 4: Breach high ground vs enemy HG defense
   const breachPower = Math.max(
-    early.teamfight,
-    (early.pickoff + early.hard_control) / 2,
-    (early.reach + early.teamfight) / 2
+    attacker.teamfight,
+    (attacker.pickoff + attacker.hard_control) / 2,
+    (attacker.reach + attacker.teamfight) / 2
   )
   const hgDefense = (
-    late.waveclear * 0.25 +
-    late.teamfight * 0.25 +
-    late.hard_control * 0.20 +
-    late.defensive_utility * 0.15 +
-    late.spell_uptime * 0.15
+    defender.waveclear * 0.25 +
+    defender.teamfight * 0.25 +
+    defender.hard_control * 0.20 +
+    defender.defensive_utility * 0.15 +
+    defender.spell_uptime * 0.15
   )
   const breachDelta = breachPower - hgDefense + uptimeDelta
 
@@ -659,58 +657,58 @@ function earlyVsLateExecution(
   return clamp(0.8 + (chainMin / 5.0) * 0.2, 0.6, 1.0)
 }
 
-function lateVsEarlySurvival(
-  late:  Record<DraftDimension, number>,
-  early: Record<DraftDimension, number>
+function stallingPower(
+  defender: Record<DraftDimension, number>,
+  attacker: Record<DraftDimension, number>
 ): number {
-  const uptimeDelta = (late.spell_uptime - early.spell_uptime) * 0.10
+  const uptimeDelta = (defender.spell_uptime - attacker.spell_uptime) * 0.10
 
   // Can they stall objectives?
   const stallPower = (
-    late.waveclear * 0.35 +
-    late.defense * 0.25 +
-    late.hard_control * 0.25 +
-    late.defensive_utility * 0.15
+    defender.waveclear * 0.35 +
+    defender.defense * 0.25 +
+    defender.hard_control * 0.25 +
+    defender.defensive_utility * 0.15
   )
   const enemyPush = Math.max(
-    early.objective_pressure,
-    (early.pickoff + early.hard_control) / 2,
-    early.teamfight,
-    (early.reach + early.objective_pressure) / 2
+    attacker.objective_pressure,
+    (attacker.pickoff + attacker.hard_control) / 2,
+    attacker.teamfight,
+    (attacker.reach + attacker.objective_pressure) / 2
   )
   const stallDelta = stallPower - enemyPush + uptimeDelta
 
   // Can they farm safely?
   const farmPower = (
-    late.mobility * 0.20 +
-    late.defensive_utility * 0.25 +
-    late.hard_control * 0.20 +
-    late.vision_control * 0.10 +
-    late.sustain * 0.15 +
-    late.reach * 0.10
+    defender.mobility * 0.20 +
+    defender.defensive_utility * 0.25 +
+    defender.hard_control * 0.20 +
+    defender.vision_control * 0.10 +
+    defender.sustain * 0.15 +
+    defender.reach * 0.10
   )
   const enemyStrangle = (
-    early.map_presence * 0.20 +
-    early.pickoff * 0.25 +
-    early.hard_control * 0.20 +
-    early.mobility * 0.15 +
-    early.vision_control * 0.10 +
-    early.reach * 0.10
+    attacker.map_presence * 0.20 +
+    attacker.pickoff * 0.25 +
+    attacker.hard_control * 0.20 +
+    attacker.mobility * 0.15 +
+    attacker.vision_control * 0.10 +
+    attacker.reach * 0.10
   )
   const farmDelta = farmPower - enemyStrangle + uptimeDelta
 
   // Can they hold high ground?
   const hgHold = (
-    late.waveclear * 0.25 +
-    late.teamfight * 0.25 +
-    late.hard_control * 0.20 +
-    late.defensive_utility * 0.15 +
-    late.spell_uptime * 0.15
+    defender.waveclear * 0.25 +
+    defender.teamfight * 0.25 +
+    defender.hard_control * 0.20 +
+    defender.defensive_utility * 0.15 +
+    defender.spell_uptime * 0.15
   )
   const enemyBreach = Math.max(
-    early.teamfight,
-    (early.pickoff + early.hard_control) / 2,
-    (early.reach + early.teamfight) / 2
+    attacker.teamfight,
+    (attacker.pickoff + attacker.hard_control) / 2,
+    (attacker.reach + attacker.teamfight) / 2
   )
   const hgDelta = hgHold - enemyBreach + uptimeDelta
 
@@ -752,44 +750,39 @@ export function analyzeMatchup(
     ? dire.heroes.reduce((s, h) => s + h.timing.score, 0) / dire.heroes.length
     : 0
 
-  // ── Execution pressure (bidirectional) ──────────────────────────────────
-  // Both teams are evaluated for offensive (can they close?) and defensive
-  // (can they stall?) execution. Pressure is high when you can't close AND
-  // the enemy can counter-push. Pressure is low when you can't close but
-  // they also can't threaten — safe to grind them out.
+  // ── Execution pressure (always computed) ──────────────────────────────────
+  // Both teams are evaluated for closing (can they push through?) and stalling
+  // (can they survive?) power. Every game is an execution test regardless of timing.
   let radiantExecPressure = 0
   let direExecPressure = 0
 
-  // Compute all four execution factors
-  const radiantOffense = earlyVsLateExecution(radiantNorm, direNorm)  // Radiant push vs Dire stall
-  const direOffense    = earlyVsLateExecution(direNorm, radiantNorm)  // Dire push vs Radiant stall
-  const radiantDefense = lateVsEarlySurvival(radiantNorm, direNorm)   // Radiant stall vs Dire push
-  const direDefense    = lateVsEarlySurvival(direNorm, radiantNorm)   // Dire stall vs Radiant push
+  const radiantClose = closingPower(radiantNorm, direNorm)
+  const direClose    = closingPower(direNorm, radiantNorm)
+  const radiantStall = stallingPower(radiantNorm, direNorm)
+  const direStall    = stallingPower(direNorm, radiantNorm)
 
   if (radiantEdge > 0.15) {
-    // Radiant is favored:
-    //   Pressure = how hard to close + can Dire counter-push?
-    //   If Dire can't push back, pressure is halved (safe to be patient)
-    const cantClose   = 1 - radiantOffense
-    const theyCanFlip = Math.max(direOffense - 0.6, 0)
+    // Radiant favored
+    const cantClose   = 1 - radiantClose
+    const theyCanFlip = Math.max(direClose - 0.6, 0)
     radiantExecPressure = clamp(cantClose * 0.5 + theyCanFlip * 0.5, 0, 0.4)
 
-    // Dire is unfavored:
-    //   Pressure = how hard to stall + can Radiant close fast?
-    //   If Radiant can't close, pressure is lower (you have time)
-    const cantStall    = 1 - direDefense
-    const enemyCloses  = Math.max(radiantOffense - 0.6, 0)
+    const cantStall   = 1 - direStall
+    const enemyCloses = Math.max(radiantClose - 0.6, 0)
     direExecPressure = clamp(cantStall * 0.5 + enemyCloses * 0.5, 0, 0.4)
   } else if (radiantEdge < -0.15) {
-    // Dire is favored:
-    const cantClose   = 1 - direOffense
-    const theyCanFlip = Math.max(radiantOffense - 0.6, 0)
+    // Dire favored
+    const cantClose   = 1 - direClose
+    const theyCanFlip = Math.max(radiantClose - 0.6, 0)
     direExecPressure = clamp(cantClose * 0.5 + theyCanFlip * 0.5, 0, 0.4)
 
-    // Radiant is unfavored:
-    const cantStall    = 1 - radiantDefense
-    const enemyCloses  = Math.max(direOffense - 0.6, 0)
+    const cantStall   = 1 - radiantStall
+    const enemyCloses = Math.max(direClose - 0.6, 0)
     radiantExecPressure = clamp(cantStall * 0.5 + enemyCloses * 0.5, 0, 0.4)
+  } else {
+    // Even matchup — both teams get light pressure based on execution gaps
+    radiantExecPressure = clamp((1 - radiantClose) * 0.5, 0, 0.2)
+    direExecPressure    = clamp((1 - direClose) * 0.5, 0, 0.2)
   }
 
   const radiantUrgency = computeTeamUrgency(radiantEdge, radiantTimingScore, direTimingScore, radiantExecPressure)
