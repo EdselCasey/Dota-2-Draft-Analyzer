@@ -41,9 +41,9 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   low_burst:        -1.0,
   medium_burst:     -0.7,
   high_burst:       -0.4,
-  low_sustained:    -0.5,
-  medium_sustained: -0.3,
-  high_sustained:   -0.1,
+  low_sustained:    -0.3,
+  medium_sustained: -0.1,
+  high_sustained:   0.1,
   small_aoe:        -0.2,
   medium_aoe:        0.2,
   large_aoe:         0.4,
@@ -61,7 +61,7 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   attack_speed_boost: 0.7,
   armor_reduction:    0.5,
   attack_damage_boost: 0.6,
-  attack_modifier:    0.5,
+  attack_modifier:    0.6,
   mana_burn:          0.0,
 
   // Duration (no direct timing bias — acts as multiplier)
@@ -71,12 +71,12 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   toggle:             0.2,
 
   // Cooldown (no direct timing bias — acts as multiplier)
-  passive:           -0.6,
-  short_cooldown:    -0.4,
-  medium_cooldown:    0.1,
-  long_cooldown:      0.5,
+  passive:            0.0,
+  short_cooldown:     0.1,
+  medium_cooldown:    0.3,
+  long_cooldown:      0.6,
 
-  magic_amp:        -0.5,
+  magic_amp:        -0.3,
 
   // Defense / survivability
   damage_reduction:  0.2,
@@ -101,7 +101,7 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   // Mobility
   blink:             -0.5,
   dash:              -0.5,
-  movement_speed_boost: 0.4,  // 
+  movement_speed_boost: 0.0,  // 
   escape:           -0.3,
   teleport:          0.4,
 
@@ -119,7 +119,7 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   gold_gain:          -0.3,
   xp_gain:            -0.1,
   status_resist_reduction:      0.4,
-  second_life:                 -0.3,
+  second_life:                 -0.1,
   increase_buff_duration:       0.1,
 
 
