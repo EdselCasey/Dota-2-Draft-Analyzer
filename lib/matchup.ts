@@ -439,8 +439,7 @@ export function computeTeamUrgency(
   /** From THIS team's perspective: positive = this team is favored */
   matchupEdgeForThisTeam: number,
   timingScore: number,   // -1 (early) to +1 (late)
-  enemyTimingScore: number,  // enemy's timing score
-  executionPressure: number = 0  // 0–0.4, how hard it is to convert advantage
+  enemyTimingScore: number  // enemy's timing score
 ): TeamUrgency {
   // Normalize matchup edge to [0, 1] — 1 = fully favored, 0 = fully unfavored.
   // Edge values are typically small floats; scale by 3 to give reasonable spread.
@@ -448,13 +447,9 @@ export function computeTeamUrgency(
   // Earlyness: 1 = very early, 0 = very late
   const earlyness     = clamp((1 - timingScore) / 2, 0, 1)
 
-  // Base urgency: unfavored teams feel more urgency, early teams feel more urgency
-  let raw = (1 - matchupFavor) * 0.60 + earlyness * 0.40
-
-  // Execution pressure amplifies urgency for favored teams that can't easily convert.
-  // A favored early team that can't close feels MORE urgent — their window is slipping.
-  // A favored late team that can't survive feels MORE urgent — they might not reach spike.
-  raw += executionPressure * 0.50
+  // Urgency is purely derived from favor and timing.
+  // Execution is already baked into the favor number, no need to double-count.
+  const raw = (1 - matchupFavor) * 0.60 + earlyness * 0.40
 
   const score = Math.round(clamp(raw, 0, 1) * 100) / 100
 
@@ -793,8 +788,8 @@ export function analyzeMatchup(
   const radiantExecEdge   = radiantClosingGap - direClosingGap
 
   // Shift favor toward the team with better execution
-  // Capped at ±0.25 so execution can flip close matchups but not override strong structure
-  const execFavorShift = clamp(radiantExecEdge * 0.5, -0.25, 0.25)
+  // Capped at ±0.40 so execution can strongly flip matchups
+  const execFavorShift = clamp(radiantExecEdge * 1.0, -0.40, 0.40)
   radiantEdge += execFavorShift
   radiantEdge = Math.round(radiantEdge * 100) / 100
 
@@ -803,8 +798,8 @@ export function analyzeMatchup(
     radiantEdge >  0.15 ? 'radiant' :
     radiantEdge < -0.15 ? 'dire'    : 'even'
 
-  const radiantUrgency = computeTeamUrgency(radiantEdge, radiantTimingScore, direTimingScore, radiantExecPressure)
-  const direUrgency    = computeTeamUrgency(-radiantEdge, direTimingScore, radiantTimingScore, direExecPressure)
+  const radiantUrgency = computeTeamUrgency(radiantEdge, radiantTimingScore, direTimingScore)
+  const direUrgency    = computeTeamUrgency(-radiantEdge, direTimingScore, radiantTimingScore)
 
   return { insights: allInsights, radiantEdge, overallFavored: overallFavoredShifted, radiantUrgency, direUrgency }
 }
