@@ -108,8 +108,8 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
 
   // ── Mobility ──────────────────────────────────────────────────────────────
   mobility: [
-    { counters: 'hard_control', strength: 0.20, requiresExcess: true },
-    { counters: 'soft_control', strength: 0.30, requiresExcess: true },
+    { counters: 'hard_control', strength: 0.20 },
+    { counters: 'soft_control', strength: 0.30 },
   ],
 
   // ── Map presence ──────────────────────────────────────────────────────────
