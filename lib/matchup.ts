@@ -788,8 +788,8 @@ export function analyzeMatchup(
   const radiantExecEdge   = radiantClosingGap - direClosingGap
 
   // Shift favor toward the team with better execution
-  // Capped at ±0.40 so execution can strongly flip matchups
-  const execFavorShift = clamp(radiantExecEdge * 1.0, -0.40, 0.40)
+  // Execution can override strong structural edges — it reflects actual game reality
+  const execFavorShift = clamp(radiantExecEdge * 1.5, -0.50, 0.50)
   radiantEdge += execFavorShift
   radiantEdge = Math.round(radiantEdge * 100) / 100
 
