@@ -214,7 +214,7 @@ export function computeRecommendations(
   dire:       TeamProfile,
   candidates: HeroProfile[],
   matchup:    MatchupAnalysis,
-  topN        = 10,
+  topN        = 15,
   minScore    = 0.15
 ): DraftRecommendations {
   const rank = (isRadiant: boolean) => {
