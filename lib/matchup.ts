@@ -45,7 +45,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   // has more sustained damage than you have control, one free damage dealer
   // still kills your team. requiresExcess enforces this.
   hard_control: [
-    { counters: 'spell_sustained',  strength: 0.40 },
+    { counters: 'spell_sustained',  strength: 0.30 },
     { counters: 'attack_sustained', strength: 0.50 },
     { counters: 'burst_damage',     strength: 0.40},
     { counters: 'mobility',         strength: 0.50},
@@ -53,7 +53,6 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
     { counters: 'defensive_utility', strength: 0.20 },
   ],
   soft_control: [
-    { counters: 'spell_sustained',  strength: 0.10, requiresExcess: true },
     { counters: 'attack_sustained', strength: 0.05, requiresExcess: true },
     { counters: 'burst_damage',     strength: 0.05, requiresExcess: true },
     { counters: 'mobility',         strength: 0.15, requiresExcess: true },
