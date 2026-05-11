@@ -166,15 +166,15 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
 
   // ── Sustained Damage (tiered) ─────────────────────────────────────────────
   low_sustained: [
-    { dimension: 'sustained_damage', weight: 1.0 },
+    { dimension: 'spell_sustained', weight: 1.0 },
     { dimension: 'waveclear',        weight: 0.5 },
   ],
   medium_sustained: [
-    { dimension: 'sustained_damage', weight: 2.0 },
+    { dimension: 'spell_sustained', weight: 2.0 },
     { dimension: 'waveclear',        weight: 1.0 },
   ],
   high_sustained: [
-    { dimension: 'sustained_damage', weight: 3.0 },
+    { dimension: 'spell_sustained', weight: 3.0 },
     { dimension: 'waveclear',        weight: 1.5 },
   ],
 
@@ -182,17 +182,17 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   small_aoe: [
     { dimension: 'burst_damage',     weight: 0.5 },
     { dimension: 'waveclear',        weight: 1.0 },
-    { dimension: 'sustained_damage', weight: 0.3 },
+    { dimension: 'spell_sustained', weight: 0.3 },
   ],
   medium_aoe: [
     { dimension: 'burst_damage',     weight: 1.0 },
     { dimension: 'waveclear',        weight: 2.0 },
-    { dimension: 'sustained_damage', weight: 0.7 },
+    { dimension: 'spell_sustained', weight: 0.7 },
   ],
   large_aoe: [
     { dimension: 'burst_damage',     weight: 1.5 },
     { dimension: 'waveclear',        weight: 3.0 },
-    { dimension: 'sustained_damage', weight: 1.0 },
+    { dimension: 'spell_sustained', weight: 1.0 },
   ],
 
   // ── Reach ─────────────────────────────────────────────────────────────────
@@ -314,21 +314,21 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
 
   // ── Attack / Right-click ──────────────────────────────────────────────────
   attack_speed_boost: [
-    { dimension: 'sustained_damage', weight: 2.0 },
+    { dimension: 'attack_sustained', weight: 2.0 },
     { dimension: 'waveclear',        weight: 1.5 },
     { dimension: 'objective_pressure', weight: 2.5 },
   ],
   armor_reduction: [
-    { dimension: 'sustained_damage', weight: 1.5 },
+    { dimension: 'attack_sustained', weight: 1.5 },
     { dimension: 'pickoff',          weight: 0.5 },
   ],
   attack_damage_boost: [
-    { dimension: 'sustained_damage', weight: 2.5 },
+    { dimension: 'attack_sustained', weight: 2.5 },
     { dimension: 'waveclear',        weight: 1.5 },
     { dimension: 'objective_pressure', weight: 3.0 },
   ],
   attack_modifier: [
-    { dimension: 'sustained_damage', weight: 2.0 },
+    { dimension: 'attack_sustained', weight: 2.0 },
     { dimension: 'pickoff',          weight: 0.5 },
     { dimension: 'objective_pressure', weight: 2.0 },
   ],
@@ -344,7 +344,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   illusion: [
     { dimension: 'objective_pressure', weight: 3.0 },
-    { dimension: 'sustained_damage',   weight: 2.5 },
+    { dimension: 'attack_sustained',   weight: 2.5 },
     { dimension: 'vision_control',     weight: 1.0 },
     { dimension: 'map_presence',       weight: 1.0 },
   ],
@@ -363,7 +363,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   bouncing_attacks: [
     { dimension: 'waveclear',       weight: 1.7 },
-    { dimension: 'sustained_damage',       weight: 1.7 },
+    { dimension: 'attack_sustained',       weight: 1.7 },
     { dimension: 'objective_pressure',       weight: 1.5 },
   ],
 

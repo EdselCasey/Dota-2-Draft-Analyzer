@@ -102,7 +102,8 @@ export type DraftDimension =
   | 'hard_control'
   | 'soft_control'
   | 'burst_damage'
-  | 'sustained_damage'
+  | 'spell_sustained'
+  | 'attack_sustained'
   | 'sustain'
   | 'defense'
   | 'mobility'
@@ -121,7 +122,8 @@ export const ALL_DIMENSIONS: DraftDimension[] = [
   'hard_control',
   'soft_control',
   'burst_damage',
-  'sustained_damage',
+  'spell_sustained',
+  'attack_sustained',
   'sustain',
   'defense',
   'mobility',

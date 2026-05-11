@@ -35,7 +35,8 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   // ── Defense ───────────────────────────────────────────────────────────────
   defense: [
     { counters: 'burst_damage',     strength: 0.30, requiresExcess: true},                        // absorbs spikes
-    { counters: 'sustained_damage', strength: 0.08, requiresExcess: true },  // only relevant if defense actually exceeds the sustained
+    { counters: 'spell_sustained',  strength: 0.06, requiresExcess: true },
+    { counters: 'attack_sustained', strength: 0.10, requiresExcess: true },
     { counters: 'pickoff', strength: 0.08, requiresExcess: true },
   ],
 
@@ -44,14 +45,16 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   // has more sustained damage than you have control, one free damage dealer
   // still kills your team. requiresExcess enforces this.
   hard_control: [
-    { counters: 'sustained_damage', strength: 0.50 },
+    { counters: 'spell_sustained',  strength: 0.40 },
+    { counters: 'attack_sustained', strength: 0.50 },
     { counters: 'burst_damage',     strength: 0.40},
     { counters: 'mobility',         strength: 0.50},
     { counters: 'objective_pressure',             strength: 0.25 },
     { counters: 'defensive_utility', strength: 0.20 },
   ],
   soft_control: [
-    { counters: 'sustained_damage', strength: 0.10, requiresExcess: true },
+    { counters: 'spell_sustained',  strength: 0.10, requiresExcess: true },
+    { counters: 'attack_sustained', strength: 0.05, requiresExcess: true },
     { counters: 'burst_damage',     strength: 0.05, requiresExcess: true },
     { counters: 'mobility',         strength: 0.15, requiresExcess: true },
     { counters: 'objective_pressure',             strength: 0.10 },
@@ -74,24 +77,33 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   burst_damage: [
     { counters: 'sustain',          strength: 0.30 },
     { counters: 'defense',          strength: 0.25 },
-    { counters: 'sustained_damage', strength: 0.50 },
+    { counters: 'spell_sustained',  strength: 0.30 },
+    { counters: 'attack_sustained', strength: 0.50 },
   ],
 
-  // ── Sustained damage ──────────────────────────────────────────────────────
-  sustained_damage: [
-    { counters: 'sustain',          strength: 0.30 },
-    { counters: 'defense',          strength: 0.35, requiresExcess: true },
+  // ── Spell Sustained ────────────────────────────────────────────────────────
+  spell_sustained: [
+    { counters: 'sustain',          strength: 0.25 },
+    { counters: 'defense',          strength: 0.30, requiresExcess: true },
+  ],
+
+  // ── Attack Sustained ───────────────────────────────────────────────────────
+  attack_sustained: [
+    { counters: 'sustain',          strength: 0.35 },
+    { counters: 'defense',          strength: 0.40, requiresExcess: true },
   ],
 
   // ── Sustain ───────────────────────────────────────────────────────────────
   sustain: [
     { counters: 'burst_damage',     strength: 0.60, requiresExcess: true },
-    { counters: 'sustained_damage', strength: 0.50, requiresExcess: true },
+    { counters: 'spell_sustained',  strength: 0.40, requiresExcess: true },
+    { counters: 'attack_sustained', strength: 0.50, requiresExcess: true },
   ],
 
   // ── Pickoff ───────────────────────────────────────────────────────────────
   pickoff: [
-    { counters: 'sustained_damage', strength: 0.55 },
+    { counters: 'spell_sustained',  strength: 0.40 },
+    { counters: 'attack_sustained', strength: 0.55 },
     { counters: 'burst_damage', strength: 0.40 },
     { counters: 'objective_pressure', strength: 0.30 },
     { counters: 'map_presence',     strength: 0.60 },
@@ -101,7 +113,8 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
   teamfight: [
     { counters: 'map_presence',     strength: 0.25 },
     { counters: 'burst_damage',     strength: 0.25 },
-    { counters: 'sustained_damage', strength: 0.40, requiresExcess: true },  // teamfight must dominate to force carries off
+    { counters: 'spell_sustained',  strength: 0.30, requiresExcess: true },
+    { counters: 'attack_sustained', strength: 0.40, requiresExcess: true },
     { counters: 'objective_pressure', strength: 1.0 },
     { counters: 'mobility',         strength: 0.35 },
   ],
@@ -168,17 +181,20 @@ export interface MatchupInsight {
 const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDimension, string>>>> = {
   defense: {
     burst_damage:     'Your defensive tools absorb spike damage before it can kill teammates.',
-    sustained_damage: 'Your team\'s durability lets them endure extended trades.',
+    spell_sustained:  'Your team\'s durability lets them endure extended spell pressure.',
+    attack_sustained: 'Your team\'s durability lets them endure prolonged right-click pressure.',
   },
   hard_control: {
-    sustained_damage: 'Your hard CC locks down their damage dealers before they can output.',
+    spell_sustained:  'Your hard CC locks down their spell-based damage dealers before they can output.',
+    attack_sustained: 'Your hard CC locks down their right-click damage dealers before they can output.',
     burst_damage:     'Your stuns and disables interrupt their burst combos completely.',
     mobility:         'Your hard lockdown catches mobile heroes mid-escape.',
     objective_pressure: 'Your hard CC holds the line and picks off pushers.',
     defensive_utility:'Your stuns go through before their reactive tools can respond.',
   },
   soft_control: {
-    sustained_damage: 'Your slows and roots limit their damage dealers\' freedom.',
+    spell_sustained:  'Your slows and roots limit their spell-based damage dealers\' freedom.',
+    attack_sustained: 'Your slows and roots limit their right-click damage dealers\' freedom.',
     burst_damage:     'Your silences and disarms delay their burst timing.',
     mobility:         'Your soft disables slow their rotations and escapes.',
     objective_pressure: 'Your soft CC disrupts their push coordination.',
@@ -188,20 +204,27 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
     sustain:          'Your burst kills faster than their healing can respond.',
     defense:          'Your nukes punch through their tankiness in a single window.',
     resource_support: 'Your burst eliminates their backline before they can provide support.',
-    sustained_damage: 'Your burst eliminates their damage dealers before they can ramp up sustained output.',
+    spell_sustained:  'Your burst eliminates their spell-based damage dealers before they can ramp up.',
+    attack_sustained: 'Your burst eliminates their right-click damage dealers before they can ramp up.',
   },
-  sustained_damage: {
-    sustain:          'Your constant damage pressure overwhelms their regen over time.',
-    defense:          'Your persistent damage wears down even the toughest defenders.',
+  spell_sustained: {
+    sustain:          'Your spell-based damage overwhelms their regen over time.',
+    defense:          'Your persistent spell damage wears down even the toughest defenders.',
+  },
+  attack_sustained: {
+    sustain:          'Your right-click pressure overwhelms their regen over time.',
+    defense:          'Your persistent right-click damage wears down even the toughest defenders.',
   },
   sustain: {
     burst_damage:     'Your healing and regen outlast their burst windows.',
-    sustained_damage: 'Your sustain keeps your team alive through extended fights.',
+    spell_sustained:  'Your sustain keeps your team alive through extended spell fights.',
+    attack_sustained: 'Your sustain keeps your team alive through prolonged right-click fights.',
   },
   pickoff: {
     objective_pressure: 'You can eliminate isolated pushers before they do structural damage.',
     map_presence:     'You punish heroes that overextend across the map.',
-    sustained_damage: 'Your pick potential eliminates their damage dealers before they can output in fights.',
+    spell_sustained:  'Your pick potential eliminates their spell-based damage dealers before they can output.',
+    attack_sustained: 'Your pick potential eliminates their right-click damage dealers before they can output.',
     burst_damage:     'Your pick off catches their bursty spell casters and divers off guard'
   },
   reach: {
@@ -217,7 +240,8 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
   teamfight: {
     map_presence:     'Your team fights better as a unit, negating their spread map game.',
     burst_damage:     'Your team synergy blunts isolated burst attempts.',
-    sustained_damage: 'Your grouped strength overwhelms their damage output in fights.',
+    spell_sustained:  'Your grouped strength overwhelms their spell-based damage output in fights.',
+    attack_sustained: 'Your grouped strength overwhelms their right-click damage output in fights.',
     objective_pressure: 'You can force a fight and collapse their push attempts.',
     mobility:         'Your fight presence denies their divers an easy escape.',
   },
@@ -246,16 +270,19 @@ const ADVANTAGE_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDi
 const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<DraftDimension, string>>>> = {
   defense: {
     burst_damage:     'Without enough tankiness or shields, your heroes crumble to spikes.',
-    sustained_damage: 'Your team lacks the armor and durability to survive prolonged fights.',
+    spell_sustained:  'Your team lacks the armor and durability to survive prolonged spell pressure.',
+    attack_sustained: 'Your team lacks the armor and durability to survive prolonged right-click pressure.',
   },
   hard_control: {
-    sustained_damage: 'You lack hard CC to lock down their damage dealers — they output freely.',
+    spell_sustained:  'You lack hard CC to lock down their spell-based damage dealers — they output freely.',
+    attack_sustained: 'You lack hard CC to lock down their right-click damage dealers — they output freely.',
     burst_damage:     'Without stuns to interrupt their combos, their burst lands uncontested.',
     mobility:         'Your team can\'t pin down their divers with hard disables.',
     objective_pressure: 'You lack reliable stuns to stop their push dead in its tracks.',
   },
   soft_control: {
-    sustained_damage: 'You lack slows and roots to limit their damage dealers\' movement.',
+    spell_sustained:  'You lack slows and roots to limit their spell-based damage dealers\' movement.',
+    attack_sustained: 'You lack slows and roots to limit their right-click damage dealers\' movement.',
     burst_damage:     'Without silences or disarms, their burst windows go uncontested.',
     mobility:         'Your soft CC isn\'t enough to catch mobile heroes.',
     objective_pressure: 'You can\'t slow their push momentum with your limited soft disables.',
@@ -264,17 +291,27 @@ const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<Dra
     sustain:          'You lack the kill pressure to cut through their sustain.',
     defense:          'Their durability soaks your nuke damage without breaking a sweat.',
     resource_support: 'You can\'t threaten their supports before they pour out resources.',
+    spell_sustained:  'Your burst can\'t eliminate their spell-based damage dealers before they ramp up.',
+    attack_sustained: 'Your burst can\'t eliminate their right-click damage dealers before they ramp up.',
   },
-  sustained_damage: {
-    sustain:          'Your DPS is too slow to outpace their healing.',
-    defense:          'Their defense outlasts your damage output in extended fights.',
-    pickoff: 'Your damage dealers are vulnerable to being picked off before fights even start.',
-    burst_damage: 'Your damage dealers die to burst before they can ramp up meaningful DPS.',
-    hard_control: 'Your damage dealers get locked down and can\'t output — they die before contributing.',
+  spell_sustained: {
+    sustain:          'Your spell-based DPS is too slow to outpace their healing.',
+    defense:          'Their defense outlasts your spell-based damage output in extended fights.',
+    pickoff:          'Your spell-based damage dealers are vulnerable to being picked off before fights even start.',
+    burst_damage:     'Your spell-based damage dealers die to burst before they can ramp up meaningful DPS.',
+    hard_control:     'Your spell-based damage dealers get locked down and can\'t output — they die before contributing.',
+  },
+  attack_sustained: {
+    sustain:          'Your right-click DPS is too slow to outpace their healing.',
+    defense:          'Their defense outlasts your right-click damage output in extended fights.',
+    pickoff:          'Your right-click damage dealers are vulnerable to being picked off before fights even start.',
+    burst_damage:     'Your right-click damage dealers die to burst before they can ramp up meaningful DPS.',
+    hard_control:     'Your right-click damage dealers get locked down and can\'t output — they die before contributing.',
   },
   sustain: {
     burst_damage:     'You have no recovery tools — a single burst combo could end a fight.',
-    sustained_damage: 'Without sustain, your team bleeds out under constant pressure.',
+    spell_sustained:  'Without sustain, your team bleeds out under constant spell pressure.',
+    attack_sustained: 'Without sustain, your team bleeds out under constant right-click pressure.',
   },
   pickoff: {
     objective_pressure: 'Your team is vulnerable to getting picked before teamfights start.',
@@ -290,7 +327,8 @@ const VULNERABILITY_NARRATIVE: Partial<Record<DraftDimension, Partial<Record<Dra
   teamfight: {
     map_presence:     'You struggle to contest their spread, forcing unfavorable fights.',
     burst_damage:     'Their burst can dismantle your team before a fight even begins.',
-    sustained_damage: 'Their sustained output keeps grinding your grouped heroes down.',
+    spell_sustained:  'Their spell-based sustained output keeps grinding your grouped heroes down.',
+    attack_sustained: 'Their right-click sustained output keeps grinding your grouped heroes down.',
     objective_pressure: 'Their push threats pull you away from fights you\'re suited for.',
     mobility:         'Their dive heroes scatter your formation before you can react.',
   },

@@ -15,7 +15,8 @@ const MIN_HERO_CEILING = 5.0
 const TEAMFIGHT_WEIGHTS: Partial<Record<DraftDimension, number>> = {
   hard_control:      0.20,
   soft_control:      0.10,
-  sustained_damage:  0.15,
+  spell_sustained:   0.08,
+  attack_sustained:  0.07,
   sustain:           0.15,
   defense:           0.12,
   defensive_utility: 0.15,
@@ -47,7 +48,7 @@ const PASSIVE_TAG = 'passive'
 
 // Dimensions that passive boosts (innate, always-on)
 const PASSIVE_BOOST_DIMS = new Set<DraftDimension>([
-  'defense', 'sustain', 'sustained_damage', 'burst_damage'
+  'defense', 'sustain', 'spell_sustained', 'attack_sustained', 'burst_damage'
 ])
 
 // Dimensions that range boosts (convenience for reactive tools)
@@ -57,12 +58,12 @@ const RANGE_BOOST_DIMS = new Set<DraftDimension>([
 
 // Dimensions that duration boosts (longer = more impactful)
 const DURATION_BOOST_DIMS = new Set<DraftDimension>([
-  'hard_control', 'soft_control', 'sustained_damage'
+  'hard_control', 'soft_control', 'spell_sustained', 'attack_sustained'
 ])
 
 // Dimensions that cooldown boosts (shorter cooldown = more uptime = stronger)
 const COOLDOWN_BOOST_DIMS = new Set<DraftDimension>([
-  'hard_control', 'soft_control', 'burst_damage', 'sustained_damage', 'defensive_utility', 'sustain'
+  'hard_control', 'soft_control', 'burst_damage', 'spell_sustained', 'attack_sustained', 'defensive_utility', 'sustain'
 ])
 
 export function scoreAbility(
