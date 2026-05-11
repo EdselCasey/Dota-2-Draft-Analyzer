@@ -8,7 +8,7 @@
     "short_range"
   ],
   "dawnbreaker_celestial_hammer": [
-    "medium_aoe",
+    "small_aoe",
     "low_burst",
     "low_sustained",
     "slow",
@@ -26,7 +26,7 @@
     "large_aoe"
   ],
   "dawnbreaker_solar_guardian": [
-    "medium_aoe",
+    "small_aoe",
     "channelled",
     "stun",
     "medium_heal",

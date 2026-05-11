@@ -2,13 +2,13 @@
   "snapfire_scatterblast": [
     "slow",
     "medium_burst",
-    "long_range",
+    "medium_range",
     "medium_aoe",
     "short_duration",
     "short_cooldown"
   ],
   "snapfire_mortimer_kisses": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "medium_burst",
     "vision",
@@ -18,14 +18,14 @@
     "short_duration"
   ],
   "snapfire_firesnap_cookie": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
     "save",
     "medium_burst",
     "dash",
     "escape",
     "medium_cooldown",
-    "long_range",
+    "medium_range",
     "short_duration"
   ],
   "snapfire_lil_shredder": [
@@ -34,7 +34,7 @@
     "low_burst",
     "medium_cooldown",
     "short_duration",
-    "medium_range"
+    "small_range"
   ],
   "boomstick": [
     "magic_amp",

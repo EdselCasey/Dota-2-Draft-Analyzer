@@ -2,15 +2,15 @@
   "queenofpain_shadow_strike": [
     "slow",
     "medium_sustained",
-    "medium_range",
+    "short_range",
     "low_burst",
     "medium_duration",
     "short_cooldown"
   ],
   "queenofpain_sonic_wave": [
     "knockback",
-    "large_aoe",
-    "long_range",
+    "small_aoe",
+    "medium_range",
     "high_burst",
     "long_cooldown",
     "short_duration"
@@ -26,7 +26,7 @@
     "passive"
   ],
   "queenofpain_scream_of_pain": [
-    "large_aoe",
+    "medium_aoe",
     "medium_burst",
     "short_cooldown"
   ]

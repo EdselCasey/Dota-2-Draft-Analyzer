@@ -20,7 +20,7 @@
   "winter_wyvern_cold_embrace": [
     "medium_heal",
     "save",
-    "long_range",
+    "medium_range",
     "damage_reduction",
     "medium_cooldown",
     "short_duration"
@@ -29,7 +29,7 @@
     "medium_aoe",
     "taunt",
     "magic_amp",
-    "long_range",
+    "medium_range",
     "short_duration",
     "long_cooldown"
   ]

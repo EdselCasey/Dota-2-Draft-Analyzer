@@ -4,7 +4,6 @@
     "passive"
   ],
   "wisp_tether": [
-    "large_aoe",
     "slow",
     "medium_sustained",
     "dash",

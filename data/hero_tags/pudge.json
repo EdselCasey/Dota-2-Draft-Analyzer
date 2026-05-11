@@ -5,11 +5,10 @@
     "medium_burst",
     "save",
     "long_range",
-    "short_cooldown",
-    ""
+    "short_cooldown"
   ],
   "pudge_rot": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "medium_sustained",
     "short_cooldown",

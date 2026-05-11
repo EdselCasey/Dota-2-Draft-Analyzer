@@ -7,16 +7,16 @@
   "enchantress_enchant": [
     "slow",
     "short_duration",
-    "long_range"
+    "medium_range"
   ],
   "enchantress_enchant_creep": [
-    "long_range",
+    "medium_range",
     "summon_units",
     "long_duration",
     "medium_cooldown"
   ],
   "enchantress_natures_attendants": [
-    "medium_aoe",
+    "small_aoe",
     "medium_regen",
     "short_duration",
     "medium_cooldown"

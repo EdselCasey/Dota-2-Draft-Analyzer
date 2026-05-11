@@ -5,7 +5,7 @@
     "medium_aoe"
   ],
   "primal_beast_onslaught": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
     "knockback",
     "medium_burst",
@@ -16,7 +16,7 @@
     "short_duration"
   ],
   "primal_beast_trample": [
-    "medium_aoe",
+    "small_aoe",
     "medium_sustained",
     "short_duration",
     "medium_cooldown"
@@ -30,7 +30,7 @@
     "short_duration"
   ],
   "primal_beast_pulverize": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
     "magic_amp",
     "short_duration",

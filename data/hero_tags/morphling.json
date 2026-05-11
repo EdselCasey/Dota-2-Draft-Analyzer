@@ -2,12 +2,12 @@
   "morphling_adaptive_strike_agi": [
     "medium_burst",
     "short_cooldown", 
-    "long_range"
+    "medium_range"
   ],
   "morphling_adaptive_strike_str": [
     "knockback",
     "stun", 
-    "long_range", 
+    "medium_range", 
     "short_cooldown", 
     "short_duration"
   ],
@@ -24,7 +24,7 @@
     "medium_aoe",
     "escape",
     "invulnerability", 
-    "long_range", 
+    "medium_range", 
     "medium_cooldown", 
     "medium_burst"
   ],

@@ -5,13 +5,13 @@
     "low_burst",
     "medium_range",
     "medium_cooldown",
-    "medium_aoe"
+    "small_aoe"
   ],
   "zuus_arc_lightning": [
-    "medium_aoe",
+    "small_aoe",
     "low_burst",
     "short_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "zuus_lightning_bolt": [
     "small_aoe",
@@ -20,7 +20,7 @@
     "vision",
     "short_duration",
     "short_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "zuus_static_field": [
     "magic_amp",

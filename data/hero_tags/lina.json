@@ -1,17 +1,17 @@
 {
   "lina_dragon_slave": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "long_range",
     "short_cooldown"
   ],
   "lina_light_strike_array": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
     "medium_burst",
     "short_cooldown",
     "short_duration",
-    "long_range"
+    "medium_range"
   ],
   "lina_fiery_soul": [
     "attack_speed_boost",
@@ -21,7 +21,7 @@
   "lina_laguna_blade": [
     "high_burst",
     "long_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "lina_slow_burn": [
     "medium_sustained",

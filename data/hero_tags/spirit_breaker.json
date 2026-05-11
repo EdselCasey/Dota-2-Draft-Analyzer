@@ -27,7 +27,7 @@
     "medium_burst",
     "knockback",
     "stun",
-    "long_range",
+    "medium_range",
     "long_cooldown",
     "short_duration"
   ],

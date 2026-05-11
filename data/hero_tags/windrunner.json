@@ -2,7 +2,7 @@
   "windrunner_shackleshot": [
     "stun",
     "medium_aoe",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "short_duration"
   ],
@@ -22,7 +22,7 @@
   ],
   "windrunner_focusfire": [
     "attack_speed_boost",
-    "long_range",
+    "medium_range",
     "medium_duration",
     "medium_cooldown"
   ],

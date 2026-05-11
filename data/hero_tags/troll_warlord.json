@@ -10,8 +10,8 @@
   ],
   "troll_warlord_whirling_axes_ranged": [
     "slow",
-    "long_cooldown",
-    "long_range",
+    "short_cooldown",
+    "medium_range",
     "medium_aoe",
     "low_burst",
     "short_duration"
@@ -21,7 +21,7 @@
     "damage_reduction",
     "short_duration",
     "low_burst",
-    "long_cooldown",
+    "short_cooldown",
     "short_range"
   ],
   "troll_warlord_fervor": [

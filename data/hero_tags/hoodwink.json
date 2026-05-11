@@ -2,13 +2,13 @@
   "hoodwink_acorn_shot": [
     "slow",
     "low_burst",
-    "medium_aoe",
-    "long_range",
+    "small_aoe",
+    "medium_range",
     "short_cooldown",
     "short_duration"
   ],
   "hoodwink_bushwhack": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
     "medium_sustained",
     "long_range",

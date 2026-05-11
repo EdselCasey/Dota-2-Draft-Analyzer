@@ -1,6 +1,6 @@
 {
   "legion_commander_overwhelming_odds": [
-    "large_aoe",
+    "medium_aoe",
     "shield",
     "attack_speed_boost",
     "medium_burst",
@@ -12,7 +12,7 @@
     "dispel",
     "save",
     "movement_speed_boost",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "short_duration"
   ],

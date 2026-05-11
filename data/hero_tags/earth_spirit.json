@@ -4,7 +4,7 @@
     "forced_movement",
     "slow",
     "medium_burst",
-    "long_range",
+    "medium_range",
     "short_duration",
     "short_cooldown"
   ],
@@ -14,7 +14,7 @@
     "escape",
     "invulnerability",
     "low_burst",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "short_duration"
   ],
@@ -33,7 +33,7 @@
     "long_range"
   ],
   "earth_spirit_magnetize": [
-    "medium_aoe",
+    "short_aoe",
     "medium_sustained",
     "slow",
     "long_cooldown",

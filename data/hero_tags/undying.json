@@ -4,7 +4,7 @@
     "low_burst",
     "hp_growth",
     "magic_amp",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "medium_duration"
   ],
@@ -12,11 +12,11 @@
     "large_aoe",
     "medium_heal",
     "medium_burst",
-    "long_range",
+    "medium_range",
     "short_cooldown"
   ],
   "undying_tombstone": [
-    "large_aoe_aoe",
+    "large_aoe",
     "summon_units",
     "slow",
     "low_sustained",

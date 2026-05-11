@@ -1,6 +1,6 @@
 {
   "crystal_maiden_crystal_nova": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "low_burst",
     "short_cooldown",
@@ -20,7 +20,7 @@
     "passive"
   ],
   "crystal_maiden_freezing_field": [
-    "large_aoe",
+    "medium_aoe",
     "channelled",
     "slow",
     "high_sustained",

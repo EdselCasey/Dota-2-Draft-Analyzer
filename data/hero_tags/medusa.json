@@ -1,8 +1,8 @@
 {
   "medusa_mystic_snake": [
-    "medium_aoe",
+    "small_aoe",
     "mana_regen",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "medium_burst"
   ],
@@ -19,9 +19,9 @@
     "long_cooldown"
   ],
   "medusa_gorgon_grasp": [
-    "medium_aoe",
+    "small_aoe",
     "root",
-    "long_range",
+    "mediumlong_range",
     "medium_cooldown",
     "short_duration",
     "low_burst"

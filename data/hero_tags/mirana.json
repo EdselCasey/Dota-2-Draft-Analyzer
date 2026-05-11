@@ -21,7 +21,7 @@
     "dash",
     "attack_speed_boost",
     "movement_speed_boost", 
-    "long_range",
+    "medium_range",
     "escape",
     "medium_cooldown", 
     "short_duration"
@@ -35,7 +35,7 @@
   "mirana_celestial_quiver": [
     "attack_modifier",
     "attack_damage_boost",
-    "long_range",
+    "medium_range",
     "short_cooldown"
   ]
 }

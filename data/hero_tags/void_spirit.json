@@ -4,7 +4,7 @@
     "zone_control",
     "medium_duration",
     "small_aoe",
-    "long_range",
+    "medium_range",
     "short_cooldown"
   ],
   "void_spirit_aether_remnant_damage": [
@@ -36,7 +36,7 @@
     "short_duration"
   ],
   "void_spirit_resonant_pulse": [
-    "medium_aoe",
+    "small_aoe",
     "shield",
     "medium_burst",
     "medium_cooldown",

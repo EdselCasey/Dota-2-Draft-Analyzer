@@ -1,28 +1,28 @@
 {
   "leshrac_defilement": [
-    "large_aoe",
+    "medium_aoe",
     "passive"
   ],
   "leshrac_split_earth": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
     "medium_burst",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "short_duration"
   ],
   "leshrac_diabolic_edict": [
-    "medium_aoe",
+    "small_aoe",
     "high_sustained",
     "short_range",
     "medium_cooldown",
     "short_duration"
   ],
   "leshrac_lightning_storm": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "medium_burst",
-    "long_range",
+    "medium_range",
     "short_duration",
     "short_cooldown"
   ],

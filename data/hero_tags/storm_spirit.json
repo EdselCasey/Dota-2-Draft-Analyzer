@@ -2,14 +2,14 @@
   "storm_spirit_static_remnant": [
     "small_aoe",
     "medium_burst",
-    "long_range",
+    "short_range",
     "vision",
     "short_cooldown",
     "short_duration"
   ],
   "storm_spirit_electric_vortex": [
     "forced_movement",
-    "medium_aoe",
+    "small_aoe",
     "stun",
     "short_range",
     "medium_cooldown",
@@ -18,7 +18,7 @@
   "storm_spirit_overload": [
     "slow",
     "low_burst",
-    "medium_aoe",
+    "small_aoe",
     "attack_modifier",
     "passive"
   ],

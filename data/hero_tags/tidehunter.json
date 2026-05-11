@@ -5,7 +5,7 @@
     "armor_reduction",
     "short_duration",
     "short_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "tidehunter_kraken_shell": [
     "damage_reduction",
@@ -18,7 +18,7 @@
     "medium_cooldown"
   ],
   "tidehunter_anchor_smash": [
-    "medium_aoe",
+    "small_aoe",
     "damage_reduction",
     "medium_burst",
     "short_cooldown",
@@ -26,7 +26,7 @@
     "short_duration"
   ],
   "tidehunter_ravage": [
-    "large_aoe",
+    "medium_aoe",
     "stun",
     "medium_burst",
     "long_cooldown",

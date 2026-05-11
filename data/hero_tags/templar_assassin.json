@@ -26,7 +26,7 @@
     "passive"
   ],
   "templar_assassin_psionic_trap": [
-    "medium_aoe",
+    "small_aoe",
     "zone_control",
     "vision",
     "long_range",
@@ -34,7 +34,7 @@
     "short_cooldown"
   ],
   "templar_assassin_psionic_trap_detonation": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "medium_burst",
     "short_duration",

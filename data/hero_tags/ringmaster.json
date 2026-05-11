@@ -1,14 +1,14 @@
 {
   "ringmaster_tame_the_beasts": [
-    "medium_aoe",
+    "small_aoe",
     "channelled",
     "fear",
     "medium_burst",
     "short_cooldown",
-    "long_range",
+    "medium_range",
     "short_duration"
   ],
-  "ringmaster_the_box": [
+  "ringmaster_escape_act": [
     "save",
     "escape",
     "debuff_immunity",

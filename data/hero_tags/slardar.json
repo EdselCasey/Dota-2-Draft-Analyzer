@@ -13,7 +13,7 @@
     "medium_cooldown"
   ],
   "slardar_slithereen_crush": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
     "medium_burst",
     "slow",
@@ -31,7 +31,7 @@
   "slardar_corrosive_haze": [
     "armor_reduction",
     "vision",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "medium_duration"
   ]

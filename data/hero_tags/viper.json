@@ -6,13 +6,13 @@
     "magic_amp",
     "toggle",
     "short_duration",
-    "long_range"
+    "medium_range"
   ],
   "viper_nethertoxin": [
     "medium_aoe",
     "slow",
     "medium_sustained",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "short_duration"
   ],
@@ -29,7 +29,7 @@
     "high_sustained",
     "short_duration",
     "long_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "viper_predator": [
     "attack_modifier",

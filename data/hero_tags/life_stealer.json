@@ -12,7 +12,7 @@
     "passive",
     "short_duration",
     "medium_cooldown",
-    "medium_range"
+    "short_range"
   ],
   "life_stealer_ghoul_frenzy": [
     "attack_speed_boost",

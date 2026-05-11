@@ -5,7 +5,7 @@
     "short_duration"
   ],
   "gyrocopter_rocket_barrage": [
-    "medium_aoe",
+    "small_aoe",
     "short_cooldown",
     "medium_sustained",
     "short_duration"
@@ -24,7 +24,7 @@
     "large_aoe"
   ],
   "gyrocopter_call_down": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "long_range",
     "medium_burst",

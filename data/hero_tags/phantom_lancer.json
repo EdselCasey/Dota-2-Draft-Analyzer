@@ -3,7 +3,7 @@
     "medium_burst",
     "illusion",
     "slow",
-    "long_range",
+    "medium_range",
     "short_duration",
     "short_cooldown"
   ],
@@ -13,7 +13,7 @@
     "escape",
     "invulnerable",
     "medium_cooldown",
-    "medium_range",
+    "short_range",
     "short_duration"
   ],
   "phantom_lancer_juxtapose": [
@@ -28,7 +28,7 @@
     "passive",
     "short_cooldown",
     "short_duration",
-    "long_range"
+    "medium_range"
   ],
   "phantom_lancer_illusory_armaments": [
     "attack_damage_boost",

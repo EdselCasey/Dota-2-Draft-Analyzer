@@ -9,7 +9,7 @@
     "short_cooldown"
   ],
   "mars_gods_rebuke": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "knockback",
     "medium_burst",
@@ -27,10 +27,10 @@
     "short_cooldown"
   ],
   "mars_arena_of_blood": [
-    "medium_aoe",
+    "small_aoe",
     "zone_control",
     "vision",
-    "medium_range",
+    "small_range",
     "long_cooldown",
     "short_duration"
   ]

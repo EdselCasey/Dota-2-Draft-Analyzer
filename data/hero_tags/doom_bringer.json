@@ -11,7 +11,7 @@
     "long_duration"
   ],
   "doom_bringer_scorched_earth": [
-    "large_aoe",
+    "medium_aoe",
     "movement_speed_boost",
     "medium_sustained",
     "low_regen",
@@ -31,7 +31,7 @@
     "antiheal",
     "silence",
     "medium_duration",
-    "medium_range",
+    "short_range",
     "long_cooldown"
   ]
 }

@@ -1,13 +1,13 @@
 {
   "necrolyte_death_pulse": [
-    "medium_aoe",
+    "small_aoe",
     "medium_heal",
     "medium_burst",
     "short_cooldown",
     "short_range"
   ],
   "necrolyte_heartstopper_aura": [
-    "large_aoe",
+    "medium_aoe",
     "medium_sustained",
     "passive"
   ],
@@ -22,14 +22,14 @@
     "medium_heal",
     "medium_cooldown",
     "short_duration",
-    "large_aoe"
+    "medium_aoe"
   ],
   "necrolyte_reapers_scythe": [
     "stun",
     "high_burst",
     "medium_regen",
     "mana_regen",
-    "long_range",
+    "medium_range",
     "short_duration",
     "long_cooldown"
   ]

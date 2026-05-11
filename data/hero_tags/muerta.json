@@ -7,13 +7,13 @@
     "slow",
     "fear",
     "medium_burst",
-    "medium_aoe",
+    "small_aoe",
     "short_cooldown",
     "short_duration",
     "long_range"
   ],
   "muerta_the_calling": [
-    "medium_aoe",
+    "small_aoe",
     "silence",
     "slow",
     "medium_sustained",
@@ -25,7 +25,7 @@
   "muerta_gun_slinger": [
     "attack_damage_boost",
     "attack_modifier",
-    "large_aoe",
+    "medium_aoe",
     "passive"
   ],
   "muerta_pierce_the_veil": [

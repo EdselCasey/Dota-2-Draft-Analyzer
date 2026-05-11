@@ -3,14 +3,14 @@
     "forced_movement",
     "short_duration",
     "medium_cooldown",
-    "medium_range",
-    "medium_aoe"
+    "short_range",
+    "small_aoe"
   ],
   "rubick_fade_bolt": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "damage_reduction",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "short_duration"
   ],

@@ -3,12 +3,12 @@
     "summon_units",
     "banish",
     "save",
-    "long_range",
+    "medium_range",
     "short_duration",
     "medium_cooldown"
   ],
   "shadow_demon_shadow_poison": [
-    "medium_aoe",
+    "short_aoe",
     "vision",
     "medium_burst",
     "long_range",
@@ -18,7 +18,7 @@
     "slow",
     "medium_burst",
     "dispel",
-    "long_range",
+    "medium_range",
     "short_duration",
     "long_cooldown"
   ],
@@ -28,9 +28,9 @@
     "attack_modifier"
   ],
   "shadow_demon_disseminate": [
-    "large_aoe",
+    "medium_aoe",
     "medium_sustained",
-    "long_range",
+    "medium_range",
     "medium_cooldown",
     "magic_amp",
     "short_duration"

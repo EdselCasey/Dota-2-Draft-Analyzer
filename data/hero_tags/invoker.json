@@ -12,7 +12,7 @@
     "mana_regen",
     "stealth",
     "escape",
-    "medium_aoe",
+    "small_aoe",
     "medium_cooldown",
     "long_duration"
   ],
@@ -28,21 +28,21 @@
     "medium_aoe",
     "low_burst",
     "medium_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "invoker_alacrity": [
     "attack_speed_boost",
     "attack_damage_boost",
     "short_duration",
     "medium_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "invoker_chaos_meteor": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "low_sustained",
     "long_cooldown",
-    "long_range",
+    "medium_range",
     "short_duration"
   ],
   "invoker_sun_strike": [
@@ -54,7 +54,7 @@
   ],
   "invoker_ice_wall": [
     "medium_sustained",
-    "medium_aoe",
+    "large_aoe",
     "slow",
     "zone_control",
     "short_range",
@@ -62,7 +62,7 @@
     "short_duration"
   ],
   "invoker_deafening_blast": [
-    "medium_aoe",
+    "small_aoe",
     "disarm",
     "knockback",
     "forced_movement",

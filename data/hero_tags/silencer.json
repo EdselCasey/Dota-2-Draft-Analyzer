@@ -1,9 +1,9 @@
 {
   "silencer_arcane_curse": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "medium_sustained",
-    "long_range",
+    "medium_range",
     "short_duration",
     "medium_cooldown"
   ],
@@ -17,7 +17,7 @@
   "silencer_last_word": [
     "medium_burst",
     "silence",
-    "long_range",
+    "medium_range",
     "short_duration",
     "short_cooldown"
   ],

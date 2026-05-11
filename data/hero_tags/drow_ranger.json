@@ -10,14 +10,14 @@
   "drow_ranger_multishot": [
     "channelled",
     "medium_sustained",
-    "large_aoe",
+    "small_aoe",
     "slow",
     "short_duration",
     "long_range",
     "medium_cooldown"
   ],
-  "drow_ranger_silence": [
-    "medium_aoe",
+  "drow_ranger_gust": [
+    "small_aoe",
     "silence",
     "knockback",
     "vision",

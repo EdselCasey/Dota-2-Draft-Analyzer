@@ -16,14 +16,14 @@
     "short_duration"
   ],
   "disruptor_kinetic_field": [
-    "medium_aoe",
+    "small_aoe",
     "zone_control",
     "long_range",
     "medium_cooldown",
     "short_duration"
   ],
   "disruptor_static_storm": [
-    "large_aoe",
+    "small_aoe",
     "silence",
     "medium_sustained",
     "zone_control",
@@ -33,7 +33,7 @@
     "long_cooldown"
   ],
   "disruptor_electromagnetic_repulsion": [
-    "medium_aoe",
+    "small_aoe",
     "knockback",
     "low_burst",
     "short_cooldown"

@@ -2,12 +2,12 @@
   "night_stalker_void": [
     "slow",
     "medium_burst",
-    "medium_range",
+    "short_range",
     "short_duration",
     "short_cooldown"
   ],
   "night_stalker_crippling_fear": [
-    "medium_aoe",
+    "short_aoe",
     "silence",
     "low_sustained",
     "medium_cooldown",

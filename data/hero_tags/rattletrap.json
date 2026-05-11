@@ -4,8 +4,7 @@
     "stun",
     "medium_sustained",
     "short_duration",
-    "medium_cooldown",
-    "short_range"
+    "medium_cooldown"
   ],
   "rattletrap_power_cogs": [
     "medium_aoe",
@@ -18,7 +17,7 @@
     "medium_cooldown"
   ],
   "rattletrap_rocket_flare": [
-    "large_aoe",
+    "medium_aoe",
     "slow",
     "vision",
     "low_burst",

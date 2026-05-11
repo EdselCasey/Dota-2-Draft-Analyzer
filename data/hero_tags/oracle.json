@@ -1,11 +1,11 @@
 {
   "oracle_fortunes_end": [
-    "medium_aoe",
+    "small_aoe",
     "channelled",
     "medium_burst",
     "root",
     "dispel",
-    "long_range",
+    "medium_range",
     "short_duration",
     "short_cooldown"
   ],
@@ -13,7 +13,7 @@
     "damage_reduction",
     "disarm",
     "save",
-    "long_range",
+    "medium_range",
     "short_duration",
     "medium_cooldown"
   ],
@@ -23,7 +23,7 @@
     "medium_heal",
     "armor_gain",
     "save", 
-    "long_range",
+    "medium_range",
     "short_duration", 
     "long_cooldown"
   ],
@@ -33,7 +33,7 @@
     "medium_burst",
     "short_cooldown",
     "short_duration",
-    "long_range"
+    "medium_range"
   ],
   "oracle_diviner's_deck": [
     "magic_amp",

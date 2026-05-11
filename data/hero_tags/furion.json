@@ -1,16 +1,15 @@
 {
   "furion_sprout": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "vision",
     "save",
     "root",
-    "long_range",
+    "medium_range",
     "short_duration",
     "short_cooldown"
   ],
   "furion_teleportation": [
-    "medium_aoe",
     "teleport",
     "escape",
     "global",
@@ -25,8 +24,8 @@
   ],
   "furion_nature's_call": [
     "summon_units",
-    "medium_aoe",
-    "long_range",
+    "small_aoe",
+    "medium_range",
     "long_duration",
     "medium_cooldown"
   ],

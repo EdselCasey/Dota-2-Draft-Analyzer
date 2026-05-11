@@ -3,14 +3,14 @@
     "medium_aoe",
     "medium_sustained",
     "magic_amp",
-    "long_range",
+    "medium_range",
     "medium_cooldown"
   ],
   "warlock_shadow_word": [
     "medium_sustained",
     "medium_aoe",
     "medium_regen",
-    "long_range",
+    "medium_range",
     "short_duration",
     "short_cooldown"
   ],
@@ -21,14 +21,15 @@
     "zone_control",
     "magic_amp",
     "medium_sustained",
-    "long_range",
+    "medium_range",
     "medium_cooldown"
   ],
   "warlock_chaotic_offering_blast": [
     "large_aoe",
     "stun",
     "long_cooldown",
-    "short_duration"
+    "short_duration",
+    "medium_range"
   ],
   "warlock_chaotic_offering_golems": [
     "summon_units",

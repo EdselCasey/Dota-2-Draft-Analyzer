@@ -15,10 +15,10 @@
     "short_cooldown"
   ],
   "largo_frogstomp": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
     "slow",
-    "long_range",
+    "medium_range",
     "medium_cooldown",
     "short_duration",
     "medium_sustained"
@@ -29,7 +29,7 @@
     "mana_regen",
     "medium_duration",
     "medium_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "largo_catchy_lick": [
     "medium_regen",
@@ -38,7 +38,7 @@
     "forced_movement",
     "save",
     "short_cooldown",
-    "long_range",
+    "medium_range",
     "short_duration"
   ]
 }

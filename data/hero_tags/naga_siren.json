@@ -5,7 +5,7 @@
     "medium_duration"
   ],
   "naga_siren_rip_tide": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "armor_reduction",
     "passive",
@@ -16,7 +16,7 @@
     "passive"
   ],
   "naga_siren_song_of_the_siren": [
-    "large_aoe",
+    "medium_aoe",
     "medium_regen",
     "stun",
     "save",

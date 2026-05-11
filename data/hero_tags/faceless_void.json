@@ -5,7 +5,7 @@
   ],
   "faceless_void_time_walk": [
     "dash",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "medium_heal",
     "escape"
@@ -19,14 +19,14 @@
     "passive"
   ],
   "faceless_void_time_dilation": [
-    "large_aoe",
+    "medium_aoe",
     "slow",
     "low_sustained",
     "short_duration",
     "medium_cooldown"
   ],
   "faceless_void_chronosphere": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
     "attack_speed_boost",
     "movement_speed_boost",

@@ -1,6 +1,6 @@
 {
   "elder_titan_echo_stomp": [
-    "medium_aoe",
+    "small_aoe",
     "sleep",
     "stun",
     "medium_burst",
@@ -8,7 +8,7 @@
     "short_cooldown"
   ],
   "elder_titan_ancestral_spirit": [
-    "medium_aoe",
+    "small_aoe",
     "long_range",
     "medium_cooldown",
     "low_burst",
@@ -27,7 +27,7 @@
     "slow",
     "high_burst",
     "vision",
-    "medium_aoe",
+    "small_aoe",
     "forced_movement",
     "long_range",
     "long_cooldown",

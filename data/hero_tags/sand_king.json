@@ -11,12 +11,12 @@
     "medium_duration"
   ],
   "sand_king_caustic_finale": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "passive"
   ],
   "sand_king_stinger": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "slow",
     "short_cooldown",

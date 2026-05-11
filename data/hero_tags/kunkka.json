@@ -1,6 +1,6 @@
 {
   "kunkka_torrent": [
-    "medium_aoe",
+    "small_aoe",
     "knockup",
     "slow",
     "stun",
@@ -29,7 +29,7 @@
     "stun",
     "damage_reduction",
     "movement_speed_boost",
-    "medium_aoe",
+    "small_aoe",
     "high_burst",
     "long_cooldown",
     "short_duration",

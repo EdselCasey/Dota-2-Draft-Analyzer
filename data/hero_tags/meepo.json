@@ -8,14 +8,14 @@
     "attack_modifier"
   ],
   "meepo_earthbind": [
-    "medium_aoe",
+    "small_aoe",
     "root",
     "long_range",
     "short_duration",
     "short_cooldown"
   ],
   "meepo_poof": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "teleport",
     "escape",

@@ -9,11 +9,11 @@
   "enigma_demonic_summoning": [
     "summon_units",
     "long_duration",
-    "medium_range",
+    "short_range",
     "medium_cooldown"
   ],
   "enigma_midnight_pulse": [
-    "large_aoe",
+    "medium_aoe",
     "medium_sustained",
     "short_duration",
     "long_cooldown",

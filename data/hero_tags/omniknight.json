@@ -8,23 +8,23 @@
     "short_range"
   ],
   "omniknight_purification": [
-    "medium_aoe",
+    "small_aoe",
     "medium_heal",
     "medium_burst",
     "short_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "omniknight_repel": [
     "damage_reduction",
     "medium_regen",
     "debuff_immunity",
     "hp_growth",
-    "long_range",
+    "medium_range",
     "medium_cooldown",
     "short_duration"
   ],
   "omniknight_degen_aura": [
-    "medium_aoe",
+    "small_aoe",
     "attack_damage_boost",
     "slow", 
     "passive"

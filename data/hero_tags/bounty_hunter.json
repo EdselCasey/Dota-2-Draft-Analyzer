@@ -2,7 +2,7 @@
   "bounty_hunter_shuriken_toss": [
     "slow",
     "low_burst",
-    "medium_range",
+    "short_range",
     "short_cooldown",
     "short_duration"
   ],

@@ -1,6 +1,6 @@
 {
   "phoenix_icarus_dive": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "dash",
     "escape",
@@ -30,12 +30,12 @@
     "long_range"
   ],
   "phoenix_dying_light": [
-    "medium_aoe",
+    "small_aoe",
     "medium_sustained",
     "passive"
   ],
   "phoenix_sun_ray": [
-    "medium_aoe",
+    "small_aoe",
     "medium_sustained",
     "medium_heal",
     "long_range",

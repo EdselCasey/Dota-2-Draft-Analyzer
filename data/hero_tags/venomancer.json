@@ -4,7 +4,7 @@
     "slow",
     "low_burst",
     "medium_sustained",
-    "long_range",
+    "medium_range",
     "medium_cooldown",
     "medium_duration"
   ],
@@ -20,17 +20,17 @@
     "medium_aoe",
     "slow",
     "medium_sustained",
-    "large_aoe",
     "medium_burst",
     "long_cooldown",
-    "short_duration"
+    "short_duration",
+    "medium_range"
   ],
   "venomancer_plague_ward": [
     "summon_units",
     "push",
     "vision",
     "zone_control",
-    "long_range",
+    "medium_range",
     "medium_duration",
     "short_cooldown"
   ],
@@ -39,6 +39,6 @@
     "low_sustained",
     "short_duration",
     "medium_cooldown",
-    "long_range"
+    "medium_range"
   ]
 }

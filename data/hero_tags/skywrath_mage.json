@@ -1,7 +1,7 @@
 {
   "skywrath_mage_arcane_bolt": [
     "low_burst",
-    "long_range",
+    "medium_range",
     "short_cooldown"
   ],
   "skywrath_mage_concussive_shot": [
@@ -26,7 +26,7 @@
   "skywrath_mage_ancient_seal": [
     "silence",
     "magic_amp",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "short_duration"
   ]

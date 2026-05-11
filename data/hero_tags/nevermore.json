@@ -1,20 +1,20 @@
 {
   "nevermore_shadowraze1": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "magic_amp",
     "short_cooldown",
     "short_range"
   ],
   "nevermore_shadowraze2": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "magic_amp",
     "short_cooldown",
     "medium_range"
   ],
   "nevermore_shadowraze3": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "magic_amp",
     "short_cooldown",

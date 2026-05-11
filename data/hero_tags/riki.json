@@ -1,11 +1,11 @@
 {
   "riki_smoke_screen": [
-    "medium_aoe",
+    "small_aoe",
     "silence",
     "damage_reduction",
     "short_cooldown",
     "short_duration",
-    "medium_range"
+    "small_range"
   ],
   "riki_blink_strike": [
     "slow",
@@ -15,7 +15,7 @@
     "attack_damage_boost",
     "short_duration",
     "short_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "riki_backstab": [
     "attack_modifier",
@@ -27,7 +27,7 @@
     "xp_gain"
   ],
   "riki_tricks_of_the_trade": [
-    "medium_aoe",
+    "short_aoe",
     "channelled",
     "attack_damage_boost",
     "medium_sustained",
@@ -35,6 +35,6 @@
     "escape",
     "short_cooldown",
     "short_duration",
-    "medium_range"
+    "short_range"
   ]
 }

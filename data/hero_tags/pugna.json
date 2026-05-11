@@ -1,10 +1,10 @@
 {
   "pugna_nether_blast": [
-    "medium_aoe",
+    "small_aoe",
     "siege",
     "medium_burst",
     "short_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "pugna_decrepify": [
     "save",
@@ -14,21 +14,22 @@
     "medium_heal",
     "short_cooldown",
     "short_duration",
-    "long_range"
+    "medium_range"
   ],
   "pugna_nether_ward": [
     "large_aoe",
     "zone_control",
     "medium_burst",
     "medium_cooldown",
-    "medium_duration"
+    "medium_duration",
+    "short_range"
   ],
   "pugna_life_drain": [
     "channelled",
     "high_regen",
     "high_sustained",
     "save",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "short_duration"
   ],

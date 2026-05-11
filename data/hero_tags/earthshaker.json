@@ -5,7 +5,7 @@
     "passive"
   ],
   "earthshaker_fissure": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
     "medium_burst",
     "zone_control",
@@ -28,7 +28,7 @@
   ],
   "earthshaker_aftershock": [
     "stun",
-    "medium_aoe",
+    "small_aoe",
     "low_burst",
     "pasive"
   ]

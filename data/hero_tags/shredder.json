@@ -1,13 +1,13 @@
 {
   "shredder_whirling_death": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "short_cooldown",
     "medium_duration",
     "damage_reduction"
   ],
   "shredder_timber_chain": [
-    "medium_aoe",
+    "small_aoe",
     "dash",
     "escape",
     "low_burst",
@@ -21,7 +21,7 @@
     "medium_duration"
   ],
   "shredder_chakram": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "medium_burst",
     "medium_sustained",

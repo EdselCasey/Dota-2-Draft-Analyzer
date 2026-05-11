@@ -1,6 +1,6 @@
 {
   "dark_willow_bramble_maze": [
-    "large_aoe",
+    "medium_aoe",
     "root",
     "low_sustained",
     "zone_control",
@@ -19,8 +19,8 @@
     "medium_aoe",
     "fear",
     "stun",
-    "long_range",
-    "long_cooldown",
+    "medium_range",
+    "medium_cooldown",
     "short_duration"
   ],
   "dark_willow_cursed_crown": [

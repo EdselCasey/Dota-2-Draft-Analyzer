@@ -1,6 +1,6 @@
 {
   "dragon_knight_breathe_fire": [
-    "medium_aoe",
+    "small_aoe",
     "damage_reduction",
     "medium_burst",
     "long_range",

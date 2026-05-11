@@ -1,6 +1,6 @@
 {
   "razor_plasma_field": [
-    "large_aoe",
+    "medium_aoe",
     "slow",
     "medium_burst",
     "short_cooldown",
@@ -10,11 +10,11 @@
     "damage_reduction",
     "medium_duration",
     "attack_damage_boost",
-    "medium_range",
+    "short_range",
     "medium_cooldown"
   ],
   "razor_storm_surge": [
-    "large_aoe",
+    "medium_aoe",
     "slow",
     "low_burst",
     "passive",
@@ -22,7 +22,7 @@
     "short_duration"
   ],
   "razor_eye_of_the_storm": [
-    "medium_aoe",
+    "small_aoe",
     "medium_sustained",
     "armor_reduction",
     "medium_duration",

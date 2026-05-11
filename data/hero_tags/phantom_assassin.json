@@ -11,7 +11,8 @@
     "attack_speed_boost",
     "blink",
     "short_duration",
-    "short_cooldown"
+    "short_cooldown",
+    "medium_range"
   ],
   "phantom_assassin_blur": [
     "move_speed_boost",

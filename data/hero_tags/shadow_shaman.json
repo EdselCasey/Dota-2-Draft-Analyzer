@@ -1,13 +1,13 @@
 {
   "shadow_shaman_ether_shock": [
     "medium_burst",
-    "long_range",
-    "medium_aoe",
+    "medium_range",
+    "small_aoe",
     "short_cooldown"
   ],
   "shadow_shaman_hex": [
     "hex",
-    "medium_range",
+    "short_range",
     "short_duration",
     "short_cooldown"
   ],
@@ -15,7 +15,7 @@
     "channelled",
     "low_sustained",
     "stun",
-    "medium_range",
+    "short_range",
     "short_cooldown",
     "short_duration"
   ],
@@ -24,7 +24,7 @@
     "siege",
     "zone_control",
     "long_cooldown",
-    "medium_range",
+    "short_range",
     "long_duration"
   ],
   "shadow_shaman_fowl_play": [

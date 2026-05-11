@@ -5,7 +5,7 @@
     "passive"
   ],
   "puck_illusory_orb": [
-    "medium_aoe",
+    "small_aoe",
     "vision",
     "medium_burst",
     "teleport",
@@ -15,12 +15,12 @@
     "long_range"
   ],
   "puck_waning_rift": [
-    "medium_aoe",
+    "small_aoe",
     "silence",
     "blink",
     "escape",
     "medium_burst",
-    "medium_range",
+    "short_range",
     "short_duration",
     "short_cooldown"
   ],
@@ -31,11 +31,11 @@
     "short_cooldown"
   ],
   "puck_dream_coil": [
-    "medium_aoe",
+    "small_aoe",
     "stun",
     "leash",
     "medium_burst",
-    "long_range",
+    "medium_range",
     "long_cooldown",
     "short_duration"
   ]

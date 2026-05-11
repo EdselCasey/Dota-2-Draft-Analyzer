@@ -1,6 +1,6 @@
 {
   "slark_dark_pact": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "dispel",
     "short_duration",
@@ -13,7 +13,7 @@
     "leash",
     "short_duration",
     "medium_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "slark_shadow_dance": [
     "medium_regen",

@@ -1,6 +1,6 @@
 {
   "huskar_inner_fire": [
-    "medium_aoe",
+    "small_aoe",
     "silence",
     "knockback",
     "medium_burst",
@@ -13,7 +13,7 @@
     "medium_sustained",
     "short_duration",
     "toggle",
-    "medium_range"
+    "small_range"
   ],
   "huskar_berserkers_blood": [
     "attack_speed_boost",
@@ -27,7 +27,7 @@
     "medium_burst",
     "debuff_immune",
     "short_cooldown",
-    "medium_range",
+    "small_range",
     "short_duration"
   ]
 }

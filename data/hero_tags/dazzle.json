@@ -5,9 +5,9 @@
     "passive"
   ],
   "dazzle_poison_touch": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
-    "long_range",
+    "medium_range",
     "low_sustained",
     "short_duration",
     "medium_cooldown",
@@ -16,17 +16,17 @@
   "dazzle_shallow_grave": [
     "save",
     "invulnerability",
-    "long_range",
+    "medium_range",
     "short_duration",
     "medium_cooldown"
   ],
   "dazzle_shadow_wave": [
-    "medium_aoe",
+    "small_aoe",
     "grant_armor",
     "low_heal",
     "low_burst",
     "armor_reduction",
-    "long_range",
+    "medium_range",
     "short_cooldown"
   ],
   "dazzle_nothl_projection": [

@@ -4,12 +4,12 @@
     "cooldown_reduction"
   ],
   "tinker_deploy_turrets": [
-    "medium_aoe",
+    "small_aoe",
     "low_burst",
     "summon_units",
     "low_sustained",
     "knockback",
-    "long_range",
+    "medium_range",
     "medium_cooldown",
     "short_duration"
   ],
@@ -24,10 +24,10 @@
     "damage_reduction",
     "short_duration",
     "medium_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "tinker_march_of_the_machines": [
-    "large_aoe",
+    "medium_aoe",
     "low_sustained",
     "zone_control",
     "short_duration",

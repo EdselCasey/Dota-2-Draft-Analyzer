@@ -5,8 +5,8 @@
     "vision",
     "medium_cooldown",
     "short_duration",
-    "long_range",
-    "medium_aoe"
+    "medium_range",
+    "small_aoe"
   ],
   "terrorblade_conjure_image": [
     "illusion",
@@ -17,7 +17,7 @@
     "medium_burst",
     "medium_heal",
     "long_cooldown",
-    "medium_range"
+    "small_range"
   ],
   "terrorblade_metamorphosis": [
     "attack_modifier",

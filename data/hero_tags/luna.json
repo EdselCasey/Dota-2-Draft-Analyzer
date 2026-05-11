@@ -4,10 +4,10 @@
     "medium_burst",
     "short_duration",
     "short_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "luna_lunar_orbit": [
-    "medium_aoe",
+    "small_aoe",
     "damage_reduction",
     "medium_sustained",
     "medium_cooldown",
@@ -20,7 +20,7 @@
     "bouncing_attacks"
   ],
   "luna_eclipse": [
-    "large_aoe",
+    "medium_aoe",
     "high_burst",
     "short_duration",
     "long_cooldown"
@@ -28,7 +28,6 @@
   "luna_lunar_blessing": [
     "global",
     "attack_damage_boost",
-    "large_aoe",
     "passive"
   ]
 }

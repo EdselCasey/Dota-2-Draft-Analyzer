@@ -18,7 +18,7 @@
     "passive"
   ],
   "juggernaut_healing_ward": [
-    "medium_aoe",
+    "small_aoe",
     "medium_regen",
     "short_range",
     "long_cooldown",

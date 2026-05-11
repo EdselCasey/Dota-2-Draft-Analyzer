@@ -8,16 +8,16 @@
     "stun",
     "medium_aoe",
     "medium_cooldown",
-    "medium_range",
+    "short_range",
     "short_duration"
   ],
   "witch_doctor_voodoo_restoration": [
-    "medium_aoe",
+    "small_aoe",
     "medium_heal",
     "short_cooldown"
   ],
   "witch_doctor_maledict": [
-    "large_aoe",
+    "small_aoe",
     "low_sustained",
     "medium_burst",
     "medium_range",

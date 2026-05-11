@@ -9,7 +9,7 @@
     "passive"
   ],
   "lone_druid_savage_roar": [
-    "medium_aoe",
+    "small_aoe",
     "fear",
     "short_duration",
     "medium_cooldown",
@@ -28,10 +28,10 @@
     "medium_sustained"
   ],
   "lone_druid_entangle": [
-    "medium_aoe",
+    "small_aoe",
     "root",
     "medium_sustained",
-    "long_range",
+    "medium_range",
     "short_duration",
     "medium_cooldown"
   ]

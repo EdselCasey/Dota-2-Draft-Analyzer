@@ -1,14 +1,14 @@
 {
   "death_prophet_crypt_swarm": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "short_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "death_prophet_silence": [
     "medium_aoe",
     "silence",
-    "long_range",
+    "medium_range",
     "short_duration",
     "short_cooldown"
   ],
@@ -17,7 +17,7 @@
     "medium_heal",
     "short_duration",
     "medium_cooldown",
-    "medium_range"
+    "small_range"
   ],
   "death_prophet_exorcism": [
     "large_aoe",

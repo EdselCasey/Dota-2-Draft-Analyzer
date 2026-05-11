@@ -1,10 +1,10 @@
 {
   "dark_seer_vacuum": [
-    "medium_aoe",
+    "small_aoe",
     "forced_movement",
     "low_burst",
     "medium_cooldown",
-    "medium_range"
+    "short_range"
   ],
   "dark_seer_ion_shell": [
     "small_aoe",

@@ -1,6 +1,6 @@
 {
   "keeper_of_the_light_illuminate": [
-    "medium_aoe",
+    "small_aoe",
     "vision",
     "high_burst",
     "medium_heal",
@@ -9,7 +9,7 @@
   ],
   "keeper_of_the_light_chakra_magic": [
     "mana_regen",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "cooldown_reduction"
   ],
@@ -26,17 +26,17 @@
     "passive"
   ],
   "keeper_of_the_light_blinding_light": [
-    "medium_aoe",
+    "small_aoe",
     "knockback",
     "damage_reduction",
     "medium_burst",
     "medium_cooldown",
     "short_duration",
-    "medium_range"
+    "small_range"
   ],
   "keeper_of_the_light_spirit_form": [
     "movement_speed_boost",
-    "medium_range",
+    "small_range",
     "medium_duration",
     "long_cooldown"
   ]

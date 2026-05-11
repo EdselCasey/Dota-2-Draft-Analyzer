@@ -1,16 +1,16 @@
 {
   "brewmaster_thunder_clap": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "medium_burst",
     "short_cooldown",
     "short_duration"
   ],
   "brewmaster_cinder_brew": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "low_burst",
-    "long_range",
+    "medium_range",
     "medium_sustained",
     "short_duration"
   ],
@@ -41,11 +41,11 @@
     "siege"
   ],
   "brewmaster_storm_dispel_magic": [
-    "medium_aoe",
+    "small_aoe",
     "low_burst",
     "dispel",
     "short_cooldown",
-    "medium_range"
+    "short_range"
   ],
   "brewmaster_fire_permanent_immolation": [
     "small_aoe",

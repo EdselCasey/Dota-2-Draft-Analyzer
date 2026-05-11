@@ -1,12 +1,12 @@
 {
   "kez_echo_slash": [
-    "medium_aoe",
+    "small_aoe",
     "slow",
     "medium_burst",
     "dash",
     "escape",
     "medium_cooldown",
-    "short_range",
+    "medium_range",
     "short_duration"
   ],
   "kez_grappling_claw": [
@@ -14,7 +14,7 @@
     "dash",
     "escape",
     "short_cooldown",
-    "long_range",
+    "medium_range",
     "short_duration"
   ],
   "kez_kazurai_katana": [
@@ -23,7 +23,7 @@
     "passive"
   ],
   "kez_raptor_dance": [
-    "medium_aoe",
+    "small_aoe",
     "medium_burst",
     "lifesteal",
     "dispel",
@@ -37,12 +37,12 @@
     "dash",
     "short_duration",
     "medium_cooldown",
-    "medium_range"
+    "small_range"
   ],
   "kez_talon_toss": [
     "silence",
     "medium_burst",
-    "long_range",
+    "medium_range",
     "short_duration",
     "short_cooldown"
   ],
@@ -53,7 +53,7 @@
     "short_duration"
   ],
   "kez_ravens_veil": [
-    "medium_aoe",
+    "large_aoe",
     "movement_speed_boost",
     "stealth",
     "escape",
