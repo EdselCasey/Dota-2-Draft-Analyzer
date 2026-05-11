@@ -171,11 +171,11 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   medium_sustained: [
     { dimension: 'sustained_damage', weight: 2.0 },
-    { dimension: 'waveclear',        weight: 1.5 },
+    { dimension: 'waveclear',        weight: 1.0 },
   ],
   high_sustained: [
     { dimension: 'sustained_damage', weight: 3.0 },
-    { dimension: 'waveclear',        weight: 2.0 },
+    { dimension: 'waveclear',        weight: 1.5 },
   ],
 
   // ── AOE (tiered) ──────────────────────────────────────────────────────────
@@ -315,7 +315,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   // ── Attack / Right-click ──────────────────────────────────────────────────
   attack_speed_boost: [
     { dimension: 'sustained_damage', weight: 2.0 },
-    { dimension: 'waveclear',        weight: 1.0 },
+    { dimension: 'waveclear',        weight: 1.5 },
     { dimension: 'objective_pressure', weight: 2.5 },
   ],
   armor_reduction: [
@@ -324,7 +324,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   attack_damage_boost: [
     { dimension: 'sustained_damage', weight: 2.5 },
-    { dimension: 'waveclear',        weight: 1.0 },
+    { dimension: 'waveclear',        weight: 1.5 },
     { dimension: 'objective_pressure', weight: 3.0 },
   ],
   attack_modifier: [
