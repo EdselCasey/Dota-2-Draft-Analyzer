@@ -50,14 +50,15 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
     { counters: 'burst_damage',     strength: 0.40},
     { counters: 'mobility',         strength: 0.50},
     { counters: 'objective_pressure',             strength: 0.25 },
-    { counters: 'defensive_utility', strength: 0.20 },
+    { counters: 'defensive_utility', strength: 0.35 },
   ],
   soft_control: [
+    { counters: 'spell_sustained',  strength: 0.10, requiresExcess: true },
     { counters: 'attack_sustained', strength: 0.05, requiresExcess: true },
     { counters: 'burst_damage',     strength: 0.05, requiresExcess: true },
     { counters: 'mobility',         strength: 0.15, requiresExcess: true },
     { counters: 'objective_pressure',             strength: 0.10 },
-    { counters: 'defensive_utility', strength: 0.05 },
+    { counters: 'defensive_utility', strength: 0.10 },
   ],
 
 
@@ -78,6 +79,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
     { counters: 'defense',          strength: 0.25 },
     { counters: 'spell_sustained',  strength: 0.30 },
     { counters: 'attack_sustained', strength: 0.50 },
+    { counters: 'hard_control',     strength: 0.30 },
   ],
 
   // ── Spell Sustained ────────────────────────────────────────────────────────
@@ -132,8 +134,8 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
 
   // ── Defensive utility ─────────────────────────────────────────────────────
   defensive_utility: [
-    { counters: 'hard_control',     strength: 0.15 },
-    { counters: 'soft_control',     strength: 0.20 },
+    { counters: 'hard_control',     strength: 0.60 },
+    { counters: 'soft_control',     strength: 0.25 },
     { counters: 'burst_damage',     strength: 0.35 },
     { counters: 'pickoff',          strength: 0.20 },
   ],
@@ -601,7 +603,16 @@ function analyzeOneSide(
 
     for (const { counters: ourDim, strength } of edges) {
       const ourScore = usNorm[ourDim] ?? 0
-      if (ourScore > WEAK_THRESHOLD) continue
+      const theirScore = themNorm[theirDim] ?? 0
+      
+      // Ratio override: if their damage is more than 2× our survivability, it's a vulnerability
+      // regardless of absolute threshold. This catches cases where low survivability gets
+      // overwhelmed by extreme damage (e.g., 4 sustain vs 10 burst).
+      const isSurvivabilityDim = ourDim === 'sustain' || ourDim === 'defense' || ourDim === 'defensive_utility'
+      const isDamageDim = theirDim === 'burst_damage' || theirDim === 'spell_sustained' || theirDim === 'attack_sustained' || theirDim === 'pickoff'
+      const ratioOverride = isSurvivabilityDim && isDamageDim && theirScore > ourScore * 2
+      
+      if (ourScore > WEAK_THRESHOLD && !ratioOverride) continue
 
       const intensity = (theirScore / 10) * strength * (1 - ourScore / 10)
       const sev = severity(intensity)
