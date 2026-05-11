@@ -84,16 +84,16 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   // ── Hard Control ──────────────────────────────────────────────────────────
   stun: [
     { dimension: 'hard_control', weight: 3.0 },
-    { dimension: 'pickoff',      weight: 2.0 },
+    { dimension: 'pickoff',      weight: 1.5 },
   ],
   hex: [
     { dimension: 'hard_control', weight: 3.0 },
-    { dimension: 'pickoff',      weight: 2.5 },
+    { dimension: 'pickoff',      weight: 1.3 },
     { dimension: 'defensive_utility', weight: 1.7 },
   ],
   taunt: [
     { dimension: 'hard_control', weight: 2.0 },
-    { dimension: 'pickoff',      weight: 1.0 },
+    { dimension: 'pickoff',      weight: 1.2 },
   ],
   fear: [
     { dimension: 'hard_control', weight: 1.5 },
@@ -107,21 +107,21 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   knockup: [
     { dimension: 'hard_control', weight: 2.5 },
-    { dimension: 'pickoff',      weight: 1.5 },
+    { dimension: 'pickoff',      weight: 1.4 },
   ],
   sleep: [
     { dimension: 'hard_control', weight: 2.0 },
-    { dimension: 'pickoff',      weight: 2.0 },
+    { dimension: 'pickoff',      weight: 1.3 },
   ],
 
   // ── Soft Control ──────────────────────────────────────────────────────────
   root: [
     { dimension: 'soft_control', weight: 1.5 },
-    { dimension: 'pickoff',      weight: 1.5 },
+    { dimension: 'pickoff',      weight: 1.3 },
   ],
   silence: [
     { dimension: 'soft_control', weight: 1.0 },
-    { dimension: 'pickoff',      weight: 1.5 },
+    { dimension: 'pickoff',      weight: 1.0 },
     { dimension: 'defensive_utility', weight: 0.65 },
   ],
   slow: [
@@ -134,12 +134,12 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   antiheal: [
     { dimension: 'soft_control', weight: 1.5 },
-    { dimension: 'pickoff',      weight: 1.5 },
+    { dimension: 'pickoff',      weight: 1.0 },
   ],
   banish: [
     { dimension: 'soft_control', weight: 1.5 },
     { dimension: 'hard_control', weight: 1.0 },
-    { dimension: 'pickoff',      weight: 1.0 },
+    { dimension: 'pickoff',      weight: 0.5 },
     { dimension: 'defensive_utility', weight: 1.9 },
   ],
   leash: [
@@ -275,12 +275,12 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   // ── Mobility ──────────────────────────────────────────────────────────────
   blink: [
     { dimension: 'mobility',         weight: 3.0 },
-    { dimension: 'pickoff',          weight: 1.5 },
+    { dimension: 'pickoff',          weight: 1.0 },
     { dimension: 'map_presence',          weight: 1.8 },
   ],
   dash: [
     { dimension: 'mobility',         weight: 2.0 },
-    { dimension: 'pickoff',          weight: 0.5 },
+    { dimension: 'pickoff',          weight: 1.0 },
     { dimension: 'map_presence',          weight: 1.5 },
   ],
   movement_speed_boost: [
@@ -297,14 +297,14 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
 
   // ── Stealth / Aerial ──────────────────────────────────────────────────────
   stealth: [
-    { dimension: 'pickoff',          weight: 2.5 },
+    { dimension: 'pickoff',          weight: 1.2 },
     { dimension: 'vision_control',   weight: 1.5 },
     { dimension: 'mobility',         weight: 0.5 },
     { dimension: 'map_presence',     weight: 1.7 },
   ],
   aerial: [
     { dimension: 'vision_control',   weight: 2.5 },
-    { dimension: 'pickoff',          weight: 1.0 },
+    { dimension: 'pickoff',          weight: 1.3 },
     { dimension: 'mobility',         weight: 1.0 },
     { dimension: 'map_presence',     weight: 1.7 },
   ],
@@ -323,7 +323,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   armor_reduction: [
     { dimension: 'attack_sustained', weight: 1.5 },
-    { dimension: 'pickoff',          weight: 0.5 },
+    { dimension: 'pickoff',          weight: 1.0 },
   ],
   attack_damage_boost: [
     { dimension: 'attack_sustained', weight: 2.5 },
@@ -332,7 +332,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   attack_modifier: [
     { dimension: 'attack_sustained', weight: 2.0 },
-    { dimension: 'pickoff',          weight: 0.5 },
+    { dimension: 'pickoff',          weight: 1.0 },
     { dimension: 'objective_pressure', weight: 2.0 },
   ],
   mana_burn: [
@@ -396,7 +396,7 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   magic_amp: [
     { dimension: 'burst_damage',      weight: 1.5 },
-    { dimension: 'pickoff',           weight: 0.5 },
+    { dimension: 'pickoff',           weight: 1.0 },
   ],
   gold_gain: [
     { dimension: 'resource_support',  weight: 2.0 },
