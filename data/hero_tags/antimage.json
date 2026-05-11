@@ -18,7 +18,7 @@
     "blink",
     "escape",
     "short_cooldown",
-    "long_range"
+    "medium_range"
   ],
   "antimage_counter_spell": [
     "damage_reduction",

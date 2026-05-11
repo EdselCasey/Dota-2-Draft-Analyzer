@@ -6,14 +6,14 @@
   "bane_enfeeble": [
     "low_sustained",
     "damage_reduction",
-    "long_range",
+    "medium_range",
     "short_cooldown",
     "short_duration"
   ],
   "bane_brain_sap": [
     "low_burst",
     "low_heal",
-    "short_range",
+    "medium_range",
     "short_cooldown"
   ],
   "bane_fiends_grip": [
@@ -28,7 +28,7 @@
     "forced_movement",
     "sleep",
     "save",
-    "short_range",
+    "medium_range",
     "medium_cooldown",
     "short_duration",
     "invulnerability"

@@ -34,7 +34,7 @@
     "stun",
     "forced_movement",
     "high_sustained",
-    "low_range",
+    "short_range",
     "short_duration",
     "long_cooldown"
   ],
