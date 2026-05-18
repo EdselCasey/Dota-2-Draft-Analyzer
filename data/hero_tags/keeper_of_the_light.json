@@ -18,8 +18,7 @@
     "slow",
     "short_duration",
     "short_cooldown",
-    "long_range",
-    ""
+    "long_range"
   ],
   "keeper_of_the_light_bright_speed": [
     "movement_speed_boost",
