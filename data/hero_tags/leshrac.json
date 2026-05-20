@@ -16,7 +16,8 @@
     "high_sustained",
     "short_range",
     "medium_cooldown",
-    "short_duration"
+    "short_duration",
+    "building_damage"
   ],
   "leshrac_lightning_storm": [
     "small_aoe",
