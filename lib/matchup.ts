@@ -48,7 +48,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
     { counters: 'spell_sustained',  strength: 0.30 },
     { counters: 'attack_sustained', strength: 0.50 },
     { counters: 'burst_damage',     strength: 0.40},
-    { counters: 'mobility',         strength: 0.50},
+    { counters: 'mobility',         strength: 0.40},
     { counters: 'objective_pressure',             strength: 0.25 },
     { counters: 'defensive_utility', strength: 0.35 },
   ],
@@ -103,11 +103,11 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
 
   // ── Pickoff ───────────────────────────────────────────────────────────────
   pickoff: [
-    { counters: 'spell_sustained',  strength: 0.40 },
-    { counters: 'attack_sustained', strength: 0.55 },
-    { counters: 'burst_damage', strength: 0.40 },
-    { counters: 'objective_pressure', strength: 0.30 },
-    { counters: 'map_presence',     strength: 0.60 },
+    { counters: 'spell_sustained',  strength: 0.35 },
+    { counters: 'attack_sustained', strength: 0.45 },
+    { counters: 'burst_damage', strength: 0.35 },
+    { counters: 'objective_pressure', strength: 0.25 },
+    { counters: 'map_presence',     strength: 0.50 },
   ],
 
   // ── Teamfight ─────────────────────────────────────────────────────────────
@@ -839,17 +839,17 @@ export function analyzeMatchup(
   const radiantExecEdge   = radiantClosingGap - direClosingGap
 
   // Shift favor toward the team with better execution
-  // Capped at ±0.50 — execution can flip matchups but not create landslides
-  const execFavorShift = clamp(radiantExecEdge * 1.0, -0.50, 0.50)
+  // Capped at ±0.25 — execution nudges close matchups but does not dominate structure
+  const execFavorShift = clamp(radiantExecEdge * 0.5, -0.25, 0.25)
   radiantEdge += execFavorShift
   radiantEdge = Math.round(radiantEdge * 100) / 100
 
   // Recompute overallFavored with the shifted edge — gradient labels
   const overallFavoredShifted: MatchupAnalysis['overallFavored'] =
-    radiantEdge >  0.40 ? 'radiant_strongly' :
+    radiantEdge >  0.55 ? 'radiant_strongly' :
     radiantEdge >  0.25 ? 'radiant'           :
     radiantEdge >  0.15 ? 'radiant_slightly'  :
-    radiantEdge < -0.40 ? 'dire_strongly'     :
+    radiantEdge < -0.55 ? 'dire_strongly'     :
     radiantEdge < -0.25 ? 'dire'              :
     radiantEdge < -0.15 ? 'dire_slightly'     : 'even'
 
