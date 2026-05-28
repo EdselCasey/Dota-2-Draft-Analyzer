@@ -22,16 +22,6 @@
     "siege",
     "aerial"
   ],
-  "visage_stone_form": [
-    "medium_aoe",
-    "medium_cooldown",
-    "short_duration",
-    "stun",
-    "low_burst",
-    "invulnerability",
-    "medium_heal",
-    "escape"
-  ],
   "visage_summon_familiars_stone_form_stun": [
     "medium_aoe",
     "stun",

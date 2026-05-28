@@ -372,9 +372,30 @@ function buildNarrative(
 export interface MatchupAnalysis {
   insights:       MatchupInsight[]
   radiantEdge:    number
+  effectiveEdge:  number
   overallFavored: 'radiant_slightly' | 'radiant' | 'radiant_strongly' | 'dire_slightly' | 'dire' | 'dire_strongly' | 'even'
   radiantUrgency: TeamUrgency
   direUrgency:    TeamUrgency
+  executionVolatility: number  // width of two-scenario range
+  rangeA:         number       // final edge if Radiant leads early
+  rangeB:         number       // final edge if Dire leads early
+  executionDebug?: {
+    structuralEdge: number
+    radiantObjDelta: number
+    radiantStrangleDelta: number
+    radiantBreachDelta: number
+    direObjDelta: number
+    direStrangleDelta: number
+    direBreachDelta: number
+    objectiveSwingA: number
+    strangleSwingA: number
+    breachSwingA: number
+    objectiveSwingB: number
+    strangleSwingB: number
+    breachSwingB: number
+    scenarioA: number
+    scenarioB: number
+  }
 }
 
 // ── Urgency ───────────────────────────────────────────────────────────────────
@@ -481,7 +502,8 @@ export function computeTeamUrgency(
   /** From THIS team's perspective: positive = this team is favored */
   matchupEdgeForThisTeam: number,
   timingScore: number,   // -1 (early) to +1 (late)
-  enemyTimingScore: number  // enemy's timing score
+  enemyTimingScore: number,  // enemy's timing score
+  scenarioShiftForThisTeam = 0
 ): TeamUrgency {
   // Normalize matchup edge to [0, 1] — 1 = fully favored, 0 = fully unfavored.
   // Edge values are typically small floats; scale by 3 to give reasonable spread.
@@ -489,9 +511,10 @@ export function computeTeamUrgency(
   // Earlyness: 1 = very early, 0 = very late
   const earlyness     = clamp((1 - timingScore) / 2, 0, 1)
 
-  // Urgency is purely derived from favor and timing.
-  // Execution is already baked into the favor number, no need to double-count.
-  const raw = (1 - matchupFavor) * 0.60 + earlyness * 0.40
+  // Urgency is driven by favor, timing, and how much more comfortable the team's
+  // better scenario is versus its worse scenario. Positive shift = safer path.
+  const shiftPressure = clamp(-scenarioShiftForThisTeam * 0.35, -0.20, 0.20)
+  const raw = (1 - matchupFavor) * 0.55 + earlyness * 0.35 + shiftPressure * 0.10
 
   const score = Math.round(clamp(raw, 0, 1) * 100) / 100
 
@@ -762,6 +785,10 @@ function stallingPower(
   return clamp(0.8 + (chainMin / 5.0) * 0.2, 0.6, 1.0)
 }
 
+function phaseSwing(delta: number, divisor = 4, cap = 1): number {
+  return clamp(delta / divisor, -cap, cap)
+}
+
 export function analyzeMatchup(
   radiant: TeamProfile,
   dire:    TeamProfile
@@ -796,65 +823,151 @@ export function analyzeMatchup(
     ? dire.heroes.reduce((s, h) => s + h.timing.score, 0) / dire.heroes.length
     : 0
 
-  // ── Execution pressure (always computed) ──────────────────────────────────
-  // Both teams are evaluated for closing (can they push through?) and stalling
-  // (can they survive?) power. Every game is an execution test regardless of timing.
-  let radiantExecPressure = 0
-  let direExecPressure = 0
+  const structuralEdge = radiantEdge
 
-  const radiantClose = closingPower(radiantNorm, direNorm)
-  const direClose    = closingPower(direNorm, radiantNorm)
-  const radiantStall = stallingPower(radiantNorm, direNorm)
-  const direStall    = stallingPower(direNorm, radiantNorm)
+  // ── Execution two-scenario range ──────────────────────────────────────────
+  // Each phase produces a raw signed delta. We run two scenarios:
+  // Scenario A: Radiant has early lead → Radiant executes close phases, Dire executes stall phases
+  // Scenario B: Dire has early lead → Dire executes close phases, Radiant executes stall phases
+  //
+  // Closing phases (positive contribution when executing well): objectiveDelta, strangleDelta, breachDelta
+  // Stalling phases (negative contribution when executing well): stallDelta, farmDelta, hgDelta
 
-  if (radiantEdge > 0.15) {
-    // Radiant favored
-    const cantClose   = 1 - radiantClose
-    const theyCanFlip = Math.max(direClose - 0.6, 0)
-    radiantExecPressure = clamp(cantClose * 0.5 + theyCanFlip * 0.5, 0, 0.4)
+  // Raw phase deltas from composites only, kept on a single scale.
+  const radiantPushPower = Math.max(
+    radiantNorm.objective_pressure,
+    (radiantNorm.pickoff + radiantNorm.hard_control) / 2,
+    radiantNorm.teamfight
+  )
+  const direPushPower = Math.max(
+    direNorm.objective_pressure,
+    (direNorm.pickoff + direNorm.hard_control) / 2,
+    direNorm.teamfight
+  )
+  const radiantBreachPower = Math.max(
+    radiantNorm.teamfight,
+    (radiantNorm.pickoff + radiantNorm.hard_control) / 2
+  )
+  const direBreachPower = Math.max(
+    direNorm.teamfight,
+    (direNorm.pickoff + direNorm.hard_control) / 2
+  )
+  const radiantObjDelta  = radiantPushPower - (direNorm.waveclear * 0.40 + direNorm.defense * 0.30 + direNorm.hard_control * 0.30)
+  const radiantStrangleDelta = (radiantNorm.map_presence * 0.25 + radiantNorm.pickoff * 0.25 + radiantNorm.hard_control * 0.20 + radiantNorm.mobility * 0.15 + radiantNorm.vision_control * 0.15) - (direNorm.mobility * 0.18 + direNorm.defensive_utility * 0.20 + direNorm.hard_control * 0.15 + direNorm.vision_control * 0.08 + direNorm.sustain * 0.14 + direNorm.defense * 0.20 + direNorm.map_presence * 0.10)
+  const radiantBreachDelta = radiantBreachPower - (direNorm.waveclear * 0.30 + direNorm.teamfight * 0.30 + direNorm.hard_control * 0.20 + direNorm.defensive_utility * 0.20)
 
-    const cantStall   = 1 - direStall
-    const enemyCloses = Math.max(radiantClose - 0.6, 0)
-    direExecPressure = clamp(cantStall * 0.5 + enemyCloses * 0.5, 0, 0.4)
-  } else if (radiantEdge < -0.15) {
-    // Dire favored
-    const cantClose   = 1 - direClose
-    const theyCanFlip = Math.max(radiantClose - 0.6, 0)
-    direExecPressure = clamp(cantClose * 0.5 + theyCanFlip * 0.5, 0, 0.4)
+  const direObjDelta    = direPushPower - (radiantNorm.waveclear * 0.40 + radiantNorm.defense * 0.30 + radiantNorm.hard_control * 0.30)
+  const direStrangleDelta   = (direNorm.map_presence * 0.25 + direNorm.pickoff * 0.25 + direNorm.hard_control * 0.20 + direNorm.mobility * 0.15 + direNorm.vision_control * 0.15) - (radiantNorm.mobility * 0.18 + radiantNorm.defensive_utility * 0.20 + radiantNorm.hard_control * 0.15 + radiantNorm.vision_control * 0.08 + radiantNorm.sustain * 0.14 + radiantNorm.defense * 0.20 + radiantNorm.map_presence * 0.10)
+  const direBreachDelta = direBreachPower - (radiantNorm.waveclear * 0.30 + radiantNorm.teamfight * 0.30 + radiantNorm.hard_control * 0.20 + radiantNorm.defensive_utility * 0.20)
 
-    const cantStall   = 1 - radiantStall
-    const enemyCloses = Math.max(direClose - 0.6, 0)
-    radiantExecPressure = clamp(cantStall * 0.5 + enemyCloses * 0.5, 0, 0.4)
-  } else {
-    // Even matchup — both teams get light pressure based on execution gaps
-    radiantExecPressure = clamp((1 - radiantClose) * 0.5, 0, 0.2)
-    direExecPressure    = clamp((1 - direClose) * 0.5, 0, 0.2)
+  const objectiveSwingA = phaseSwing(radiantObjDelta)
+  const strangleSwingA  = phaseSwing(radiantStrangleDelta)
+  const breachSwingA    = phaseSwing(radiantBreachDelta)
+
+  const objectiveSwingB = -phaseSwing(direObjDelta)
+  const strangleSwingB  = -phaseSwing(direStrangleDelta)
+  const breachSwingB    = -phaseSwing(direBreachDelta)
+
+  // Scenario A: Radiant leads early → small signed edge-scale swings
+  const scenarioA = objectiveSwingA + strangleSwingA + breachSwingA
+  // Scenario B: Dire leads early → small signed edge-scale swings on the same axis
+  const scenarioB = objectiveSwingB + strangleSwingB + breachSwingB
+
+  // Two-scenario range for display
+  const rangeA = structuralEdge + scenarioA
+  const rangeB = structuralEdge + scenarioB
+  const verdictRangeA = clamp(rangeA, -1, 1)
+  const verdictRangeB = clamp(rangeB, -1, 1)
+
+  // Effective edge: use midpoint only when both outcomes stay on one side.
+  const minRange = Math.min(verdictRangeA, verdictRangeB)
+  const maxRange = Math.max(verdictRangeA, verdictRangeB)
+  const midpoint = (verdictRangeA + verdictRangeB) / 2
+  const executionVolatility = Math.abs(rangeA - rangeB)
+  let effectiveEdge: number
+
+  const bucketOf = (value: number) => {
+    if (value >= 0.80) return 'radiant_strongly' as const
+    if (value >= 0.40) return 'radiant' as const
+    if (value >  0.20) return 'radiant_slightly' as const
+    if (value <= -0.80) return 'dire_strongly' as const
+    if (value <= -0.40) return 'dire' as const
+    if (value <  -0.20) return 'dire_slightly' as const
+    return 'even' as const
   }
 
-  // ── Execution favor shift ──────────────────────────────────────────────
-  // How much better is each team at executing vs the other team's resistance?
-  // Positive = Radiant executes better, negative = Dire executes better.
-  const radiantClosingGap = radiantClose - direStall    // Can Radiant push through Dire?
-  const direClosingGap    = direClose - radiantStall    // Can Dire push through Radiant?
-  const radiantExecEdge   = radiantClosingGap - direClosingGap
+  const downgradeBucket = (
+    bucket: 'radiant_strongly' | 'radiant' | 'radiant_slightly' | 'dire_strongly' | 'dire' | 'dire_slightly' | 'even'
+  ): number => {
+    switch (bucket) {
+      case 'radiant_strongly': return 0.60
+      case 'radiant':          return 0.30
+      case 'radiant_slightly': return 0.30
+      case 'dire_strongly':    return -0.60
+      case 'dire':             return -0.30
+      case 'dire_slightly':    return -0.30
+      default:                 return 0
+    }
+  }
 
-  // Shift favor toward the team with better execution
-  // Capped at ±0.25 — execution nudges close matchups but does not dominate structure
-  const execFavorShift = clamp(radiantExecEdge * 0.5, -0.25, 0.25)
-  radiantEdge += execFavorShift
-  radiantEdge = Math.round(radiantEdge * 100) / 100
+  const bucketA = bucketOf(verdictRangeA)
+  const bucketB = bucketOf(verdictRangeB)
+  const aIsEven = bucketA === 'even'
+  const bIsEven = bucketB === 'even'
+  const splitAcrossTeams =
+    (verdictRangeA > 0.20 && verdictRangeB < -0.20) ||
+    (verdictRangeB > 0.20 && verdictRangeA < -0.20)
 
-  // Recompute overallFavored with the shifted edge — gradient labels
+  if (splitAcrossTeams || (aIsEven && bIsEven)) {
+    effectiveEdge = 0
+  } else if (aIsEven !== bIsEven) {
+    effectiveEdge = downgradeBucket(aIsEven ? bucketB : bucketA)
+  } else {
+    effectiveEdge = midpoint
+  }
+
+  radiantEdge = Math.round(structuralEdge * 100) / 100
+  effectiveEdge = Math.round(effectiveEdge * 100) / 100
+
   const overallFavoredShifted: MatchupAnalysis['overallFavored'] =
-    radiantEdge >  0.55 ? 'radiant_strongly' :
-    radiantEdge >  0.25 ? 'radiant'           :
-    radiantEdge >  0.15 ? 'radiant_slightly'  :
-    radiantEdge < -0.55 ? 'dire_strongly'     :
-    radiantEdge < -0.25 ? 'dire'              :
-    radiantEdge < -0.15 ? 'dire_slightly'     : 'even'
+    effectiveEdge >=  0.80 ? 'radiant_strongly' :
+    effectiveEdge >=  0.40 ? 'radiant'          :
+    effectiveEdge >   0.20 ? 'radiant_slightly' :
+    effectiveEdge <= -0.80 ? 'dire_strongly'    :
+    effectiveEdge <= -0.40 ? 'dire'             :
+    effectiveEdge <  -0.20 ? 'dire_slightly'    : 'even'
 
-  const radiantUrgency = computeTeamUrgency(radiantEdge, radiantTimingScore, direTimingScore)
-  const direUrgency    = computeTeamUrgency(-radiantEdge, direTimingScore, radiantTimingScore)
+  const radiantScenarioShift = rangeA - rangeB
+  const direScenarioShift    = rangeB - rangeA
+  const radiantUrgency = computeTeamUrgency(effectiveEdge, radiantTimingScore, direTimingScore, radiantScenarioShift)
+  const direUrgency    = computeTeamUrgency(-effectiveEdge, direTimingScore, radiantTimingScore, direScenarioShift)
 
-  return { insights: allInsights, radiantEdge, overallFavored: overallFavoredShifted, radiantUrgency, direUrgency }
+  return {
+    insights: allInsights,
+    radiantEdge,
+    effectiveEdge,
+    overallFavored: overallFavoredShifted,
+    radiantUrgency,
+    direUrgency,
+    executionVolatility,
+    rangeA,
+    rangeB,
+    executionDebug: {
+      structuralEdge,
+      radiantObjDelta,
+      radiantStrangleDelta,
+      radiantBreachDelta,
+      direObjDelta,
+      direStrangleDelta,
+      direBreachDelta,
+      objectiveSwingA,
+      strangleSwingA,
+      breachSwingA,
+      objectiveSwingB,
+      strangleSwingB,
+      breachSwingB,
+      scenarioA,
+      scenarioB,
+    }
+  }
 }

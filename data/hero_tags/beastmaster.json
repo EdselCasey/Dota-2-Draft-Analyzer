@@ -14,7 +14,6 @@
   ],
   "beastmaster_summon_raptors": [
     "root",
-    "summon_units",
     "medium_duration",
     "medium_cooldown",
     "medium_aoe",

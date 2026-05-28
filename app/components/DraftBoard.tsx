@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import type { HeroProfile } from '../../lib/types'
 import { buildTeamProfile } from '../../lib/scorer'
 import { toDisplayName } from '../../lib/displayNames'
@@ -174,6 +174,63 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
     if (dRecs[0] && direCount    < 5) set.add(dRecs[0].hero.name)
     return set
   }, [matchup, radiantTeam, direTeam, recPool, radiantCount, direCount])
+
+  useEffect(() => {
+    if (!matchup) return
+    const debug = matchup as typeof matchup & {
+      executionDebug?: {
+        radiantObjDelta: number
+        radiantStrangleDelta: number
+        radiantBreachDelta: number
+        direObjDelta: number
+        direStrangleDelta: number
+        direBreachDelta: number
+        objectiveSwingA: number
+        strangleSwingA: number
+        breachSwingA: number
+        objectiveSwingB: number
+        strangleSwingB: number
+        breachSwingB: number
+        scenarioA: number
+        scenarioB: number
+        structuralEdge: number
+      }
+    }
+
+    console.log('=== VISIBLE DRAFT EXECUTION MATH ===')
+    console.log('radiant heroes:', radiant.filter(Boolean))
+    console.log('dire heroes:', dire.filter(Boolean))
+    console.log('structuralEdge:', matchup.radiantEdge)
+    if (debug.executionDebug) {
+      console.log('Radiant phase deltas:', {
+        objective: debug.executionDebug.radiantObjDelta,
+        strangle: debug.executionDebug.radiantStrangleDelta,
+        breach: debug.executionDebug.radiantBreachDelta,
+      })
+      console.log('Dire phase deltas:', {
+        objective: debug.executionDebug.direObjDelta,
+        strangle: debug.executionDebug.direStrangleDelta,
+        breach: debug.executionDebug.direBreachDelta,
+      })
+      console.log('Scenario A swings (Radiant leads):', {
+        objective: debug.executionDebug.objectiveSwingA,
+        strangle: debug.executionDebug.strangleSwingA,
+        breach: debug.executionDebug.breachSwingA,
+        total: debug.executionDebug.scenarioA,
+      })
+      console.log('Scenario B swings (Dire leads):', {
+        objective: debug.executionDebug.objectiveSwingB,
+        strangle: debug.executionDebug.strangleSwingB,
+        breach: debug.executionDebug.breachSwingB,
+        total: debug.executionDebug.scenarioB,
+      })
+    }
+    console.log('rangeA:', matchup.rangeA)
+    console.log('rangeB:', matchup.rangeB)
+    console.log('executionVolatility:', matchup.executionVolatility)
+    console.log('label:', matchup.overallFavored)
+    console.log('==============================')
+  }, [matchup, radiant, dire])
 
   const selectedProfile = selectedHero ? heroProfileMap.get(selectedHero) ?? null : null
 

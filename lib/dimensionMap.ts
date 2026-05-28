@@ -346,10 +346,11 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'map_presence',       weight: 1.0 },
   ],
   illusion: [
-    { dimension: 'objective_pressure', weight: 3.0 },
+    { dimension: 'objective_pressure', weight: 1.5 },
     { dimension: 'attack_sustained',   weight: 2.5 },
     { dimension: 'vision_control',     weight: 1.0 },
     { dimension: 'map_presence',       weight: 1.0 },
+    { dimension: 'defense',       weight: 1.0 },
   ],
   siege: [
     { dimension: 'objective_pressure', weight: 3.0 },

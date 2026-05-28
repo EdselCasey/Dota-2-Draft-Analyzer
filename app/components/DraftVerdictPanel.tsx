@@ -95,13 +95,15 @@ export default function DraftVerdictPanel({
     overallFavored === 'dire_strongly'    || overallFavored === 'dire'    || overallFavored === 'dire_slightly'    ? '#f87171' : '#94a3b8'
 
   const subtitle = verdictSubtitle(overallFavored, radiantTiming, direTiming)
+  const isDireFavored =
+    overallFavored === 'dire_slightly' || overallFavored === 'dire' || overallFavored === 'dire_strongly'
 
   return (
     <div className="shrink-0 mx-3 mt-3 rounded-lg border border-white/8 bg-white/[0.02] overflow-hidden">
       {/* Row 1: Verdict + Timing */}
-      <div className="flex items-center gap-3 px-4 pt-3 pb-2">
+      <div className={`flex items-center gap-3 px-4 pt-3 pb-2 ${isDireFavored ? 'flex-row-reverse' : ''}`}>
         {/* Verdict */}
-        <div className="flex flex-col gap-0.5 mr-2">
+        <div className={`flex flex-col gap-0.5 ${isDireFavored ? 'ml-2 items-end text-right' : 'mr-2'}`}>
           <span
             className="text-base font-black leading-tight tracking-tight"
             style={{ color: verdictColor, textShadow: `0 0 20px ${verdictColor}66` }}
@@ -112,7 +114,7 @@ export default function DraftVerdictPanel({
         </div>
 
         {/* Timing badges */}
-        <div className="ml-auto flex items-center gap-2 shrink-0">
+        <div className={`${isDireFavored ? 'mr-auto' : 'ml-auto'} flex items-center gap-2 shrink-0`}>
           <span className="text-[10px] text-white/25 hidden sm:inline">Timing</span>
 
           {radiantTiming && (

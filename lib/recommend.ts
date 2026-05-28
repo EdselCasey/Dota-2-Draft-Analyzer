@@ -59,21 +59,21 @@ function scoreForTeam(
   const enemyKey = isRadiant ? 'dire'    : 'radiant'
   const reasons: string[] = []
 
-  const currentEdge = currentMatchup.radiantEdge  // positive = radiant favored
+  const currentEdge = currentMatchup.effectiveEdge  // positive = radiant favored
   const enemyFavored =
     isRadiant ? currentMatchup.overallFavored === 'dire' || currentMatchup.overallFavored === 'dire_slightly' || currentMatchup.overallFavored === 'dire_strongly'
               : currentMatchup.overallFavored === 'radiant' || currentMatchup.overallFavored === 'radiant_slightly' || currentMatchup.overallFavored === 'radiant_strongly'
 
   // ── 1. Favor shift simulation ──────────────────────────────────────────────
   // Build a hypothetical team with this hero added and re-run the matchup.
-  // Measure how much radiantEdge moves in the picking team's direction.
+  // Measure how much final effective edge moves in the picking team's direction.
   const simHeroes = [...team.heroes, hero]
   const simTeam   = buildTeamProfile(simHeroes)
   const simMatchup = isRadiant
     ? analyzeMatchup(simTeam, enemy)
     : analyzeMatchup(enemy, simTeam)
 
-  const newEdge = simMatchup.radiantEdge
+  const newEdge = simMatchup.effectiveEdge
   // Positive delta = shifted toward radiant. Flip sign for Dire.
   const rawDelta  = isRadiant ? (newEdge - currentEdge) : (currentEdge - newEdge)
   // Normalize: a +0.3 shift is already a big swing. Cap at 0.5 for normalization.

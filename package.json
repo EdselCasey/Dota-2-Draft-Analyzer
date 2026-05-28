@@ -7,7 +7,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "fetch:matches": "tsx scripts/fetch-matches.ts",
+    "fetch:ranked": "tsx scripts/fetch-ranked-matches.ts",
+    "analyze:batch": "tsx scripts/batch-analyze.ts"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -23,6 +26,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "tsx": "^4.22.3",
     "typescript": "^5"
   }
 }

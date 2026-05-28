@@ -12,7 +12,6 @@
     "blink",
     "escape",
     "medium_burst",
-    "attack_damage_boost",
     "short_duration",
     "short_cooldown",
     "medium_range"
@@ -29,7 +28,6 @@
   "riki_tricks_of_the_trade": [
     "short_aoe",
     "channelled",
-    "attack_damage_boost",
     "medium_sustained",
     "invulnerability",
     "escape",

@@ -47,3 +47,8 @@ next-env.d.ts
 #Verdent
 /.verdent/
 /.git_disabled/
+
+# Batch analyzer scratchpad data (don't commit)
+/scripts/match-ids.txt
+/scripts/results.csv
+/scripts/results.json
