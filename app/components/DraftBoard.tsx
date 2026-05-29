@@ -203,24 +203,24 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
     console.log('structuralEdge:', matchup.radiantEdge)
     if (debug.executionDebug) {
       console.log('Radiant phase deltas:', {
-        objective: debug.executionDebug.radiantObjDelta,
         strangle: debug.executionDebug.radiantStrangleDelta,
+        objective: debug.executionDebug.radiantObjDelta,
         breach: debug.executionDebug.radiantBreachDelta,
       })
       console.log('Dire phase deltas:', {
-        objective: debug.executionDebug.direObjDelta,
         strangle: debug.executionDebug.direStrangleDelta,
+        objective: debug.executionDebug.direObjDelta,
         breach: debug.executionDebug.direBreachDelta,
       })
       console.log('Scenario A swings (Radiant leads):', {
-        objective: debug.executionDebug.objectiveSwingA,
         strangle: debug.executionDebug.strangleSwingA,
+        objective: debug.executionDebug.objectiveSwingA,
         breach: debug.executionDebug.breachSwingA,
         total: debug.executionDebug.scenarioA,
       })
       console.log('Scenario B swings (Dire leads):', {
-        objective: debug.executionDebug.objectiveSwingB,
         strangle: debug.executionDebug.strangleSwingB,
+        objective: debug.executionDebug.objectiveSwingB,
         breach: debug.executionDebug.breachSwingB,
         total: debug.executionDebug.scenarioB,
       })
