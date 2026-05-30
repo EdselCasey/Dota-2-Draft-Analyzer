@@ -31,11 +31,11 @@
     "medium_burst",
     "medium_cooldown",
     "short_duration",
-    "small_range"
+    "short_range"
   ],
   "keeper_of_the_light_spirit_form": [
     "movement_speed_boost",
-    "small_range",
+    "short_range",
     "medium_duration",
     "long_cooldown"
   ]
