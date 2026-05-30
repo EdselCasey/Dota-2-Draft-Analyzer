@@ -23,19 +23,19 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   fear:              -0.5,
 
   // Soft Control (partial disable)
-  root:             -0.5,
-  silence:          -0.3,
-  slow:             -0.5,
+  root:             -0.2,
+  silence:          -0.4,
+  slow:             0.0,
   disarm:           -0.3,
-  antiheal:         -0.1,
+  antiheal:         0.1,
   banish:            0.0,
   leash:            -0.3,
 
   // Reach
-  short_range:       0.0,
+  short_range:       -0.4,
   medium_range:     -0.2,
-  long_range:       -0.4,
-  global:           -0.6,
+  long_range:       -0.1,
+  global:           0.0,
 
   // Waveclear (damage + AOE)
   low_burst:        -1.0,
@@ -58,10 +58,10 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   bouncing_attacks:  0.3,
 
   // Attack modifiers (right-click scaling)
-  attack_speed_boost: -0.2,
+  attack_speed_boost: -0.1,
   armor_reduction:    -0.3,
-  attack_damage_boost: 0.6,
-  attack_modifier:    0.5,
+  attack_damage_boost: 0.8,
+  attack_modifier:    0.7,
   mana_burn:          -0.5,
 
   // Duration (no direct timing bias — acts as multiplier)
