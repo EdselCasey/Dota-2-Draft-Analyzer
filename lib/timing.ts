@@ -136,9 +136,9 @@ export interface TimingResult {
 
 const LABEL_THRESHOLDS: [number, TimingLabel][] = [
   [-0.30, 'Early Game'],
-  [-0.10, 'Early-Mid'],
-  [ 0.10, 'Mid Game'],
-  [ 0.30, 'Mid-Late'],
+  [-0.15, 'Early-Mid'],
+  [ 0.05, 'Mid Game'],
+  [ 0.05, 'Mid-Late'],
   [ Infinity, 'Late Game'],
 ]
 
