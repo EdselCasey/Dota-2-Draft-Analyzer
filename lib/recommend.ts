@@ -10,7 +10,9 @@ import { STRONG_THRESHOLD } from './matchupConstants'
 export interface HeroRecommendation {
   hero:           HeroProfile
   score:          number   // 0–1 composite
-  favorShift:     number   // how much this pick moves overall favor toward us (0–1)
+  endpointShift:  number   // total improvement across both scenario endpoints (-1..1)
+  bestCaseShift:  number   // improvement in our favorable scenario
+  worstCaseShift: number   // improvement in our unfavorable scenario
   neutralizeFit:  number   // reduces enemy advantages
   weaknessFit:    number   // patches our own vulnerabilities
   timingFit:      number   // timing alignment with urgency bias
@@ -59,7 +61,6 @@ function scoreForTeam(
   const enemyKey = isRadiant ? 'dire'    : 'radiant'
   const reasons: string[] = []
 
-  const currentEdge = currentMatchup.continuousEdge  // positive = radiant favored
   const enemyFavored =
     isRadiant ? currentMatchup.overallFavored === 'dire' || currentMatchup.overallFavored === 'dire_slightly' || currentMatchup.overallFavored === 'dire_strongly'
               : currentMatchup.overallFavored === 'radiant' || currentMatchup.overallFavored === 'radiant_slightly' || currentMatchup.overallFavored === 'radiant_strongly'
@@ -73,15 +74,29 @@ function scoreForTeam(
     ? analyzeMatchup(simTeam, enemy)
     : analyzeMatchup(enemy, simTeam)
 
-  const newEdge = simMatchup.continuousEdge
-  // Positive delta = shifted toward radiant. Flip sign for Dire.
-  const rawDelta  = isRadiant ? (newEdge - currentEdge) : (currentEdge - newEdge)
-  // Normalize: a +0.3 shift is already a big swing. Cap at 0.5 for normalization.
-  const favorShift = clamp(rawDelta / 0.5, -1, 1)
-  // Use only positive movement toward our favor (negative = hurts us, exclude via scoring weights)
-  const favorShiftPos = clamp(favorShift, 0, 1)
+  const simRangeA = simMatchup.rangeA
+  const simRangeB = simMatchup.rangeB
 
-  if (favorShiftPos > 0.25) {
+  // Positive = endpoint moved in our favor.
+  // Radiant wants rangeA up and rangeB up.
+  // Dire   wants rangeA down and rangeB down.
+  let bestCaseShift: number
+  let worstCaseShift: number
+
+  if (isRadiant) {
+    bestCaseShift  = simRangeA - currentMatchup.rangeA   // rangeA up = Radiant wins harder if they lead
+    worstCaseShift = simRangeB - currentMatchup.rangeB   // rangeB up = Radiant loses less if Dire leads
+  } else {
+    bestCaseShift  = currentMatchup.rangeB - simRangeB   // rangeB down = Dire wins harder if they lead
+    worstCaseShift = currentMatchup.rangeA - simRangeA   // rangeA down = Dire loses less if Radiant leads
+  }
+
+  const totalShift = bestCaseShift + worstCaseShift
+  // Divisor 1.5: improving both scenarios by ~0.75 each is already huge impact.
+  const endpointShift = clamp(totalShift / 1.5, -1, 1)
+  const endpointShiftPos = clamp(endpointShift, 0, 1)
+
+  if (endpointShiftPos > 0.25) {
     const simFavored = simMatchup.overallFavored
     const ourTeamFavored = isRadiant
       ? simFavored === 'radiant' || simFavored === 'radiant_slightly' || simFavored === 'radiant_strongly'
@@ -181,29 +196,32 @@ function scoreForTeam(
   }
 
   // ── Composite ─────────────────────────────────────────────────────────────
-  // favorShift is the primary signal — it's the real measured outcome of adding
-  // this hero. The other signals act as tie-breakers and directional guides.
+  // endpointShift is the primary signal — measures total improvement across
+  // both scenario endpoints. A hero that boosts our best-case AND cushions our
+  // worst-case simultaneously gets the highest score.
   //
-  // When enemy favored:  favor shift + neutralize dominate (must actually flip)
-  // When balanced/ahead: favor shift + tilt dominate (widen the lead)
-  const fsW  = enemyFavored ? 0.45 : 0.35   // favor shift — always the top weight
+  // When enemy favored:  endpoint shift + neutralize dominate (must actually flip)
+  // When balanced/ahead: endpoint shift + tilt dominate (widen the lead)
+  const fsW  = enemyFavored ? 0.45 : 0.35   // endpoint shift — always the top weight
   const nW   = enemyFavored ? 0.25 : 0.10
   const wW   = enemyFavored ? 0.10 : 0.15
   const tW   = enemyFavored ? 0.05 : 0.25   // tilt matters more when already ahead
   const tiW  = 0.15
 
-  const raw   = favorShiftPos * fsW + neutralizeFit * nW + weaknessFit * wW + timingFit * tiW + tiltFactor * tW - stackPenalty
+  const raw   = endpointShiftPos * fsW + neutralizeFit * nW + weaknessFit * wW + timingFit * tiW + tiltFactor * tW - stackPenalty
   const score = Math.round(clamp(raw, 0, 1) * 100) / 100
 
   return {
     hero,
     score,
-    favorShift:    Math.round(favorShift    * 100) / 100,
-    neutralizeFit: Math.round(neutralizeFit * 100) / 100,
-    weaknessFit:   Math.round(weaknessFit   * 100) / 100,
-    timingFit:     Math.round(timingFit     * 100) / 100,
-    tiltFactor:    Math.round(tiltFactor    * 100) / 100,
-    reasons:       [...new Set(reasons)].slice(0, 3),
+    endpointShift:  Math.round(endpointShift  * 100) / 100,
+    bestCaseShift:  Math.round(bestCaseShift  * 100) / 100,
+    worstCaseShift: Math.round(worstCaseShift * 100) / 100,
+    neutralizeFit:  Math.round(neutralizeFit * 100) / 100,
+    weaknessFit:    Math.round(weaknessFit   * 100) / 100,
+    timingFit:      Math.round(timingFit     * 100) / 100,
+    tiltFactor:     Math.round(tiltFactor    * 100) / 100,
+    reasons:        [...new Set(reasons)].slice(0, 3),
   }
 }
 
@@ -227,17 +245,17 @@ export function computeRecommendations(
       isRadiant
     ))
 
-    // Primary: heroes with positive favor shift (net delta improves matchup)
+    // Primary: heroes with positive endpoint shift (net delta improves matchup)
     const positive = scored
-      .filter(r => r.favorShift > 0)
-      .sort((a, b) => b.favorShift - a.favorShift)
+      .filter(r => r.endpointShift > 0)
+      .sort((a, b) => b.endpointShift - a.endpointShift)
       .slice(0, topN)
 
     if (positive.length > 0) return positive
 
     // Fallback: no pick improves the matchup, show least bad options
     return scored
-      .sort((a, b) => b.favorShift - a.favorShift)
+      .sort((a, b) => b.endpointShift - a.endpointShift)
       .slice(0, topN)
       .map(r => ({ ...r, isLeastBad: true as const }))
   }
