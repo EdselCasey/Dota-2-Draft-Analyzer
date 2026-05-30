@@ -87,6 +87,7 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   dispel:           -0.2,
   debuff_immunity:  -0.5,
   grant_armor:      -0.3,
+  hp_growth:        -0.4,
 
   // Sustain
   low_heal:         -0.5,
