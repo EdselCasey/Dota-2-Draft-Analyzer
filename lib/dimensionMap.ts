@@ -388,6 +388,10 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'defensive_utility', weight: 3.0 },
     { dimension: 'defense',           weight: 2.5 },
   ],
+  slow_resist: [
+    { dimension: 'defensive_utility', weight: 1.3 },
+    { dimension: 'mobility',           weight: 1.0 },
+  ],
   vision: [
     { dimension: 'vision_control',    weight: 2.0 },
     { dimension: 'map_presence',    weight: 2.0 },

@@ -15,7 +15,7 @@
     "medium_range"
   ],
   "phantom_assassin_blur": [
-    "move_speed_boost",
+    "movement_speed_boost",
     "medium_duration",
     "medium_cooldown",
     "damage_reduction"

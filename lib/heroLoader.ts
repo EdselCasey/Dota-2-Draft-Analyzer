@@ -40,7 +40,7 @@ export function loadAllHeroes(): Map<string, HeroProfile> {
   if (process.env.NODE_ENV === 'production' && _cache) return _cache
 
   const heroNames = fs.readdirSync(HERO_TAGS_DIR)
-    .filter(f => f.endsWith('.json') && !f.startsWith('_'))
+    .filter(f => f.endsWith('.json'))
     .map(f => f.replace('.json', ''))
 
   const profiles = new Map<string, HeroProfile>()
@@ -76,7 +76,7 @@ export function loadAllHeroes(): Map<string, HeroProfile> {
       const extraMsg = extraCount > 0 ? ` (+${extraCount} more)` : ''
       console.warn(`  - "${tag}" on ${heroes.join(', ')}${extraMsg}`)
     }
-    console.warn('Add these tags to lib/dimensionMap.ts (TAG_DIMENSION_MAP) or fix typos to silence.\n')
+    console.warn('Add these tags to lib/dimensionMap.ts (TAG_DIMENSION_MAP) or fix typos to silence\n')
   }
 
   _cache = profiles

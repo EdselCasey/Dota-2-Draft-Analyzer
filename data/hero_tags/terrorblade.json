@@ -16,7 +16,7 @@
     "medium_burst",
     "medium_heal",
     "long_cooldown",
-    "small_range"
+    "short_range"
   ],
   "terrorblade_metamorphosis": [
     "attack_modifier",

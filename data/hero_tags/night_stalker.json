@@ -7,7 +7,7 @@
     "short_cooldown"
   ],
   "night_stalker_crippling_fear": [
-    "short_aoe",
+    "small_aoe",
     "silence",
     "low_sustained",
     "medium_cooldown",

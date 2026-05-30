@@ -1,7 +1,7 @@
 {
   "primal_beast_colossal": [
     "passive",
-    "slow_resistance",
+    "slow_resist",
     "medium_aoe"
   ],
   "primal_beast_onslaught": [

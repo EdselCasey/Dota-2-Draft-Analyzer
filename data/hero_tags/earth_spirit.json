@@ -33,7 +33,7 @@
     "long_range"
   ],
   "earth_spirit_magnetize": [
-    "short_aoe",
+    "small_aoe",
     "medium_sustained",
     "slow",
     "long_cooldown",

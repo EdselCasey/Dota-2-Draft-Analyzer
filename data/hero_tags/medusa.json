@@ -21,7 +21,7 @@
   "medusa_gorgon_grasp": [
     "small_aoe",
     "root",
-    "mediumlong_range",
+    "medium_range",
     "medium_cooldown",
     "short_duration",
     "low_burst"

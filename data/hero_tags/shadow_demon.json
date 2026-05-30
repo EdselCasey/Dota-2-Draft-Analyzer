@@ -8,7 +8,7 @@
     "medium_cooldown"
   ],
   "shadow_demon_shadow_poison": [
-    "short_aoe",
+    "small_aoe",
     "vision",
     "medium_burst",
     "long_range",

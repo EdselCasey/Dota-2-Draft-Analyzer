@@ -27,7 +27,6 @@
   ],
   "venomancer_plague_ward": [
     "summon_units",
-    "push",
     "vision",
     "zone_control",
     "medium_range",

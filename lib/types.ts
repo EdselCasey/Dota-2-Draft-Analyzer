@@ -87,6 +87,7 @@ export type AbilityTag =
   | 'second_life'
   | 'increase_buff_duration'
   | 'grant_armor'
+  | 'slow_resist'
   // ── Modifiers (non-scoring) ──────────────────────────────────────────────
   | 'channelled'
   | 'toggle'

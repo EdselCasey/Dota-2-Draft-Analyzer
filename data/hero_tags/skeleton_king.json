@@ -9,7 +9,6 @@
     "short_cooldown"
   ],
   "skeleton_king_bone_guard": [
-    "push",
     "summon_units",
     "medium_duration",
     "medium_cooldown"

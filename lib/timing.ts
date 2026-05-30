@@ -121,6 +121,7 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   status_resist_reduction:      0.4,
   second_life:                 -0.3,
   increase_buff_duration:       0.1,
+  slow_resist:                  -0.5,
 
 
   cooldown_reduction: 0.0
