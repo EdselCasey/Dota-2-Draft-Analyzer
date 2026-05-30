@@ -1,0 +1,10 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "data/hero_tags/*.json"
+      ],
+      "url": "./data/hero_tags/_schema.json"
+    }
+  ]
+}

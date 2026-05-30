@@ -9,10 +9,9 @@
   ],
   "disruptor_glimpse": [
     "forced_movement",
-    "low_burst",
     "long_range",
     "medium_cooldown",
-    "small_burst",
+    "low_burst",
     "short_duration"
   ],
   "disruptor_kinetic_field": [

@@ -17,7 +17,7 @@
     "medium_heal",
     "short_duration",
     "medium_cooldown",
-    "small_range"
+    "short_range"
   ],
   "death_prophet_exorcism": [
     "large_aoe",

@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import type { HeroProfile, TaggedAbility, AbilityTag } from './types'
 import { buildHeroProfile } from './scorer'
+import { TAG_DIMENSION_MAP } from './dimensionMap'
 
 const HERO_TAGS_DIR = path.join(process.cwd(), 'data', 'hero_tags')
 
@@ -39,15 +40,43 @@ export function loadAllHeroes(): Map<string, HeroProfile> {
   if (process.env.NODE_ENV === 'production' && _cache) return _cache
 
   const heroNames = fs.readdirSync(HERO_TAGS_DIR)
-    .filter(f => f.endsWith('.json'))
+    .filter(f => f.endsWith('.json') && !f.startsWith('_'))
     .map(f => f.replace('.json', ''))
 
   const profiles = new Map<string, HeroProfile>()
+  const unknownTagMap = new Map<string, { hero: string; ability: string }[]>()
+
   for (const heroName of heroNames) {
     const tagFile = loadTagFile(heroName)
     if (!tagFile) continue
     const tagged = buildTaggedAbilities(tagFile)
+
+    // Dev check: every tag must be a key in TAG_DIMENSION_MAP
+    if (process.env.NODE_ENV !== 'production') {
+      for (const ability of tagged) {
+        for (const tag of ability.tags) {
+          if (!(tag in TAG_DIMENSION_MAP)) {
+            const entries = unknownTagMap.get(tag) ?? []
+            entries.push({ hero: heroName, ability: ability.name })
+            unknownTagMap.set(tag, entries)
+          }
+        }
+      }
+    }
+
     profiles.set(heroName, buildHeroProfile(heroName, tagged))
+  }
+
+  // Dev-only: warn about tags with no dimension weights
+  if (process.env.NODE_ENV !== 'production' && unknownTagMap.size > 0) {
+    console.warn('\n[TAG ALERT] Unrecognized tags found in hero data (these contribute NOTHING to scoring):')
+    for (const [tag, occurrences] of unknownTagMap) {
+      const heroes = [...new Set(occurrences.map(o => o.hero))].slice(0, 20)
+      const extraCount = occurrences.length - heroes.length
+      const extraMsg = extraCount > 0 ? ` (+${extraCount} more)` : ''
+      console.warn(`  - "${tag}" on ${heroes.join(', ')}${extraMsg}`)
+    }
+    console.warn('Add these tags to lib/dimensionMap.ts (TAG_DIMENSION_MAP) or fix typos to silence.\n')
   }
 
   _cache = profiles

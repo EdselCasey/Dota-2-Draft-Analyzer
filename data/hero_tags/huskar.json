@@ -13,7 +13,7 @@
     "medium_sustained",
     "short_duration",
     "toggle",
-    "small_range"
+    "short_range"
   ],
   "huskar_berserkers_blood": [
     "attack_speed_boost",
@@ -25,7 +25,7 @@
     "slow",
     "dash",
     "medium_burst",
-    "debuff_immune",
+    "debuff_immunity",
     "short_cooldown",
     "small_range",
     "short_duration"

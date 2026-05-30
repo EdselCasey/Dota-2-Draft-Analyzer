@@ -2,7 +2,7 @@
   "broodmother_spawn_spiderlings": [
     "slow",
     "summon_units",
-    "small_burst",
+    "low_burst",
     "short_cooldown",
     "medium_duration"
   ],

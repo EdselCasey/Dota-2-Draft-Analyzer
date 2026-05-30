@@ -11,7 +11,7 @@
     "low_burst",
     "attack_damage_boost",
     "gold_gain",
-    "low_range",
+    "short_range",
     "short_cooldown"
   ],
   "bounty_hunter_shadow_walk": [

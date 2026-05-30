@@ -22,7 +22,7 @@
   ],
   "earthshaker_echo_slam": [
     "medium_aoe",
-    "large_burst",
+    "high_burst",
     "long_cooldown",
     "short_range"
   ],
@@ -30,6 +30,6 @@
     "stun",
     "small_aoe",
     "low_burst",
-    "pasive"
+    "passive"
   ]
 }
