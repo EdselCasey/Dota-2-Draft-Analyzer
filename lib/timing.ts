@@ -12,119 +12,114 @@ import type { AbilityTag, TaggedAbility } from './types'
  *   hard CC                → slightly negative (most punishing early before BKB)
  */
 export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
-  // Hard Control (prevents casting + moving + attacking + items)
-  stun:             -0.2,
-  hex:              -0.2,
-  taunt:            -0.2,
-  forced_movement:  -0.1,
-  knockback:        -0.4,
-  knockup:          -0.2,
-  sleep:            -0.1,
-  fear:              -0.5,
+  // Hard Control
+  stun:             -0.8,
+  hex:              -0.7,
+  taunt:            -0.7,
+  forced_movement:  -0.6,
+  knockback:        -0.7,
+  knockup:          -0.7,
+  sleep:            -0.5,
+  fear:             -0.8,
 
-  // Soft Control (partial disable)
-  root:             -0.2,
-  silence:          -0.4,
-  slow:             0.0,
-  disarm:           -0.3,
-  antiheal:         0.1,
-  banish:            0.0,
-  leash:            -0.3,
+  // Soft Control
+  root:             -0.7,
+  silence:          -0.8,
+  slow:             -0.6,
+  disarm:           -0.6,
+  antiheal:         -0.4,
+  banish:           -0.3,
+  leash:            -0.6,
 
   // Reach
-  short_range:       -0.4,
-  medium_range:     -0.2,
-  long_range:       -0.1,
-  global:           0.0,
+  short_range:       0.0,
+  medium_range:     -0.1,
+  long_range:       -0.3,
+  global:           -0.2,
 
-  // Waveclear (damage + AOE)
+  // Waveclear
   low_burst:        -1.0,
-  medium_burst:     -0.7,
-  high_burst:       -0.4,
-  low_sustained:    -0.5,
-  medium_sustained: -0.3,
-  high_sustained:   -0.1,
-  small_aoe:        -0.2,
-  medium_aoe:        0.2,
+  medium_burst:     -0.8,
+  high_burst:       -0.5,
+  low_sustained:    -0.7,
+  medium_sustained: -0.5,
+  high_sustained:   -0.3,
+  small_aoe:        -0.3,
+  medium_aoe:        0.1,
   large_aoe:         0.4,
 
   // Objective Pressure
-  summon_units:      0.2,
-  illusion:          0.5,
-  siege:             0.1,
-  building_damage:   0.3,
+  summon_units:      0.3,
+  illusion:          0.6,
+  siege:             0.2,
+  building_damage:   0.1,
   push_structures:   0.2,
-  zone_control:      0.1,
-  bouncing_attacks:  0.3,
+  zone_control:     -0.2,
+  bouncing_attacks:  0.4,
 
-  // Attack modifiers (right-click scaling)
-  attack_speed_boost: -0.1,
-  armor_reduction:    -0.3,
+  // Attack Modifiers
+  attack_speed_boost: -0.2,
+  armor_reduction:   -0.4,
   attack_damage_boost: 0.8,
-  attack_modifier:    0.7,
-  mana_burn:          -0.5,
+  attack_modifier:   0.7,
+  mana_burn:        -0.6,
 
-  // Duration (no direct timing bias — acts as multiplier)
-  short_duration:     -0.5,
-  medium_duration:    -0.2,
-  long_duration:      0.0,
-  toggle:             0.0,
+  // Duration
+  short_duration:   -0.6,
+  medium_duration:  -0.3,
+  long_duration:     0.2,
+  toggle:            0.0,
 
-  // Cooldown (no direct timing bias — acts as multiplier)
+  // Cooldown
   passive:           0.0,
-  short_cooldown:    0.0,
-  medium_cooldown:    0.3,
-  long_cooldown:      0.5,
+  short_cooldown:   -0.4,
+  medium_cooldown:   0.0,
+  long_cooldown:     0.4,
 
-  magic_amp:        -0.5,
+  // Magic
+  magic_amp:        -0.8,
 
-  // Defense / survivability
-  damage_reduction:  0.0,
-  armor_gain:        -0.3,
-  save:              0.0,
-  invulnerability:   0.0,
-  dispel:            0.0,
-  debuff_immunity:   0.0,
-  grant_armor:       0.2,
+  // Defense / Survivability
+  damage_reduction: -0.3,
+  armor_gain:       -0.4,
+  save:             -0.6,
+  invulnerability:  -0.3,
+  dispel:           -0.2,
+  debuff_immunity:  -0.5,
+  grant_armor:      -0.3,
 
-  // Sustain (tiered)
-  low_heal:          -0.3,
-  medium_heal:        -0.1,
-  high_heal:          0.1,
-  low_regen:         -0.4,
-  medium_regen:      -0.2,
-  high_regen:         0.1,
-  shield:            -0.5,
-  lifesteal:         0.7,  // scales hard with attack damage
-
+  // Sustain
+  low_heal:         -0.5,
+  medium_heal:      -0.3,
+  high_heal:        -0.1,
+  low_regen:        -0.5,
+  medium_regen:     -0.3,
+  high_regen:        0.0,
+  shield:           -0.6,
+  lifesteal:         0.8,
 
   // Mobility
-  blink:             -0.3,
-  dash:              -0.2,
-  movement_speed_boost: -0.4,  // 
-  escape:           -0.1,
-  teleport:          0.0,
+  blink:            -0.5,
+  dash:             -0.4,
+  movement_speed_boost: -0.5,
+  escape:           -0.3,
+  teleport:         -0.1,
 
-  // Right-click DPS — all positive (farm/item dependent)
-
-  // Stealth / aerial
-  stealth:          -0.5,  // gank/pickoff window = early-mid
+  // Stealth / Aerial
+  stealth:          -0.6,
   aerial:            0.0,
   unobstructed:      0.0,
-  // Push / objective
 
   // Utility
-  vision:           0.1,  
-  mana_regen:        -0.3,
-  gold_gain:          -0.3,
-  xp_gain:            -0.3,
-  status_resist_reduction:      0.4,
-  second_life:                 -0.1,
-  increase_buff_duration:       0.1,
-  slow_resist:                  -0.5,
-
-
-  cooldown_reduction: 0.0
+  vision:           -0.3,
+  mana_regen:       -0.5,
+  gold_gain:        -0.6,
+  xp_gain:          -0.6,
+  status_resist_reduction: 0.3,
+  second_life:      -0.2,
+  increase_buff_duration: 0.0,
+  slow_resist:      -0.3,
+  cooldown_reduction: -0.2,
 }
 
 export type TimingLabel =
