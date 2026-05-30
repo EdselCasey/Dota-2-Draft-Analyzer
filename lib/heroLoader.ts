@@ -76,7 +76,7 @@ export function loadAllHeroes(): Map<string, HeroProfile> {
       const extraMsg = extraCount > 0 ? ` (+${extraCount} more)` : ''
       console.warn(`  - "${tag}" on ${heroes.join(', ')}${extraMsg}`)
     }
-    console.warn('Add these tags to lib/dimensionMap.ts (TAG_DIMENSION_MAP) or fix typos to silence\n')
+    console.warn('Add these tags to lib/dimensionMap.ts (TAG_DIMENSION_MAP) or fix typos to silence.\n')
   }
 
   _cache = profiles
