@@ -373,6 +373,7 @@ export interface MatchupAnalysis {
   insights:       MatchupInsight[]
   radiantEdge:    number
   effectiveEdge:  number
+  continuousEdge: number
   overallFavored: 'radiant_slightly' | 'radiant' | 'radiant_strongly' | 'dire_slightly' | 'dire' | 'dire_strongly' | 'even'
   radiantUrgency: TeamUrgency
   direUrgency:    TeamUrgency
@@ -928,6 +929,7 @@ export function analyzeMatchup(
 
   radiantEdge = Math.round(structuralEdge * 100) / 100
   effectiveEdge = Math.round(effectiveEdge * 100) / 100
+  const continuousEdge = Math.round(((rangeA + rangeB) / 2) * 100) / 100
 
   const overallFavoredShifted: MatchupAnalysis['overallFavored'] =
     effectiveEdge >=  0.80 ? 'radiant_strongly' :
@@ -946,6 +948,7 @@ export function analyzeMatchup(
     insights: allInsights,
     radiantEdge,
     effectiveEdge,
+    continuousEdge,
     overallFavored: overallFavoredShifted,
     radiantUrgency,
     direUrgency,

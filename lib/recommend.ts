@@ -59,7 +59,7 @@ function scoreForTeam(
   const enemyKey = isRadiant ? 'dire'    : 'radiant'
   const reasons: string[] = []
 
-  const currentEdge = currentMatchup.effectiveEdge  // positive = radiant favored
+  const currentEdge = currentMatchup.continuousEdge  // positive = radiant favored
   const enemyFavored =
     isRadiant ? currentMatchup.overallFavored === 'dire' || currentMatchup.overallFavored === 'dire_slightly' || currentMatchup.overallFavored === 'dire_strongly'
               : currentMatchup.overallFavored === 'radiant' || currentMatchup.overallFavored === 'radiant_slightly' || currentMatchup.overallFavored === 'radiant_strongly'
@@ -73,7 +73,7 @@ function scoreForTeam(
     ? analyzeMatchup(simTeam, enemy)
     : analyzeMatchup(enemy, simTeam)
 
-  const newEdge = simMatchup.effectiveEdge
+  const newEdge = simMatchup.continuousEdge
   // Positive delta = shifted toward radiant. Flip sign for Dire.
   const rawDelta  = isRadiant ? (newEdge - currentEdge) : (currentEdge - newEdge)
   // Normalize: a +0.3 shift is already a big swing. Cap at 0.5 for normalization.
