@@ -197,9 +197,14 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
       }
     }
 
+    const formatHeroTiming = (name: string) => {
+      const profile = heroProfileMap.get(name)
+      if (!profile) return name
+      return `${name} (${Math.round(profile.timing.score * 100) / 100})`
+    }
     console.log('=== VISIBLE DRAFT EXECUTION MATH ===')
-    console.log('radiant heroes:', radiant.filter(Boolean))
-    console.log('dire heroes:', dire.filter(Boolean))
+    console.log('radiant heroes:', (radiant.filter(Boolean) as string[]).map(formatHeroTiming))
+    console.log('dire heroes:', (dire.filter(Boolean) as string[]).map(formatHeroTiming))
     console.log('structuralEdge:', matchup.radiantEdge)
     if (debug.executionDebug) {
       console.log('Radiant phase deltas:', {
