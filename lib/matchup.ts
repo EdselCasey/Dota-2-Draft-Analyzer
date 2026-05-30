@@ -837,29 +837,29 @@ export function analyzeMatchup(
   // Raw phase deltas from composites only, kept on a single scale.
   const radiantPushPower = Math.max(
     radiantNorm.objective_pressure,
-    (radiantNorm.pickoff + (radiantNorm.hard_control + radiantNorm.soft_control * 0.5)) / 2,
+    (radiantNorm.pickoff + (radiantNorm.hard_control + radiantNorm.soft_control * 0.75)) / 2,
     radiantNorm.teamfight
   )
   const direPushPower = Math.max(
     direNorm.objective_pressure,
-    (direNorm.pickoff + (direNorm.hard_control + direNorm.soft_control * 0.5)) / 2,
+    (direNorm.pickoff + (direNorm.hard_control + direNorm.soft_control * 0.75)) / 2,
     direNorm.teamfight
   )
   const radiantBreachPower = Math.max(
     radiantNorm.teamfight,
-    (radiantNorm.pickoff + (radiantNorm.hard_control + radiantNorm.soft_control * 0.5)) / 2
+    (radiantNorm.pickoff + (radiantNorm.hard_control + radiantNorm.soft_control * 0.75)) / 2
   )
   const direBreachPower = Math.max(
     direNorm.teamfight,
-    (direNorm.pickoff + (direNorm.hard_control + direNorm.soft_control * 0.5)) / 2
+    (direNorm.pickoff + (direNorm.hard_control + direNorm.soft_control * 0.75)) / 2
   )
-  const radiantObjDelta  = radiantPushPower - (direNorm.waveclear * 0.40 + direNorm.defense * 0.30 + (direNorm.hard_control * 0.30 + direNorm.soft_control * 0.15))
-  const radiantStrangleDelta = (radiantNorm.map_presence * 0.25 + radiantNorm.pickoff * 0.25 + (radiantNorm.hard_control * 0.20 + radiantNorm.soft_control * 0.10) + radiantNorm.mobility * 0.15 + radiantNorm.vision_control * 0.15) - (direNorm.mobility * 0.18 + direNorm.defensive_utility * 0.20 + (direNorm.hard_control * 0.15 + direNorm.soft_control * 0.08) + direNorm.vision_control * 0.08 + direNorm.sustain * 0.14 + direNorm.defense * 0.20 + direNorm.map_presence * 0.10)
-  const radiantBreachDelta = radiantBreachPower - (direNorm.waveclear * 0.30 + direNorm.teamfight * 0.30 + (direNorm.hard_control * 0.20 + direNorm.soft_control * 0.10) + direNorm.defensive_utility * 0.20)
+  const radiantObjDelta  = radiantPushPower - (direNorm.waveclear * 0.40 + direNorm.defense * 0.30 + (direNorm.hard_control * 0.30 + direNorm.soft_control * 0.20))
+  const radiantStrangleDelta = (radiantNorm.map_presence * 0.25 + radiantNorm.pickoff * 0.25 + (radiantNorm.hard_control * 0.20 + radiantNorm.soft_control * 0.20) + radiantNorm.mobility * 0.15 + radiantNorm.vision_control * 0.15) - (direNorm.mobility * 0.18 + direNorm.defensive_utility * 0.20 + (direNorm.hard_control * 0.15 + direNorm.soft_control * 0.15) + direNorm.vision_control * 0.1 + direNorm.sustain * 0.14 + direNorm.defense * 0.20 + direNorm.map_presence * 0.10)
+  const radiantBreachDelta = radiantBreachPower - (direNorm.waveclear * 0.30 + direNorm.teamfight * 0.30 + (direNorm.hard_control * 0.20 + direNorm.soft_control * 0.20) + direNorm.defensive_utility * 0.20)
 
-  const direObjDelta    = direPushPower - (radiantNorm.waveclear * 0.40 + radiantNorm.defense * 0.30 + (radiantNorm.hard_control * 0.30 + radiantNorm.soft_control * 0.15))
-  const direStrangleDelta   = (direNorm.map_presence * 0.25 + direNorm.pickoff * 0.25 + (direNorm.hard_control * 0.20 + direNorm.soft_control * 0.10) + direNorm.mobility * 0.15 + direNorm.vision_control * 0.15) - (radiantNorm.mobility * 0.18 + radiantNorm.defensive_utility * 0.20 + (radiantNorm.hard_control * 0.15 + radiantNorm.soft_control * 0.08) + radiantNorm.vision_control * 0.08 + radiantNorm.sustain * 0.14 + radiantNorm.defense * 0.20 + radiantNorm.map_presence * 0.10)
-  const direBreachDelta = direBreachPower - (radiantNorm.waveclear * 0.30 + radiantNorm.teamfight * 0.30 + (radiantNorm.hard_control * 0.20 + radiantNorm.soft_control * 0.10) + radiantNorm.defensive_utility * 0.20)
+  const direObjDelta    = direPushPower - (radiantNorm.waveclear * 0.40 + radiantNorm.defense * 0.30 + (radiantNorm.hard_control * 0.30 + radiantNorm.soft_control * 0.2))
+  const direStrangleDelta   = (direNorm.map_presence * 0.25 + direNorm.pickoff * 0.25 + (direNorm.hard_control * 0.20 + direNorm.soft_control * 0.20) + direNorm.mobility * 0.15 + direNorm.vision_control * 0.15) - (radiantNorm.mobility * 0.18 + radiantNorm.defensive_utility * 0.20 + (radiantNorm.hard_control * 0.15 + radiantNorm.soft_control * 0.15) + radiantNorm.vision_control * 0.1 + radiantNorm.sustain * 0.14 + radiantNorm.defense * 0.20 + radiantNorm.map_presence * 0.10)
+  const direBreachDelta = direBreachPower - (radiantNorm.waveclear * 0.30 + radiantNorm.teamfight * 0.30 + (radiantNorm.hard_control * 0.20 + radiantNorm.soft_control * 0.20) + radiantNorm.defensive_utility * 0.20)
 
   const objectiveSwingA = phaseSwing(radiantObjDelta)
   const strangleSwingA  = phaseSwing(radiantStrangleDelta)
