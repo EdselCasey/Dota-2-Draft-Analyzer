@@ -839,37 +839,24 @@ export function analyzeMatchup(
   // Stalling phases (negative contribution when executing well): stallDelta, farmDelta, hgDelta
 
   // Raw phase deltas from composites only, kept on a single scale.
-  const radiantPushPower = 
-  radiantNorm.objective_pressure * 0.25 +
-  radiantNorm.attack_sustained * 0.20 +
-  radiantNorm.sustain * 0.30 +
-  radiantNorm.resource_support * 0.20 +
-  radiantNorm.waveclear * 0.15
-
-const direPushPower = 
-  direNorm.objective_pressure * 0.25 +
-  direNorm.attack_sustained * 0.20 +
-  direNorm.sustain * 0.30 +
-  direNorm.resource_support * 0.20 +
-  direNorm.waveclear * 0.15
-
-const radiantBreachPower = 
-  radiantNorm.defense * 0.30 +
-  radiantNorm.defensive_utility * 0.25 +
-  radiantNorm.mobility * 0.20 +
-  radiantNorm.hard_control * 0.20 +
-  radiantNorm.soft_control * 0.15 +
-  radiantNorm.reach * 0.15 +
-  radiantNorm.vision_control * 0.15
-
-const direBreachPower = 
-  direNorm.defense * 0.30 +
-  direNorm.defensive_utility * 0.25 +
-  direNorm.mobility * 0.20 +
-  direNorm.hard_control * 0.20 +
-  direNorm.soft_control * 0.15 +
-  direNorm.reach * 0.15 +
-  direNorm.vision_control * 0.15
+  const radiantPushPower = Math.max(
+    radiantNorm.objective_pressure,
+    (radiantNorm.pickoff + (radiantNorm.hard_control + radiantNorm.soft_control * 0.5)) / 2,
+    radiantNorm.teamfight
+  )
+  const direPushPower = Math.max(
+    direNorm.objective_pressure,
+    (direNorm.pickoff + (direNorm.hard_control + direNorm.soft_control * 0.5)) / 2,
+    direNorm.teamfight
+  )
+  const radiantBreachPower = Math.max(
+    radiantNorm.teamfight,
+    (radiantNorm.pickoff + (radiantNorm.hard_control + radiantNorm.soft_control * 0.5)) / 2
+  )
+  const direBreachPower = Math.max(
+    direNorm.teamfight,
+    (direNorm.pickoff + (direNorm.hard_control + direNorm.soft_control * 0.5)) / 2
+  )
 
 
   const radiantObjDelta  = radiantPushPower - (direNorm.waveclear * 0.25 + (direNorm.hard_control * 0.30 + direNorm.soft_control * 0.20) + direNorm.sustain * 0.15)
