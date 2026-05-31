@@ -891,7 +891,7 @@ const direBreachPower =
   const objectiveSwingB = -phaseSwing(direObjDelta)
   const strangleSwingB  = -phaseSwing(direStrangleDelta)
   const breachSwingB    = -phaseSwing(direBreachDelta)
-  const skirmishSwingB    = -phaseSwing(direSkirmishDelta)
+  const skirmishSwingB    = phaseSwing(direSkirmishDelta)
 
   // Scenario A: Radiant leads early → small signed edge-scale swings
   const scenarioA = objectiveSwingA + strangleSwingA + breachSwingA + skirmishSwingA
