@@ -835,26 +835,28 @@ export function analyzeMatchup(
   // Stalling phases (negative contribution when executing well): stallDelta, farmDelta, hgDelta
 
   // Raw phase deltas from composites only, kept on a single scale.
-  const radiantPushPower = Math.max(
-    radiantNorm.objective_pressure,
-    (radiantNorm.pickoff + (radiantNorm.hard_control + radiantNorm.soft_control * 0.75)) / 2,
-    radiantNorm.teamfight,radiantNorm.reach
-  )
-  const direPushPower = Math.max(
-    direNorm.objective_pressure,
-    (direNorm.pickoff + (direNorm.hard_control + direNorm.soft_control * 0.75)) / 2,
-    direNorm.teamfight,direNorm.reach
-  )
-  const radiantBreachPower = Math.max(
-    radiantNorm.teamfight,
-    (radiantNorm.pickoff + (radiantNorm.hard_control + radiantNorm.soft_control * 0.75)) / 2,
-    radiantNorm.reach
-  )
-  const direBreachPower = Math.max(
-    direNorm.teamfight,
-    (direNorm.pickoff + (direNorm.hard_control + direNorm.soft_control * 0.75)) / 2,
-    direNorm.reach
-  )
+  const radiantPushPower = 
+  radiantNorm.objective_pressure * 0.30 +
+  radiantNorm.teamfight * 0.25 +
+  (radiantNorm.pickoff + (radiantNorm.hard_control + radiantNorm.soft_control * 0.75)) / 2 * 0.25 +
+  radiantNorm.reach * 0.20
+  
+  const direPushPower = 
+  direNorm.objective_pressure * 0.30 +
+  direNorm.teamfight * 0.25 +
+  (direNorm.pickoff + (direNorm.hard_control + direNorm.soft_control * 0.75)) / 2 * 0.25 +
+  direNorm.reach * 0.20
+
+  const radiantBreachPower = 
+  radiantNorm.teamfight * 0.35 +
+  (radiantNorm.pickoff + (radiantNorm.hard_control + radiantNorm.soft_control * 0.75)) / 2 * 0.30 +
+  radiantNorm.reach * 0.35
+
+  const direBreachPower = 
+  direNorm.teamfight * 0.35 +
+  (direNorm.pickoff + (direNorm.hard_control + direNorm.soft_control * 0.75)) / 2 * 0.30 +
+  direNorm.reach * 0.35
+  
   const radiantObjDelta  = radiantPushPower - (direNorm.waveclear * 0.40 + direNorm.defense * 0.30 + (direNorm.hard_control * 0.30 + direNorm.soft_control * 0.20) + direNorm.reach * 0.15)
   const radiantStrangleDelta = (radiantNorm.map_presence * 0.25 + radiantNorm.pickoff * 0.25 + (radiantNorm.hard_control * 0.20 + radiantNorm.soft_control * 0.20) + radiantNorm.mobility * 0.15 + radiantNorm.vision_control * 0.15) - (direNorm.mobility * 0.18 + direNorm.defensive_utility * 0.20 + (direNorm.hard_control * 0.15 + direNorm.soft_control * 0.15) + direNorm.vision_control * 0.1 + direNorm.sustain * 0.14 + direNorm.defense * 0.20 + direNorm.map_presence * 0.10 + direNorm.reach * 0.15)
   const radiantBreachDelta = radiantBreachPower - (direNorm.waveclear * 0.30 + direNorm.teamfight * 0.30 + (direNorm.hard_control * 0.20 + direNorm.soft_control * 0.20) + direNorm.defensive_utility * 0.20 + direNorm.reach * 0.15)
