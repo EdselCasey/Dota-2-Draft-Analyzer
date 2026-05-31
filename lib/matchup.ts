@@ -860,7 +860,7 @@ const radiantBreachPower =
   radiantNorm.hard_control * 0.20 +
   radiantNorm.soft_control * 0.15 +
   radiantNorm.reach * 0.15 +
-  radiantNorm.vision_control * 0.10
+  radiantNorm.vision_control * 0.15
 
 const direBreachPower = 
   direNorm.defense * 0.30 +
@@ -869,7 +869,7 @@ const direBreachPower =
   direNorm.hard_control * 0.20 +
   direNorm.soft_control * 0.15 +
   direNorm.reach * 0.15 +
-  direNorm.vision_control * 0.10
+  direNorm.vision_control * 0.15
 
 
   const radiantObjDelta  = radiantPushPower - (direNorm.waveclear * 0.25 + direNorm.pickoff * 0.20 + (direNorm.hard_control * 0.30 + direNorm.soft_control * 0.20) + direNorm.sustain * 0.15)
