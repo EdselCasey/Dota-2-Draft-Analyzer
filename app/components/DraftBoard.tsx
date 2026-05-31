@@ -182,14 +182,18 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
         radiantObjDelta: number
         radiantStrangleDelta: number
         radiantBreachDelta: number
+        radiantSkirmishDelta: number
         direObjDelta: number
         direStrangleDelta: number
         direBreachDelta: number
+        direSkirmishDelta: number
         objectiveSwingA: number
         strangleSwingA: number
+        skirmishSwingA: number
         breachSwingA: number
         objectiveSwingB: number
         strangleSwingB: number
+        skirmishSwingB: number
         breachSwingB: number
         scenarioA: number
         scenarioB: number
@@ -211,22 +215,26 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
         strangle: debug.executionDebug.radiantStrangleDelta,
         objective: debug.executionDebug.radiantObjDelta,
         breach: debug.executionDebug.radiantBreachDelta,
+        skirmish: debug.executionDebug.radiantSkirmishDelta,
       })
       console.log('Dire phase deltas:', {
         strangle: debug.executionDebug.direStrangleDelta,
         objective: debug.executionDebug.direObjDelta,
         breach: debug.executionDebug.direBreachDelta,
+        skirmish: debug.executionDebug.radiantSkirmishDelta,
       })
       console.log('Scenario A swings (Radiant leads):', {
         strangle: debug.executionDebug.strangleSwingA,
         objective: debug.executionDebug.objectiveSwingA,
         breach: debug.executionDebug.breachSwingA,
+        skirmish: debug.executionDebug.skirmishSwingA,
         total: debug.executionDebug.scenarioA,
       })
       console.log('Scenario B swings (Dire leads):', {
         strangle: debug.executionDebug.strangleSwingB,
         objective: debug.executionDebug.objectiveSwingB,
         breach: debug.executionDebug.breachSwingB,
+        skirmish: debug.executionDebug.skirmishSwingB,
         total: debug.executionDebug.scenarioB,
       })
     }
