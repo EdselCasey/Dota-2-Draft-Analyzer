@@ -89,7 +89,6 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   hex: [
     { dimension: 'hard_control', weight: 3.0 },
     { dimension: 'pickoff',      weight: 1.3 },
-    { dimension: 'defensive_utility', weight: 1.7 },
   ],
   taunt: [
     { dimension: 'hard_control', weight: 2.0 },
@@ -122,7 +121,6 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   silence: [
     { dimension: 'soft_control', weight: 1.0 },
     { dimension: 'pickoff',      weight: 1.0 },
-    { dimension: 'defensive_utility', weight: 0.65 },
   ],
   slow: [
     { dimension: 'soft_control', weight: 0.5 },
@@ -130,14 +128,12 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   ],
   disarm: [
     { dimension: 'soft_control', weight: 2.0 },
-    { dimension: 'defensive_utility', weight: 0.65 },
   ],
   antiheal: [
     { dimension: 'soft_control', weight: 1.5 },
     { dimension: 'pickoff',      weight: 1.0 },
   ],
   banish: [
-    { dimension: 'soft_control', weight: 1.5 },
     { dimension: 'hard_control', weight: 1.0 },
     { dimension: 'pickoff',      weight: 0.5 },
     { dimension: 'defensive_utility', weight: 1.9 },
@@ -216,7 +212,6 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
   // ── Defense / Survivability ───────────────────────────────────────────────
   damage_reduction: [
     { dimension: 'defense',           weight: 1.5 },
-    { dimension: 'defensive_utility', weight: 2.0 },
   ],
   armor_gain: [
     { dimension: 'defense',           weight: 1.5 },
@@ -257,7 +252,6 @@ export const TAG_DIMENSION_MAP: Record<AbilityTag, TagWeight[]> = {
     { dimension: 'sustain',           weight: 2.0 },
   ],
   invulnerability: [
-    { dimension: 'defense',           weight: 3.0 },
     { dimension: 'defensive_utility', weight: 1.5 },
   ],
 
