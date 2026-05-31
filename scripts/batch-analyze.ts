@@ -306,18 +306,18 @@ async function main() {
       const radiantComfortableEnough = matchup.radiantUrgency.score <= 0.61
       const direComfortableEnough    = matchup.direUrgency.score <= 0.61
       const urgencyGap = Math.abs(matchup.radiantUrgency.score - matchup.direUrgency.score)
-      const evenComfortWinner =
-        favoredFromLabel !== 'even' ? 'even' :
-        urgencyGap < 0.05 ? 'even' :
-        radiantComfortableEnough && !direComfortableEnough ? 'radiant' :
-        direComfortableEnough && !radiantComfortableEnough ? 'dire' :
-        matchup.radiantUrgency.score < matchup.direUrgency.score ? 'radiant' :
-        matchup.direUrgency.score < matchup.radiantUrgency.score ? 'dire' :
-        'even'
+      //const evenComfortWinner =
+       // favoredFromLabel !== 'even' ? 'even' :
+      //  urgencyGap < 0.05 ? 'even' :
+       // radiantComfortableEnough && !direComfortableEnough ? 'radiant' :
+       //direComfortableEnough && !radiantComfortableEnough ? 'dire' :
+        //matchup.radiantUrgency.score < matchup.direUrgency.score ? 'radiant' :
+        //matchup.direUrgency.score < matchup.radiantUrgency.score ? 'dire' :
+        //'even'
 
       const predictedWinner =
-        favoredFromLabel !== 'even' ? favoredFromLabel :
-        evenComfortWinner
+        favoredFromLabel !== 'even' ? favoredFromLabel : 'even'
+        //evenComfortWinner
 
       const actualWinner = match.didRadiantWin ? 'radiant' : 'dire'
 
@@ -335,9 +335,9 @@ async function main() {
 
       // Bucket
       const absEdge = Math.abs(matchup.radiantEdge)
-      const bucket = absEdge >= 0.40 ? 'strongly' :
-                     absEdge >= 0.25 ? 'favored'  :
-                     absEdge >= 0.15 ? 'slightly' : 'even'
+      const bucket = absEdge >= 0.80 ? 'strongly' :
+                     absEdge >= 0.40 ? 'favored'  :
+                     absEdge >= 0.20 ? 'slightly' : 'even'
       if (predictedWinner !== 'even') {
         buckets[bucket].total++
         if (correct) buckets[bucket].correct++

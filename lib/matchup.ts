@@ -872,15 +872,15 @@ const direBreachPower =
   direNorm.vision_control * 0.15
 
 
-  const radiantObjDelta  = radiantPushPower - (direNorm.waveclear * 0.25 + direNorm.pickoff * 0.20 + (direNorm.hard_control * 0.30 + direNorm.soft_control * 0.20) + direNorm.sustain * 0.15)
-  const radiantStrangleDelta = (radiantNorm.map_presence * 0.25 + radiantNorm.pickoff * 0.25 + radiantNorm.hard_control * 0.15 + radiantNorm.soft_control * 0.10 + radiantNorm.mobility * 0.15 + radiantNorm.vision_control * 0.10) - (direNorm.mobility * 0.15 + direNorm.defensive_utility * 0.15 + direNorm.hard_control * 0.15 + direNorm.soft_control * 0.10 + direNorm.vision_control * 0.10 + direNorm.sustain * 0.10 + direNorm.defense * 0.10 + direNorm.reach * 0.05+ direNorm.map_presence * 0.10)
+  const radiantObjDelta  = radiantPushPower - (direNorm.waveclear * 0.25 + (direNorm.hard_control * 0.30 + direNorm.soft_control * 0.20) + direNorm.sustain * 0.15)
+  const radiantStrangleDelta = (radiantNorm.map_presence * 0.25 + radiantNorm.pickoff * 0.25 + radiantNorm.hard_control * 0.15 + radiantNorm.soft_control * 0.10 + radiantNorm.mobility * 0.15 + radiantNorm.vision_control * 0.10) - (direNorm.mobility * 0.15 + direNorm.defensive_utility * 0.15 + direNorm.hard_control * 0.15 + direNorm.soft_control * 0.10 + direNorm.vision_control * 0.10 + direNorm.sustain * 0.10 + direNorm.defense * 0.10 + direNorm.reach * 0.05 + direNorm.map_presence * 0.10)
   const radiantBreachDelta = radiantBreachPower - (direNorm.waveclear * 0.30 + direNorm.teamfight * 0.20 + (direNorm.hard_control * 0.25 + direNorm.soft_control * 0.20) + direNorm.defensive_utility * 0.20 + direNorm.reach * 0.15 + direNorm.vision_control * 0.10)
-  const radiantSkirmishDelta = (radiantNorm.attack_sustained * 0.20 + radiantNorm.spell_sustained * 0.15 + radiantNorm.burst_damage * 0.10 + radiantNorm.spell_uptime * 0.10 + radiantNorm.hard_control * 0.15 + radiantNorm.soft_control * 0.10 + radiantNorm.defense * 0.10 + radiantNorm.sustain * 0.10) - (direNorm.attack_sustained * 0.20 + direNorm.spell_sustained * 0.15 + direNorm.burst_damage * 0.10 + direNorm.spell_uptime * 0.10 + direNorm.hard_control * 0.15 + direNorm.soft_control * 0.10 + direNorm.defense * 0.10 + direNorm.sustain * 0.10)
+  const radiantSkirmishDelta = (radiantNorm.attack_sustained * 0.25 + radiantNorm.spell_sustained * 0.20 + radiantNorm.burst_damage * 0.15 + radiantNorm.spell_uptime * 0.10 + radiantNorm.hard_control * 0.15 + radiantNorm.soft_control * 0.10 + radiantNorm.mobility * 0.05) - (direNorm.defense * 0.20 + direNorm.sustain * 0.20 + direNorm.hard_control * 0.15 + direNorm.soft_control * 0.10 + direNorm.defensive_utility * 0.20 + direNorm.mobility * 0.15)
 
-  const direObjDelta    = direPushPower - (radiantNorm.waveclear * 0.25 + radiantNorm.pickoff * 0.20 + (radiantNorm.hard_control * 0.30 + radiantNorm.soft_control * 0.20) + radiantNorm.sustain * 0.15)
+  const direObjDelta    = direPushPower - (radiantNorm.waveclear * 0.25 + (radiantNorm.hard_control * 0.30 + radiantNorm.soft_control * 0.20) + radiantNorm.sustain * 0.15)
   const direStrangleDelta = (direNorm.map_presence * 0.25 + direNorm.pickoff * 0.25 + direNorm.hard_control * 0.15 + direNorm.soft_control * 0.10 + direNorm.mobility * 0.15 + direNorm.vision_control * 0.10) - (radiantNorm.mobility * 0.15 + radiantNorm.defensive_utility * 0.15 + radiantNorm.hard_control * 0.15 + radiantNorm.soft_control * 0.10 + radiantNorm.vision_control * 0.10 + radiantNorm.sustain * 0.10 + radiantNorm.defense * 0.10 + radiantNorm.reach * 0.05 + radiantNorm.map_presence * 0.10)
   const direBreachDelta = direBreachPower - (radiantNorm.waveclear * 0.30 + radiantNorm.teamfight * 0.20 + (radiantNorm.hard_control * 0.25 + radiantNorm.soft_control * 0.20) + radiantNorm.defensive_utility * 0.20 + radiantNorm.reach * 0.15 + radiantNorm.vision_control * 0.10)
-  const direSkirmishDelta = (radiantNorm.attack_sustained * 0.20 + radiantNorm.spell_sustained * 0.15 + radiantNorm.burst_damage * 0.10 + radiantNorm.spell_uptime * 0.10 + radiantNorm.hard_control * 0.15 + radiantNorm.soft_control * 0.10 + radiantNorm.defense * 0.10 + radiantNorm.sustain * 0.10) - (direNorm.attack_sustained * 0.20 + direNorm.spell_sustained * 0.15 + direNorm.burst_damage * 0.10 + direNorm.spell_uptime * 0.10 + direNorm.hard_control * 0.15 + direNorm.soft_control * 0.10 + direNorm.defense * 0.10 + direNorm.sustain * 0.10)
+  const direSkirmishDelta = (direNorm.attack_sustained * 0.25 + direNorm.spell_sustained * 0.20 + direNorm.burst_damage * 0.15 + direNorm.spell_uptime * 0.10 + direNorm.hard_control * 0.15 + direNorm.soft_control * 0.10 + direNorm.mobility * 0.05) - (radiantNorm.defense * 0.20 + radiantNorm.sustain * 0.20 + radiantNorm.hard_control * 0.15 + radiantNorm.soft_control * 0.10 + radiantNorm.defensive_utility * 0.20 + radiantNorm.mobility * 0.15)
 
 
   const objectiveSwingA = phaseSwing(radiantObjDelta)
@@ -891,7 +891,7 @@ const direBreachPower =
   const objectiveSwingB = -phaseSwing(direObjDelta)
   const strangleSwingB  = -phaseSwing(direStrangleDelta)
   const breachSwingB    = -phaseSwing(direBreachDelta)
-  const skirmishSwingB    = phaseSwing(direSkirmishDelta)
+  const skirmishSwingB    = -phaseSwing(direSkirmishDelta)
 
   // Scenario A: Radiant leads early → small signed edge-scale swings
   const scenarioA = objectiveSwingA + strangleSwingA + breachSwingA + skirmishSwingA
