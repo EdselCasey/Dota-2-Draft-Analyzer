@@ -790,7 +790,7 @@ function stallingPower(
   return clamp(0.8 + (chainMin / 5.0) * 0.2, 0.6, 1.0)
 }
 
-function phaseSwing(delta: number, divisor = 4, cap = 1): number {
+function phaseSwing(delta: number, divisor = 8, cap = 1): number {
   return clamp(delta / divisor, -cap, cap)
 }
 
