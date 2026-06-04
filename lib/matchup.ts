@@ -750,18 +750,18 @@ export function analyzeMatchup(
     (radiantRaw.pickoff * 0.45 +
      radiantRaw.hard_control * 0.30 +
      radiantRaw.soft_control * 0.30 +
-     radiantRaw.mobility * 0.28 +
-     radiantRaw.map_presence * 0.30 +
+     radiantRaw.mobility * 0.35 +
+     radiantRaw.map_presence * 0.27 +
      radiantRaw.vision_control * 0.20) -
-    (direRaw.mobility * 0.28 +
+    (direRaw.mobility * 0.25 +
      direRaw.defensive_utility * 0.23 +
      direRaw.hard_control * 0.30 +
-     direRaw.soft_control * 0.20 +
+     direRaw.soft_control * 0.30 +
      direRaw.vision_control * 0.30 +
-     direRaw.sustain * 0.50 +
-     direRaw.defense * 0.14 +
-     direRaw.reach * 0.38 +
-     direRaw.map_presence * 0.25)
+     direRaw.sustain * 0.40 +
+     direRaw.defense * 0.30 +
+     direRaw.reach * 0.25 +
+     direRaw.map_presence * 0.28)
 
   // Breach: siege power vs defense
   // Offense: pickoff(0.38), teamfight(0.38)
@@ -807,18 +807,18 @@ export function analyzeMatchup(
     (direRaw.pickoff * 0.45 +
      direRaw.hard_control * 0.30 +
      direRaw.soft_control * 0.30 +
-     direRaw.mobility * 0.28 +
-     direRaw.map_presence * 0.30 +
-     direRaw.vision_control * 0.30) -
-    (radiantRaw.mobility * 0.28 +
+     direRaw.mobility * 0.35 +
+     direRaw.map_presence * 0.27 +
+     direRaw.vision_control * 0.20) -
+    (radiantRaw.mobility * 0.25 +
      radiantRaw.defensive_utility * 0.23 +
      radiantRaw.hard_control * 0.30 +
-     radiantRaw.soft_control * 0.20 +
-     radiantRaw.vision_control * 0.20 +
-     radiantRaw.sustain * 0.50 +
-     radiantRaw.defense * 0.14 +
-     radiantRaw.reach * 0.38 +
-     radiantRaw.map_presence * 0.25)
+     radiantRaw.soft_control * 0.30 +
+     radiantRaw.vision_control * 0.30 +
+     radiantRaw.sustain * 0.40 +
+     radiantRaw.defense * 0.30 +
+     radiantRaw.reach * 0.25 +
+     radiantRaw.map_presence * 0.28)
 
   const direBreachDelta =
     (direRaw.pickoff * 0.38 + direRaw.teamfight * 0.38) -
