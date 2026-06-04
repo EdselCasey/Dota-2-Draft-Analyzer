@@ -729,35 +729,120 @@ export function analyzeMatchup(
   // Stalling phases (negative contribution when executing well): stallDelta, farmDelta, hgDelta
 
   // Raw phase deltas from composites only, kept on a single scale.
-  const radiantPushPower = 
-    radiantRaw.objective_pressure +
-    (radiantRaw.pickoff + (radiantRaw.hard_control + radiantRaw.soft_control * 0.5)) / 2 +
-    radiantRaw.teamfight
-  
-  const direPushPower = 
-    direRaw.objective_pressure +
-    (direRaw.pickoff + (direRaw.hard_control + direRaw.soft_control * 0.5)) / 2 +
-    direRaw.teamfight
-  
-  const radiantBreachPower = 
-    radiantRaw.teamfight +
-    (radiantRaw.pickoff + (radiantRaw.hard_control + radiantRaw.soft_control * 0.5)) / 2
-  
-  const direBreachPower = 
-    direRaw.teamfight +
-    (direRaw.pickoff + (direRaw.hard_control + direRaw.soft_control * 0.5)) / 2
-  
+  // Weights derived from counter matrix relationships.
 
+  // Objective: push power vs resistance
+  // Offense: pickoff(0.50), objective_pressure(0.53), waveclear(0.40)
+  // Defense: waveclear(0.40), hard_control(0.40), soft_control(0.10), sustain(0.50)
+  const radiantObjDelta =
+    radiantRaw.pickoff * 0.50 +
+    radiantRaw.objective_pressure * 0.53 +
+    radiantRaw.waveclear * 0.40 -
+    (direRaw.waveclear * 0.40 +
+     direRaw.hard_control * 0.40 +
+     direRaw.soft_control * 0.10 +
+     direRaw.sustain * 0.50)
 
-  const radiantObjDelta  = radiantPushPower - (direRaw.waveclear * 0.25 + (direRaw.hard_control * 0.30 + direRaw.soft_control * 0.20) + direRaw.sustain * 0.15)
-  const radiantStrangleDelta = (radiantRaw.map_presence * 0.25 + radiantRaw.pickoff * 0.25 + radiantRaw.hard_control * 0.15 + radiantRaw.soft_control * 0.10 + radiantRaw.mobility * 0.15 + radiantRaw.vision_control * 0.10) - (direRaw.mobility * 0.15 + direRaw.defensive_utility * 0.15 + direRaw.hard_control * 0.15 + direRaw.soft_control * 0.10 + direRaw.vision_control * 0.10 + direRaw.sustain * 0.10 + direRaw.defense * 0.10 + direRaw.reach * 0.05 + direRaw.map_presence * 0.10)
-  const radiantBreachDelta = radiantBreachPower - (direRaw.waveclear * 0.30 + direRaw.teamfight * 0.20 + (direRaw.hard_control * 0.25 + direRaw.soft_control * 0.20) + direRaw.defensive_utility * 0.20 + direRaw.reach * 0.15 + direRaw.vision_control * 0.10)
-  const radiantSkirmishDelta = (radiantRaw.attack_sustained * 0.25 + radiantRaw.spell_sustained * 0.20 + radiantRaw.burst_damage * 0.15 + radiantRaw.spell_uptime * 0.10 + radiantRaw.hard_control * 0.15 + radiantRaw.soft_control * 0.10 + radiantRaw.mobility * 0.05) - (direRaw.defense * 0.20 + direRaw.sustain * 0.20 + direRaw.hard_control * 0.15 + direRaw.soft_control * 0.10 + direRaw.defensive_utility * 0.20 + direRaw.mobility * 0.15)
+  // Strangle: map control vs resistance
+  // Offense: pickoff(0.45), hard_control(0.40), soft_control(0.10), mobility(0.28), map_presence(0.30), vision_control(0.30)
+  // Defense: mobility(0.28), defensive_utility(0.23), hard_control(0.40), soft_control(0.10), vision_control(0.30), sustain(0.50), defense(0.14), reach(0.38), map_presence(0.25)
+  const radiantStrangleDelta =
+    (radiantRaw.pickoff * 0.45 +
+     radiantRaw.hard_control * 0.40 +
+     radiantRaw.soft_control * 0.10 +
+     radiantRaw.mobility * 0.28 +
+     radiantRaw.map_presence * 0.30 +
+     radiantRaw.vision_control * 0.30) -
+    (direRaw.mobility * 0.28 +
+     direRaw.defensive_utility * 0.23 +
+     direRaw.hard_control * 0.40 +
+     direRaw.soft_control * 0.10 +
+     direRaw.vision_control * 0.30 +
+     direRaw.sustain * 0.50 +
+     direRaw.defense * 0.14 +
+     direRaw.reach * 0.38 +
+     direRaw.map_presence * 0.25)
 
-  const direObjDelta    = direPushPower - (radiantRaw.waveclear * 0.25 + (radiantRaw.hard_control * 0.30 + radiantRaw.soft_control * 0.20) + radiantRaw.sustain * 0.15)
-  const direStrangleDelta = (direRaw.map_presence * 0.25 + direRaw.pickoff * 0.25 + direRaw.hard_control * 0.15 + direRaw.soft_control * 0.10 + direRaw.mobility * 0.15 + direRaw.vision_control * 0.10) - (radiantRaw.mobility * 0.15 + radiantRaw.defensive_utility * 0.15 + radiantRaw.hard_control * 0.15 + radiantRaw.soft_control * 0.10 + radiantRaw.vision_control * 0.10 + radiantRaw.sustain * 0.10 + radiantRaw.defense * 0.10 + radiantRaw.reach * 0.05 + radiantRaw.map_presence * 0.10)
-  const direBreachDelta = direBreachPower - (radiantRaw.waveclear * 0.30 + radiantRaw.teamfight * 0.20 + (radiantRaw.hard_control * 0.25 + radiantRaw.soft_control * 0.20) + radiantRaw.defensive_utility * 0.20 + radiantRaw.reach * 0.15 + radiantRaw.vision_control * 0.10)
-  const direSkirmishDelta = (direRaw.attack_sustained * 0.25 + direRaw.spell_sustained * 0.20 + direRaw.burst_damage * 0.15 + direRaw.spell_uptime * 0.10 + direRaw.hard_control * 0.15 + direRaw.soft_control * 0.10 + direRaw.mobility * 0.05) - (radiantRaw.defense * 0.20 + radiantRaw.sustain * 0.20 + radiantRaw.hard_control * 0.15 + radiantRaw.soft_control * 0.10 + radiantRaw.defensive_utility * 0.20 + radiantRaw.mobility * 0.15)
+  // Breach: siege power vs defense
+  // Offense: pickoff(0.38), teamfight(0.38)
+  // Defense: waveclear(0.40), teamfight(0.38), hard_control(0.40), soft_control(0.10), defensive_utility(0.23), reach(0.38), vision_control(0.30)
+  const radiantBreachDelta =
+    (radiantRaw.pickoff * 0.38 + radiantRaw.teamfight * 0.38) -
+    (direRaw.waveclear * 0.40 +
+     direRaw.teamfight * 0.38 +
+     direRaw.hard_control * 0.40 +
+     direRaw.soft_control * 0.10 +
+     direRaw.defensive_utility * 0.23 +
+     direRaw.reach * 0.38 +
+     direRaw.vision_control * 0.30)
+
+  // Skirmish: teamfight damage vs survival
+  // Offense: attack_sustained(0.38), spell_sustained(0.28), burst_damage(0.28), hard_control(0.40), soft_control(0.10), mobility(0.28)
+  // Defense: sustain(0.50), defense(0.14), hard_control(0.40), soft_control(0.07), defensive_utility(0.23), mobility(0.28)
+  const radiantSkirmishDelta =
+    (radiantRaw.attack_sustained * 0.38 +
+     radiantRaw.spell_sustained * 0.28 +
+     radiantRaw.burst_damage * 0.28 +
+     radiantRaw.hard_control * 0.40 +
+     radiantRaw.soft_control * 0.10 +
+     radiantRaw.mobility * 0.28) -
+    (direRaw.sustain * 0.50 +
+     direRaw.defense * 0.14 +
+     direRaw.hard_control * 0.40 +
+     direRaw.soft_control * 0.07 +
+     direRaw.defensive_utility * 0.23 +
+     direRaw.mobility * 0.28)
+
+  // Dire objective
+  const direObjDelta =
+    direRaw.pickoff * 0.50 +
+    direRaw.objective_pressure * 0.53 +
+    direRaw.waveclear * 0.40 -
+    (radiantRaw.waveclear * 0.40 +
+     radiantRaw.hard_control * 0.40 +
+     radiantRaw.soft_control * 0.10 +
+     radiantRaw.sustain * 0.50)
+
+  const direStrangleDelta =
+    (direRaw.pickoff * 0.45 +
+     direRaw.hard_control * 0.40 +
+     direRaw.soft_control * 0.10 +
+     direRaw.mobility * 0.28 +
+     direRaw.map_presence * 0.30 +
+     direRaw.vision_control * 0.30) -
+    (radiantRaw.mobility * 0.28 +
+     radiantRaw.defensive_utility * 0.23 +
+     radiantRaw.hard_control * 0.40 +
+     radiantRaw.soft_control * 0.10 +
+     radiantRaw.vision_control * 0.30 +
+     radiantRaw.sustain * 0.50 +
+     radiantRaw.defense * 0.14 +
+     radiantRaw.reach * 0.38 +
+     radiantRaw.map_presence * 0.25)
+
+  const direBreachDelta =
+    (direRaw.pickoff * 0.38 + direRaw.teamfight * 0.38) -
+    (radiantRaw.waveclear * 0.40 +
+     radiantRaw.teamfight * 0.38 +
+     radiantRaw.hard_control * 0.40 +
+     radiantRaw.soft_control * 0.10 +
+     radiantRaw.defensive_utility * 0.23 +
+     radiantRaw.reach * 0.38 +
+     radiantRaw.vision_control * 0.30)
+
+  const direSkirmishDelta =
+    (direRaw.attack_sustained * 0.38 +
+     direRaw.spell_sustained * 0.28 +
+     direRaw.burst_damage * 0.28 +
+     direRaw.hard_control * 0.40 +
+     direRaw.soft_control * 0.10 +
+     direRaw.mobility * 0.28) -
+    (radiantRaw.sustain * 0.50 +
+     radiantRaw.defense * 0.14 +
+     radiantRaw.hard_control * 0.40 +
+     radiantRaw.soft_control * 0.07 +
+     radiantRaw.defensive_utility * 0.23 +
+     radiantRaw.mobility * 0.28)
 
 
   const objectiveSwingA = phaseSwing(radiantObjDelta, 56, 1)
