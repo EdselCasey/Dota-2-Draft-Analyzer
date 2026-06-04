@@ -107,7 +107,7 @@ export const COUNTER_MAP: Partial<Record<DraftDimension, CounterEdge[]>> = {
     { counters: 'attack_sustained', strength: 0.45 },
     { counters: 'burst_damage', strength: 0.35 },
     { counters: 'objective_pressure', strength: 0.25 },
-    { counters: 'map_presence',     strength: 0.50 },
+    { counters: 'map_presence',     strength: 0.05 },
   ],
 
   // ── Teamfight ─────────────────────────────────────────────────────────────
