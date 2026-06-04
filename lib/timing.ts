@@ -49,7 +49,7 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   large_aoe:         0.4,
 
   // Objective Pressure
-  summon_units:      0.3,
+  summon_units:      -0.3,
   illusion:          0.6,
   siege:             0.2,
   building_damage:   0.1,
