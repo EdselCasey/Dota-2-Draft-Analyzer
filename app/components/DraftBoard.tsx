@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, useMemo } from 'react'
-import type { HeroProfile } from '../../lib/types'
+import type { DraftDimension, HeroProfile } from '../../lib/types'
 import { buildTeamProfile } from '../../lib/scorer'
 import { toDisplayName } from '../../lib/displayNames'
 import { analyzeMatchup } from '../../lib/matchup'
@@ -198,6 +198,8 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
         scenarioA: number
         scenarioB: number
         structuralEdge: number
+        radiantRaw: Record<DraftDimension, number>
+        direRaw: Record<DraftDimension, number>
       }
     }
 
@@ -206,6 +208,8 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
       if (!profile) return name
       return `${name} (${Math.round(profile.timing.score * 100) / 100})`
     }
+    console.log("Radiant Dimensions: ", debug.executionDebug?.radiantRaw)
+    console.log("Dire Dimensions: ", debug.executionDebug?.direRaw)
     console.log('=== VISIBLE DRAFT EXECUTION MATH ===')
     console.log('radiant heroes:', (radiant.filter(Boolean) as string[]).map(formatHeroTiming))
     console.log('dire heroes:', (dire.filter(Boolean) as string[]).map(formatHeroTiming))
@@ -221,7 +225,7 @@ export default function DraftBoard({ heroProfiles }: DraftBoardProps) {
         strangle: debug.executionDebug.direStrangleDelta,
         objective: debug.executionDebug.direObjDelta,
         breach: debug.executionDebug.direBreachDelta,
-        skirmish: debug.executionDebug.radiantSkirmishDelta,
+        skirmish: debug.executionDebug.direSkirmishDelta,
       })
       console.log('Scenario A swings (Radiant leads):', {
         strangle: debug.executionDebug.strangleSwingA,
