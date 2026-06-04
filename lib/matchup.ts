@@ -748,15 +748,15 @@ export function analyzeMatchup(
   // Defense: mobility(0.28), defensive_utility(0.23), hard_control(0.40), soft_control(0.10), vision_control(0.30), sustain(0.50), defense(0.14), reach(0.38), map_presence(0.25)
   const radiantStrangleDelta =
     (radiantRaw.pickoff * 0.45 +
-     radiantRaw.hard_control * 0.40 +
-     radiantRaw.soft_control * 0.10 +
+     radiantRaw.hard_control * 0.30 +
+     radiantRaw.soft_control * 0.30 +
      radiantRaw.mobility * 0.28 +
      radiantRaw.map_presence * 0.30 +
-     radiantRaw.vision_control * 0.30) -
+     radiantRaw.vision_control * 0.20) -
     (direRaw.mobility * 0.28 +
      direRaw.defensive_utility * 0.23 +
-     direRaw.hard_control * 0.40 +
-     direRaw.soft_control * 0.10 +
+     direRaw.hard_control * 0.30 +
+     direRaw.soft_control * 0.20 +
      direRaw.vision_control * 0.30 +
      direRaw.sustain * 0.50 +
      direRaw.defense * 0.14 +
@@ -805,16 +805,16 @@ export function analyzeMatchup(
 
   const direStrangleDelta =
     (direRaw.pickoff * 0.45 +
-     direRaw.hard_control * 0.40 +
-     direRaw.soft_control * 0.10 +
+     direRaw.hard_control * 0.30 +
+     direRaw.soft_control * 0.30 +
      direRaw.mobility * 0.28 +
      direRaw.map_presence * 0.30 +
      direRaw.vision_control * 0.30) -
     (radiantRaw.mobility * 0.28 +
      radiantRaw.defensive_utility * 0.23 +
-     radiantRaw.hard_control * 0.40 +
-     radiantRaw.soft_control * 0.10 +
-     radiantRaw.vision_control * 0.30 +
+     radiantRaw.hard_control * 0.30 +
+     radiantRaw.soft_control * 0.20 +
+     radiantRaw.vision_control * 0.20 +
      radiantRaw.sustain * 0.50 +
      radiantRaw.defense * 0.14 +
      radiantRaw.reach * 0.38 +

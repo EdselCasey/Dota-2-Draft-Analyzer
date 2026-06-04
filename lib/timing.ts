@@ -44,9 +44,9 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   low_sustained:    -0.7,
   medium_sustained: -0.5,
   high_sustained:   -0.3,
-  small_aoe:        -0.3,
-  medium_aoe:        0.1,
-  large_aoe:         0.4,
+  small_aoe:        -0.1,
+  medium_aoe:        -0.2,
+  large_aoe:         0.0,
 
   // Objective Pressure
   summon_units:      -0.5,
@@ -104,7 +104,7 @@ export const TIMING_BIAS: Partial<Record<AbilityTag, number>> = {
   dash:             -0.4,
   movement_speed_boost: -0.5,
   escape:           -0.3,
-  teleport:         -0.1,
+  teleport:         -0.4,
 
   // Stealth / Aerial
   stealth:          -0.6,
